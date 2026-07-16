@@ -1,0 +1,30 @@
+{
+  "muestra": null,
+  "preguntas": [
+    {
+      "texto": "¿Cómo calificarías la situación económica del País Vasco?",
+      "opciones": ["Muy buena", "Buena", "Regular", "Mala", "Muy mala", "No lo sé / prefiero no contestar"],
+      "multiple": 1
+    },
+    {
+      "texto": "Y dentro de un año, ¿cómo crees que será la situación económica del País Vasco?",
+      "opciones": ["Mejor", "Igual", "Peor", "No lo sé / prefiero no contestar"],
+      "multiple": 1
+    },
+    {
+      "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos\"",
+      "opciones": ["Muy de acuerdo", "Bastante de acuerdo", "Poco de acuerdo", "Nada de acuerdo", "No lo sé"],
+      "multiple": 1
+    },
+    {
+      "texto": "¿Crees que dentro de 10 años será más fácil acceder a una vivienda?",
+      "opciones": ["Seguro que sí", "Probablemente sí", "Probablemente no", "Seguro que no", "No lo sé / prefiero no contestar"],
+      "multiple": 1
+    },
+    {
+      "texto": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan.",
+      "opciones": ["Conflictos internacionales / guerras", "Subida brusca de los precios", "El avance de las ideas antidemocráticas", "Inseguridad ciudadana", "Cambio climático", "Pandemias / crisis sanitarias", "Precariedad laboral", "Migración", "Desempleo", "Terrorismo", "Crisis energética", "Desarrollos tecnológicos (Inteligencia artificial)", "Ciberataques", "Desabastecimiento de algún producto básico", "Ninguno en particular"],
+      "multiple": 3
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "titulo": "Deustobarómetro verano 2026 — Tanda 2 (miedos y seguridad)",
+  "muestra": null,
+  "preguntas": [
+    {
+      "texto": "¿Cómo calificarías la situación económica del País Vasco?",
+      "opciones": ["Muy buena", "Buena", "Regular", "Mala", "Muy mala", "No lo sé / prefiero no contestar"],
+      "multiple": 1,
+      "datos_reales": {"Muy buena": 3.9, "Buena": 43.0, "Regular": 42.5, "Mala": 6.7, "Muy mala": 2.5, "NS/NC": 1.4}
+    },
+    {
+      "texto": "Y dentro de un año, ¿cómo crees que será la situación económica del País Vasco?",
+      "opciones": ["Mejor", "Igual", "Peor", "No lo sé / prefiero no contestar"],
+      "multiple": 1,
+      "datos_reales": {"Mejor": 7.5, "Igual": 66.9, "Peor": 21.5, "NS/NC": 4.2}
+    },
+    {
+      "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos\"",
+      "opciones": ["Muy de acuerdo", "Bastante de acuerdo", "Poco de acuerdo", "Nada de acuerdo", "No lo sé"],
+      "multiple": 1,
+      "datos_reales": {"Muy de acuerdo": 19.4, "Bastante de acuerdo": 33.1, "Poco de acuerdo": 22.1, "Nada de acuerdo": 18.6, "No lo sé": 6.8}
+    },
+    {
+      "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Cedería parte de mis libertades a cambio de mayor garantía de mi seguridad\"",
+      "opciones": ["Muy de acuerdo", "Bastante de acuerdo", "Poco de acuerdo", "Nada de acuerdo", "No lo sé"],
+      "multiple": 1,
+      "datos_reales": {"Muy de acuerdo": 5.6, "Bastante de acuerdo": 21.6, "Poco de acuerdo": 35.5, "Nada de acuerdo": 29.4, "No lo sé": 8.0}
+    },
+    {
+      "texto": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+      "opciones": ["Mucho", "Bastante", "Poco", "Nada", "Nunca he tenido miedo a viajar"],
+      "multiple": 1,
+      "datos_reales": {"Mucho": 3.0}
+    }
+  ],
+  "_nota": "PENDIENTE: porcentajes reales completos de la pregunta del miedo a viajar (solo se conoce Mucho: 3,0). datos_reales es documentación para el contraste; el servidor solo usa titulo/muestra/preguntas."
+}

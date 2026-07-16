@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pueblo Digital — Entrevistador</title>
+<!-- LiveKit SDK (WebRTC room) — servido localmente por el servidor Python -->
+<script src="/livekit.js"></script>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --surface2: #22263a;
+    --border: #2e3250; --accent: #5b6af0; --accent2: #3dcc91;
+    --text: #e8eaf6; --muted: #7b82b4; --red: #e05c5c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+  header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  header h1 { font-size: 1rem; font-weight: 600; }
+  header .sub { font-size: .78rem; color: var(--muted); }
+  #status-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); margin-left: auto; flex-shrink: 0; transition: background .3s; }
+  #status-dot.connected { background: var(--accent2); box-shadow: 0 0 8px var(--accent2); }
+  #status-dot.connecting { background: #f0b429; animation: pulse 1s infinite; }
+  #status-dot.error { background: var(--red); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  #status-text { font-size: .72rem; color: var(--muted); margin-left: 6px; }
+
+  .layout { display: grid; grid-template-columns: 300px 1fr; flex: 1; overflow: hidden; }
+
+  .sidebar { background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+  .sidebar-section { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+  .sidebar-section label { display: block; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 8px; }
+  input[type="text"], select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 8px 10px; font-size: .85rem; outline: none; transition: border-color .2s; }
+  input[type="text"]:focus, select:focus { border-color: var(--accent); }
+  select { cursor: pointer; }
+  #agent-search { margin-bottom: 8px; }
+  #agent-list { flex: 1; overflow-y: auto; padding: 8px; }
+  #agent-list::-webkit-scrollbar { width: 4px; }
+  #agent-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .agent-item { padding: 9px 12px; border-radius: 8px; cursor: pointer; transition: background .15s; margin-bottom: 2px; }
+  .agent-item:hover { background: var(--surface2); }
+  .agent-item.selected { background: var(--accent); }
+  .agent-item .aname { font-size: .85rem; font-weight: 500; }
+  .agent-item .ameta { font-size: .72rem; color: var(--muted); margin-top: 1px; }
+  .agent-item.selected .ameta { color: rgba(255,255,255,.7); }
+
+  #agent-profile { padding: 14px 16px; border-bottom: 1px solid var(--border); display: none; font-size: .78rem; }
+  #agent-profile.visible { display: block; }
+  #agent-profile h3 { font-size: .9rem; margin-bottom: 10px; }
+  .prof-section { font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin: 12px 0 4px; }
+  .prof-section:first-of-type { margin-top: 0; }
+  .prof-row { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,.04); gap: 8px; }
+  .prof-row span:first-child { color: var(--muted); }
+  .prof-row span:last-child { font-weight: 500; text-align: right; max-width: 58%; }
+
+  /* ── Modo enfocado: se llega desde el panel con ?id= → solo la ficha ── */
+  body.focus #search-section { display: none; }
+  body.focus #agent-list { display: none; }
+  body.focus #agent-profile.visible { flex: 1; overflow-y: auto; border-bottom: none; }
+  body.focus #agent-profile::-webkit-scrollbar { width: 4px; }
+  body.focus #agent-profile::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .main { display: flex; flex-direction: column; overflow: hidden; }
+
+  #setup-bar { display: flex; gap: 10px; align-items: center; padding: 10px 16px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; flex-wrap: wrap; }
+  #setup-bar label { font-size: .78rem; color: var(--muted); white-space: nowrap; }
+  #avatar-select { max-width: 220px; }
+
+  .interview-area { display: grid; grid-template-columns: 1fr 380px; flex: 1; overflow: hidden; }
+
+  .video-panel { background: #000; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  #avatar-video { width: 100%; height: 100%; object-fit: cover; display: none; }
+  #avatar-video.active { display: block; }
+  #video-placeholder { text-align: center; color: var(--muted); }
+  #video-placeholder .icon { font-size: 3rem; margin-bottom: 12px; opacity: .4; }
+  #video-placeholder p { font-size: .85rem; }
+  #speaking-indicator { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.6); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 20px; padding: 6px 16px; font-size: .78rem; display: none; gap: 6px; align-items: center; }
+  #speaking-indicator.visible { display: flex; }
+  .speak-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: pulse 0.8s infinite; }
+  .speak-dot:nth-child(2) { animation-delay: .2s; }
+  .speak-dot:nth-child(3) { animation-delay: .4s; }
+
+  .chat-panel { background: var(--surface); border-left: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+  .chat-header { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); flex-shrink: 0; }
+  #transcript { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+  #transcript::-webkit-scrollbar { width: 4px; }
+  #transcript::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: .83rem; line-height: 1.5; animation: fadeIn .2s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
+  .msg.user { align-self: flex-end; background: var(--accent); border-bottom-right-radius: 4px; }
+  .msg.agent { align-self: flex-start; background: var(--surface2); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .msg .sender { font-size: .68rem; font-weight: 600; margin-bottom: 4px; opacity: .7; }
+  .msg.agent .sender { color: var(--accent2); }
+  .msg.user .sender { text-align: right; }
+  .msg.system-msg { align-self: center; background: transparent; border: 1px dashed var(--border); color: var(--muted); font-size: .75rem; text-align: center; max-width: 100%; }
+
+  .input-area { padding: 12px; border-top: 1px solid var(--border); display: flex; gap: 8px; flex-shrink: 0; }
+  #question-input { flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); padding: 9px 12px; font-size: .85rem; resize: none; height: 70px; outline: none; font-family: inherit; transition: border-color .2s; }
+  #question-input:focus { border-color: var(--accent); }
+  #question-input:disabled { opacity: .4; cursor: not-allowed; }
+  .input-btns { display: flex; flex-direction: column; gap: 6px; }
+
+  button { border: none; border-radius: 8px; cursor: pointer; font-family: inherit; font-weight: 600; font-size: .8rem; padding: 8px 14px; transition: opacity .15s, transform .1s; }
+  button:active { transform: scale(.97); }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+  #btn-send { background: var(--accent); color: #fff; flex: 1; }
+  #btn-connect { background: var(--accent2); color: #000; width: 100%; padding: 9px 18px; font-size: .82rem; }
+  #connect-bar { padding: 12px 16px; }
+  #btn-disconnect { background: var(--surface2); border: 1px solid var(--border); color: var(--text); width: 100%; font-size: .82rem; margin-top: 8px; display: none; }
+
+  .empty-hint { flex: 1; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .85rem; text-align: center; padding: 20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🎙 Pueblo Digital — Entrevistador</h1>
+    <div class="sub">Entrevista a agentes sintéticos del País Vasco · LiveAvatar</div>
+  </div>
+  <div id="status-dot"></div>
+  <span id="status-text">Desconectado</span>
+</header>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <div class="sidebar-section" id="search-section">
+      <label>Buscar agente</label>
+      <input type="text" id="agent-search" placeholder="Nombre, provincia, voto...">
+    </div>
+    <div class="sidebar-section" id="connect-bar" style="display:none">
+      <button id="btn-connect">🎙 Hablar con la Persona</button>
+      <button id="btn-disconnect">■ Desconectar</button>
+    </div>
+    <div id="agent-list"><div class="empty-hint">Cargando agentes…</div></div>
+    <div id="agent-profile">
+      <h3 id="profile-name">—</h3>
+      <div id="profile-rows"></div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div id="setup-bar">
+      <label>Avatar:</label>
+      <select id="avatar-select"><option value="">Cargando avatares…</option></select>
+      <label style="margin-left:4px">o ID manual:</label>
+      <input type="text" id="avatar-manual" placeholder="UUID del avatar" style="max-width:200px;width:200px">
+      <label style="margin-left:6px">Voz (ES):</label>
+      <select id="voice-select" style="max-width:200px"><option value="">Cargando voces…</option></select>
+    </div>
+
+    <div class="interview-area">
+      <div class="video-panel">
+        <video id="avatar-video" autoplay playsinline></video>
+        <div id="video-placeholder">
+          <div class="icon">🎭</div>
+          <p>Selecciona un agente y conecta el avatar<br>para comenzar la entrevista</p>
+        </div>
+        <div id="speaking-indicator">
+          <div class="speak-dot"></div><div class="speak-dot"></div><div class="speak-dot"></div>
+          <span id="speaking-name">—</span>
+        </div>
+      </div>
+
+      <div class="chat-panel">
+        <div class="chat-header">📝 Transcripción</div>
+        <div id="transcript"><div class="empty-hint">Aquí aparecerá la conversación</div></div>
+        <div class="input-area">
+          <textarea id="question-input" placeholder="Escribe tu pregunta al agente…" disabled></textarea>
+          <div class="input-btns">
+            <button id="btn-send" disabled>Enviar ↵</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let agents = [];
+let selectedAgent = null;
+let sessionToken  = null;   // JWT from /v1/sessions/token
+let sessionId     = null;   // UUID
+let livekitRoom   = null;   // LivekitClient.Room instance
+let chatHistory   = [];
+
+// ── DOM ───────────────────────────────────────────────────────────────────────
+const agentSearch   = document.getElementById('agent-search');
+const agentList     = document.getElementById('agent-list');
+const agentProfile  = document.getElementById('agent-profile');
+const profileName   = document.getElementById('profile-name');
+const profileRows   = document.getElementById('profile-rows');
+const transcript    = document.getElementById('transcript');
+const questionInput = document.getElementById('question-input');
+const btnSend       = document.getElementById('btn-send');
+const btnConnect    = document.getElementById('btn-connect');
+const btnDisconnect = document.getElementById('btn-disconnect');
+const avatarVideo   = document.getElementById('avatar-video');
+const videoPlaceholder = document.getElementById('video-placeholder');
+const statusDot     = document.getElementById('status-dot');
+const statusText    = document.getElementById('status-text');
+const speakingIndicator = document.getElementById('speaking-indicator');
+const speakingName  = document.getElementById('speaking-name');
+const avatarSelect  = document.getElementById('avatar-select');
+const avatarManual  = document.getElementById('avatar-manual');
+const voiceSelect   = document.getElementById('voice-select');
+
+// ── Load voices ───────────────────────────────────────────────────────────────
+async function loadVoices() {
+  try {
+    const r    = await fetch('/api/liveavatar/voices');
+    const data = await r.json();
+    const list = data.voices || [];
+    if (!list.length) {
+      voiceSelect.innerHTML = '<option value="">Sin voces ES disponibles</option>';
+      return;
+    }
+    // Ordenar: voces propias primero, luego por nombre
+    list.sort((a, b) => {
+      const pa = (a.provider || '').toLowerCase();
+      const pb = (b.provider || '').toLowerCase();
+      if (pa.includes('tuya') && !pb.includes('tuya')) return -1;
+      if (!pa.includes('tuya') && pb.includes('tuya')) return 1;
+      return (a.name || '').localeCompare(b.name || '');
+    });
+    voiceSelect.innerHTML =
+      '<option value="">— Voz por defecto —</option>' +
+      list.map(v => {
+        const prov = v.provider ? ` [${v.provider}]` : '';
+        const gen  = v.gender  ? ` · ${v.gender}`    : '';
+        return `<option value="${esc(v.voice_id)}">${esc(v.name)}${gen}${prov}</option>`;
+      }).join('');
+    console.log(`Voces ES cargadas: ${list.length}`);
+  } catch(e) {
+    voiceSelect.innerHTML = '<option value="">Error al cargar voces</option>';
+    console.error('loadVoices:', e);
+  }
+}
+
+// ── Load avatars / voice agents ───────────────────────────────────────────────
+// voiceAgentIds: set de IDs que son Voice Agents (no avatares públicos)
+const voiceAgentIds = new Set();
+
+async function loadAvatars() {
+  try {
+    // 1. Intentar Voice Agents del usuario
+    const rVA = await fetch('/api/liveavatar/myavatars');
+    const dVA = await rVA.json();
+    console.log('Voice Agents (raw):', JSON.stringify(dVA).slice(0, 500));
+
+    const vaList = (dVA?.data?.results || dVA?.data?.list || []);
+
+    if (vaList.length) {
+      vaList.forEach(va => voiceAgentIds.add(va.id));
+      avatarSelect.innerHTML =
+        '<optgroup label="Mis Voice Agents">' +
+        vaList.map(va => `<option value="${esc(va.id)}">${esc(va.name || 'Sin nombre')}</option>`).join('') +
+        '</optgroup>';
+      return;
+    }
+
+    // 2. Fallback: avatares públicos
+    const rPub = await fetch('/api/liveavatar/avatars');
+    const dPub = await rPub.json();
+    const pubList = (dPub?.data?.results || []).filter(av => av.status === 'ACTIVE');
+    if (!pubList.length) {
+      avatarSelect.innerHTML = '<option value="">Sin avatares — usa el campo ID manual</option>';
+      return;
+    }
+    avatarSelect.innerHTML =
+      '<optgroup label="Avatares públicos">' +
+      pubList.map(av => `<option value="${esc(av.id)}">${esc(av.name)}</option>`).join('') +
+      '</optgroup>';
+
+  } catch(e) {
+    avatarSelect.innerHTML = '<option value="">Error — usa ID manual</option>';
+    console.error('loadAvatars:', e);
+  }
+}
+
+function getAvatarId() {
+  return avatarManual.value.trim() || avatarSelect.value;
+}
+
+function isVoiceAgent(id) {
+  return voiceAgentIds.has(id) || avatarManual.value.trim() === '';
+}
+
+// ── Load agents ───────────────────────────────────────────────────────────────
+async function loadAgents() {
+  try {
+    const r = await fetch('/api/agentes');
+    agents = await r.json();
+    renderAgentList(agents);
+    // Preselección desde el panel: ?id=NN abre esa persona automáticamente
+    // y activa el "modo enfocado" (solo ficha · avatar · conversación).
+    const preId = parseInt(new URLSearchParams(location.search).get('id'));
+    if (!isNaN(preId)) {
+      document.body.classList.add('focus');
+      selectAgent(preId);
+    }
+  } catch(e) {
+    agentList.innerHTML = `<div class="empty-hint" style="color:var(--red)">Error: ${e.message}</div>`;
+  }
+}
+
+function renderAgentList(list) {
+  if (!list.length) { agentList.innerHTML = '<div class="empty-hint">Sin resultados</div>'; return; }
+  agentList.innerHTML = list.map(a => `
+    <div class="agent-item ${selectedAgent?.id === a.id ? 'selected' : ''}" data-id="${a.id}">
+      <div class="aname">${esc(a.nombre)}</div>
+      <div class="ameta">${a.edad} años · ${esc(a.provincia)} · ${esc(a.voto)}</div>
+    </div>`).join('');
+  agentList.querySelectorAll('.agent-item').forEach(el =>
+    el.addEventListener('click', () => selectAgent(parseInt(el.dataset.id)))
+  );
+}
+
+agentSearch.addEventListener('input', () => {
+  const q = agentSearch.value.toLowerCase();
+  renderAgentList(agents.filter(a =>
+    a.nombre.toLowerCase().includes(q) ||
+    a.provincia.toLowerCase().includes(q) ||
+    a.voto.toLowerCase().includes(q)
+  ));
+});
+
+// ── Select agent ──────────────────────────────────────────────────────────────
+async function selectAgent(id) {
+  try {
+    const r = await fetch(`/api/agentes/${id}`);
+    selectedAgent = await r.json();
+    renderProfile(selectedAgent);
+    agentProfile.classList.add('visible');
+    document.getElementById('connect-bar').style.display = 'block';
+    chatHistory = [];
+    transcript.innerHTML = `<div class="msg system-msg">Agente: <strong>${selectedAgent.nombre} ${selectedAgent.apellidos}</strong></div>`;
+    if (sessionId) { questionInput.disabled = false; btnSend.disabled = false; }
+    renderAgentList(agents);
+  } catch(e) { addSystemMsg('Error cargando agente: ' + e.message); }
+}
+
+function renderProfile(a) {
+  profileName.textContent = a.nombre + ' ' + a.apellidos;
+  speakingName.textContent = a.nombre;
+
+  const bien = a.perfil_bienestar || {};
+  const soc  = a.perfil_social || {};
+  const med  = a.perfil_mediatico || {};
+  const val  = v => (v === null || v === undefined || v === '') ? null : v;
+  const esc10 = v => val(v) === null ? null : v + '/10';
+
+  // [etiqueta, valor]. Los null se descartan (no todos los perfiles traen todo).
+  const sections = [
+    ['Perfil', [
+      ['Edad', a.edad + ' años' + (a.grupo_edad ? ' (' + a.grupo_edad + ')' : '')],
+      ['Género', val(a.genero)], ['Provincia', val(a.provincia)],
+      ['Estudios', val(a.nivel_estudios)], ['Situación laboral', val(a.situacion_laboral)],
+      ['Clase social', val(a.clase_social)], ['Euskera', val(a.euskera)],
+      ['Religión', val(a.religion)],
+    ]],
+    ['Política', [
+      ['Voto 2024', val(a.voto_autonomicas_2024)],
+      ['Ideología', esc10(a.ideologia_0_10)],
+      ['Nacionalismo', esc10(a.escala_nacionalismo_0_10)],
+      ['Identidad', val(a.identidad)],
+      ['Preferencia territorial', val(a.preferencia_territorial)],
+      ['Interés en política', val(a.interes_politica)],
+      ['Economía PV', val(a.valoracion_economia_pv)],
+      ['Política PV', val(a.valoracion_politica_pv)],
+    ]],
+    ['Bienestar', [
+      ['Felicidad', esc10(bien.felicidad_0_10)],
+      ['Satisfacción vital', esc10(bien.satisfaccion_vida_0_10)],
+      ['Salud', val(bien.salud_autopercibida)],
+      ['Contacto social', val(bien.contacto_social)],
+      ['Soledad', val(bien.sentimiento_soledad)],
+    ]],
+    ['Confianza y sociedad', [
+      ['Confianza general', esc10(soc.confianza_general_0_10)],
+      ['Confianza instituciones', esc10(soc.confianza_instituciones_0_10)],
+      ['Participación social', esc10(soc.participacion_social_0_10)],
+      ['Cohesión social', esc10(soc.cohesion_social_0_10)],
+      ['Seguridad percibida', esc10(soc.seguridad_0_10)],
+      ['Percepción corrupción', esc10(soc.percepcion_corrupcion_0_10)],
+    ]],
+    ['Medios', [
+      ['Noticias (min/día)', val(med.consumo_noticias_min_dia)],
+      ['Uso de internet', val(med.uso_internet)],
+      ['Confianza en políticos', esc10(med.confianza_politicos_0_10)],
+    ]],
+  ];
+
+  profileRows.innerHTML = sections.map(([title, rows]) => {
+    const body = rows.filter(([, v]) => v !== null && v !== undefined)
+      .map(([k, v]) => `<div class="prof-row"><span>${esc(k)}</span><span>${esc(String(v))}</span></div>`)
+      .join('');
+    return body ? `<div class="prof-section">${esc(title)}</div>${body}` : '';
+  }).join('');
+}
+
+// ── Status ────────────────────────────────────────────────────────────────────
+function setStatus(state, text) {
+  statusDot.className = state;
+  statusText.textContent = text;
+}
+
+// ── Connect avatar ─────────────────────────────────────────────────────────────
+btnConnect.addEventListener('click', connectAvatar);
+btnDisconnect.addEventListener('click', disconnectAvatar);
+
+async function connectAvatar() {
+  if (!selectedAgent) { addSystemMsg('Primero selecciona un agente.'); return; }
+  const avatarId = getAvatarId();
+  if (!avatarId) { addSystemMsg('Selecciona un avatar o pega su UUID en el campo "ID manual".'); return; }
+
+  setStatus('connecting', 'Conectando...');
+  btnConnect.disabled = true;
+  addSystemMsg('Iniciando sesión con LiveAvatar...');
+
+  try {
+    // ── Paso 1: crear session token ──────────────────────────────────────────
+    const usingVoiceAgent = voiceAgentIds.has(avatarId);
+    const tokenBody = usingVoiceAgent
+      ? { voice_agent_id: avatarId }
+      : { avatar_id: avatarId, voice_id: voiceSelect.value || undefined };
+
+    const tokenRes  = await fetch('/api/liveavatar/token', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(tokenBody)
+    });
+    const tokenData = await tokenRes.json();
+    if (!tokenData?.data?.session_token) {
+      const msg = tokenData?.detail || tokenData?.message || JSON.stringify(tokenData);
+      throw new Error('No se pudo crear el token de sesión: ' + msg);
+    }
+    sessionToken = tokenData.data.session_token;
+    sessionId    = tokenData.data.session_id;
+    addSystemMsg('Token creado. Iniciando sesión de avatar...');
+
+    // ── Paso 2: iniciar sesión → obtener LiveKit URL y token ─────────────────
+    const startRes  = await fetch('/api/liveavatar/session/start', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ session_token: sessionToken })
+    });
+    const startData = await startRes.json();
+    if (!startData?.data?.livekit_url) {
+      throw new Error('No se obtuvo LiveKit URL: ' + JSON.stringify(startData));
+    }
+    const { livekit_url, livekit_client_token } = startData.data;
+    addSystemMsg('Sesión iniciada. Conectando vídeo (LiveKit)...');
+
+    // ── Paso 3: conectar sala LiveKit ─────────────────────────────────────────
+    livekitRoom = new LivekitClient.Room({
+      adaptiveStream: true,
+      dynacast: true,
+    });
+
+    // Recibir pistas de vídeo y audio del avatar
+    livekitRoom.on(LivekitClient.RoomEvent.TrackSubscribed, (track, publication, participant) => {
+      if (track.kind === LivekitClient.Track.Kind.Video) {
+        track.attach(avatarVideo);
+        avatarVideo.classList.add('active');
+        videoPlaceholder.style.display = 'none';
+      } else if (track.kind === LivekitClient.Track.Kind.Audio) {
+        // track.attach() sin argumento crea un <audio> y lo añade al DOM
+        const audioEl = track.attach();
+        audioEl.autoplay = true;
+        document.body.appendChild(audioEl);
+      }
+    });
+
+    livekitRoom.on(LivekitClient.RoomEvent.TrackUnsubscribed, (track) => {
+      track.detach();
+    });
+
+    // Recibir eventos del avatar (transcripción, estado)
+    livekitRoom.on(LivekitClient.RoomEvent.DataReceived, (data, participant, kind, topic) => {
+      if (topic === 'agent-response') {
+        try {
+          const evt = JSON.parse(new TextDecoder().decode(data));
+          if (evt.event_type === 'avatar.speak_started') {
+            speakingIndicator.classList.add('visible');
+          } else if (evt.event_type === 'avatar.speak_ended') {
+            speakingIndicator.classList.remove('visible');
+          } else if (evt.event_type === 'avatar.transcription' && evt.text) {
+            console.log('Avatar dijo:', evt.text);
+          }
+        } catch(e) {}
+      }
+    });
+
+    livekitRoom.on(LivekitClient.RoomEvent.Disconnected, () => {
+      setStatus('', 'Desconectado');
+      addSystemMsg('Sesión terminada.');
+      resetUI();
+    });
+
+    await livekitRoom.connect(livekit_url, livekit_client_token);
+    setStatus('connected', 'Conectado');
+    btnConnect.style.display = 'none';
+    btnDisconnect.style.display = 'block';
+    btnConnect.disabled = false;
+    questionInput.disabled = false;
+    btnSend.disabled = false;
+
+    addSystemMsg(`Avatar listo. ${selectedAgent.nombre} está esperando tu pregunta.`);
+
+    // Saludo inicial
+    await speakText(`Hola, soy ${selectedAgent.nombre} ${selectedAgent.apellidos}. Puedes preguntarme lo que quieras.`);
+
+  } catch(e) {
+    setStatus('error', 'Error');
+    addSystemMsg('Error: ' + e.message);
+    btnConnect.disabled = false;
+    console.error(e);
+  }
+}
+
+async function disconnectAvatar() {
+  if (livekitRoom) { await livekitRoom.disconnect(); livekitRoom = null; }
+  if (sessionId && sessionToken) {
+    fetch('/api/liveavatar/session/stop', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ session_id: sessionId, session_token: sessionToken })
+    }).catch(() => {});
+  }
+  resetUI();
+  addSystemMsg('Sesión terminada.');
+}
+
+function resetUI() {
+  avatarVideo.srcObject = null;
+  avatarVideo.classList.remove('active');
+  videoPlaceholder.style.display = '';
+  sessionId = sessionToken = null;
+  setStatus('', 'Desconectado');
+  speakingIndicator.classList.remove('visible');
+  questionInput.disabled = true;
+  btnSend.disabled = true;
+  btnConnect.style.display = 'block';
+  btnDisconnect.style.display = 'none';
+}
+
+// ── Speak text via LiveKit ─────────────────────────────────────────────────────
+async function speakText(text) {
+  if (!livekitRoom || !sessionId) return;
+  const payload = {
+    event_id:   crypto.randomUUID(),
+    event_type: 'avatar.speak_text',
+    session_id: sessionId,
+    text:       text,
+  };
+  await livekitRoom.localParticipant.publishData(
+    new TextEncoder().encode(JSON.stringify(payload)),
+    { topic: 'agent-control', reliable: true }
+  );
+  speakingIndicator.classList.add('visible');
+}
+
+// ── Send question ─────────────────────────────────────────────────────────────
+async function sendQuestion() {
+  const question = questionInput.value.trim();
+  if (!question || !selectedAgent) return;
+  questionInput.value = '';
+  questionInput.disabled = true;
+  btnSend.disabled = true;
+
+  addMsg('user', 'Entrevistador', question);
+  chatHistory.push({ role: 'user', content: question });
+
+  const thinking = addMsg('agent', selectedAgent.nombre, '…');
+  try {
+    const r = await fetch('/api/chat', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ agentId: selectedAgent.id, messages: chatHistory })
+    });
+    const data = await r.json();
+    if (data.error) throw new Error(data.error);
+    const reply = data.text;
+    thinking.querySelector('.content').textContent = reply;
+    chatHistory.push({ role: 'assistant', content: reply });
+    if (sessionId) await speakText(reply);
+  } catch(e) {
+    thinking.querySelector('.content').textContent = '[Error: ' + e.message + ']';
+  }
+  questionInput.disabled = false;
+  btnSend.disabled = false;
+  questionInput.focus();
+  transcript.scrollTop = transcript.scrollHeight;
+}
+
+btnSend.addEventListener('click', sendQuestion);
+questionInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQuestion(); }
+});
+
+// ── UI helpers ────────────────────────────────────────────────────────────────
+function addMsg(type, sender, text) {
+  document.querySelector('#transcript .empty-hint')?.remove();
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  div.innerHTML = `<div class="sender">${esc(sender)}</div><div class="content">${esc(text)}</div>`;
+  transcript.appendChild(div);
+  transcript.scrollTop = transcript.scrollHeight;
+  return div;
+}
+function addSystemMsg(text) {
+  document.querySelector('#transcript .empty-hint')?.remove();
+  const div = document.createElement('div');
+  div.className = 'msg system-msg';
+  div.textContent = text;
+  transcript.appendChild(div);
+  transcript.scrollTop = transcript.scrollHeight;
+}
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+loadAvatars();
+loadVoices();
+loadAgents();
+</script>
+</body>
+</html>

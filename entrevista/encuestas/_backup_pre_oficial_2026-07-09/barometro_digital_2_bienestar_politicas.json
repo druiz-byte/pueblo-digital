@@ -1,0 +1,493 @@
+{
+ "titulo": "Barómetro digital — Bloque 2: Estado de bienestar y políticas públicas",
+ "fuente": "Informe Deustobarómetro social XXIV, verano 2026 (campo: 3-10 junio 2026, n=1.000)",
+ "muestra": null,
+ "preguntas": [
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): El transporte público",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 6.5
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La educación en las universidades públicas",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 6.0
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Los programas de Investigación y Desarrollo (I+D)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.7
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Las carreteras",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.7
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La educación en escuelas, colegios e institutos públicos",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.6
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La protección del medio ambiente",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.4
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Las políticas para reducir la desigualdad entre mujeres y hombres",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.3
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Los servicios sociales (ayuda a personas dependientes, a personas mayores…)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.3
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La atención sanitaria (Osakidetza)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.2
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Las pensiones",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.2
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La política turística",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.0
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La política lingüística",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 5.0
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La seguridad ciudadana",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 4.9
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): El servicio de empleo (Lanbide)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 4.9
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): La Administración de Justicia",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 4.3
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración): Las políticas de vivienda",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "media_real": 3.6
+   },
+   "nota": "El informe solo publica la media (comparar medias, no distribución)."
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Asistencia sanitaria",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 59.3,
+    "Sólo los inmigrantes regularizados (con papeles)": 35.7,
+    "Ninguno": 4.9
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Acceso a la educación",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 53.1,
+    "Sólo los inmigrantes regularizados (con papeles)": 41.6,
+    "Ninguno": 5.3
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Ayudas sociales",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 30.7,
+    "Sólo los inmigrantes regularizados (con papeles)": 55.3,
+    "Ninguno": 14.0
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Abrir centros de culto (religiosos)",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 28.9,
+    "Sólo los inmigrantes regularizados (con papeles)": 37.5,
+    "Ninguno": 33.6
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Traer a la familia más cercana",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 23.6,
+    "Sólo los inmigrantes regularizados (con papeles)": 60.8,
+    "Ninguno": 15.7
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Vivienda de protección oficial",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 20.0,
+    "Sólo los inmigrantes regularizados (con papeles)": 63.2,
+    "Ninguno": 16.8
+   }
+  },
+  {
+   "texto": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?: Derecho al voto",
+   "opciones": [
+    "Todos los inmigrantes (regularizados o no)",
+    "Sólo los inmigrantes regularizados (con papeles)",
+    "Ninguno"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Todos los inmigrantes (regularizados o no)": 13.5,
+    "Sólo los inmigrantes regularizados (con papeles)": 68.5,
+    "Ninguno": 18.0
+   }
+  },
+  {
+   "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 19.4,
+    "Bastante de acuerdo": 33.1,
+    "Poco de acuerdo": 22.1,
+    "Nada de acuerdo": 18.6,
+    "NS/NC": 6.8
+   }
+  },
+  {
+   "texto": "¿Crees que dentro de 10 años será más fácil acceder a una vivienda?",
+   "opciones": [
+    "Seguro que sí",
+    "Probablemente sí",
+    "Probablemente no",
+    "Seguro que no",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Seguro que sí": 3.8,
+    "Probablemente sí": 15.0,
+    "Probablemente no": 38.1,
+    "Seguro que no": 33.0,
+    "NS/NC": 10.1
+   }
+  }
+ ]
+}

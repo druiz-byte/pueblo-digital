@@ -1,0 +1,358 @@
+{
+ "fecha": "2026-07-09 17:13:57",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "texto": "Independientemente del partido al que votes o al que te sientas más próximo/a, ¿cuál de los siguientes líderes políticos crees que sería mejor lehendakari?",
+   "opciones": [
+    "Imanol Pradales",
+    "Pello Otxandiano",
+    "Eneko Andueza",
+    "Amaia Martínez",
+    "Javier de Andrés",
+    "Jon Hernández",
+    "No sé / No contesto"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "De las siguientes cualidades, ¿cuál crees que define mejor al actual Gobierno Vasco? Marca solo una.",
+   "opciones": [
+    "Capacidad",
+    "Cercanía",
+    "Iniciativa",
+    "Honestidad",
+    "Diagnóstico acertado de los problemas",
+    "Rapidez de respuesta",
+    "No sé / No contesto"
+   ],
+   "multiple": 1
+  }
+ ],
+ "total": 20,
+ "done": 20,
+ "results": [
+  {
+   "id": 653,
+   "nombre": "Antonio Izagirre López",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 62,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C"
+   }
+  },
+  {
+   "id": 972,
+   "nombre": "María Jiménez Beristain",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 29,
+   "voto": "Vox",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 171,
+   "nombre": "Patricia Sánchez Torres",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 39,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C"
+   }
+  },
+  {
+   "id": 386,
+   "nombre": "Ana Álvarez Bilbao",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 56,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 338,
+   "nombre": "Amaia Arrizabalaga Mendieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 574,
+   "nombre": "Iker Hernández Moreno",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 26,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 820,
+   "nombre": "Amaia Sánchez Jiménez",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 26,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "G",
+    "1": "C"
+   }
+  },
+  {
+   "id": 463,
+   "nombre": "Mikel Bilbao Gaztañaga",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "PP",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 432,
+   "nombre": "Joseba Torres Zubieta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 68,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 419,
+   "nombre": "Ander Muñoz González",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 53,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 56,
+   "nombre": "Miguel Uriarte Arrieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 35,
+   "voto": "Vox",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "E",
+    "1": "G"
+   }
+  },
+  {
+   "id": 713,
+   "nombre": "Laura Romero Muñoz",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 58,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 485,
+   "nombre": "Unai Rodríguez Muñoz",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 50,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 514,
+   "nombre": "Laura Alkorta Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 52,
+   "voto": "Voté en blanco",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 366,
+   "nombre": "Fernando Landa Sánchez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "Prefiero no contestar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 692,
+   "nombre": "Oier Sánchez Ramírez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 46,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 159,
+   "nombre": "Lucia Beristain Ramírez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 65,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 279,
+   "nombre": "Uxue Beristain Torres",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "Prefiero no contestar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 751,
+   "nombre": "Haizea Bilbao Alkorta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 39,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  },
+  {
+   "id": 389,
+   "nombre": "María Ormaetxea Ruiz",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "G",
+    "1": "G"
+   }
+  }
+ ],
+ "plantilla": "extra_lideres_gobierno_2026-07-09.json",
+ "titulo": "Barómetro digital — Extra: liderazgo y valoración del Gobierno Vasco"
+}

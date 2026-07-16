@@ -1,0 +1,135 @@
+{
+ "titulo": "Barómetro digital — Bloque 3: Los miedos de la era de la inseguridad",
+ "fuente": "Informe Deustobarómetro social XXIV, verano 2026 (campo: 3-10 junio 2026, n=1.000)",
+ "muestra": null,
+ "preguntas": [
+  {
+   "texto": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan.",
+   "opciones": [
+    "Conflictos internacionales / guerras",
+    "Subida brusca de los precios",
+    "El avance de las ideas antidemocráticas",
+    "Inseguridad ciudadana",
+    "Cambio climático",
+    "Pandemias / crisis sanitarias",
+    "Precariedad laboral",
+    "Migración",
+    "Desempleo",
+    "Terrorismo",
+    "Crisis energética",
+    "Desarrollos tecnológicos (Inteligencia artificial)",
+    "Ciberataques",
+    "Desabastecimiento de algún producto básico",
+    "Ninguno en particular"
+   ],
+   "multiple": 3,
+   "datos_reales": {
+    "Conflictos internacionales / guerras": 45.0,
+    "Subida brusca de los precios": 36.4,
+    "El avance de las ideas antidemocráticas": 33.1,
+    "Inseguridad ciudadana": 32.8,
+    "Cambio climático": 26.8,
+    "Pandemias / crisis sanitarias": 23.8,
+    "Precariedad laboral": 21.0,
+    "Migración": 18.4,
+    "Desempleo": 17.5,
+    "Terrorismo": 9.5,
+    "Crisis energética": 9.0,
+    "Desarrollos tecnológicos (Inteligencia artificial)": 8.8,
+    "Ciberataques": 6.7,
+    "Desabastecimiento de algún producto básico": 5.2,
+    "Ninguno en particular": 2.0
+   }
+  },
+  {
+   "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Cedería parte de mis libertades a cambio de mayor garantía de mi seguridad\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 5.6,
+    "Bastante de acuerdo": 21.6,
+    "Poco de acuerdo": 35.5,
+    "Nada de acuerdo": 29.4,
+    "NS/NC": 8.0
+   }
+  },
+  {
+   "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"El miedo a la delincuencia justifica un mayor control estatal sobre la población\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 10.0,
+    "Bastante de acuerdo": 31.7,
+    "Poco de acuerdo": 30.6,
+    "Nada de acuerdo": 21.2,
+    "NS/NC": 6.5
+   }
+  },
+  {
+   "texto": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "Nunca he tenido miedo a viajar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mucho": 3.0,
+    "Bastante": 17.9,
+    "Poco": 37.6,
+    "Nada": 28.0,
+    "Nunca he tenido miedo a viajar": 13.5
+   }
+  },
+  {
+   "texto": "¿Has descartado o modificado un viaje en los últimos dos años?",
+   "opciones": [
+    "Sí",
+    "No"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Sí": 27.0,
+    "No": 73.0
+   }
+  },
+  {
+   "texto": "Si has descartado o modificado un viaje en los últimos dos años, ¿cuál fue la principal razón? (Si no lo has hecho, elige la opción A)",
+   "opciones": [
+    "No he descartado ni modificado ningún viaje",
+    "Precio elevado",
+    "Inseguridad",
+    "Guerras",
+    "Conflicto político",
+    "Motivos laborales",
+    "Crisis sanitaria",
+    "Otro"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Precio elevado": 37.6,
+    "Inseguridad": 19.0,
+    "Guerras": 14.6,
+    "Conflicto político": 11.0,
+    "Motivos laborales": 6.4,
+    "Crisis sanitaria": 3.3,
+    "Otro": 8.2
+   },
+   "nota": "Datos reales sobre base de quienes descartaron/modificaron un viaje (27%): para el contraste, recalcular % del panel excluyendo la opción A."
+  }
+ ]
+}

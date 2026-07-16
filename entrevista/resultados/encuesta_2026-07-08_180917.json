@@ -1,0 +1,371 @@
+{
+ "fecha": "2026-07-08 18:09:17",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "texto": "¿En qué medida crees que el aumento de turistas afecta a la pérdida de la tradición e identidad de Euskadi?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mucho": 9.9,
+    "Bastante": 25.6,
+    "Poco": 41.2,
+    "Nada": 17.0,
+    "NS/NC": 6.2
+   }
+  },
+  {
+   "texto": "¿Crees que el turismo tiene alguno de los siguientes efectos en el acceso a la vivienda de la población local en tu municipio? Indica todas las opciones que consideres.",
+   "opciones": [
+    "Se incrementa el precio del alquiler residencial al competir con el alquiler vacacional",
+    "Disminuye la oferta de viviendas en venta",
+    "La calidad de vida de los barrios disminuye gravemente",
+    "Mejora la calidad de vida al mejorar las infraestructuras y oferta de ocio",
+    "Aumenta la construcción de vivienda, tanto para residentes como para inversores",
+    "Ninguna de las anteriores"
+   ],
+   "multiple": 5,
+   "hasta": true,
+   "datos_reales": {
+    "Se incrementa el precio del alquiler residencial al competir con el alquiler vacacional": 64.4,
+    "Disminuye la oferta de viviendas en venta": 39.4,
+    "La calidad de vida de los barrios disminuye gravemente": 27.1,
+    "Mejora la calidad de vida al mejorar las infraestructuras y oferta de ocio": 11.5,
+    "Aumenta la construcción de vivienda, tanto para residentes como para inversores": 11.0,
+    "Ninguna de las anteriores": 14.1
+   }
+  }
+ ],
+ "total": 20,
+ "done": 20,
+ "results": [
+  {
+   "id": 281,
+   "nombre": "Unai Martínez Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 45,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 741,
+   "nombre": "Izaskun Ibarra Romero",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 53,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 245,
+   "nombre": "Haizea Jiménez Urrutia",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 68,
+   "nombre": "Naia Izagirre Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 75,
+   "voto": "No lo recuerdo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 255,
+   "nombre": "Jon Alkorta Zubieta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 59,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 665,
+   "nombre": "Xabier Zubieta Iturriaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 27,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 861,
+   "nombre": "Txema Landa González",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 53,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 220,
+   "nombre": "Javier Landa Ramírez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 52,
+   "voto": "Voté en blanco",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 127,
+   "nombre": "Olatz Arrizabalaga Moreno",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 43,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 188,
+   "nombre": "Unai Bilbao Moreno",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "Prefiero no contestar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 228,
+   "nombre": "Lorea Ruiz Zubizarreta",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 24,
+   "voto": "Sumar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 669,
+   "nombre": "Ibon Fernández Lazkano",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "PNV/ EAJ",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 806,
+   "nombre": "Itziar Ruiz Etxebarria",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 60,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 467,
+   "nombre": "Aitor Ruiz Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 33,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 169,
+   "nombre": "Mikel Mendieta Muñoz",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 80,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 787,
+   "nombre": "José Fernández Uriarte",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 48,
+   "voto": "Otros",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Doctorado",
+   "resps": {
+    "0": "B",
+    "1": "A,B,C"
+   }
+  },
+  {
+   "id": 58,
+   "nombre": "Sergio Torres Lazkano",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 47,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 944,
+   "nombre": "David Beristain Bilbao",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 658,
+   "nombre": "Ibon Alkorta Rodríguez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 51,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  },
+  {
+   "id": 389,
+   "nombre": "María Ormaetxea Ruiz",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "A,C"
+   }
+  }
+ ],
+ "plantilla": "barometro_digital_4_turismo.json",
+ "titulo": "Barómetro digital — Bloque 4: El impacto social del turismo"
+}

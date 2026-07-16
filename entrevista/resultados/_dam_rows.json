@@ -1,0 +1,989 @@
+[
+{
+"bloque": "B1 Economía",
+"pid": "P1",
+"enunciado": "En estos momentos, ¿cuáles crees que son los tres principales problemas de la Comunidad Autónoma del País Vasco? Señala hasta un máximo de tres.",
+"item": "",
+"dam": 4.8
+},
+{
+"bloque": "B1 Economía",
+"pid": "P2",
+"enunciado": "¿Cómo calificarías la situación económica del País Vasco?",
+"item": "",
+"dam": 0.7
+},
+{
+"bloque": "B1 Economía",
+"pid": "P3",
+"enunciado": "Y dentro de un año, ¿cómo crees que será la situación económica del País Vasco?",
+"item": "",
+"dam": 22.7
+},
+{
+"bloque": "B1 Economía",
+"pid": "P4",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Reducir los gastos en ocio",
+"dam": 15.1
+},
+{
+"bloque": "B1 Economía",
+"pid": "P5",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Renunciar a irme de vacaciones este verano",
+"dam": 9.9
+},
+{
+"bloque": "B1 Economía",
+"pid": "P6",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Reducir el consumo de carne o pescado",
+"dam": 18.3
+},
+{
+"bloque": "B1 Economía",
+"pid": "P7",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Reducir los gastos en alimentación",
+"dam": 7.1
+},
+{
+"bloque": "B1 Economía",
+"pid": "P8",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "No comprar ropa o calzado que realmente necesito",
+"dam": 5.4
+},
+{
+"bloque": "B1 Economía",
+"pid": "P9",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Dejar de ir al dentista",
+"dam": 8.9
+},
+{
+"bloque": "B1 Economía",
+"pid": "P10",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Renunciar a independizarme, teniendo que permanecer en la casa de mis familiares",
+"dam": 9.2
+},
+{
+"bloque": "B1 Economía",
+"pid": "P11",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Volver a vivir en casa de mis familiares",
+"dam": 10.5
+},
+{
+"bloque": "B1 Economía",
+"pid": "P12",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Pedir ayuda económica a amigos/as, vecinos/as o familiares",
+"dam": 5.3
+},
+{
+"bloque": "B1 Economía",
+"pid": "P13",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Retrasar algún pago",
+"dam": 4.7
+},
+{
+"bloque": "B1 Economía",
+"pid": "P14",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "No comprar alguna medicina o dejar de seguir un tratamiento médico",
+"dam": 3.9
+},
+{
+"bloque": "B1 Economía",
+"pid": "P15",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Pedir ropa",
+"dam": 6.5
+},
+{
+"bloque": "B1 Economía",
+"pid": "P16",
+"enunciado": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer la siguiente acción",
+"item": "Pedir alimentos",
+"dam": 4.0
+},
+{
+"bloque": "B1 Economía",
+"pid": "P17",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Preocupación",
+"dam": 11.8
+},
+{
+"bloque": "B1 Economía",
+"pid": "P18",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Insomnio o mal sueño",
+"dam": 18.0
+},
+{
+"bloque": "B1 Economía",
+"pid": "P19",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Rabia / Enfado",
+"dam": 15.3
+},
+{
+"bloque": "B1 Economía",
+"pid": "P20",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Ansiedad",
+"dam": 18.8
+},
+{
+"bloque": "B1 Economía",
+"pid": "P21",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Tristeza",
+"dam": 14.1
+},
+{
+"bloque": "B1 Economía",
+"pid": "P22",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Soledad",
+"dam": 13.6
+},
+{
+"bloque": "B1 Economía",
+"pid": "P23",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Miedo",
+"dam": 22.0
+},
+{
+"bloque": "B1 Economía",
+"pid": "P24",
+"enunciado": "¿Con qué frecuencia has pasado por el siguiente estado de ánimo durante la última semana?",
+"item": "Odio",
+"dam": 11.9
+},
+{
+"bloque": "B1 Economía",
+"pid": "P25",
+"enunciado": "¿Crees que es probable que en los próximos seis meses pierdas tu actual empleo?",
+"item": "",
+"dam": 7.6
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P1",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "El transporte público",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P2",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La educación en las universidades públicas",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P3",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Los programas de Investigación y Desarrollo",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P4",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Las carreteras",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P5",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La educación en escuelas, colegios e institutos públicos",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P6",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La protección del medio ambiente",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P7",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Las políticas para reducir la desigualdad entre mujeres y hombres",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P8",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Los servicios sociales",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P9",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La atención sanitaria (Osakidetza)",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P10",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Las pensiones",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P11",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La política turística",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P12",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La política lingüística",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P13",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La seguridad ciudadana",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P14",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "El servicio de empleo (Lanbide)",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P15",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "La Administración de Justicia",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P16",
+"enunciado": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "Las políticas de vivienda",
+"dam": null
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P17",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Asistencia sanitaria",
+"dam": 7.7
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P18",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Acceso a la educación",
+"dam": 28.0
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P19",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Ayudas sociales",
+"dam": 22.8
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P20",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Abrir centros de culto (religiosos)",
+"dam": 30.1
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P21",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Traer a la familia más cercana",
+"dam": 17.0
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P22",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Vivienda de protección oficial",
+"dam": 15.4
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P23",
+"enunciado": "¿Crees que los inmigrantes que viven en el País Vasco deberían tener los mismos derechos y las mismas posibilidades que el resto de las personas en lo relativo a…?",
+"item": "Derecho al voto",
+"dam": 16.4
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P24",
+"enunciado": "¿En qué medida estás de acuerdo con la siguiente frase?",
+"item": "\"Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos",
+"dam": 12.5
+},
+{
+"bloque": "B2 Bienestar y políticas",
+"pid": "P25",
+"enunciado": "¿Crees que dentro de 10 años será más fácil acceder a una vivienda?",
+"item": "",
+"dam": 11.5
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P1",
+"enunciado": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan.",
+"item": "",
+"dam": 29.7
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P2",
+"enunciado": "¿En qué medida estás de acuerdo con la siguiente frase?",
+"item": "\"Cedería parte de mis libertades a cambio de mayor garantía de mi seguridad\"",
+"dam": 17.5
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P3",
+"enunciado": "¿En qué medida estás de acuerdo con la siguiente frase?",
+"item": "\"El miedo a la delincuencia justifica un mayor control estatal sobre la población\"",
+"dam": 28.4
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P4",
+"enunciado": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+"item": "",
+"dam": 2.9
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P5",
+"enunciado": "¿Has descartado o modificado un viaje en los últimos dos años?",
+"item": "",
+"dam": 26.3
+},
+{
+"bloque": "B3 Miedos",
+"pid": "P6",
+"enunciado": "Si has descartado o modificado un viaje en los últimos dos años, ¿cuál fue la principal razón? (Si no lo has hecho, elige la opción A)",
+"item": "",
+"dam": 12.7
+},
+{
+"bloque": "B4 Turismo",
+"pid": "P1",
+"enunciado": "¿En qué medida crees que el aumento de turistas afecta a la pérdida de la tradición e identidad de Euskadi?",
+"item": "",
+"dam": 29.3
+},
+{
+"bloque": "B4 Turismo",
+"pid": "P2",
+"enunciado": "¿Crees que el turismo tiene alguno de los siguientes efectos en el acceso a la vivienda de la población local en tu municipio? Indica todas las opciones que consideres.",
+"item": "",
+"dam": 23.6
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P1",
+"enunciado": "¿Cómo calificarías la situación política general del País Vasco?",
+"item": "",
+"dam": 0.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P2",
+"enunciado": "¿Y cómo crees que será la situación política del País Vasco dentro de un año?",
+"item": "",
+"dam": 12.6
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P3",
+"enunciado": "Si tuvieras que valorar con una nota de 0 a 10 la calidad de la democracia en el País Vasco, ¿qué nota le pondrías? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "",
+"dam": 7.3
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P4",
+"enunciado": "Si tuvieras que valorar con una nota de 0 a 10 la calidad de la democracia en España, ¿qué nota le pondrías? Escala de 0 (muy mala valoración) a 10 (muy buena valoración)",
+"item": "",
+"dam": 9.2
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P5",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "La Universidad",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P6",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Las pequeñas empresas",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P7",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Osakidetza",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P8",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "La Ertzaintza",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P9",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Los Ayuntamientos",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P10",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "El Gobierno Vasco",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P11",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "EITB",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P12",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Las Diputaciones",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P13",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Las ONG",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P14",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "El Parlamento Europeo",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P15",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Los medios de comunicación",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P16",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Los sindicatos",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P17",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "El Tribunal Constitucional",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P18",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Los tribunales de justicia",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P19",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "El Gobierno Central",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P20",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Las grandes empresas (IBEX 35)",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P21",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Las organizaciones empresariales",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P22",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "La Iglesia Católica",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P23",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "Los partidos políticos",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P24",
+"enunciado": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Escala de 0 (no confío nada) a 10 (confío plenamente)",
+"item": "La Monarquía",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P25",
+"enunciado": "Hay distintas formas de organización territorial. En estos momentos, ¿cuál de las siguientes alternativas prefieres para el País Vasco con respecto al Estado español?",
+"item": "",
+"dam": 1.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P26",
+"enunciado": "¿En qué medida consideras necesario un nuevo estatuto para el País Vasco?",
+"item": "",
+"dam": 13.3
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P27",
+"enunciado": "¿Cuál de las siguientes medidas te gustaría que fueran incluidas en el nuevo estatuto? Indica todas las opciones que consideres.",
+"item": "",
+"dam": 20.3
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P28",
+"enunciado": "Indica tu grado de acuerdo con la siguiente afirmación",
+"item": "\"Me siento libre de expresar mis opiniones políticas en cualquier situación\"",
+"dam": 16.0
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P29",
+"enunciado": "¿A cuál de los siguientes partidos no votarías nunca? Marca todas las necesarias.",
+"item": "",
+"dam": 18.0
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P30",
+"enunciado": "¿Qué partido es el que está más capacitado para mejorar el acceso a la vivienda?",
+"item": "mejorar el acceso a la vivienda",
+"dam": 10.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P31",
+"enunciado": "¿Qué partido es el que está más capacitado para mejorar la atención de Osakidetza?",
+"item": "mejorar la atención de Osakidetza",
+"dam": 10.7
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P32",
+"enunciado": "¿Qué partido es el que está más capacitado para mejorar la educación pública?",
+"item": "mejorar la educación pública",
+"dam": 10.5
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P33",
+"enunciado": "¿Qué partido es el que está más capacitado para gestionar la inmigración?",
+"item": "gestionar la inmigración",
+"dam": 15.9
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P34",
+"enunciado": "¿Qué partido es el que está más capacitado para gestionar la política lingüística?",
+"item": "gestionar la política lingüística",
+"dam": 12.1
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P35",
+"enunciado": "¿Qué partido es el que está más capacitado para incrementar la seguridad?",
+"item": "incrementar la seguridad",
+"dam": 18.2
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P36",
+"enunciado": "¿Qué partido es el que está más capacitado para defender la industria vasca?",
+"item": "defender la industria vasca",
+"dam": 11.7
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P37",
+"enunciado": "¿Qué partido es el que está más capacitado para crear empleo de calidad?",
+"item": "crear empleo de calidad",
+"dam": 13.6
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P38",
+"enunciado": "¿Qué partido es el que está más capacitado para proteger a los más vulnerables?",
+"item": "proteger a los más vulnerables",
+"dam": 15.2
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P39",
+"enunciado": "Indica tu grado de acuerdo con la siguiente frase",
+"item": "\"Hay una ofensiva judicial contra el euskera\"",
+"dam": 7.2
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P40",
+"enunciado": "Indica tu grado de acuerdo con la siguiente frase",
+"item": "\"Es necesario modificar la ley de empleo público para proteger el actual modelo lingüístico\"",
+"dam": 8.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P41",
+"enunciado": "Indica tu grado de acuerdo con la siguiente frase",
+"item": "\"Hay que avanzar hacia la universalización del euskera en la administración pública\"",
+"dam": 10.1
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P42",
+"enunciado": "Indica tu grado de acuerdo con la siguiente frase",
+"item": "\"Habría que igualar el castellano y el euskera de forma flexible y progresiva teniendo en cuenta la situación sociolingüística de cada lugar\"",
+"dam": 17.0
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P43",
+"enunciado": "¿Cuál de las siguientes afirmaciones sobre los requisitos lingüísticos del empleo público coincide más con tu punto de vista?",
+"item": "",
+"dam": 29.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P44",
+"enunciado": "En relación con el sentimiento nacionalista vasco, ¿dónde te colocarías en una escala de 0 (mínimo nacionalismo vasco) a 10 (máximo nacionalismo vasco)?",
+"item": "Tú (población)",
+"dam": 1.4
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P45",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "PNV/EAJ",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P46",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "EH Bildu",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P47",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "PSE-EE (PSOE)",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P48",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "Elkarrekin Podemos",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P49",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "Sumar",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P50",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "PP",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P51",
+"enunciado": "En la misma escala de sentimiento nacionalista vasco de 0 (mínimo) a 10 (máximo), ¿dónde colocarías a este partido?",
+"item": "Vox",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P52",
+"enunciado": "Cuando se habla de política se utilizan normalmente las expresiones \"izquierda\" y \"derecha\". ¿Dónde te colocas en una escala de 0 (extrema izquierda) a 10 (extrema derecha)?",
+"item": "Tú (población)",
+"dam": 5.5
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P53",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "EH Bildu",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P54",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "Elkarrekin Podemos",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P55",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "Sumar",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P56",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "PSE-EE (PSOE)",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P57",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "PNV/EAJ",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P58",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "PP",
+"dam": null
+},
+{
+"bloque": "B5 Política y democracia",
+"pid": "P59",
+"enunciado": "En la misma escala ideológica de 0 (extrema izquierda) a 10 (extrema derecha), ¿dónde colocarías a este partido o coalición?",
+"item": "Vox",
+"dam": null
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P1",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Francia?",
+"item": "Francia",
+"dam": 36.8
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P2",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Palestina?",
+"item": "Palestina",
+"dam": 6.5
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P3",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Ucrania?",
+"item": "Ucrania",
+"dam": 12.6
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P4",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Italia?",
+"item": "Italia",
+"dam": 31.8
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P5",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a México?",
+"item": "México",
+"dam": 21.7
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P6",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Reino Unido?",
+"item": "Reino Unido",
+"dam": 17.3
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P7",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Argentina?",
+"item": "Argentina",
+"dam": 24.4
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P8",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a China?",
+"item": "China",
+"dam": 56.9
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P9",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Hungría?",
+"item": "Hungría",
+"dam": 21.6
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P10",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Irán?",
+"item": "Irán",
+"dam": 46.4
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P11",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Estados Unidos?",
+"item": "Estados Unidos",
+"dam": 22.7
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P12",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Rusia?",
+"item": "Rusia",
+"dam": 36.8
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P13",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Corea del Norte?",
+"item": "Corea del Norte",
+"dam": 42.3
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P14",
+"enunciado": "Si hoy tuvieras que señalar a los aliados y los enemigos de Euskadi, ¿dónde ubicarías a Israel?",
+"item": "Israel",
+"dam": 10.2
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P15",
+"enunciado": "¿Cómo crees que la guerra en Oriente Medio (entre EEUU, Israel, Líbano e Irán) puede afectar a la economía española?",
+"item": "la economía española",
+"dam": 14.1
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P16",
+"enunciado": "¿Cómo crees que la guerra en Oriente Medio (entre EEUU, Israel, Líbano e Irán) puede afectar a la economía europea?",
+"item": "la economía europea",
+"dam": 14.0
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P17",
+"enunciado": "¿Cómo crees que la guerra en Oriente Medio (entre EEUU, Israel, Líbano e Irán) puede afectar a la economía vasca?",
+"item": "la economía vasca",
+"dam": 3.3
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P18",
+"enunciado": "¿Cómo crees que la guerra en Oriente Medio (entre EEUU, Israel, Líbano e Irán) puede afectar a la economía de tu hogar?",
+"item": "la economía de tu hogar",
+"dam": 14.6
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P19",
+"enunciado": "¿Crees que las medidas que ha tomado o que puede tomar Donald Trump tienen o podrían tener un impacto personal negativo en los precios de la energía que consumes?",
+"item": "los precios de la energía que consumes",
+"dam": 30.4
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P20",
+"enunciado": "¿Crees que las medidas que ha tomado o que puede tomar Donald Trump tienen o podrían tener un impacto personal negativo en tu cesta de la compra?",
+"item": "tu cesta de la compra",
+"dam": 29.8
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P21",
+"enunciado": "¿Crees que las medidas que ha tomado o que puede tomar Donald Trump tienen o podrían tener un impacto personal negativo en tu espacio laboral?",
+"item": "tu espacio laboral",
+"dam": 16.1
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P22",
+"enunciado": "¿Cuáles crees que son las principales amenazas que tenemos como país europeo? Señala las dos más importantes para ti.",
+"item": "",
+"dam": 37.5
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P23",
+"enunciado": "¿Qué papel crees que deben tener las potencias mundiales en conflictos internacionales? Marca todas las que consideres.",
+"item": "",
+"dam": 32.1
+},
+{
+"bloque": "B6 Geopolítica",
+"pid": "P24",
+"enunciado": "¿Cuáles de las siguientes medidas crees que se deberían utilizar para acabar con regímenes autoritarios que violan derechos fundamentales de su ciudadanía? Marca todas las que consideres.",
+"item": "",
+"dam": 38.8
+}
+]

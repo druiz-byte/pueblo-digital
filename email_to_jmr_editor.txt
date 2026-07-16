@@ -1,0 +1,50 @@
+Subject: Query — Synthetic Population Panel Method for Marketing Research
+
+Dear Dr. Thomadsen,
+
+I'm writing to inquire whether a manuscript we're developing on a new methodological approach might be suitable for the Journal of Marketing Research.
+
+Our paper proposes a novel method for constructing **synthetic population panels** using language model agents as survey respondents. The core contribution is a systematic approach to instantiate LLM agents with sociodemographic, attitudinal, and behavioral profiles derived from real survey microdata, enabling rapid, cost-effective survey simulation without recruiting live respondents.
+
+## Methodological Comparison
+
+We compare our approach directly to two established methods:
+
+1. **Conventional online panels** (live respondents) — gold standard but costly, time-consuming to recruit, and subject to panel fatigue and selection bias
+2. **Synthetic data via statistical imputation** (e.g., multiple imputation, synthetic data generation) — faster and cheaper, but lacks coherence across multi-domain responses and cannot simulate agent heterogeneity in open-ended reasoning
+
+Our method bridges these gaps by anchoring LLM agents to real survey respondents via k-NN matching across multiple domains (demographics, attitudes, behaviors), then validating multi-question coherence and distributional fidelity.
+
+## Superior Performance & Circumstances
+
+The method demonstrates advantage when:
+- **Speed/cost matter:** Researchers need rapid turnaround on hypothetical scenarios, policy counterfactuals, or large-scale survey simulations (6 months → 2 weeks, ~95% cost reduction)
+- **Multi-domain coherence is critical:** The agent must respond consistently across attitudes, behaviors, and preferences (where imputation fails)
+- **Heterogeneity matters:** Researchers need realistic agent-level variance, not just aggregate distributions
+
+We validate with ground truth data across 143 survey items and show **mean absolute deviation of 14.0 percentage points** vs. observed distributions. Fidelity is highest where agent profiles are richly specified (r² > 0.95 in core domains) and degrades predictably in out-of-profile inference.
+
+## Clear Disclosure of Limitations
+
+- **Bias in inference domains:** LLM agents systematically diverge from real populations in attitude domains with sparse coverage in training data
+- **Multi-response questions:** Open-ended or unstructured formats (vs. closed-ended items) show 2–3× larger error
+- **Temporal validity:** Trained on historical microdata; real-world shifts emerge as distributional drift
+- **Coherence vs. diversity trade-off:** Strong anchoring improves fidelity but reduces emergent heterogeneity
+
+## Implications for Research Practice
+
+For **consumer research:** enables rapid prototyping of market segmentation strategies, testing messaging variants across synthetic populations before live testing—reducing risk and resource commitment.
+
+For **firm strategy:** policy research and regulatory agencies can simulate population responses to proposed regulations or market conditions without live survey cost/delay.
+
+For **academic understanding:** opens new research questions about *what* drives LLM response coherence, enabling studies of agent-based modeling with realistic behavioral heterogeneity.
+
+## Questions for Editor
+
+Does this methodological framing align with JMR's interest in comparative method development and validation? We're careful to position this not as a replacement for live research, but as a complementary tool for specific use cases where speed, cost, or scenario modeling is primary.
+
+Happy to share an abstract or draft if you'd like to discuss fit further.
+
+Best regards,
+David Ruiz
+druiz@deusto.es

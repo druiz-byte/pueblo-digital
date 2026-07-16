@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────
+#  Pueblo Digital — .gitignore
+#  Excluye claves de API, microdatos reales (licencia/privacidad)
+#  y PDFs con copyright. NO subir nada de esto a un repo público.
+# ─────────────────────────────────────────────────────────────
+
+# ── Claves y entorno (¡nunca subir!) ──
+.env
+.env.*
+!.env.example
+*.key
+secrets*
+
+# ── Dependencias / temporales ──
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+
+# ── Microdatos reales: encuestas oficiales con datos individuales ──
+#    (licenciados por sus proveedores y/o con datos personales)
+datos ESS/
+datos Barometro Deusto/
+datos capital social 2022/
+datos sociometro GV/
+datos sociómetro GobEsp/
+datos GV/
+*.sav
+*.spv
+predictores_deusto.csv
+
+# ── PDFs: artículos académicos con copyright y comparativas derivadas ──
+artículos/
+*.pdf
+
+# ── Salidas SPSS / binarios de análisis ──
+*.zsav
+*.por

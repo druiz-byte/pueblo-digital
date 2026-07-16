@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────
+#  Render Blueprint — despliega la app de entrevista (panel v2)
+#  En Render: New → Blueprint → conecta el repo → se lee este archivo.
+#  Las 3 variables marcadas sync:false se rellenan en el panel de Render.
+# ─────────────────────────────────────────────────────────────
+services:
+  - type: web
+    name: pueblo-digital-entrevista
+    runtime: python
+    rootDir: entrevista
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python server_v2.py"
+    autoDeploy: true
+    envVars:
+      # Contraseña de acceso (Basic Auth). Ponla para que no la use cualquiera.
+      - key: SITE_PASSWORD
+        sync: false
+      # Clave de HeyGen / LiveAvatar
+      - key: HEYGEN_API_KEY
+        sync: false
+      # Clave de Anthropic (Claude Haiku responde como la Persona)
+      - key: ANTHROPIC_API_KEY
+        sync: false

@@ -1,0 +1,1025 @@
+{
+ "fecha": "2026-07-08 13:27:18",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "texto": "¿Cómo calificarías la situación económica del País Vasco?",
+   "opciones": [
+    "Muy buena",
+    "Buena",
+    "Regular",
+    "Mala",
+    "Muy mala",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "Y dentro de un año, ¿cómo crees que será la situación económica del País Vasco?",
+   "opciones": [
+    "Mejor",
+    "Igual",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "¿En qué medida estás de acuerdo con la siguiente frase?: \"Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "¿Crees que dentro de 10 años será más fácil acceder a una vivienda?",
+   "opciones": [
+    "Seguro que sí",
+    "Probablemente sí",
+    "Probablemente no",
+    "Seguro que no",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan.",
+   "opciones": [
+    "Conflictos internacionales / guerras",
+    "Subida brusca de los precios",
+    "El avance de las ideas antidemocráticas",
+    "Inseguridad ciudadana",
+    "Cambio climático",
+    "Pandemias / crisis sanitarias",
+    "Precariedad laboral",
+    "Migración",
+    "Desempleo",
+    "Terrorismo",
+    "Crisis energética",
+    "Desarrollos tecnológicos (Inteligencia artificial)",
+    "Ciberataques",
+    "Desabastecimiento de algún producto básico",
+    "Ninguno en particular"
+   ],
+   "multiple": 3
+  }
+ ],
+ "total": 50,
+ "done": 50,
+ "results": [
+  {
+   "id": 985,
+   "nombre": "Manuel Sánchez Zubieta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 46,
+   "voto": "Vox",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,C,D"
+   }
+  },
+  {
+   "id": 112,
+   "nombre": "Txema García Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 65,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "E",
+    "3": "D",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 31,
+   "nombre": "Alaitz González Rodríguez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "E",
+    "3": "E",
+    "4": "B,E,G"
+   }
+  },
+  {
+   "id": 332,
+   "nombre": "Iker Ormaetxea Landa",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 51,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "D",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,E,H"
+   }
+  },
+  {
+   "id": 338,
+   "nombre": "Amaia Arrizabalaga Mendieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,I,E"
+   }
+  },
+  {
+   "id": 238,
+   "nombre": "Antonio Uriarte Romero",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "PSE",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "D",
+    "4": "B,E,G"
+   }
+  },
+  {
+   "id": 343,
+   "nombre": "Carmen Etxebarria Lazkano",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 58,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "E",
+    "3": "E",
+    "4": "B,G,I"
+   }
+  },
+  {
+   "id": 130,
+   "nombre": "Isabel Iturriaga Beristain",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 75,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Sin estudios/Primaria",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "B",
+    "3": "E",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 467,
+   "nombre": "Aitor Ruiz Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 33,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C",
+    "1": "D",
+    "2": "E",
+    "3": "D",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 202,
+   "nombre": "Iker Lazkano Martínez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "B",
+    "3": "D",
+    "4": "B,C,D"
+   }
+  },
+  {
+   "id": 284,
+   "nombre": "Uxue Martínez Pérez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 71,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "E",
+    "4": "B,C,D"
+   }
+  },
+  {
+   "id": 900,
+   "nombre": "Olatz Zubieta Etxebarria",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 58,
+   "voto": "No lo recuerdo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "E",
+    "3": "E",
+    "4": "B,E,G"
+   }
+  },
+  {
+   "id": 57,
+   "nombre": "Jone Etxebarria López",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,G,I"
+   }
+  },
+  {
+   "id": 421,
+   "nombre": "Itziar Izagirre Sánchez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 55,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "E",
+    "3": "D",
+    "4": "B,G,I"
+   }
+  },
+  {
+   "id": 817,
+   "nombre": "Begoña Romero Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 42,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "C",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 515,
+   "nombre": "Sara Bilbao Arrieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 52,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "C",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 600,
+   "nombre": "Naia Mendieta Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No lo recuerdo",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "B",
+    "3": "E",
+    "4": "B,I,E"
+   }
+  },
+  {
+   "id": 962,
+   "nombre": "Laura González Alkorta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 24,
+   "voto": "No lo recuerdo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,E,H"
+   }
+  },
+  {
+   "id": 345,
+   "nombre": "Maddi Arrizabalaga Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 24,
+   "voto": "PP",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "B",
+    "3": "E",
+    "4": "B,D,H"
+   }
+  },
+  {
+   "id": 173,
+   "nombre": "Isabel Urrutia Gaztañaga",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 49,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 80,
+   "nombre": "Manuel Torres Gaztañaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 60,
+   "voto": "Voté nulo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C",
+    "1": "B",
+    "2": "B",
+    "3": "E",
+    "4": "B,D,E"
+   }
+  },
+  {
+   "id": 876,
+   "nombre": "Pilar Agirre Agirre",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 24,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,D,E"
+   }
+  },
+  {
+   "id": 969,
+   "nombre": "Eider Moreno Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "D",
+    "1": "C",
+    "2": "E",
+    "3": "E",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 611,
+   "nombre": "Oier Sánchez Beristain",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 50,
+   "voto": "EH Bildu",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "A",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,E,G"
+   }
+  },
+  {
+   "id": 660,
+   "nombre": "Haizea Zubieta Arrieta",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 49,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,E,G"
+   }
+  },
+  {
+   "id": 275,
+   "nombre": "Manuel González Zubieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 70,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 217,
+   "nombre": "Ainhoa Fernández Fernández",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 66,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "B,E,F"
+   }
+  },
+  {
+   "id": 701,
+   "nombre": "Ibon Etxebarria Arrizabalaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 75,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,D,E"
+   }
+  },
+  {
+   "id": 710,
+   "nombre": "José Ramírez Hernández",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 74,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "D",
+    "4": "A,B,G"
+   }
+  },
+  {
+   "id": 214,
+   "nombre": "Alberto Beristain Moreno",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "E",
+    "3": "E",
+    "4": "B,D,G"
+   }
+  },
+  {
+   "id": 531,
+   "nombre": "Txema Muñoz Romero",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "Voté nulo",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Doctorado",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,C,D"
+   }
+  },
+  {
+   "id": 808,
+   "nombre": "Carmen Bilbao Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 33,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,D"
+   }
+  },
+  {
+   "id": 142,
+   "nombre": "Txema Lazkano Zubieta",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "Voté nulo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C",
+    "1": "D",
+    "2": "B",
+    "3": "D",
+    "4": "B,D,E"
+   }
+  },
+  {
+   "id": 413,
+   "nombre": "Alejandro Bilbao Zubieta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 53,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "C",
+    "4": "B,E,F"
+   }
+  },
+  {
+   "id": 596,
+   "nombre": "Josu Arrizabalaga Mendieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 28,
+   "voto": "Voté en blanco",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "D",
+    "1": "C",
+    "2": "E",
+    "3": "D",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 695,
+   "nombre": "Patricia Ormaetxea Mendieta",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 31,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "D",
+    "1": "C",
+    "2": "B",
+    "3": "E",
+    "4": "B,D,G"
+   }
+  },
+  {
+   "id": 191,
+   "nombre": "Koldo Hernández Bilbao",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 76,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 425,
+   "nombre": "María Hernández Arrizabalaga",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 19,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 357,
+   "nombre": "Itziar Martínez Fernández",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 42,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "E",
+    "3": "D",
+    "4": "B,E,F"
+   }
+  },
+  {
+   "id": 632,
+   "nombre": "Amaia Ormaetxea Urrutia",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 20,
+   "voto": "PSE",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 418,
+   "nombre": "Naia Martínez Urrutia",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 52,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,E,F"
+   }
+  },
+  {
+   "id": 504,
+   "nombre": "Aritz Lazkano Torres",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 49,
+   "voto": "PSE",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "C",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 490,
+   "nombre": "Patricia Hernández Romero",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 32,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 328,
+   "nombre": "Eider Zubizarreta Landa",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 31,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,C,G"
+   }
+  },
+  {
+   "id": 449,
+   "nombre": "Patricia Mendieta Jiménez",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "PNV/ EAJ",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "D",
+    "3": "E",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 100,
+   "nombre": "Beñat Muñoz Romero",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 76,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,D,E"
+   }
+  },
+  {
+   "id": 105,
+   "nombre": "Nekane García Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 65,
+   "voto": "PNV/ EAJ",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "B",
+    "2": "B",
+    "3": "E",
+    "4": "B,D,F"
+   }
+  },
+  {
+   "id": 779,
+   "nombre": "Eider Moreno López",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 20,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "E",
+    "3": "D",
+    "4": "B,G,I"
+   }
+  },
+  {
+   "id": 755,
+   "nombre": "Maialen Pérez Gaztañaga",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 32,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "B,C,E"
+   }
+  },
+  {
+   "id": 279,
+   "nombre": "Uxue Beristain Torres",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "Prefiero no contestar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "B",
+    "3": "D",
+    "4": "B,D,G"
+   }
+  }
+ ]
+}

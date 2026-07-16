@@ -1,0 +1,33 @@
+{
+ "titulo": "Barómetro digital — Extra: liderazgo y valoración del Gobierno Vasco",
+ "fuente": "Preguntas propias (no incluidas en el Deustobarómetro verano 2026)",
+ "muestra": 1000,
+ "preguntas": [
+  {
+   "texto": "Independientemente del partido al que votes o al que te sientas más próximo/a, ¿cuál de los siguientes líderes políticos crees que sería mejor lehendakari?",
+   "opciones": [
+    "Imanol Pradales",
+    "Pello Otxandiano",
+    "Eneko Andueza",
+    "Amaia Martínez",
+    "Javier de Andrés",
+    "Jon Hernández",
+    "No sé / No contesto"
+   ],
+   "multiple": 1
+  },
+  {
+   "texto": "De las siguientes cualidades, ¿cuál crees que define mejor al actual Gobierno Vasco? Marca solo una.",
+   "opciones": [
+    "Capacidad",
+    "Cercanía",
+    "Iniciativa",
+    "Honestidad",
+    "Diagnóstico acertado de los problemas",
+    "Rapidez de respuesta",
+    "No sé / No contesto"
+   ],
+   "multiple": 1
+  }
+ ]
+}

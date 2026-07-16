@@ -1,0 +1,189 @@
+{
+ "fecha": "2026-07-09_173828",
+ "modelo": "claude-haiku-4-5",
+ "pregunta": "En tu opinión, ¿cuáles son los tres problemas más importantes de Euskadi (el País Vasco) en este momento?",
+ "total": 20,
+ "vacias": 0,
+ "results": [
+  {
+   "id": 554,
+   "nombre": "David Bilbao López",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "voto": "PSE",
+   "respuesta": "Mira, yo diría que la educación es algo que me preocupa bastante, porque ves que hay muchos jóvenes que salen sin la formación que deberían tener. Y luego está el tema de la delincuencia y la inseguridad, que se nota cada vez más en las calles, ¿eh? Y bueno, otro problema gordo es la baja natalidad, porque al final si no tenemos hijos, pues esto se va quedando sin gente joven y sin futuro."
+  },
+  {
+   "id": 11,
+   "nombre": "Jon Gaztañaga Ramírez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "voto": "PSE",
+   "respuesta": "Bueno, mira, lo que me preocupa más es la sanidad, que está cada vez más saturada y los tiempos de espera son muy largos. Luego está el tema de la vivienda, que está imposible, los precios están por las nubes y los jóvenes no pueden ni plantearse comprarse una casa. Y claro, la subida de los precios de todo, de la luz, la gasolina, la comida... eso nos afecta a todos en el día a día y la cosa no mejora."
+  },
+  {
+   "id": 872,
+   "nombre": "Sandra Zubieta García",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "voto": "Prefiero no contestar",
+   "respuesta": "Bueno, mira, lo que me preocupa más es el tema del paro, que sigue siendo un problema gordo aquí. Luego está la sanidad, que veo que se va degradando poco a poco y la gente tiene que esperar mucho para las cosas. Y luego el de la vivienda, claro, que los precios están por las nubes y es imposible que la gente joven pueda acceder a una casa con lo que se cobra."
+  },
+  {
+   "id": 475,
+   "nombre": "Oier Izagirre García",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "voto": "Voté en blanco",
+   "respuesta": "Bueno, mira, yo creo que lo más grave ahora mismo es la convivencia política, ¿eh? Estamos muy divididos, muy enfrentados, y eso no nos lleva a ningún lado. Y luego está el problema de la clase política en general, porque la verdad es que no tengo mucha confianza en que nos representen bien. Y bueno, también me preocupa bastante el tema demográfico, la baja natalidad, porque si no tenemos recambio generacional, esto se va a vaciar poco a poco."
+  },
+  {
+   "id": 746,
+   "nombre": "Carlos Jiménez Uriarte",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "18-24",
+   "voto": "Prefiero no contestar",
+   "respuesta": "Pues mira, yo creo que ahora mismo lo que más preocupa es la subida de precios, que se nota un montón en el día a día, ¿eh? Luego está el tema de la inmigración, que es un asunto bastante delicado y que genera bastante debate en la sociedad. Y bueno, también veo que la situación política está un poco revuelta, con esos escándalos de corrupción que salen de vez en cuando, así que eso tampoco ayuda mucho a que tengamos confianza en nuestros políticos."
+  },
+  {
+   "id": 625,
+   "nombre": "Mikel Hernández Hernández",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "voto": "EH Bildu",
+   "respuesta": "Mira, lo que me preocupa más ahora mismo es la sanidad, porque la gente está esperando demasiado para operarse y eso no debería ser así. Luego está el tema de la vivienda, que es cada vez más difícil para los jóvenes poder acceder a una casa propia, los precios están por las nubes. Y bueno, también veo que se está perdiendo un poco la brújula moral, los valores no son los de antes, la gente está cada vez más desconectada y eso me preocupa bastante para el futuro."
+  },
+  {
+   "id": 606,
+   "nombre": "Txema Etxebarria Landa",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "voto": "PNV/ EAJ",
+   "respuesta": "Mira, lo primero que me preocupa es la sanidad, la verdad. Tenemos un sistema que funciona, pero cada vez está más saturado y eso se nota. Luego está el tema de la vivienda, que es una locura los precios que hay ahora mismo, especialmente para los jóvenes que quieren emanciparse. Y bueno, también las desigualdades sociales, porque vemos que hay gente que lo está pasando realmente mal mientras otros van bien, y eso no debería ser así en una sociedad como la nuestra."
+  },
+  {
+   "id": 643,
+   "nombre": "Joseba Jiménez Rodríguez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "voto": "No voté",
+   "respuesta": "Bueno, lo que me preocupa más es la vivienda, sinceramente. Los precios están por las nubes y es imposible que la gente joven pueda comprarse un piso. Luego están las pensiones, que no dan para mucho con lo que cuesta todo ahora, la comida, la luz... Y bueno, la subida de precios en general es lo que más nos afecta a los que vivimos con una pensión. La situación política también está un poco revuelta, pero eso es lo de siempre aquí en Euskadi."
+  },
+  {
+   "id": 68,
+   "nombre": "Naia Izagirre Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "voto": "No lo recuerdo",
+   "respuesta": "Bueno, mira, lo que más me preocupa ahora mismo es la subida de los precios, que todo está cada vez más caro y la gente como yo, que vivimos con lo justo, lo pasamos muy mal. También me trae de cabeza toda la corrupción que vemos en los políticos, que parece que siempre andan metidos en líos y fraudes, y eso no está bien. Y luego está el tema del cambio climático, que vemos que hace cada vez más calor y que algo hay que hacer porque esto no puede seguir así."
+  },
+  {
+   "id": 808,
+   "nombre": "Carmen Bilbao Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "voto": "PNV/ EAJ",
+   "respuesta": "Pues mira, lo que más me preocupa ahora mismo es la delincuencia, ¿eh? Ves cosas en la calle que no te gustan, robos, inseguridad... Y luego está la corrupción, que parece que siempre hay algo nuevo saliendo en las noticias, que si un político o lo que sea, eso cansa. Y bueno, los precios, claro, todo sube un montón y el sueldo no acompaña, es difícil llegar a fin de mes con normalidad."
+  },
+  {
+   "id": 35,
+   "nombre": "Patricia Mendieta Etxebarria",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "voto": "No voté",
+   "respuesta": "Pues mira, a mí lo que más me preocupa ahora mismo es la vivienda, porque los pisos están por las nubes y es imposible que gente como yo pueda independizarse en un futuro. Y luego está la inseguridad, que cada vez se habla más de delincuencia y eso te genera cierta inquietud en el día a día. Y bueno, también me parece importante el tema de la natalidad, porque si no hay gente joven formando familias, pues eso afecta al futuro del país, ¿sabes?"
+  },
+  {
+   "id": 199,
+   "nombre": "Julen Martínez Etxebarria",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "voto": "No voté",
+   "respuesta": "Bueno, mira, lo primero que me preocupa es la sanidad, que está bastante saturada y los tiempos de espera son cada vez más largos. Luego está el tema del empleo y las condiciones laborales, porque aunque hay trabajo, muchas personas tienen contratos precarios y sueldos que no acompañan. Y bueno, también veo que la inmigración es un asunto que genera mucha tensión social, no sé si por falta de integración o porque se ha hablado demasiado de ello, pero está ahí."
+  },
+  {
+   "id": 838,
+   "nombre": "Nerea Pérez Sánchez",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "voto": "Prefiero no contestar",
+   "respuesta": "Mira, lo que más me preocupa ahora mismo es la sanidad, la verdad. Los tiempos de espera son cada vez más largos y eso te deja muy mal cuerpo. Y luego está el tema de la vivienda, que es una locura lo que cuesta una casa o alquilar algo decente, especialmente para la gente joven. Y bueno, con todo lo que está subiendo todo, la comida, la luz, los precios en general... la gente está apretada, vamos."
+  },
+  {
+   "id": 854,
+   "nombre": "Jon Fernández Torres",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "voto": "EH Bildu",
+   "respuesta": "Mira, para mí lo más urgente ahora mismo es el tema de la vivienda, que está completamente fuera de control. Los precios han subido una barbaridad y la gente joven no puede ni plantearse emanciparse, es un problema serio de verdad.\n\nY luego está la educación, que necesita más inversión y mejor calidad, porque tenemos que preparar bien a las nuevas generaciones para que puedan competir y prosperar aquí en Euskadi.\n\nY bueno, también la situación política en general está bastante complicada, hay mucha polarización y división que no nos ayuda a avanzar como sociedad. Necesitamos encontrar puntos de acuerdo para resolver las cosas que de verdad importan."
+  },
+  {
+   "id": 591,
+   "nombre": "Eneko Ramírez González",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "voto": "PNV/ EAJ",
+   "respuesta": "Bueno, mira, lo que más me preocupa ahora mismo es la sanidad, sinceramente. Los tiempos de espera son cada vez más largos y eso afecta a la calidad de vida de la gente, ya sabes. Luego está el tema económico, porque aunque aquí en Euskadi nos va mejor que en otros sitios, la subida de precios nos está apretando bastante, especialmente en la cesta de la compra y los gastos del día a día. Y bueno, el tercero sería las condiciones laborales, porque veo que hay mucha gente joven que se va o que tiene empleos precarios, y eso no es lo que queremos para el País Vasco."
+  },
+  {
+   "id": 949,
+   "nombre": "Julen Torres Rodríguez",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "voto": "Prefiero no contestar",
+   "respuesta": "Mira, lo que más me preocupa ahora mismo es la corrupción que vemos a todos los niveles, en los ayuntamientos, en las instituciones... eso socava la confianza en todo. Y luego está el tema económico, que aunque dicen que va bien, la gente de a pie sigue teniendo dificultades para llegar a fin de mes, los alquileres están por las nubes. Y bueno, también me inquieta mucho lo del cambio climático, porque vemos que cada año hace más calor, llueve menos, y no veo que se tomen medidas de verdad para atajar el problema."
+  },
+  {
+   "id": 276,
+   "nombre": "Patricia Izagirre Ramírez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "voto": "EH Bildu",
+   "respuesta": "Bueno, mira, lo que más me preocupa ahora mismo es el tema de la vivienda, que está imposible para la gente joven, los precios están por las nubes. Y luego está la subida de los precios en general, que todo se ha puesto muy caro, desde la compra hasta la gasolina. Y bueno, también me preocupa un poco la situación política, aunque no es que esté mal, pero hay veces que parece que no avanzan como deberían en ciertas cosas."
+  },
+  {
+   "id": 835,
+   "nombre": "David Rodríguez García",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "voto": "EH Bildu",
+   "respuesta": "Bueno, mira, lo que más me preocupa ahora mismo es el tema del paro, que todavía hay muchas personas sin trabajo por aquí. Luego está la corrupción, ¿eh?, que parece que siempre sale algún escándalo de políticos y eso te deja mal sabor de boca. Y bueno, también me molesta bastante el tema del euskera, porque veo que se está perdiendo entre los jóvenes y creo que deberíamos hacer más por mantenerlo vivo, que al fin y al cabo es parte de quiénes somos."
+  },
+  {
+   "id": 251,
+   "nombre": "Ane Rodríguez García",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "voto": "No voté",
+   "respuesta": "Bueno, pues mira, lo que más me preocupa ahora mismo es el tema del empleo, ¿eh? Es que salgo del instituto buscando mi primer curro y es complicadísimo encontrar algo decente, con un sueldo que te permita vivir. Y luego está la vivienda, que los precios están por las nubes, es imposible plantearse independizarse con lo que ganan los jóvenes. Y bueno, también está el rollo político, que tenemos que estar constantemente con estos temas de independencia y tal, que al final todo acaba siendo muy tenso y no avanzamos en lo que de verdad importa, que es mejorar la economía y que la gente tenga oportunidades."
+  },
+  {
+   "id": 505,
+   "nombre": "Pilar Uriarte Sánchez",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "voto": "PSE",
+   "respuesta": "Bueno, mira, lo que yo veo es que hay un problema muy serio con el empleo y las condiciones de trabajo, porque muchas personas están exprimidas laboralmente y ganan poco para lo que trabajan. Luego está la vivienda, que es carísima y no hay manera de acceder a ella con un sueldo normal. Y bueno, también me preocupa muchísimo que se está perdiendo como una crisis de valores, que la gente no respeta nada, y eso se nota en la calle, en el comportamiento de la gente joven sobre todo."
+  }
+ ]
+}

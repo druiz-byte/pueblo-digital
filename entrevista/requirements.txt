@@ -1,0 +1,2 @@
+# La app de entrevista usa solo la librería estándar de Python (http.server, urllib, json...).
+# No hay dependencias externas; este fichero existe para que Render detecte el runtime de Python.

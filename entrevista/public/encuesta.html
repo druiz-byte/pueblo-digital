@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pueblo Digital — Encuesta</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:#0f1117; --surface:#1a1d27; --surface2:#22263a;
+  --border:#2e3250; --accent:#5b6af0; --accent2:#3dcc91;
+  --text:#e8eaf6; --muted:#7b82b4; --red:#e05c5c;
+  --yellow:#f0b429;
+  --c0:#5b6af0; --c1:#3dcc91; --c2:#f0b429; --c3:#e05c5c; --c4:#a78bfa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;gap:14px;padding:14px 24px;background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0}
+header h1{font-size:1rem;font-weight:600}
+header .sub{font-size:.78rem;color:var(--muted)}
+header nav{margin-left:auto;display:flex;gap:8px}
+header nav a{font-size:.78rem;color:var(--muted);text-decoration:none;padding:5px 10px;border:1px solid var(--border);border-radius:6px;transition:border-color .15s}
+header nav a:hover{border-color:var(--accent);color:var(--text)}
+
+.view{display:none;flex:1;flex-direction:column}
+.view.active{display:flex}
+
+/* ── DISEÑAR ─────────────────────────────────────────────────── */
+#view-design{align-items:center;padding:32px 16px;gap:20px;overflow-y:auto}
+.design-card{width:100%;max-width:700px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px}
+.design-card h2{font-size:1.05rem;margin-bottom:20px;color:var(--accent2)}
+.q-block{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px;position:relative}
+.q-block .q-num{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
+.q-block .q-remove{position:absolute;top:12px;right:12px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:2px 6px;border-radius:4px}
+.q-block .q-remove:hover{color:var(--red);background:rgba(224,92,92,.1)}
+input[type="text"],textarea{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:8px 11px;font-size:.85rem;font-family:inherit;outline:none;transition:border-color .2s}
+input[type="text"]:focus,textarea:focus{border-color:var(--accent)}
+.opt-row{display:flex;gap:8px;align-items:center;margin-top:8px}
+.opt-letter{font-size:.8rem;font-weight:700;color:var(--muted);width:18px;flex-shrink:0}
+.opt-row .opt-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.9rem;padding:0 4px}
+.opt-row .opt-remove:hover{color:var(--red)}
+.btn-add-opt{margin-top:10px;background:none;border:1px dashed var(--border);color:var(--muted);border-radius:6px;padding:6px 12px;font-size:.78rem;cursor:pointer;width:100%;transition:border-color .2s,color .2s}
+.btn-add-opt:hover{border-color:var(--accent);color:var(--accent)}
+.btn-add-q{width:100%;max-width:700px;background:none;border:2px dashed var(--border);color:var(--muted);border-radius:10px;padding:12px;font-size:.85rem;cursor:pointer;transition:border-color .2s,color .2s}
+.btn-add-q:hover{border-color:var(--accent2);color:var(--accent2)}
+.btn-launch{width:100%;max-width:700px;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:14px;font-size:.9rem;font-weight:700;cursor:pointer;transition:opacity .15s}
+.btn-launch:hover{opacity:.85}
+.btn-launch:disabled{opacity:.4;cursor:not-allowed}
+.cost-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:-10px}
+
+/* ── PROGRESO ─────────────────────────────────────────────────── */
+#view-progress{align-items:center;justify-content:center;gap:24px;padding:40px}
+.prog-box{width:100%;max-width:500px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center}
+.prog-box h2{font-size:1rem;color:var(--muted);margin-bottom:24px}
+.prog-count{font-size:2.8rem;font-weight:700;color:var(--accent2);margin-bottom:4px}
+.prog-label{font-size:.82rem;color:var(--muted);margin-bottom:24px}
+.prog-bar-outer{background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px}
+.prog-bar-inner{height:100%;background:var(--accent2);border-radius:99px;transition:width .4s ease}
+.prog-pct{font-size:.75rem;color:var(--muted)}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent2);border-radius:50%;animation:spin 1s linear infinite;margin:20px auto 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── RESULTADOS ───────────────────────────────────────────────── */
+#view-results{flex-direction:row;overflow:hidden}
+.res-sidebar{width:220px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:16px}
+.res-sidebar h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px}
+.filter-group{display:flex;flex-direction:column;gap:6px}
+.filter-group label{font-size:.72rem;color:var(--muted)}
+select.filter{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 8px;font-size:.8rem;outline:none}
+select.filter:focus{border-color:var(--accent)}
+.n-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;text-align:center}
+.n-badge .n-val{font-size:1.6rem;font-weight:700;color:var(--accent2)}
+.n-badge .n-label{font-size:.7rem;color:var(--muted)}
+.btn-nueva{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px;font-size:.78rem;font-weight:600;cursor:pointer;width:100%;margin-top:auto;transition:border-color .15s}
+.btn-nueva:hover{border-color:var(--accent)}
+
+.res-main{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:20px}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.chart-card h3{font-size:.88rem;font-weight:600;margin-bottom:16px;line-height:1.4}
+.chart-wrap{position:relative;height:200px}
+
+/* ── HISTORIAL ────────────────────────────────────────────────── */
+.hist-item{display:flex;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px;cursor:pointer;transition:border-color .15s}
+.hist-item:hover{border-color:var(--accent2)}
+.hist-item .hist-q{flex:1;font-size:.83rem;line-height:1.35}
+.hist-item .hist-meta{font-size:.72rem;color:var(--muted);white-space:nowrap;text-align:right}
+.res-meta{font-size:.72rem;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📊 Pueblo Digital — Encuesta</h1>
+    <div class="sub" id="hdr-sub">Diseña y lanza una encuesta a las 1.000 Personas del panel</div>
+  </div>
+  <nav>
+    <a href="/">🎙 Entrevista</a>
+  </nav>
+</header>
+
+<!-- ── VISTA: DISEÑAR ─────────────────────────────────────────── -->
+<div id="view-design" class="view active">
+  <div class="design-card" id="templates-card" style="display:none">
+    <h2>📋 Encuestas disponibles</h2>
+    <div id="templates-list"></div>
+  </div>
+  <div class="design-card">
+    <h2>📝 Diseña tu encuesta</h2>
+    <div id="questions-container"></div>
+    <button class="btn-add-q" onclick="addQuestion()">+ Añadir pregunta</button>
+  </div>
+  <div style="width:100%;max-width:700px;display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px">
+    <label style="font-size:.82rem;color:var(--muted);white-space:nowrap">Tamaño de muestra:</label>
+    <select id="muestra-select" style="background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 10px;font-size:.85rem;outline:none">
+      <option value="50">50 Personas (~4 min)</option>
+      <option value="200" selected>200 Personas (~14 min)</option>
+      <option value="500">500 Personas (~35 min)</option>
+      <option value="">1.000 Personas completas (~70 min)</option>
+    </select>
+    <span style="font-size:.75rem;color:var(--muted);margin-left:auto">Muestra aleatoria estratificada</span>
+  </div>
+  <button class="btn-launch" id="btn-launch" onclick="launchSurvey()">
+    🚀 Lanzar encuesta
+  </button>
+  <p class="cost-note">Proveedor LLM según .env: Gemini (gratuito) · Groq · Claude Haiku</p>
+
+  <div class="design-card" id="history-card" style="display:none">
+    <h2>📁 Encuestas guardadas</h2>
+    <div id="history-list"></div>
+  </div>
+</div>
+
+<!-- ── VISTA: PROGRESO ────────────────────────────────────────── -->
+<div id="view-progress" class="view">
+  <div class="prog-box">
+    <h2>Encuesta en curso…</h2>
+    <div class="prog-count" id="prog-count">0</div>
+    <div class="prog-label" id="prog-label">de 1.000 Personas respondidas</div>
+    <div class="prog-bar-outer"><div class="prog-bar-inner" id="prog-bar" style="width:0%"></div></div>
+    <div class="prog-pct" id="prog-pct">0%</div>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- ── VISTA: RESULTADOS ──────────────────────────────────────── -->
+<div id="view-results" class="view">
+  <div class="res-sidebar">
+    <div>
+      <h3>Filtros</h3>
+      <div class="filter-group">
+        <label>Provincia</label>
+        <select class="filter" id="f-provincia" onchange="updateCharts()">
+          <option value="">Todas</option>
+          <option>Álava</option><option>Gipuzkoa</option><option>Bizkaia</option>
+        </select>
+        <label>Género</label>
+        <select class="filter" id="f-genero" onchange="updateCharts()">
+          <option value="">Todos</option>
+          <option>Hombre</option><option>Mujer</option>
+        </select>
+        <label>Grupo de edad</label>
+        <select class="filter" id="f-edad" onchange="updateCharts()">
+          <option value="">Todos</option>
+        </select>
+        <label>Voto 2024</label>
+        <select class="filter" id="f-voto" onchange="updateCharts()">
+          <option value="">Todos</option>
+        </select>
+        <label>Euskera</label>
+        <select class="filter" id="f-euskera" onchange="updateCharts()">
+          <option value="">Todos</option>
+        </select>
+        <label>Clase social</label>
+        <select class="filter" id="f-clase" onchange="updateCharts()">
+          <option value="">Todas</option>
+        </select>
+      </div>
+    </div>
+    <div class="n-badge">
+      <div class="n-val" id="n-val">—</div>
+      <div class="n-label">Personas seleccionadas</div>
+    </div>
+    <div class="res-meta" id="res-meta" style="display:none"></div>
+    <button class="btn-nueva" onclick="showView('design'); loadHistory()">+ Nueva encuesta</button>
+  </div>
+  <div class="res-main" id="charts-container"></div>
+</div>
+
+<script>
+// ── Estado ────────────────────────────────────────────────────────────────────
+let questions   = [];   // definición de la encuesta
+let surveyData  = null; // resultados completos {definition, results}
+let charts      = [];   // instancias Chart.js
+let pollTimer   = null;
+
+const COLORS = ['#5b6af0','#3dcc91','#f0b429','#e05c5c','#a78bfa','#f97316','#06b6d4'];
+
+// ── Vistas ────────────────────────────────────────────────────────────────────
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+}
+
+// ── Diseñador de preguntas ────────────────────────────────────────────────────
+function addQuestion(texto='', opciones=['','','',''], multiple=1) {
+  const idx = questions.length;
+  questions.push({texto, opciones: [...opciones], multiple});
+  renderQuestions();
+}
+
+function renderQuestions() {
+  const c = document.getElementById('questions-container');
+  c.innerHTML = questions.map((q, qi) => `
+    <div class="q-block" data-qi="${qi}">
+      <div class="q-num">Pregunta ${qi+1}
+        <select onchange="questions[${qi}].multiple=parseInt(this.value)" style="margin-left:10px;background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);padding:2px 6px;font-size:.7rem">
+          ${[1,2,3,4].map(k => `<option value="${k}" ${(q.multiple||1)===k?'selected':''}>${k===1?'respuesta única':'elegir '+k}</option>`).join('')}
+        </select>
+      </div>
+      <button class="q-remove" onclick="removeQuestion(${qi})">✕</button>
+      <input type="text" placeholder="Texto de la pregunta…"
+        value="${esc(q.texto)}"
+        oninput="questions[${qi}].texto=this.value">
+      ${q.opciones.map((op, oi) => `
+        <div class="opt-row">
+          <span class="opt-letter">${String.fromCharCode(65+oi)})</span>
+          <input type="text" placeholder="Opción ${String.fromCharCode(65+oi)}…"
+            value="${esc(op)}"
+            oninput="questions[${qi}].opciones[${oi}]=this.value">
+          ${q.opciones.length > 2
+            ? `<button class="opt-remove" onclick="removeOption(${qi},${oi})">✕</button>`
+            : ''}
+        </div>`).join('')}
+      ${q.opciones.length < 15
+        ? `<button class="btn-add-opt" onclick="addOption(${qi})">+ Añadir opción</button>`
+        : ''}
+    </div>`).join('');
+}
+
+function removeQuestion(qi) {
+  questions.splice(qi, 1);
+  renderQuestions();
+}
+
+function addOption(qi) {
+  questions[qi].opciones.push('');
+  renderQuestions();
+}
+
+function removeOption(qi, oi) {
+  questions[qi].opciones.splice(oi, 1);
+  renderQuestions();
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Lanzar encuesta ───────────────────────────────────────────────────────────
+async function launchSurvey() {
+  // Validar
+  const valid = questions.filter(q =>
+    q.texto.trim() && q.opciones.filter(o => o.trim()).length >= 2
+  );
+  if (!valid.length) {
+    alert('Añade al menos una pregunta con 2 opciones.');
+    return;
+  }
+  // Limpiar opciones vacías
+  const preguntas = valid.map(q => ({
+    texto: q.texto.trim(),
+    opciones: q.opciones.filter(o => o.trim()).map(o => o.trim()),
+    multiple: parseInt(q.multiple || 1),
+  }));
+
+  const btn = document.getElementById('btn-launch');
+  btn.disabled = true;
+
+  const muestraVal = document.getElementById('muestra-select').value;
+  const muestra = muestraVal ? parseInt(muestraVal) : null;
+  const r = await fetch('/api/encuesta/iniciar', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({preguntas, muestra})
+  });
+  const d = await r.json();
+  if (!r.ok) {
+    alert('Error: ' + (d.error || r.status));
+    btn.disabled = false;
+    return;
+  }
+  document.getElementById('prog-label').textContent = `de ${d.total} Personas respondidas`;
+  showView('progress');
+  startPolling();
+}
+
+// ── Polling de progreso ───────────────────────────────────────────────────────
+function startPolling() {
+  clearInterval(pollTimer);
+  pollTimer = setInterval(checkProgress, 1500);
+}
+
+async function checkProgress() {
+  try {
+    const r = await fetch('/api/encuesta/progreso');
+    const d = await r.json();
+    const pct = d.total ? Math.round(d.done / d.total * 100) : 0;
+    document.getElementById('prog-count').textContent = d.done;
+    document.getElementById('prog-label').textContent = `de ${d.total} Personas respondidas`;
+    document.getElementById('prog-bar').style.width = pct + '%';
+    document.getElementById('prog-pct').textContent = pct + '%';
+
+    if (!d.running && d.done > 0) {
+      clearInterval(pollTimer);
+      await loadResults();
+    }
+  } catch(e) { console.error(e); }
+}
+
+// ── Cargar y mostrar resultados ───────────────────────────────────────────────
+async function loadResults() {
+  const r = await fetch('/api/encuesta/resultados');
+  surveyData = await r.json();
+  setResMeta(surveyData.saved_file
+    ? `Encuesta actual · guardada en resultados/${surveyData.saved_file}`
+    : 'Encuesta actual (en memoria)');
+  populateFilters(surveyData.results);
+  showView('results');
+  updateCharts();
+  document.getElementById('btn-launch').disabled = false;
+}
+
+function setResMeta(text) {
+  const el = document.getElementById('res-meta');
+  el.textContent = text || '';
+  el.style.display = text ? 'block' : 'none';
+}
+
+// ── Plantillas de encuesta (encuestas/) ──────────────────────────────────────
+async function loadTemplates() {
+  try {
+    const r = await fetch('/api/encuesta/plantillas');
+    const items = await r.json();
+    const card = document.getElementById('templates-card');
+    const list = document.getElementById('templates-list');
+    if (!Array.isArray(items) || !items.length) { card.style.display = 'none'; return; }
+    card.style.display = 'block';
+    list.innerHTML = items.map(it => `
+      <div class="hist-item" onclick="loadTemplate('${esc(it.archivo)}')">
+        <div class="hist-q"><strong>${esc(it.titulo)}</strong><br>
+          <span style="color:var(--muted)">${esc(it.primera_pregunta || '')}${it.n_preguntas > 1 ? ` +${it.n_preguntas-1} más` : ''}</span></div>
+        <div class="hist-meta">${it.n_preguntas} pregunta${it.n_preguntas===1?'':'s'}<br>cargar en el diseñador →</div>
+      </div>`).join('');
+  } catch(e) { console.error(e); }
+}
+
+async function loadTemplate(archivo) {
+  try {
+    const r = await fetch('/api/encuesta/plantillas/' + encodeURIComponent(archivo));
+    if (!r.ok) { alert('No se pudo cargar la encuesta.'); return; }
+    const d = await r.json();
+    questions = (d.preguntas || []).map(q => ({
+      texto: q.texto || '',
+      opciones: [...(q.opciones || [])],
+      multiple: parseInt(q.multiple || 1),
+    }));
+    renderQuestions();
+    const sel = document.getElementById('muestra-select');
+    if (d.muestra === null) sel.value = '';
+    else if (d.muestra) sel.value = String(d.muestra);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  } catch(e) { console.error(e); alert('Error cargando la encuesta.'); }
+}
+
+// ── Historial de encuestas guardadas ─────────────────────────────────────────
+async function loadHistory() {
+  try {
+    const r = await fetch('/api/encuesta/historial');
+    const items = await r.json();
+    const card = document.getElementById('history-card');
+    const list = document.getElementById('history-list');
+    if (!Array.isArray(items) || !items.length) { card.style.display = 'none'; return; }
+    card.style.display = 'block';
+    list.innerHTML = items.map(it => `
+      <div class="hist-item" onclick="openSaved('${esc(it.archivo)}')">
+        <div class="hist-q">${esc(it.primera_pregunta || '(sin título)')}${it.n_preguntas > 1 ? ` <span style="color:var(--muted)">+${it.n_preguntas-1} más</span>` : ''}</div>
+        <div class="hist-meta">${esc(it.fecha)}<br>${it.n_personas} Personas</div>
+      </div>`).join('');
+  } catch(e) { console.error(e); }
+}
+
+async function openSaved(archivo) {
+  try {
+    const r = await fetch('/api/encuesta/historial/' + encodeURIComponent(archivo));
+    if (!r.ok) { alert('No se pudo cargar la encuesta guardada.'); return; }
+    surveyData = await r.json();
+    setResMeta(`Encuesta guardada · ${surveyData.fecha || archivo} · ${surveyData.modelo || ''}`);
+    populateFilters(surveyData.results || []);
+    showView('results');
+    updateCharts();
+  } catch(e) { console.error(e); alert('Error cargando la encuesta.'); }
+}
+
+function populateFilters(results) {
+  const vals = (key, sel) => {
+    const uniq = [...new Set(results.map(r => r[key]).filter(Boolean))].sort();
+    const el = document.getElementById(sel);
+    const cur = el.value;
+    uniq.forEach(v => {
+      if (![...el.options].find(o => o.value === v)) {
+        el.add(new Option(v, v));
+      }
+    });
+    if (cur) el.value = cur;
+  };
+  vals('grupo_edad',    'f-edad');
+  vals('voto',         'f-voto');
+  vals('euskera',      'f-euskera');
+  vals('clase_social', 'f-clase');
+}
+
+function filteredResults() {
+  const prov   = document.getElementById('f-provincia').value;
+  const gen    = document.getElementById('f-genero').value;
+  const edad   = document.getElementById('f-edad').value;
+  const voto   = document.getElementById('f-voto').value;
+  const eusk   = document.getElementById('f-euskera').value;
+  const clase  = document.getElementById('f-clase').value;
+  return (surveyData?.results || []).filter(r =>
+    (!prov  || r.provincia    === prov)  &&
+    (!gen   || r.genero       === gen)   &&
+    (!edad  || r.grupo_edad   === edad)  &&
+    (!voto  || r.voto         === voto)  &&
+    (!eusk  || r.euskera      === eusk)  &&
+    (!clase || r.clase_social === clase)
+  );
+}
+
+// ── Renderizar gráficos ───────────────────────────────────────────────────────
+function updateCharts() {
+  const subset = filteredResults();
+  document.getElementById('n-val').textContent = subset.length;
+
+  const def = surveyData?.definition || [];
+  const container = document.getElementById('charts-container');
+
+  charts.forEach(c => c.destroy());
+  charts = [];
+  container.innerHTML = '';
+
+  if (subset.length === 0) {
+    container.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;flex:1;flex-direction:column;gap:12px;color:var(--muted);padding:60px">
+      <div style="font-size:2rem">🔍</div>
+      <div style="font-size:.95rem;font-weight:600">Sin resultados para esta combinación de filtros</div>
+      <div style="font-size:.8rem">Reduce los filtros o ponlos todos a "Todos/Todas"</div>
+    </div>`;
+    return;
+  }
+
+  def.forEach((q, qi) => {
+    // Contar respuestas (una o varias letras por Persona: "B" o "A,C,F")
+    const multi  = (q.multiple || 1) > 1;
+    const counts = {};
+    q.opciones.forEach((_, oi) => counts[String.fromCharCode(65+oi)] = 0);
+    let base = 0; // Personas con al menos una respuesta válida
+    subset.forEach(r => {
+      const raw = String(r.resps?.[String(qi)] || '');
+      const letters = raw.split(/[^A-Za-z]+/).map(l => l.toUpperCase()).filter(l => counts[l] !== undefined);
+      if (letters.length) {
+        base++;
+        [...new Set(letters)].forEach(l => counts[l]++);
+      }
+    });
+
+    const labels  = q.opciones.map((op, oi) => `${String.fromCharCode(65+oi)}) ${op}`);
+    const data    = q.opciones.map((_, oi) => counts[String.fromCharCode(65+oi)] || 0);
+    const pcts    = data.map(v => base ? Math.round(v / base * 100) : 0);
+
+    // Card
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    const tag = multi ? ` <span style="color:var(--muted);font-weight:400;font-size:.75rem">(selección múltiple: ${q.multiple} opciones · % sobre ${base} Personas)</span>` : '';
+    card.innerHTML = `<h3>P${qi+1}. ${esc(q.texto)}${tag}</h3><div class="chart-wrap" style="height:${Math.max(200, q.opciones.length*26)}px"><canvas id="chart-${qi}"></canvas></div>`;
+    container.appendChild(card);
+
+    const ctx = document.getElementById(`chart-${qi}`).getContext('2d');
+    const ch = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          data: pcts,
+          backgroundColor: q.opciones.map((_, oi) => COLORS[oi % COLORS.length] + 'cc'),
+          borderColor:     q.opciones.map((_, oi) => COLORS[oi % COLORS.length]),
+          borderWidth: 1,
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {display: false},
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.parsed.x}%  (n=${data[ctx.dataIndex]})`
+            }
+          }
+        },
+        scales: {
+          x: {
+            min: 0, max: 100,
+            grid:  {color: '#2e325044'},
+            ticks: {color: '#7b82b4', callback: v => v + '%'},
+          },
+          y: {
+            grid:  {display: false},
+            ticks: {color: '#e8eaf6', font: {size: 12}},
+          }
+        }
+      }
+    });
+    charts.push(ch);
+  });
+}
+
+// ── Init: añadir pregunta de ejemplo ─────────────────────────────────────────
+addQuestion(
+  '¿Cómo valoras la situación económica del País Vasco en este momento?',
+  ['Muy buena', 'Buena', 'Regular', 'Mala', 'Muy mala']
+);
+
+// Cargar plantillas e historial de encuestas guardadas
+loadTemplates();
+loadHistory();
+
+// Si ya hay resultados en el servidor al cargar, mostrarlos
+fetch('/api/encuesta/progreso').then(r => r.json()).then(d => {
+  if (d.running) {
+    showView('progress');
+    startPolling();
+  } else if (d.done > 0) {
+    loadResults();
+  }
+}).catch(() => {});
+</script>
+</body>
+</html>

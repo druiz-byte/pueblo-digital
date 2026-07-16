@@ -1,0 +1,1204 @@
+{
+ "fecha": "2026-07-14 16:30:38",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "texto": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan",
+   "opciones": [
+    "Conflictos internacionales / guerras",
+    "Terrorismo",
+    "Subida brusca de los precios",
+    "Desabastecimiento de algún producto básico",
+    "Crisis energética",
+    "Inseguridad ciudadana",
+    "Migración",
+    "Cambio climático",
+    "Pandemias / crisis sanitarias",
+    "Desempleo",
+    "Precariedad laboral",
+    "Desarrollos tecnológicos (Inteligencia artificial)",
+    "Ciberataques",
+    "El avance de las ideas antidemocráticas",
+    "Ninguno en particular"
+   ],
+   "multiple": 3,
+   "datos_reales": {
+    "Conflictos internacionales / guerras": 45.0,
+    "Terrorismo": 9.5,
+    "Subida brusca de los precios": 36.4,
+    "Desabastecimiento de algún producto básico": 5.2,
+    "Crisis energética": 9.0,
+    "Inseguridad ciudadana": 32.8,
+    "Migración": 18.4,
+    "Cambio climático": 26.8,
+    "Pandemias / crisis sanitarias": 23.8,
+    "Desempleo": 17.5,
+    "Precariedad laboral": 21.0,
+    "Desarrollos tecnológicos (Inteligencia artificial)": 8.8,
+    "Ciberataques": 6.7,
+    "El avance de las ideas antidemocráticas": 33.1,
+    "Ninguno en particular": 2.0
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes frases: El miedo a la delincuencia justifica un mayor control estatal sobre la población",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 10.0,
+    "Bastante de acuerdo": 31.7,
+    "Poco de acuerdo": 30.6,
+    "Nada de acuerdo": 21.2,
+    "NS/NC": 6.5
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes frases: Cedería parte de mis libertades a cambio de mayor garantía de mi seguridad",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 5.6,
+    "Bastante de acuerdo": 21.6,
+    "Poco de acuerdo": 35.5,
+    "Nada de acuerdo": 29.4,
+    "NS/NC": 8.0
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes fras: Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 19.4,
+    "Bastante de acuerdo": 33.1,
+    "Poco de acuerdo": 22.1,
+    "Nada de acuerdo": 18.6,
+    "NS/NC": 6.8
+   }
+  },
+  {
+   "texto": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "Nunca he tenido miedo a viajar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mucho": 3.0,
+    "Bastante": 17.9,
+    "Poco": 37.6,
+    "Nada": 28.0,
+    "Nunca he tenido miedo a viajar": 13.5
+   }
+  },
+  {
+   "texto": "¿Has descartado o modificado un viaje en los últimos dos años?",
+   "opciones": [
+    "Sí",
+    "No"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Sí": 27.0,
+    "No": 73.0
+   }
+  },
+  {
+   "texto": "¿Cuál fue la principal razón?",
+   "opciones": [
+    "Inseguridad",
+    "Precio elevado",
+    "Crisis sanitaria",
+    "Conflicto político",
+    "Guerras",
+    "Motivos laborales",
+    "Otro"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Inseguridad": 19.0,
+    "Precio elevado": 37.6,
+    "Crisis sanitaria": 3.3,
+    "Conflicto político": 11.0,
+    "Guerras": 14.6,
+    "Motivos laborales": 6.4,
+    "Otro": 8.2
+   }
+  }
+ ],
+ "total": 50,
+ "done": 50,
+ "results": [
+  {
+   "id": 471,
+   "nombre": "June Gabilondo Iraola",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 28,
+   "voto": "No sabe / No contesta",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "C,K,J",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B"
+   }
+  },
+  {
+   "id": 397,
+   "nombre": "Amaia Urrutia Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-59",
+   "edad": 54,
+   "voto": "Abstención",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "C,J,K",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 791,
+   "nombre": "Enara Lasa Bilbao",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 28,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "C,E,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 387,
+   "nombre": "Garazi Arrieta Elorza",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 44,
+   "voto": "Abstención",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-alta o acomodada",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,E,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 786,
+   "nombre": "Unai Zubizarreta Etxeberria",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 64,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,H",
+    "1": "D",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 129,
+   "nombre": "Manuel Goikoetxea Rodríguez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "75+",
+   "edad": 81,
+   "voto": "PP",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,J",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B"
+   }
+  },
+  {
+   "id": 396,
+   "nombre": "Asier Mendizabal Otxoa",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 50,
+   "voto": "Voto en blanco",
+   "euskera": "Euskaldun (habla bastante bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,J",
+    "1": "D",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 218,
+   "nombre": "Uxue Zabala Aguirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 29,
+   "voto": "PNV/EAJ",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "C,E,H",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 863,
+   "nombre": "Leire Larrañaga Gabilondo",
+   "provincia": "Gipuzkoa",
+   "genero": "No binario",
+   "grupo_edad": "30-44",
+   "edad": 33,
+   "voto": "PNV/EAJ",
+   "euskera": "Euskaldun (habla bastante bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "C,H,K",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 74,
+   "nombre": "Carlos Bilbao Sánchez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 73,
+   "voto": "No sabe / No contesta",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "B"
+   }
+  },
+  {
+   "id": 240,
+   "nombre": "Garazi Goikoetxea Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 29,
+   "voto": "No sabe / No contesta",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-alta o acomodada",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "C,H,K",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "B"
+   }
+  },
+  {
+   "id": 379,
+   "nombre": "Maddi Lasa Zabala",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 19,
+   "voto": "No sabe / No contesta",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "C,H,K",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 451,
+   "nombre": "Ibai Goikoetxea Goikoetxea",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 63,
+   "voto": "Voto en blanco",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,J",
+    "1": "D",
+    "2": "D",
+    "3": "C",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 126,
+   "nombre": "Garazi Iraola Larrañaga",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 29,
+   "voto": "No sabe / No contesta",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "C,H,K",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 622,
+   "nombre": "Sara Otxoa Moreno",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 63,
+   "voto": "Abstención",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,J,K",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 288,
+   "nombre": "Oihana Aguirre Urrutia",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 66,
+   "voto": "PSE-EE",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 586,
+   "nombre": "Jon Etxeberria Zabala",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 58,
+   "voto": "Abstención",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "C,E,J",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 425,
+   "nombre": "Lucía Fernández Ortega",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-29",
+   "edad": 29,
+   "voto": "No sabe / No contesta",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-alta o acomodada",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,E,H",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "B"
+   }
+  },
+  {
+   "id": 604,
+   "nombre": "Isabel López Gómez",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 60,
+   "voto": "PNV/EAJ",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,J",
+    "1": "C",
+    "2": "D",
+    "3": "B",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 105,
+   "nombre": "Ainhoa Aguirre Iraola",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-59",
+   "edad": 54,
+   "voto": "Otra candidatura",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "C,E,J",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 241,
+   "nombre": "Fernando Etxeberria Moreno",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 59,
+   "voto": "Abstención",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,J",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 230,
+   "nombre": "Isabel Gómez Moreno",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 69,
+   "voto": "PNV/EAJ",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,J",
+    "1": "D",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 679,
+   "nombre": "David Arrieta Díaz",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "75+",
+   "edad": 79,
+   "voto": "PP",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "D",
+    "2": "D",
+    "3": "B",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 948,
+   "nombre": "Elena Lasa Romero",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 68,
+   "voto": "Abstención",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "A,C,J",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 988,
+   "nombre": "Iker Zubizarreta Iraola",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 70,
+   "voto": "No sabe / No contesta",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "B"
+   }
+  },
+  {
+   "id": 147,
+   "nombre": "Sergio Mendizabal López",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 72,
+   "voto": "Abstención",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 536,
+   "nombre": "Leire Mendizabal Mendizabal",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 43,
+   "voto": "PNV/EAJ",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "C,E,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "F"
+   }
+  },
+  {
+   "id": 765,
+   "nombre": "Carmen González Muñoz",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 32,
+   "voto": "No sabe / No contesta",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "C,E,K",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 587,
+   "nombre": "Sara Bilbao Fernández",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 41,
+   "voto": "No sabe / No contesta",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,F",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "B",
+    "5": "A",
+    "6": "A"
+   }
+  },
+  {
+   "id": 116,
+   "nombre": "Julen Etxeberria Larrañaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "18-29",
+   "edad": 25,
+   "voto": "Abstención",
+   "euskera": "Euskaldun (habla bastante bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,J,K",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 473,
+   "nombre": "María López Pérez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 61,
+   "voto": "No sabe / No contesta",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,D,E",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "B"
+   }
+  },
+  {
+   "id": 886,
+   "nombre": "Naroa Arrieta Zubizarreta",
+   "provincia": "Álava",
+   "genero": "No binario",
+   "grupo_edad": "30-44",
+   "edad": 42,
+   "voto": "Abstención",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-alta o acomodada",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "C,H,L",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 88,
+   "nombre": "Leire Otxoa Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "75+",
+   "edad": 84,
+   "voto": "PNV/EAJ",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,E",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 297,
+   "nombre": "Antonio Romero Fernández",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 50,
+   "voto": "EH Bildu",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,J",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 106,
+   "nombre": "Unai Larrañaga Lasa",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 63,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,H,E",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 700,
+   "nombre": "Jesús Díaz Martínez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 74,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,E",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 411,
+   "nombre": "Ángel Romero Díaz",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 62,
+   "voto": "PSE-EE",
+   "euskera": "Erdaldun (no habla euskera)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 201,
+   "nombre": "Julen Bilbao Aguirre",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "30-44",
+   "edad": 44,
+   "voto": "Abstención",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,J",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 926,
+   "nombre": "Pilar Muñoz Martínez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 37,
+   "voto": "No sabe / No contesta",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "C,D,J",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 257,
+   "nombre": "Alberto Moreno Rodríguez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 64,
+   "voto": "Abstención",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 35,
+   "nombre": "Igor Zabala Arrieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "30-44",
+   "edad": 34,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Formación Profesional",
+   "resps": {
+    "0": "A,C,H",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 330,
+   "nombre": "Eneko Bilbao Iraola",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "18-29",
+   "edad": 27,
+   "voto": "Voto nulo",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 832,
+   "nombre": "Laura Aguirre Muñoz",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "75+",
+   "edad": 78,
+   "voto": "PSE-EE",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,E",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 90,
+   "nombre": "Enara Larrañaga Gabilondo",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "75+",
+   "edad": 76,
+   "voto": "PNV/EAJ",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,D,J",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 430,
+   "nombre": "Ander Arrieta Aguirre",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 58,
+   "voto": "Abstención",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Bachillerato superior",
+   "resps": {
+    "0": "A,C,E",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 805,
+   "nombre": "Sara Mendizabal Sánchez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "60-74",
+   "edad": 65,
+   "voto": "PNV/EAJ",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,H",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 209,
+   "nombre": "June Bilbao Etxeberria",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "45-59",
+   "edad": 47,
+   "voto": "PSE-EE",
+   "euskera": "Euskaldun (habla bien)",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,D,E",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 179,
+   "nombre": "Peru Etxeberria Mendizabal",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "60-74",
+   "edad": 64,
+   "voto": "EH Bildu",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-media",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "A,C,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 728,
+   "nombre": "Irati Larrañaga Zabala",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "30-44",
+   "edad": 34,
+   "voto": "Abstención",
+   "euskera": "Habla algo de euskera",
+   "clase_social": "Media-baja u obrera",
+   "nivel_estudios": "Primarios (EGB/ESO)",
+   "resps": {
+    "0": "C,J,K",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 823,
+   "nombre": "Jesús Larrañaga González",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-59",
+   "edad": 48,
+   "voto": "PP",
+   "euskera": "Sabe algunas palabras de euskera",
+   "clase_social": "Media-alta o acomodada",
+   "nivel_estudios": "Universitarios",
+   "resps": {
+    "0": "A,C,E",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  }
+ ],
+ "plantilla": "barometro_digital_3_miedos.json",
+ "titulo": "Barómetro digital — Bloque 3: Los miedos de la era de la inseguridad"
+}
