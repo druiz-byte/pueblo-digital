@@ -83,7 +83,7 @@ const num = v => (v===null||v===undefined)?'—':(typeof v==='number'?(Number.is
 // URL de la app de entrevista con avatar.
 //  · En local (abres el panel como archivo o en localhost): usa el server_v2.py de tu PC en el puerto 3000.
 //  · Online (GitHub Pages): usa la app desplegada en Render → PEGA AQUÍ tu URL de Render tras desplegar.
-const ENTREVISTA_RENDER_URL = "https://TU-APP.onrender.com";   // ← reemplazar tras desplegar en Render
+const ENTREVISTA_RENDER_URL = "https://pueblo-digital.onrender.com";   // URL de la app de entrevista en Render
 const _esLocal = ['localhost','127.0.0.1',''].includes(location.hostname);
 const ENTREVISTA_URL = _esLocal ? "http://localhost:3000" : ENTREVISTA_RENDER_URL;
 function entrevistar(id){
