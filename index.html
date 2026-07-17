@@ -274,5 +274,55 @@ document.querySelectorAll('#filtros select,#filtros input').forEach(el=>el.addEv
 document.getElementById('fReset').onclick=()=>{document.querySelectorAll('#filtros select,#filtros input').forEach(e=>e.value='');actualizar();};
 actualizar();
 </script>
+  <!-- ============================================================
+     EVENTOS PERSONALIZADOS GA4 · Pueblo Digital
+     Pegar este bloque JUSTO ANTES de </body> en index.html.
+     No modifica ninguna función existente: las "envuelve".
+     GA4 ya activo: G-4GQ86YD4FM
+     ============================================================ -->
+<script>
+(function(){
+  // Envía un evento a GA4 solo si gtag está disponible (respeta el consentimiento actual)
+  function track(name, params){
+    if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+  }
+
+  // --- Envolver funciones globales sin tocar su código original ---
+  if (typeof window.entrevistar === 'function') {
+    var _entrevistar = window.entrevistar;
+    window.entrevistar = function(id){ track('entrevistar_persona', {persona_id: id}); return _entrevistar.apply(this, arguments); };
+  }
+  if (typeof window.lanzarEncuesta === 'function') {
+    var _lanzar = window.lanzarEncuesta;
+    window.lanzarEncuesta = function(){ track('lanzar_encuesta'); return _lanzar.apply(this, arguments); };
+  }
+  if (typeof window.abrir === 'function') {              // abrir ficha de una Persona
+    var _abrir = window.abrir;
+    window.abrir = function(id){ track('abrir_persona', {persona_id: id}); return _abrir.apply(this, arguments); };
+  }
+  if (typeof window.verPrompt === 'function') {          // botón "Generar prompt"
+    var _prompt = window.verPrompt;
+    window.verPrompt = function(id){ track('generar_prompt', {persona_id: id}); return _prompt.apply(this, arguments); };
+  }
+
+  // --- Uso de filtros (una vez por selección, no por tecla) ---
+  var etiquetas = {
+    fProvincia:'provincia', fGenero:'genero', fEdad:'edad', fVoto:'voto',
+    fEuskera:'euskera', fEstudios:'estudios', fClase:'clase',
+    fIdeo:'ideologia', fBuscar:'busqueda'
+  };
+  document.querySelectorAll('#filtros select, #filtros input').forEach(function(el){
+    el.addEventListener('change', function(){
+      var v = (el.value || '').toString().slice(0, 80);
+      if (v === '') return;
+      track('usar_filtro', { filtro: etiquetas[el.id] || el.id, valor: v });
+    });
+  });
+  var reset = document.getElementById('fReset');
+  if (reset) reset.addEventListener('click', function(){ track('limpiar_filtros'); });
+})();
+</script>
+<!-- ============ fin eventos personalizados GA4 ============ -->
+
 </body>
 </html>
