@@ -7,27 +7,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg:#0f1117; --surface:#1a1d27; --surface2:#22263a;
-  --border:#2e3250; --accent:#5b6af0; --accent2:#3dcc91;
-  --text:#e8eaf6; --muted:#7b82b4; --red:#e05c5c;
-  --yellow:#f0b429;
-  --c0:#5b6af0; --c1:#3dcc91; --c2:#f0b429; --c3:#e05c5c; --c4:#a78bfa;
+  --bg:#f4f7f6; --surface:#ffffff; --surface2:#ffffff;
+  --border:#e3e8e6; --accent:#00754a; --accent2:#00754a;
+  --text:#1f2937; --muted:#6b7280; --red:#e05c5c;
+  --yellow:#f0b429; --verde2:#3aa17e;
+  --c0:#00754a; --c1:#3aa17e; --c2:#f0b429; --c3:#e05c5c; --c4:#a78bfa;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
-header{display:flex;align-items:center;gap:14px;padding:14px 24px;background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0}
-header h1{font-size:1rem;font-weight:600}
-header .sub{font-size:.78rem;color:var(--muted)}
-header nav{margin-left:auto;display:flex;gap:8px}
-header nav a{font-size:.78rem;color:var(--muted);text-decoration:none;padding:5px 10px;border:1px solid var(--border);border-radius:6px;transition:border-color .15s}
-header nav a:hover{border-color:var(--accent);color:var(--text)}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;gap:14px;padding:16px 24px;background:linear-gradient(120deg,#00754a,#0a8a5c);color:#fff;flex-shrink:0}
+header h1{font-size:1.2rem;font-weight:700}
+header .sub{font-size:.8rem;color:rgba(255,255,255,.9)}
 
 .view{display:none;flex:1;flex-direction:column}
 .view.active{display:flex}
 
-/* ── DISEÑAR ─────────────────────────────────────────────────── */
-#view-design{align-items:center;padding:32px 16px;gap:20px;overflow-y:auto}
-.design-card{width:100%;max-width:700px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px}
+/* ── DISEÑAR (3 columnas) ────────────────────────────────────── */
+#view-design{padding:24px 20px;overflow-y:auto}
+.design-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;width:100%;max-width:1500px;margin:0 auto;align-items:start}
+.design-col{display:flex;flex-direction:column;gap:16px;min-width:0}
+.muestra-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.muestra-row label{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.muestra-row select{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 10px;font-size:.85rem;outline:none;flex:1;min-width:150px}
+.empty-msg{font-size:.8rem;color:var(--muted);text-align:center;padding:24px 8px;line-height:1.5}
+@media(max-width:900px){.design-grid{grid-template-columns:1fr;max-width:700px}}
+.design-card{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.design-col .btn-add-q,.design-col .btn-launch{max-width:none;margin-top:14px}
+.design-card .cost-note{margin-top:10px}
 .design-card h2{font-size:1.05rem;margin-bottom:20px;color:var(--accent2)}
 .q-block{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px;position:relative}
 .q-block .q-num{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
@@ -50,7 +56,7 @@ input[type="text"]:focus,textarea:focus{border-color:var(--accent)}
 
 /* ── PROGRESO ─────────────────────────────────────────────────── */
 #view-progress{align-items:center;justify-content:center;gap:24px;padding:40px}
-.prog-box{width:100%;max-width:500px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center}
+.prog-box{width:100%;max-width:500px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .prog-box h2{font-size:1rem;color:var(--muted);margin-bottom:24px}
 .prog-count{font-size:2.8rem;font-weight:700;color:var(--accent2);margin-bottom:4px}
 .prog-label{font-size:.82rem;color:var(--muted);margin-bottom:24px}
@@ -66,16 +72,18 @@ input[type="text"]:focus,textarea:focus{border-color:var(--accent)}
 .res-sidebar h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px}
 .filter-group{display:flex;flex-direction:column;gap:6px}
 .filter-group label{font-size:.72rem;color:var(--muted)}
-select.filter{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 8px;font-size:.8rem;outline:none}
+select.filter{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 8px;font-size:.8rem;outline:none}
 select.filter:focus{border-color:var(--accent)}
 .n-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;text-align:center}
 .n-badge .n-val{font-size:1.6rem;font-weight:700;color:var(--accent2)}
 .n-badge .n-label{font-size:.7rem;color:var(--muted)}
 .btn-nueva{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px;font-size:.78rem;font-weight:600;cursor:pointer;width:100%;margin-top:auto;transition:border-color .15s}
 .btn-nueva:hover{border-color:var(--accent)}
+.btn-volver{background:var(--accent);border:none;color:#fff;border-radius:8px;padding:9px;font-size:.8rem;font-weight:600;cursor:pointer;width:100%;transition:opacity .15s}
+.btn-volver:hover{opacity:.9}
 
 .res-main{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:20px}
-.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .chart-card h3{font-size:.88rem;font-weight:600;margin-bottom:16px;line-height:1.4}
 .chart-wrap{position:relative;height:200px}
 
@@ -94,40 +102,48 @@ select.filter:focus{border-color:var(--accent)}
     <h1>📊 Pueblo Digital — Encuesta</h1>
     <div class="sub" id="hdr-sub">Diseña y lanza una encuesta a las 1.000 Personas del panel</div>
   </div>
-  <nav>
-    <a href="/">🎙 Entrevista</a>
-  </nav>
 </header>
 
-<!-- ── VISTA: DISEÑAR ─────────────────────────────────────────── -->
+<!-- ── VISTA: DISEÑAR (3 columnas) ────────────────────────────── -->
 <div id="view-design" class="view active">
-  <div class="design-card" id="templates-card" style="display:none">
-    <h2>📋 Encuestas disponibles</h2>
-    <div id="templates-list"></div>
-  </div>
-  <div class="design-card">
-    <h2>📝 Diseña tu encuesta</h2>
-    <div id="questions-container"></div>
-    <button class="btn-add-q" onclick="addQuestion()">+ Añadir pregunta</button>
-  </div>
-  <div style="width:100%;max-width:700px;display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px">
-    <label style="font-size:.82rem;color:var(--muted);white-space:nowrap">Tamaño de muestra:</label>
-    <select id="muestra-select" style="background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:6px 10px;font-size:.85rem;outline:none">
-      <option value="50">50 Personas (~4 min)</option>
-      <option value="200" selected>200 Personas (~14 min)</option>
-      <option value="500">500 Personas (~35 min)</option>
-      <option value="">1.000 Personas completas (~70 min)</option>
-    </select>
-    <span style="font-size:.75rem;color:var(--muted);margin-left:auto">Muestra aleatoria estratificada</span>
-  </div>
-  <button class="btn-launch" id="btn-launch" onclick="launchSurvey()">
-    🚀 Lanzar encuesta
-  </button>
-  <p class="cost-note">Proveedor LLM según .env: Gemini (gratuito) · Groq · Claude Haiku</p>
+  <div class="design-grid">
 
-  <div class="design-card" id="history-card" style="display:none">
-    <h2>📁 Encuestas guardadas</h2>
-    <div id="history-list"></div>
+    <!-- Columna 1: Diseña nueva encuesta -->
+    <div class="design-col">
+      <div class="design-card">
+        <h2>📝 Diseña nueva encuesta</h2>
+        <div id="questions-container"></div>
+        <button class="btn-add-q" onclick="addQuestion()">+ Añadir pregunta</button>
+        <div class="muestra-row">
+          <label>Tamaño de muestra:</label>
+          <select id="muestra-select">
+            <option value="50">50 Personas (~4 min)</option>
+            <option value="200" selected>200 Personas (~14 min)</option>
+            <option value="500">500 Personas (~35 min)</option>
+            <option value="">1.000 Personas completas (~70 min)</option>
+          </select>
+        </div>
+        <button class="btn-launch" id="btn-launch" onclick="launchSurvey()">🚀 Lanzar encuesta</button>
+        <p class="cost-note">Muestra aleatoria estratificada · Proveedor LLM según .env: Gemini (gratuito) · Groq · Claude Haiku</p>
+      </div>
+    </div>
+
+    <!-- Columna 2: Encuestas disponibles -->
+    <div class="design-col">
+      <div class="design-card" id="templates-card">
+        <h2>📋 Encuestas disponibles</h2>
+        <div id="templates-list"></div>
+      </div>
+    </div>
+
+    <!-- Columna 3: Resultados encuestas -->
+    <div class="design-col">
+      <div class="design-card" id="history-card">
+        <h2>📁 Resultados encuestas</h2>
+        <div id="history-list"></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -146,6 +162,7 @@ select.filter:focus{border-color:var(--accent)}
 <!-- ── VISTA: RESULTADOS ──────────────────────────────────────── -->
 <div id="view-results" class="view">
   <div class="res-sidebar">
+    <button class="btn-volver" onclick="showView('design'); loadTemplates(); loadHistory()">← Volver</button>
     <div>
       <h3>Filtros</h3>
       <div class="filter-group">
@@ -337,21 +354,26 @@ function setResMeta(text) {
 }
 
 // ── Plantillas de encuesta (encuestas/) ──────────────────────────────────────
+function emptyMsg(text) {
+  return `<div class="empty-msg">${esc(text)}</div>`;
+}
+
 async function loadTemplates() {
+  const list = document.getElementById('templates-list');
   try {
     const r = await fetch('/api/encuesta/plantillas');
     const items = await r.json();
-    const card = document.getElementById('templates-card');
-    const list = document.getElementById('templates-list');
-    if (!Array.isArray(items) || !items.length) { card.style.display = 'none'; return; }
-    card.style.display = 'block';
+    if (!Array.isArray(items) || !items.length) {
+      list.innerHTML = emptyMsg('No hay encuestas disponibles todavía.');
+      return;
+    }
     list.innerHTML = items.map(it => `
       <div class="hist-item" onclick="loadTemplate('${esc(it.archivo)}')">
         <div class="hist-q"><strong>${esc(it.titulo)}</strong><br>
           <span style="color:var(--muted)">${esc(it.primera_pregunta || '')}${it.n_preguntas > 1 ? ` +${it.n_preguntas-1} más` : ''}</span></div>
         <div class="hist-meta">${it.n_preguntas} pregunta${it.n_preguntas===1?'':'s'}<br>cargar en el diseñador →</div>
       </div>`).join('');
-  } catch(e) { console.error(e); }
+  } catch(e) { console.error(e); list.innerHTML = emptyMsg('No se pudieron cargar las encuestas.'); }
 }
 
 async function loadTemplate(archivo) {
@@ -374,19 +396,20 @@ async function loadTemplate(archivo) {
 
 // ── Historial de encuestas guardadas ─────────────────────────────────────────
 async function loadHistory() {
+  const list = document.getElementById('history-list');
   try {
     const r = await fetch('/api/encuesta/historial');
     const items = await r.json();
-    const card = document.getElementById('history-card');
-    const list = document.getElementById('history-list');
-    if (!Array.isArray(items) || !items.length) { card.style.display = 'none'; return; }
-    card.style.display = 'block';
+    if (!Array.isArray(items) || !items.length) {
+      list.innerHTML = emptyMsg('Aún no hay resultados guardados. Lanza una encuesta para ver aquí sus resultados.');
+      return;
+    }
     list.innerHTML = items.map(it => `
       <div class="hist-item" onclick="openSaved('${esc(it.archivo)}')">
         <div class="hist-q">${esc(it.primera_pregunta || '(sin título)')}${it.n_preguntas > 1 ? ` <span style="color:var(--muted)">+${it.n_preguntas-1} más</span>` : ''}</div>
         <div class="hist-meta">${esc(it.fecha)}<br>${it.n_personas} Personas</div>
       </div>`).join('');
-  } catch(e) { console.error(e); }
+  } catch(e) { console.error(e); list.innerHTML = emptyMsg('No se pudieron cargar los resultados.'); }
 }
 
 async function openSaved(archivo) {
@@ -511,12 +534,12 @@ function updateCharts() {
         scales: {
           x: {
             min: 0, max: 100,
-            grid:  {color: '#2e325044'},
-            ticks: {color: '#7b82b4', callback: v => v + '%'},
+            grid:  {color: 'rgba(0,0,0,.06)'},
+            ticks: {color: '#6b7280', callback: v => v + '%'},
           },
           y: {
             grid:  {display: false},
-            ticks: {color: '#e8eaf6', font: {size: 12}},
+            ticks: {color: '#1f2937', font: {size: 12}},
           }
         }
       }
@@ -525,11 +548,8 @@ function updateCharts() {
   });
 }
 
-// ── Init: añadir pregunta de ejemplo ─────────────────────────────────────────
-addQuestion(
-  '¿Cómo valoras la situación económica del País Vasco en este momento?',
-  ['Muy buena', 'Buena', 'Regular', 'Mala', 'Muy mala']
-);
+// ── Init: añadir una pregunta en blanco ──────────────────────────────────────
+addQuestion();
 
 // Cargar plantillas e historial de encuestas guardadas
 loadTemplates();
