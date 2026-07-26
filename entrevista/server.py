@@ -710,7 +710,7 @@ class Handler(BaseHTTPRequestHandler):
             if not agent:
                 return self.send_err(404, 'Agente no encontrado')
             payload = {
-                'model':      'claude-opus-4-8',
+                'model':      'claude-haiku-4-5-20251001',
                 'max_tokens': 300,
                 'system':     build_system_prompt(agent),
                 'messages':   body.get('messages', []),

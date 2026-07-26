@@ -1,0 +1,576 @@
+{
+ "fecha": "2026-07-16 11:56:29",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "texto": "Pensando en los problemas globales actuales, indica los 3 que más miedo te dan",
+   "opciones": [
+    "Conflictos internacionales / guerras",
+    "Terrorismo",
+    "Subida brusca de los precios",
+    "Desabastecimiento de algún producto básico",
+    "Crisis energética",
+    "Inseguridad ciudadana",
+    "Migración",
+    "Cambio climático",
+    "Pandemias / crisis sanitarias",
+    "Desempleo",
+    "Precariedad laboral",
+    "Desarrollos tecnológicos (Inteligencia artificial)",
+    "Ciberataques",
+    "El avance de las ideas antidemocráticas",
+    "Ninguno en particular"
+   ],
+   "multiple": 3,
+   "datos_reales": {
+    "Conflictos internacionales / guerras": 45.0,
+    "Terrorismo": 9.5,
+    "Subida brusca de los precios": 36.4,
+    "Desabastecimiento de algún producto básico": 5.2,
+    "Crisis energética": 9.0,
+    "Inseguridad ciudadana": 32.8,
+    "Migración": 18.4,
+    "Cambio climático": 26.8,
+    "Pandemias / crisis sanitarias": 23.8,
+    "Desempleo": 17.5,
+    "Precariedad laboral": 21.0,
+    "Desarrollos tecnológicos (Inteligencia artificial)": 8.8,
+    "Ciberataques": 6.7,
+    "El avance de las ideas antidemocráticas": 33.1,
+    "Ninguno en particular": 2.0
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes frases: El miedo a la delincuencia justifica un mayor control estatal sobre la población",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 10.0,
+    "Bastante de acuerdo": 31.7,
+    "Poco de acuerdo": 30.6,
+    "Nada de acuerdo": 21.2,
+    "NS/NC": 6.5
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes frases: Cedería parte de mis libertades a cambio de mayor garantía de mi seguridad",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 5.6,
+    "Bastante de acuerdo": 21.6,
+    "Poco de acuerdo": 35.5,
+    "Nada de acuerdo": 29.4,
+    "NS/NC": 8.0
+   }
+  },
+  {
+   "texto": "En qué medida estás de acuerdo con cada una de las siguientes fras: Es necesario priorizar a las personas autóctonas en la redistribución de recursos públicos (ayudas, vivienda, asistencia sanitaria, etc.) para que no colapsen los servicios públicos",
+   "opciones": [
+    "Muy de acuerdo",
+    "Bastante de acuerdo",
+    "Poco de acuerdo",
+    "Nada de acuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Muy de acuerdo": 19.4,
+    "Bastante de acuerdo": 33.1,
+    "Poco de acuerdo": 22.1,
+    "Nada de acuerdo": 18.6,
+    "NS/NC": 6.8
+   }
+  },
+  {
+   "texto": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "Nunca he tenido miedo a viajar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mucho": 3.0,
+    "Bastante": 17.9,
+    "Poco": 37.6,
+    "Nada": 28.0,
+    "Nunca he tenido miedo a viajar": 13.5
+   }
+  },
+  {
+   "texto": "¿Has descartado o modificado un viaje en los últimos dos años?",
+   "opciones": [
+    "Sí",
+    "No"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Sí": 27.0,
+    "No": 73.0
+   }
+  },
+  {
+   "texto": "¿Cuál fue la principal razón?",
+   "opciones": [
+    "Inseguridad",
+    "Precio elevado",
+    "Crisis sanitaria",
+    "Conflicto político",
+    "Guerras",
+    "Motivos laborales",
+    "Otro"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Inseguridad": 19.0,
+    "Precio elevado": 37.6,
+    "Crisis sanitaria": 3.3,
+    "Conflicto político": 11.0,
+    "Guerras": 14.6,
+    "Motivos laborales": 6.4,
+    "Otro": 8.2
+   }
+  }
+ ],
+ "total": 20,
+ "done": 20,
+ "results": [
+  {
+   "id": 881,
+   "nombre": "Txema Mendieta Fernández",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "25-34",
+   "edad": 29,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,H,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 142,
+   "nombre": "Txema Lazkano Zubieta",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "Voté nulo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C,D,G",
+    "1": "C",
+    "2": "D",
+    "3": "B",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 363,
+   "nombre": "Eider Pérez Alkorta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C,F,H",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 21,
+   "nombre": "Nora González Alkorta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C,D,H",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "A",
+    "6": "B"
+   }
+  },
+  {
+   "id": 602,
+   "nombre": "Patricia Uriarte Fernández",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 65,
+   "voto": "PNV/ EAJ",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,H,I",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 920,
+   "nombre": "Ander Muñoz Álvarez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 53,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C,D,J",
+    "1": "C",
+    "2": "C",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 335,
+   "nombre": "Nerea Fernández Zubieta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 48,
+   "voto": "No lo recuerdo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,J,K",
+    "1": "C",
+    "2": "C",
+    "3": "D",
+    "4": "D",
+    "5": "A",
+    "6": "B"
+   }
+  },
+  {
+   "id": 518,
+   "nombre": "Aritz Rodríguez Ramírez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "PNV/ EAJ",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "C,D,F",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 73,
+   "nombre": "Begoña Rodríguez Gaztañaga",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 75,
+   "voto": "Voté en blanco",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C,D,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 389,
+   "nombre": "María Ormaetxea Ruiz",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No voté",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,D,F",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "B",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 157,
+   "nombre": "Iker Beristain López",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 63,
+   "voto": "No lo recuerdo",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "A,C,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 313,
+   "nombre": "Juan García Rodríguez",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 61,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C,D,H",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 176,
+   "nombre": "Manuel Martínez Arrizabalaga",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 66,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,J,K",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 661,
+   "nombre": "Lucia Agirre López",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 69,
+   "voto": "Voté en blanco",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "C,D,H",
+    "1": "C",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 566,
+   "nombre": "Pedro García Urrutia",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 60,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C,H,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 397,
+   "nombre": "Aritz Etxebarria Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 76,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "A,C,K",
+    "1": "D",
+    "2": "D",
+    "3": "D",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 495,
+   "nombre": "Ander Izagirre Bilbao",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 75,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C,D,H",
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 391,
+   "nombre": "Iñaki Ibarra Álvarez",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 43,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B,C,F",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "C",
+    "5": "B",
+    "6": "G"
+   }
+  },
+  {
+   "id": 671,
+   "nombre": "Beñat Martínez Ruiz",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 57,
+   "voto": "PSE",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C,H,I",
+    "1": "C",
+    "2": "D",
+    "3": "C",
+    "4": "B",
+    "5": "A",
+    "6": "B"
+   }
+  },
+  {
+   "id": 795,
+   "nombre": "Carmen Beristain Agirre",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 84,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Muy baja (E2)",
+   "nivel_estudios": "Sin estudios/Primaria",
+   "resps": {
+    "0": "C,D,I",
+    "1": "D",
+    "2": "D",
+    "3": "E",
+    "4": "D",
+    "5": "B",
+    "6": "G"
+   }
+  }
+ ],
+ "plantilla": "barometro_digital_3_miedos.json",
+ "titulo": "Barómetro digital — Bloque 3: Los miedos de la era de la inseguridad"
+}

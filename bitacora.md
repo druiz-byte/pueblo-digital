@@ -4,6 +4,194 @@
 
 ---
 
+## 2026-07-26 · Decimoquinta sesión — App de entrevista: emparejamiento automático de avatar y migración a Anam
+
+**Ordenador:** oficina (Cowork). Sin API (Anam/Anthropic solo desde el PC de David).
+
+**Contexto:** retomar la app de entrevista con avatares. Dos peticiones de David: (1) que la Persona se empareje sola con un avatar/voz sin tener que elegir a mano entre los perfiles, y (2) alternativas a LiveAvatar que reflejen mejor los perfiles.
+
+**Decisiones (con David):** migrar a **Anam** (anam.ai) por fidelidad —genera avatar desde **una sola foto**, al contrario que LiveAvatar/Tavus que exigen 2-5 min de vídeo— y granularidad de cara **por celda género×edad** (no una cara por Persona).
+
+**Investigación de alternativas (WebSearch):** LiveAvatar (actual, spin-off de HeyGen), Anam, Tavus CVI, D-ID, Simli. Distinción clave: **cara desde foto (Anam, D-ID) vs desde vídeo (LiveAvatar, Tavus)** → solo las primeras escalan a la diversidad del panel. Voz: ElevenLabs es lo mejor en castellano pero **no tiene euskera**; para las 105 Personas en euskera hará falta TTS externo (Azure `eu-ES`, Google, Narakeet) vía audio passthrough (fase 2).
+
+**Arquitectura elegida:** el cerebro sigue siendo Claude (`/api/chat` genera la respuesta de la Persona); Anam solo pone la cara y la **habla** con `talk()`. El servidor mina el token de sesión de Anam con `ANAM_API_KEY` (no sale del navegador). Entrada por teclado (no STT), así que la migración es limpia.
+
+**Hecho (todo en `entrevista/`):**
+- **`emparejar.py`** — selector determinista Persona→(cara, voz). Celdas género×edad (bordes 30/50/65), voz idioma×género. Dentro de celda: `id mod nº_caras`. **Probado sobre las 1.000**: reparto correcto en 12 celdas, 0 Personas sin clasificar. Reparto de voz: cas_h 422 · cas_m 463 · cas_x 10 · eus_h 50 · eus_m 53 · eus_x 2.
+- **`avatares_catalogo.json`** — celdas→[avatarId] y voces→voiceId (voces provisionales de la galería EN; caras vacías hasta que David las cree).
+- **`anam_setup.py`** (PC de David) — subcomandos `voces` / `avatares` / `crear <carpeta>` / `token <id>`. `crear` sube una imagen por celda (nombre `celda__loquesea.png`) a `POST /v1/avatars` y rellena el catálogo. Avisa si Anam devuelve `403 Requires enterprise plan`.
+- **`server_anam.py`** — como `server_v2.py` pero con `AnamHandler`: `POST /api/anam/session {id}` empareja y mina el token; sirve `anam.html` en `/anam`.
+- **`public/anam.html`** — frontend enfocado (ficha · avatar · chat) con el SDK de Anam (`esm.sh/@anam-ai/js-sdk`): `createClient(token)` → `streamToVideoElement` → `talk(reply)`. Muestra la celda/voz emparejada en un badge.
+- **`MIGRACION_ANAM.md`** — guía + checklist para David (cuenta/clave, voces castellano, ~16-24 caras Cara-4, comprobación, arranque, cambiar `ENTREVISTA_URL`).
+
+**Avisos:** (a) crear avatares custom **puede requerir plan superior** en Anam (403); alternativa: galería stock. (b) **euskera** pendiente de fase 2 (audio passthrough con Azure/Google). (c) el emparejamiento es **independiente del proveedor**: sirve también para LiveAvatar rellenando el catálogo con sus IDs.
+
+**PUESTA EN MARCHA — FUNCIONANDO END-TO-END (misma sesión, PC de David):**
+- **Caras: galería stock de Anam** (David no tiene plan para crear custom desde foto, de momento). Se listaron con `anam_setup.py avatares` (10 disponibles) y se mapearon a las 8 celdas: Hunter→h_18_30/h_31_50 · Finn→h_31_50 · Gabriel→h_51_65/h_66_plus · Sophie→m_18_30 · Mia/Liv/Bella→m_31_50 · Anne/Julia→m_51_65 · Julia(canas)→m_66_plus. El digital twin de David se deja fuera. Limitación conocida: la galería tira a **adulto profesional 30-55**, poca cara joven/mayor real → motivo para crear caras propias más adelante.
+- **Voces: castellano nativo de Anam.** Las 10 voces por defecto eran inglesas (acento americano). David añadió desde el Lab voces en español y pasó sus IDs. Cableadas en el catálogo con **rotación por id** (como las caras): mujeres **Nuria** `8f90e9ac-4fc0-11f1-84b0-52bacf74fa75` + **Blanca** `8f70d6bd-4fc0-11f1-84b0-52bacf74fa75`; hombres **Martin Osborne** `fbe2b6ee-a4df-4d6c-b51a-92be37c9517f` + **Daniel** `2d96e0ff-6667-4d7d-a908-f5e4d6ee0bcd`. Reparto sobre las 1.000: Blanca 266 · Nuria 262 · Martin 243 · Daniel 229. `emparejar.py` ampliado para admitir una **lista** de voces por clave (además de un dict) y rotar.
+- **Fix clave del error "Legacy session tokens":** el token de sesión necesita `personaConfig.llmId = "CUSTOMER_CLIENT_V1"` para desactivar el cerebro de Anam y dejar que responda Claude vía `talk()`. Añadido en `server_anam.py` y `anam_setup.py`. El frontend usa el evento `SESSION_READY` y fija el SDK a `@anam-ai/js-sdk@latest`.
+- **Incidencia Anthropic:** la `ANTHROPIC_API_KEY` del `.env` daba 401 `authentication_error` (revocada). Se creó `test_anthropic.py` (prueba la clave sin dependencias). David generó clave nueva → chat OK.
+- **Estado: la Persona se empareja sola con cara+voz castellana y conversa** (Claude de cerebro, Anam pone cara y voz). Confirmado por David.
+
+**Pendiente:** (a) **euskera** fase 2 (audio passthrough con Azure `eu-ES`; ahora las 105 Personas usan voz castellana provisional). (b) **caras propias** si David sube de plan en Anam (más diversidad de edad que la galería stock). (c) opcional: enlazar `/anam?id=` desde el panel raíz (`ENTREVISTA_URL` en `index.html`).
+
+---
+
+## 2026-07-20 · Decimocuarta sesión — El frente PPI++ se CIERRA: el perfil enriquecido no mueve la aguja y sabemos por qué (techo predictivo)
+
+**Ordenador:** oficina (Cowork). Generación de las predicciones en el PC de David; todo el análisis en Cowork (sin API).
+
+**Contexto:** ejecutar por fin el pendiente nº1 (tanda de 300 con perfil enriquecido) y medir si sube la correlación individual, que era el cuello de botella del PPI++.
+
+**Hecho:**
+- **Tanda de 300 relanzada y completada** (prueba de 3 → 300). `predicciones_deusto_full.json`: 300 encuestados, 285 con las 152 preguntas completas, 0 sin parsear. Verificado que `generar_predicciones_full.py` **guarda incrementalmente** (línea 122, tras cada bloque de cada encuestado) y es reanudable — el corte del 16-jul no se puede repetir.
+- **Herramienta nueva `piloto_ppi/acuerdo_individual.py`** — mide el acuerdo a nivel de MICRODATO (persona real vs su gemelo digital), que hasta ahora solo existía para las escalas 0-10. Métrica según tipo, porque la distancia importa (un 7 real vs 8 predicho no es el mismo error que 7 vs 1): escalas 0-10 → exacto/±1/MAE/Spearman/kappa cuadrático; **cat ORDINAL** (48) → kappa ponderado + ±1; **cat NOMINAL** (41) → kappa de Cohen; multi (9) → Jaccard/F1. Dos decisiones críticas: (a) **baseline "predecir siempre la moda"** en todas —sin él, un 51% de acierto parece bueno cuando la moda sola da 56%—, y (b) **NS/NC excluido** de las métricas de distancia (en las 54 escalas es la opción L = índice 11; tratarlo como número metería un "11" en una escala 0-10). Reutiliza `arrays_pregunta` de `true_ppi_full.py`; stub de `ppi_py` para no exigir la librería.
+- **Herramienta nueva `piloto_ppi/techo_predictivo.py`** — calcula el **TECHO de información**: regresa cada una de las 152 preguntas del `.sav` REAL sobre las variables que un perfil podría contener (sexo, edad, provincia, lengua, situación laboral, estudios, religión, nacimiento, voto 2024, voto 2020, ideología, nacionalismo; 68 columnas). R² **fuera de muestra**, validación cruzada 5-fold, ridge suave. `corr_max = sqrt(R²)` es el límite de CUALQUIER panel digital. No toca el panel: es una propiedad de los datos reales.
+
+**RESULTADOS — los tres números que cierran el frente:**
+1. **Techo (`techo_predictivo.md`): R² medio fuera de muestra 0,080 → corr máxima media 0,24.** Mediana 0,052; **14/100 preguntas con R² ≤ 0** (el perfil no predice NADA). Por bloque: economía 0,024 (corr máx 0,15) · bienestar 0,034 (0,16) · miedos 0,059 (0,21) · turismo 0,085 (0,29) · **política 0,099 (0,28, el mejor)** · perfil 0,371 (0,61, control). Nominales: un clasificador lineal saca +7,5 p.p. sobre la moda; multi solo +1,1.
+2. **Tanda enriquecida vs perfil pobre — resultado NULO en lo esencial.** Umbrales fijados ANTES de mirar (éxito: corr ≥ 0,22, recorte IC ≥ 4%, delta vs moda ≥ 0):
+
+   | métrica | perfil pobre | enriquecido | veredicto |
+   |---|--:|--:|---|
+   | Spearman escalas (54) | 0,15 | **0,15** | sin cambio |
+   | kappa ordinales (48) | 0,101 | **0,100** | sin cambio |
+   | kappa nominales (41) | 0,161 | **0,231** | mejora |
+   | delta vs moda, nominales | −3,3 | **+1,6** | **cumple** |
+   | delta vs moda, ordinales | −5,2 | −4,5 | sigue negativo |
+   | recorte IC limpio (bloques 1-6) | 1,1% | **1,4%** | falla |
+   | DAM global | 15,8 | **15,1** | marginal |
+3. **El panel alcanza ~65% del techo.** Spearman 0,15 sobre un máximo de 0,24 → **el pipeline no está roto, choca contra un límite de información.** Aunque se construyera la Persona perfecta, el recorte del PPI sería corr² ≈ 6%, no el 30-40% que haría el método interesante.
+
+**Diagnóstico:** los 3 campos nuevos aportan **solo donde son mecánicamente relevantes** y nada donde no. El caso ilustrativo: la correlación no circular más alta sube de 0,31 a **0,52** y es `p21_9 = confianza en la Iglesia Católica` — sube porque ahora se inyecta la religión. Señal real (por debajo del techo, no es bug) pero casi **tautológica**: el perfil predice bien lo que es una reformulación del propio perfil. Igual con voto 2020 → preguntas de partido (nominales, que son las que mejoran). El margen 0,17→0,24 existía sobre el papel pero requería variables con señal transversal, y estas no la tienen.
+
+**Decisiones:**
+- **NO escalar a los 1.000.** No es cuestión de dinero (~19 $): con corr 0,15 la ganancia del PPI va con corr² y el techo de recorte es ~2% **independientemente del N**. Solo tendría sentido si la correlación hubiera subido.
+- **Frente PPI++/panel CERRADO.** El artículo pasa a tener una tesis explicada, no solo un resultado negativo: *la correlación máxima alcanzable desde un perfil sociodemográfico es 0,24 y nuestro panel alcanza el 65% de ese techo* — el límite es de información, no de modelo (ni de prompt, ni de encuestas donantes, ni de LLM frontera).
+- **Distinción central para el paper** (fuente de toda la confusión previa): se puede clavar la distribución agregada sin acertar a **ninguna** persona. Si el 43% dice "Regular", repartir las respuestas al azar reproduce el histograma perfecto con acierto individual nulo. Por eso el DAM parecía razonable (economía 13,5) mientras el delta vs moda salía negativo. Son ejes ortogonales.
+
+**Diseño propuesto para el artículo (discutido con David, "empezar de cero"):** benchmark de 3 métodos sobre las mismas 152 preguntas — imputación estadística clásica (hot-deck/kNN), Persona LLM, y LLM+PPI — contra 2 baselines tontos (moda y marginal). Evidencia a favor: en nominales el clasificador lineal saca +7,5 y el LLM +1,6 → **para preguntas imputables la estadística clásica gana al LLM**; el LLM solo debería reservarse para lo que ninguna encuesta donante cubre (turismo, geopolítica), que es justo donde peor sale (DAM 30,4 y 28,2). Cautela metodológica acordada: partir el fichero (mitad para selección de variables, mitad reservada como test) para no contaminar la validación.
+
+**Limitación reconocida:** el techo se calcula con un modelo **lineal**; uno no lineal podría arañar algo más. Es cota razonable, no absoluta. Réplica prevista si un revisor lo pregunta: gradient boosting (se espera poco movimiento — 14 preguntas con R² ≤ 0 no es un problema de forma funcional).
+
+**Infra:** el sandbox de Cowork corta los comandos a 45 s → los análisis largos se lanzan con `setsid nohup … > /tmp/log 2>&1 & disown` y se consultan después (el log **fuera** del mount de OneDrive; dentro del mount, nohup no escribe). Reaparece el desfase del mount: bash listó `predicciones_deusto_full.json` con tamaño y fecha obsoletos cuando el fichero ya había sido borrado; se contrasta con la herramienta de lectura/Glob, que ven el disco real. Ficheros solo-nube (`ppi_engine.py`, `.git/*`) dan `Invalid argument` en bash hasta que se leen una vez con la herramienta de lectura. Instalado `ppi-python` en el sandbox (ahora `true_ppi_full.py` corre en Cowork sin API).
+
+**Ficheros nuevos:** `piloto_ppi/{acuerdo_individual.py, acuerdo_individual.md, acuerdo_individual.json, techo_predictivo.py, techo_predictivo.md, techo_predictivo.json}`. Regenerados: `predicciones_deusto_full.json` (300, perfil enriquecido) e `informe_ppi_full.md`.
+
+**Pendiente:** `.sav` en formato ANCHO para SPSS (una fila por persona con `var_real` y `var_panel` en columnas, para crosstabs y kappa; la bandera `--sav` de `acuerdo_individual.py` está documentada pero **sin implementar** — el `comparacion_real_vs_panel.sav` actual está apilado y NO sirve para acuerdo individual).
+
+---
+
+## 2026-07-17 · Decimotercera sesión — Analítica web (GA4), rediseño de la app de encuestas y entrevista a Haiku
+
+**Ordenador:** oficina (Cowork). Los `git push` y el arranque de la API los hizo David en su PC (el sandbox de Cowork no puede escribir en git; ver "Infra").
+
+**Contexto:** mejorar la analítica de la web pública (`https://druiz-byte.github.io/pueblo-digital/`), rediseñar la página de diseño de encuestas y arreglar el error del chat de la entrevista.
+
+**Analítica web (Google Analytics 4):**
+- **Diagnóstico de la cuenta.** La web ya tenía GA4 (`G-4GQ86YD4FM`) y los eventos personalizados pegados por David (`abrir_persona`, `entrevistar_persona`, `lanzar_encuesta`, `generar_prompt`, `usar_filtro`, `limpiar_filtros`). El ID **no** estaba en la cuenta de Google con la que estaba abierto Chrome (esa solo tiene la propiedad "International Weeks", stream `G-TK9Y4XRVBP`, + la cuenta **demo** de GA con tráfico ficticio). El `G-4GQ86YD4FM` vive en **otra cuenta de Google de David** (propiedad "Pueblo Digital", `a6838353p545874210`, `authuser=1`).
+- **Informe creado (Explorar → Formato libre):** filas = **País** anidado con **Nombre del evento**, valores = **Usuarios activos** + **Recuento de eventos**. En Tiempo real ya entran los eventos personalizados; en las Exploraciones tardan 24-48 h en procesarse, así que el informe se llena solo. Guardado en la propiedad Pueblo Digital.
+- **Limpieza de `index.html`:** eliminado el bloque `<noscript>` de **Google Tag Manager (`GTM-K6Z7RF7G`)** que estaba a medias (sin el script de cabecera → no cargaba nada) y encima mal colocado dentro del `<style>`. GA4 intacto.
+
+**Rediseño de la app de encuestas (`entrevista/public/encuesta.html`):**
+- Vista de diseño reorganizada en **3 columnas**: izq. **"Diseña nueva encuesta"** (empieza con **una pregunta en blanco**, no el ejemplo de economía; incluye tamaño de muestra + Lanzar), centro **"Encuestas disponibles"** (plantillas), dcha. **"Resultados encuestas"** (antes "Encuestas guardadas"). Columnas siempre visibles (mensaje de vacío en vez de ocultarse); se apilan <900px.
+- **Tema claro** replicando la paleta de `index.html` (`--verde:#00754a`, `--claro:#f4f7f6`, cabecera verde degradada, tarjetas blancas con sombra). Corregidos los colores de los ejes de Chart.js (el eje Y era casi blanco → invisible en claro).
+- Quitado el botón **"🎙 Entrevista"** del header; añadido botón **"← Volver"** en la vista de resultados.
+- No se tocó la lógica de lanzar/progreso/gráficos.
+
+**Cabecera de `index.html`:** título **"Pueblo digital"** y subtítulo **"Analiza y revisa las personas que componen el pueblo digital"** (misma cabecera verde compartida con la app de encuestas). Botón "Lanzar encuesta" intacto.
+
+**Entrevista con avatar — error del chat resuelto:**
+- Síntoma: al preguntar, la Persona respondía `[Error: [object Object]]`. Doble causa: (1) el frontend hacía `throw new Error(objeto)` → aplastaba el error real; (2) el handler `/api/chat` usaba el modelo caro **`claude-opus-4-8`** (el resto del proyecto usa Haiku).
+- Arreglos (en `entrevista/public/index.html` y `entrevista/server.py`): el frontend ahora **muestra el mensaje real** de Anthropic; el modelo del chat pasa a **`claude-haiku-4-5-20251001`**. (Quedan restos de Opus en `server.js` y `server-PC-David.py`, que NO se usan en Render.)
+- Con el mensaje ya legible, el error real era el **límite de gasto de Anthropic**: *"You have reached your specified API usage limits. You will regain access on 2026-08-01 at 00:00 UTC."* Es el mismo tope que bloqueaba la generación PPI. **David amplió el límite a 200 USD en la consola → la entrevista ya funciona.**
+
+**Push a GitHub (2 commits, hechos por David desde su PC):** `ec06825` "Cabecera Pueblo digital + rediseño encuesta (3 columnas, tema claro)" y `48806c8` "Entrevista: usar Haiku y mostrar el error real del chat". `index.html` lo publica GitHub Pages; `encuesta.html`/`server.py` los sirve Render (autoDeploy).
+
+**Recordatorio de acceso:** la clave de las entrevistas es la variable `SITE_PASSWORD` (Basic Auth, `sync:false` en `render.yaml`) → se cambia en Render → Environment (online) o en `entrevista/.env` (local).
+
+**Infra (importante para futuras sesiones):** el sandbox de Cowork, montado sobre OneDrive, **no puede escribir en git** — falla al crear/borrar `.git/index.lock` ("Operation not permitted"), así que **todos los `git push` los lanza David en su PC**. Técnica usada para subir limpio pese a ir "behind": `git reset --mixed origin/main` (apunta la rama a GitHub sin tocar los ficheros) y luego `add`/`commit`/`push`. Si aparece un `index.lock` huérfano (se sincroniza por OneDrive), borrarlo en el PC (`rm -f .git/index.lock`).
+
+---
+
+## 2026-07-16 · Duodécima sesión — PPI++: perfil de generación enriquecido (preparado para lanzar)
+
+**Ordenador:** oficina (Cowork). La generación con API la lanzará David en su PC.
+
+**Contexto:** cerrar el pendiente nº1 de la sesión anterior — subir la correlación individual del panel (~0,17, el cuello de botella del PPI) reenriqueciendo el perfil de generación con campos REALES del propio Deustobarómetro que no se usaban.
+
+**Hecho (todo sin API, en Cowork):**
+- **Decodificados 3 campos del `.sav`** (que no traen etiquetas de valor): **p41 religión**, **p42 nacimiento** (+`ccaa_otra`/`pais_otra` para el lugar concreto) y **p46 voto autonómicas 2020**. Códigos mapeados por posición a las opciones de `barometro_digital_7` y **verificados**: las frecuencias del `.sav` alinean 1:1 con los `datos_reales`, y el join por `id` se validó contra la columna `voto_autonomicas_2024` ya existente (p45 decodificado → 1000/1000 coinciden).
+- **`predictores_deusto.csv` enriquecido** con las 3 columnas nuevas vía `piloto_ppi/enriquecer_predictores.py` (backup en `predictores_deusto_backup_pre_enriq.csv`). Cobertura: nacimiento 100%, religión 93,6% (resto NS/NC→N/D), voto 2020 100%. **David no necesita pyreadstat**: el CSV ya viaja por OneDrive.
+- **`generar_predicciones_full.py`** ahora inyecta los 3 campos: `persona()` los lee del CSV y el wrapper `build_prompt_enriquecido` añade religión y voto 2020 al prompt (el nacimiento ya lo renderiza `build_system_prompt_v2`). No toca `prompt_v2.py` (compartido con la app de entrevista). **No circular para B1-B6**: solo el Bloque 7 pregunta por estos campos, y ese ya se trataba como validación. Smoke-test OK (el N/D de religión se omite; el detalle de CCAA aparece).
+- **Predicciones viejas archivadas** en `predicciones_deusto_full_v1perfilpobre.json` para que la regeneración arranque limpia y poder comparar antes/después.
+
+**Pendiente (David, con API):** `cd piloto_ppi && python generar_predicciones_full.py --muestra 300` → `python true_ppi_full.py`. Comparar la correlación del `informe_ppi_full.md` nuevo con el ~0,17 previo. Si sube (≈0,35+), plantear los 1.000; si no, reencuadrar el artículo con el resultado negativo. Pasos en `PASOS_ppi_full.md`.
+
+**Herramientas nuevas para comparar en SPSS:**
+- **`equivalencia_preguntas_panel_barometro.md`** (raíz): tabla de las 152 preguntas con el texto de la plantilla (lo que ve la Persona) junto a la variable + etiqueta del `.sav` original y el error de verificación por opción. Demuestra que se pregunta y codifica exactamente lo mismo (**152/152, error medio 0,58 p.p., máx 1,9**).
+- **`piloto_ppi/predicciones_a_sav.py`**: convierte `predicciones_deusto_full.json` en dos `.sav` con el MISMO esquema, códigos y etiquetas que el original (reutiliza el crosswalk): `panel_predicho_<N>.sav` (solo panel) y `comparacion_real_vs_panel.sav` (2N filas con variable `fuente` 1=real / 2=panel, para segmentar en SPSS). Validado de punta a punta.
+
+**Incidencia API + entregable parcial:** David lanzó los 300 pero la cuenta de Anthropic **tocó el límite de gasto de la organización** (400: "reached your API usage limits", se reabre el **1-ago-2026 00:00 UTC**). La generación se cortó y el JSON quedó truncado; se recuperaron **24 encuestados completos** (`piloto_ppi/predicciones_recuperadas_parcial.json`, recuperación por escaneo de llaves). Con ellos se generó **`piloto_ppi/doublecheck.sav`** (48 filas = 24 reales + 24 panel, variable `fuente`, esquema del original) a petición de David para comparar ya en SPSS. Señal preliminar (n=24, no concluyente): el perfil enriquecido **NO** rompe el colapso de p18 en "Regular" (panel 83% vs real 58%). Para completar: David metió una **clave API nueva** en `.env`; pasos de reinicio limpio dados (borrar el JSON corrupto → prueba `--muestra 3` → `--muestra 300`).
+
+**Revisión de literatura — requisitos de un panel digital** (a petición de David, sobre `artículos/`): sintetizados de tres fuentes. (1) **Argyle et al., 4 criterios de fidelidad algorítmica**: Test de Turing social, continuidad hacia atrás (el perfil se infiere de las respuestas), continuidad hacia delante, y **correspondencia de patrones** (mantener las correlaciones internas, no solo la media) — este último es el más exigente y el cuello de botella del panel. (2) **Perils of LLMs**: el perfil DEBE incluir la variable política (omitirla dispara el error), el panel produce menos varianza y falla en relaciones condicionales individuales, y debe ser reproducible. (3) **MRS/AIA Council**: complemento no sustituto, explicabilidad, transparencia de procedencia, estándares de calidad y validación contra datos reales. Discutido con David por qué la política es el predictor de mayor densidad de señal — y la tensión con la circularidad (ideología/nacionalismo inyectados dan corr 0,82-0,96 pero no cuentan).
+
+**Storyline del artículo enriquecido (David prepara el paper):**
+- **Mov. 1 — explosión de la IA (cifras defendibles):** *AI Index 2025* → 149 modelos fundacionales en 2023 (2× 2022), ~90% de industria en 2024; cómputo de entrenamiento se duplica cada ~5 meses; coste 2,4×/año. Frontera: GPT-4 (23) → GPT-4o (24) → GPT-5/DeepSeek-R1 (25).
+- **Qué modelo usó cada paper del corpus** (`artículos/`): Argyle=GPT-3; *perils*=GPT-3.5 Turbo (+GPT-4.0/Falcon40B robustez); Wang AAE=GPT-4o afinado; Park self-reports=GPT-4o; Yin *Synthetic but Not Infinite*=GPT-4o-mini; nosotros=Claude Haiku 4.5. (`2311.01453`=PPI++ sin LLM; `sjme`=bibliométrico.)
+- **"Mejora" con modelos actuales — cálculo honesto:** salto bruto de capacidad grande (MMLU: GPT-3 ~44%, GPT-3.5 ~70% vs frontera ~91-92%), PERO la fidelidad NO sigue a la capacidad: el propio *perils* replicó con GPT-4.0 y los sesgos **persistieron** ("similar results"); el cuello de botella (corr ~0,17) es de anclaje/perfil, no de potencia. Conclusión para el paper: cambiar de modelo movería poco el DAM → propuesta de robustez: re-lanzar un subconjunto (p.ej. 100 del bloque político) con un modelo frontera y enseñar la **invariancia al modelo** del techo de fidelidad.
+- **Test de Turing (Mov. 2):** Jones & Bergen — 2023 *Does GPT-4 pass…* (~50%), 2024 *People cannot distinguish GPT-4…* (54%), **2025 *LLMs Pass the Turing Test* (PNAS): GPT-4.5 con persona juzgado humano 73%** en test de 3 partes (primer sistema que lo pasa). Matiz clave para el artículo: pasar el Turing **conversacional** (parecer *un* humano, y solo con persona) ≠ fidelidad de panel (simular a *este* humano / la distribución) = criterios 2-4 de Argyle; nuestra corr ~0,17 lo demuestra.
+- PENDIENTE: revisar los 2 PDFs sin abrir del todo, redactar Mov. 2 con las citas de Turing y añadirlas a `literatura_relacionada.md`; opcional, volcar el storyline a `draft_paper.docx`.
+
+**Infra:** reaparece el corte del mount de OneDrive tras Edit/Write (bash ve `generar_predicciones_full.py` truncado en la línea 102, pero el disco está íntegro y correcto — verificado con la herramienta de lectura). No afecta a la ejecución en el PC de David. Los `.sav`/PDF solo-nube se descargan leyéndolos una vez con la herramienta de lectura; luego bash (pyreadstat/pdftotext) ya los ve.
+
+---
+
+## 2026-07-16 · Undécima sesión — PPI++ completo (152 preguntas): piloto con 300
+
+**Ordenador:** oficina (Cowork) + generación LLM en el PC de David.
+
+**Contexto:** extender el piloto PPI++ (que solo cubría 5 variables del bloque 5) a las **152 preguntas** de los 7 bloques, para tener por bloque "sustitución ingenua (DAM)" vs "PPI++ (recorte de IC / ahorro de datos)".
+
+**Hecho:**
+- **Crosswalk 152 preguntas ↔ variables del `.sav`** construido y **autoverificado sin API**: `piloto_ppi/build_crosswalk.py` → `crosswalk_ppi.json` + `crosswalk_cobertura.md`. Cada pregunta mapea a su variable (tipo cat/escala/multi, con las baterías resueltas: problemas→p1_1..p1_24, "no votarías"→p28_1..p28_8). Reconstruye el % real desde el `.sav` y lo compara con el `datos_reales` del template: **152/152, error medio 0,58 p.p.**
+- **Generador ampliado** `piloto_ppi/generar_predicciones_full.py`: predice las 152 por cada encuestado real con SU perfil (solo 12 predictores, anti-circularidad), reanudable. **David generó los 300** → `predicciones_deusto_full.json` (300×152).
+- **Evaluador PPI++ generalizado** `piloto_ppi/true_ppi_full.py` (motor `ppi_engine.py`): por pregunta calcula DAM ingenua (distribución, p.p.), recorte de IC, cobertura y correlación (escalas); agrega por bloque. Modo `--simular` para probar sin API. Informe → `informe_ppi_full.md`. **Bug corregido:** en escalas 0-10 la DAM ingenua se calculaba sobre la media (unidades 0-10) y se multiplicaba ×100 → inflaba bloques 2 y 5; ahora es DAM de distribución, comparable en p.p.
+
+**Resultados (300, n etiquetado=100, 20 semillas) — informe en `piloto_ppi/informe_ppi_full.md`:**
+- **Sustitución ingenua DAM global ~15,7 p.p.** (política 11,2 · bienestar 13,8 · economía 14,0 · miedos 16,9 · geopolítica 27,7 · turismo 30,8). Confirma de nuevo que el panel no sirve como sustituto.
+- **PPI++ válido pero ganancia despreciable:** recorte de IC ~1,1% global limpio (~2% de ahorro de datos). Solo política asoma (recorte 1,9%).
+- **Correlación individual muy baja:** ~0,17 incluso en el mejor grupo (las 20 escalas de "confianza en instituciones"). Como el recorte va con corr², el **techo es bajo aunque se amplíe a 1.000** — el problema no es el tamaño, es la correlación.
+- **Las únicas correlaciones altas (0,82-0,96) son circulares:** ideología y nacionalismo, que se inyectan en el prompt. Validan que el motor PPI está bien (cuando el panel sabe, corr→1, recorte→34%), pero no cuentan.
+- **Cobertura ~90%**, algo baja; probable artefacto de que los 300 son los primeros del fichero (no submuestra aleatoria) contrastados contra la "verdad" de los 1.000. Con los 1.000 desaparece.
+
+**Decisiones / diagnóstico:** la palanca real es la **correlación**, no el N. La generación usó un perfil pobre (12 predictores, resto N/D). **Siguiente paso acordado:** reenriquecer el perfil con campos REALES del propio Deustobarómetro no usados aún — **p42 lugar de nacimiento** (+`ccaa_otra`/`pais_otra`), **p41 religión**, **p46 voto 2020** (David señaló que el lugar de nacimiento sí está en los datos; se confirmó: está en el `.sav`, no hay que imputarlo). Luego remedir con los 300 y ver si sube la correlación antes de decidir sobre los 1.000. Opcional posterior: bloques imputados medios/bienestar/social evitando los campos circulares (confianza institucional, soledad, seguridad, bienestar-objetivo).
+
+**Ficheros nuevos:** `piloto_ppi/{build_crosswalk.py, crosswalk_ppi.json, crosswalk_cobertura.md, generar_predicciones_full.py, true_ppi_full.py, predicciones_deusto_full.json, informe_ppi_full.md}` y `PASOS_ppi_full.md` (raíz).
+
+**Infra:** persiste el corte del mount de OneDrive tras Edit/Write (bash ve el `.py` truncado aunque el disco está bien); se resolvió ejecutando la lógica por heredoc. La generación LLM se lanza siempre en el PC de David (API bloqueada en el sandbox).
+
+---
+
+## 2026-07-16 · Décima sesión — Contraste limpio v1 vs v2: la mejora era de las plantillas, no del panel
+
+**Ordenador:** oficina (Cowork) + tanda lanzada en el PC de David.
+
+**Contexto:** cerrar el pendiente nº1. Hasta ahora la "mejora v2" (16,7 → 14,0) mezclaba dos cambios: el rediseño del panel **y** el cambio de plantillas (91 preg. viejas → 143/152 oficiales). Había que relanzar el **panel v1 con las mismas plantillas oficiales** que usó la v2 para aislar el efecto del panel.
+
+**Hecho:**
+- **Preparación:** verificado que `lanzar_barometro.py` ya carga el panel v1 (`pv_agentes.json`) + las 7 plantillas oficiales `barometro_digital_1..7` (152 preguntas, las mismas que la v2 del 14-jul). Escrito el agregador **`entrevista/contraste_v1_vs_v2.py`**: calcula DAM por bloque y global de dos tandas identificadas por fecha, con la **misma lógica** que `comparar_deustobarometro.py` (tomando por bloque la tanda completa n≥500 de cada fecha; ignora pruebas `--muestra`). Validado con autocontraste v2 vs v2 (Δ=0, reproduce los DAM por bloque documentados). Instrucciones en `PASOS_contraste_v1_oficial.md`.
+- **Tanda v1 lanzada por David** (Haiku, 1.000 Personas, 7 bloques): `resultados/encuesta_2026-07-16_1200..1209.json`. Prueba previa de 20 OK; tanda completa con **0 vacías, 0 sin parsear** (huecos sueltos <1%: B5 242/60.000, B6 163/24.000). Confirmado que corrió sobre v1 (id 363 = *Eider*, no *Nahia* de v2).
+- **Contraste (`resultados/contraste_v1_vs_v2.md`): DAM v1 = 13,4 vs v2 = 13,9 (Δ +0,4) sobre 152 preguntas.** Excluyendo el B7 de perfil: v1 = 13,8 vs v2 = 14,0. Por bloque (Δ = v2−v1): economía +0,3 · bienestar +1,4 · miedos +3,9 · turismo −3,5 (2 preg.) · política −0,1 · geopolítica −0,9 · perfil +3,3.
+
+**Conclusión (importante para el artículo):**
+- **La mejora 16,7 → 14,0 era el cambio de plantillas, no el panel.** Sobre las mismas preguntas la v1 es incluso marginalmente mejor que la v2. El ancla en encuestado real + más llaves (ESS España, Capital Social) **no reduce el DAM** frente al Deustobarómetro: el barómetro está dominado por variables políticas/económicas que la v1 ya capturaba (B5 política idéntico, 10,1), y la v2 empeora bienestar/miedos/perfil. La mejor coherencia interna de la v2 (validación sin API) no se traduce en mejor predicción.
+- Es un hallazgo metodológico limpio: un confound de instrumento (plantillas) y la lección de que "más estructura ≠ mejor predicción" en este caso.
+
+**Decisiones / pendiente:** decidir con David el rumbo del frente "panel" (mejorar v2 con ancla vasca real para medios/bienestar y `principales_problemas`; volver a v1 como base; o congelar el panel y centrar el artículo en PPI++ como método). Documentación (`CLAUDE.md`, esta bitácora) actualizada.
+
+---
+
 ## 2026-07-16 · Novena sesión — App de entrevista: vista enfocada desde el panel + fix de datos v2
 
 **Ordenador:** oficina (Cowork). Entrevista servida en el PC de David.

@@ -578,7 +578,13 @@ async function sendQuestion() {
       body: JSON.stringify({ agentId: selectedAgent.id, messages: chatHistory })
     });
     const data = await r.json();
-    if (data.error) throw new Error(data.error);
+    if (!r.ok || data.error) {
+      const err = data.error;
+      const msg = (err && err.message) ? err.message
+                : (typeof err === 'string' ? err
+                : (data.message || ('HTTP ' + r.status)));
+      throw new Error(msg);
+    }
     const reply = data.text;
     thinking.querySelector('.content').textContent = reply;
     chatHistory.push({ role: 'assistant', content: reply });

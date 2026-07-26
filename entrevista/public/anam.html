@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pueblo Digital — Entrevista (Anam)</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { padding:14px 20px; border-bottom:1px solid var(--line); background:var(--card); }
+  header h1 { margin:0; font-size:18px; }
+  header .sub { color:var(--muted); font-size:13px; }
+  main { display:grid; grid-template-columns:320px 1fr 360px; gap:16px; padding:16px; height:calc(100vh - 58px); }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; overflow:auto; }
+  .ficha h2 { font-size:16px; margin:.2em 0 .6em; }
+  .ficha .sec { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:14px 0 4px; }
+  .ficha .row { display:flex; justify-content:space-between; gap:10px; padding:2px 0; border-bottom:1px dashed var(--line); }
+  .ficha .row .k { color:var(--muted); }
+  .stage { display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0d1117; border:1px solid var(--line); border-radius:12px; position:relative; overflow:hidden; }
+  #video { width:100%; height:100%; object-fit:cover; display:none; }
+  #video.on { display:block; }
+  .stage .ph { color:#98a2b3; text-align:center; padding:20px; }
+  .btn { border:0; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; }
+  .btn.primary { background:var(--accent); color:#fff; }
+  .btn.ghost { background:#eef1f6; color:var(--ink); }
+  .btn:disabled { opacity:.5; cursor:default; }
+  .stage .controls { position:absolute; top:10px; left:10px; display:flex; gap:8px; }
+  .chat { display:flex; flex-direction:column; }
+  #transcript { flex:1; overflow:auto; display:flex; flex-direction:column; gap:8px; }
+  .msg { padding:8px 10px; border-radius:10px; max-width:92%; }
+  .msg.user { background:#eaf1ff; align-self:flex-end; }
+  .msg.agent { background:#f1f3f7; align-self:flex-start; }
+  .msg .who { font-size:11px; color:var(--muted); margin-bottom:2px; }
+  .msg.sys { align-self:center; color:var(--muted); font-size:12px; background:transparent; }
+  .composer { display:flex; gap:8px; margin-top:10px; }
+  .composer input { flex:1; padding:9px 11px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
+  .badge { display:inline-block; font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:1px 8px; margin-left:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pueblo Digital · Entrevista <span id="match-badge" class="badge" style="display:none"></span></h1>
+  <div class="sub">Cara y voz asignadas automáticamente al perfil · Anam</div>
+</header>
+<main>
+  <section class="panel ficha" id="ficha"><p style="color:var(--muted)">Cargando ficha…</p></section>
+
+  <section class="panel stage">
+    <div class="controls">
+      <button id="btn-connect" class="btn primary">🎙 Hablar con la Persona</button>
+      <button id="btn-stop" class="btn ghost" style="display:none">Terminar</button>
+    </div>
+    <video id="video" autoplay playsinline></video>
+    <div class="ph" id="ph">Pulsa «Hablar con la Persona» para conectar el avatar.</div>
+  </section>
+
+  <section class="panel chat">
+    <div id="transcript"><div class="msg sys">La conversación aparecerá aquí.</div></div>
+    <div class="composer">
+      <input id="q" placeholder="Escribe tu pregunta…" disabled>
+      <button id="send" class="btn primary" disabled>Enviar</button>
+    </div>
+  </section>
+</main>
+
+<script type="module">
+import { createClient } from "https://esm.sh/@anam-ai/js-sdk@latest";
+import { AnamEvent } from "https://esm.sh/@anam-ai/js-sdk@latest/dist/module/types";
+
+const $ = s => document.querySelector(s);
+const params = new URLSearchParams(location.search);
+const ID = params.get("id") || "1";
+let persona = null, anam = null, history = [];
+
+const esc = t => (t||"").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function sys(t){ add("sys","",t); }
+function add(type, who, text){
+  const d = document.createElement("div");
+  d.className = "msg " + type;
+  d.innerHTML = (who?`<div class="who">${esc(who)}</div>`:"") + `<div class="content">${esc(text)}</div>`;
+  $("#transcript").appendChild(d);
+  $("#transcript").scrollTop = $("#transcript").scrollHeight;
+  return d;
+}
+
+// ── Ficha de la Persona ─────────────────────────────────────────────────────
+function fila(k,v){ return v==null||v===""?"":`<div class="row"><span class="k">${esc(k)}</span><span>${esc(String(v))}</span></div>`; }
+function pintarFicha(a){
+  const H = [];
+  H.push(`<h2>${esc(a.nombre)} ${esc(a.apellidos||"")}</h2>`);
+  H.push(`<div class="sec">Perfil</div>`);
+  H.push(fila("Edad", a.edad), fila("Género", a.genero), fila("Provincia", a.provincia),
+         fila("Hábitat", a.habitat), fila("Estudios", a.nivel_estudios),
+         fila("Situación laboral", a.situacion_laboral), fila("Clase social", a.clase_social),
+         fila("Nacimiento", a.nacimiento));
+  H.push(`<div class="sec">Lengua</div>`);
+  H.push(fila("Euskera", a.euskera), fila("Idioma", a.lengua_encuesta));
+  H.push(`<div class="sec">Política</div>`);
+  H.push(fila("Voto 2024", a.voto_autonomicas_2024), fila("Identidad", a.identidad),
+         fila("Territorial", a.preferencia_territorial),
+         fila("Ideología (0-10)", a.ideologia_0_10),
+         fila("Nacionalismo (0-10)", a.escala_nacionalismo_0_10),
+         fila("Interés política", a.interes_politica));
+  $("#ficha").innerHTML = H.join("");
+}
+
+async function cargarFicha(){
+  const r = await fetch("/api/agentes/" + encodeURIComponent(ID));
+  if(!r.ok){ $("#ficha").innerHTML = "<p>No se encontró la Persona "+esc(ID)+".</p>"; return; }
+  persona = await r.json();
+  pintarFicha(persona);
+}
+
+// ── Conectar el avatar (cara+voz emparejadas por el servidor) ───────────────
+async function connect(){
+  $("#btn-connect").disabled = true;
+  sys("Emparejando cara y voz con el perfil…");
+  try {
+    const r = await fetch("/api/anam/session", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ id: ID })
+    });
+    const data = await r.json();
+    if(!r.ok || !data.sessionToken){
+      throw new Error(typeof data.error==="string"?data.error:JSON.stringify(data.error||data));
+    }
+    const m = data.match;
+    const b = $("#match-badge");
+    b.textContent = `celda ${m.celda} · voz ${m.claveVoz}`;
+    b.style.display = "inline-block";
+
+    anam = createClient(data.sessionToken, { disableInputAudio: true });
+    anam.addListener(AnamEvent.SESSION_READY, () => {
+      $("#ph").style.display = "none";
+      $("#video").classList.add("on");
+      $("#q").disabled = false; $("#send").disabled = false;
+      $("#btn-stop").style.display = "inline-block";
+      sys(`${persona.nombre} está lista. Escribe tu pregunta.`);
+    });
+    anam.addListener(AnamEvent.CONNECTION_CLOSED, () => sys("Conexión cerrada."));
+    await anam.streamToVideoElement("video");
+  } catch(e){
+    sys("Error al conectar: " + e.message);
+    $("#btn-connect").disabled = false;
+  }
+}
+
+async function stop(){
+  try { if(anam) await anam.stopStreaming(); } catch(_){}
+  anam = null;
+  $("#video").classList.remove("on");
+  $("#ph").style.display = "";
+  $("#q").disabled = true; $("#send").disabled = true;
+  $("#btn-stop").style.display = "none";
+  $("#btn-connect").disabled = false;
+  sys("Sesión terminada.");
+}
+
+// ── Pregunta → Claude (mismo cerebro) → talk() ──────────────────────────────
+async function preguntar(){
+  const q = $("#q").value.trim();
+  if(!q) return;
+  $("#q").value = ""; $("#q").disabled = true; $("#send").disabled = true;
+  add("user","Entrevistador", q);
+  history.push({ role:"user", content:q });
+  const pensando = add("agent", persona.nombre, "…");
+  try {
+    const r = await fetch("/api/chat", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ agentId: persona.id, messages: history })
+    });
+    const data = await r.json();
+    if(!r.ok || data.error) throw new Error((data.error&&data.error.message)||data.error||("HTTP "+r.status));
+    const reply = data.text;
+    pensando.querySelector(".content").textContent = reply;
+    history.push({ role:"assistant", content: reply });
+    if(anam) await anam.talk(reply);
+  } catch(e){
+    pensando.querySelector(".content").textContent = "[Error: " + e.message + "]";
+  }
+  $("#q").disabled = false; $("#send").disabled = false; $("#q").focus();
+}
+
+$("#btn-connect").addEventListener("click", connect);
+$("#btn-stop").addEventListener("click", stop);
+$("#send").addEventListener("click", preguntar);
+$("#q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); preguntar(); }});
+
+cargarFicha();
+</script>
+</body>
+</html>

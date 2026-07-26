@@ -1,0 +1,1001 @@
+id,genero,edad,provincia,nivel_estudios,situacion_laboral,clase_social,lengua_encuesta,habitat,voto_autonomicas_2024,ideologia_0_10,escala_nacionalismo_0_10
+1,Mujer,53,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,PNV/ EAJ,2,8
+2,Mujer,50,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,10.001 - 20.000,PSE,3,7
+3,Hombre,38,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,Sumar,4,7
+4,Hombre,58,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,No lo recuerdo,,10
+5,Hombre,38,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,PP,6,6
+6,Mujer,48,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,20.001 - 50.000,Prefiero no contestar,,
+7,Hombre,46,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,< 10.000,No voté,2,8
+8,Mujer,63,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,10.001 - 20.000,No voté,4,7
+9,Mujer,37,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,1,10
+10,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,50.001 - 100.000,Voté en blanco,4,3
+11,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PSE,4,2
+12,Mujer,42,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,,0
+13,Hombre,49,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,C,Castellano,< 10.000,Prefiero no contestar,6,3
+14,Mujer,61,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,D,Castellano,< 10.000,No lo recuerdo,,5
+15,Mujer,37,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,No voté,,
+16,Mujer,44,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,50.001 - 100.000,Voté en blanco,7,6
+17,Hombre,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,4,6
+18,Hombre,51,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,10.001 - 20.000,PNV/ EAJ,3,8
+19,Mujer,52,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,2,7
+20,Hombre,40,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,0,6
+21,Mujer,64,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,8,9
+22,Hombre,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,PNV/ EAJ,4,9
+23,Mujer,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No lo recuerdo,8,3
+24,Mujer,69,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Euskera,100.001 - 500.000,EH Bildu,0,10
+25,Hombre,61,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,Voté en blanco,,
+26,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,10.001 - 20.000,PNV/ EAJ,5,5
+27,Hombre,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Otros,2,3
+28,Mujer,65,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+29,Mujer,69,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,6
+30,Mujer,59,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Euskera,10.001 - 20.000,PNV/ EAJ,4,10
+31,Mujer,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,50.001 - 100.000,PNV/ EAJ,5,9
+32,Hombre,29,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,PNV/ EAJ,5,5
+33,Hombre,46,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,Elkarrekin Podemos,0,0
+34,Mujer,40,Álava,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,4,6
+35,Mujer,19,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A1,Euskera,100.001 - 500.000,No voté,4,6
+36,Mujer,47,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+37,Mujer,47,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",B,Castellano,100.001 - 500.000,No voté,5,5
+38,Mujer,52,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,5,5
+39,Hombre,55,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,20.001 - 50.000,PNV/ EAJ,3,3
+40,Hombre,48,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+41,Hombre,77,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PP,6,0
+42,Mujer,59,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,B,Castellano,10.001 - 20.000,PNV/ EAJ,4,5
+43,Hombre,18,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Euskera,10.001 - 20.000,No voté,3,6
+44,Mujer,49,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PNV/ EAJ,4,5
+45,Hombre,52,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,10.001 - 20.000,PSE,5,0
+46,Mujer,34,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,6,5
+47,Hombre,69,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E2,Castellano,< 10.000,No voté,2,1
+48,Mujer,55,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,6,10
+49,Hombre,40,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PNV/ EAJ,5,8
+50,Hombre,31,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,C,Castellano,100.001 - 500.000,Sumar,6,6
+51,Mujer,49,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,100.001 - 500.000,Otros,4,5
+52,Hombre,28,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,4,5
+53,Hombre,46,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Euskera,20.001 - 50.000,PNV/ EAJ,4,8
+54,Hombre,50,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Voté en blanco,5,6
+55,Hombre,57,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,3,8
+56,Hombre,35,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,50.001 - 100.000,Vox,6,7
+57,Mujer,64,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,No voté,4,7
+58,Hombre,47,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,PSE,4,1
+59,Hombre,64,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,,10
+60,Hombre,64,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,7,3
+61,Mujer,70,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,7,5
+62,Hombre,72,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PNV/ EAJ,5,6
+63,Hombre,74,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,1,8
+64,Hombre,55,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,3,3
+65,Hombre,52,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,20.001 - 50.000,No voté,0,6
+66,Hombre,53,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,5,5
+67,Mujer,22,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",B,Castellano,20.001 - 50.000,No voté,8,7
+68,Mujer,75,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,10.001 - 20.000,No lo recuerdo,,
+69,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PNV/ EAJ,3,10
+70,Mujer,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,2,3
+71,Mujer,49,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,10.001 - 20.000,No voté,3,8
+72,Mujer,43,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,4,7
+73,Mujer,75,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,20.001 - 50.000,Voté en blanco,10,5
+74,Mujer,45,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,2,6
+75,Mujer,55,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,10,10
+76,Hombre,36,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,10,0
+77,Mujer,37,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,No voté,5,0
+78,Mujer,47,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Elkarrekin Podemos,4,0
+79,Mujer,75,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PP,6,0
+80,Hombre,60,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,D,Castellano,100.001 - 500.000,Voté nulo,5,8
+81,Hombre,44,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,E1,Castellano,20.001 - 50.000,PSE,,5
+82,Mujer,21,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A1,Castellano,100.001 - 500.000,PP,6,4
+83,Mujer,22,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Euskera,100.001 - 500.000,PSE,5,8
+84,Mujer,74,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,C,Castellano,< 10.000,EH Bildu,3,6
+85,Hombre,57,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Vox,8,4
+86,Mujer,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,8
+87,Mujer,39,Álava,Tercer grado (Doctorado),Trabajo actualmente,C,Euskera,100.001 - 500.000,EH Bildu,2,9
+88,Mujer,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+89,Hombre,60,Álava,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,6,7
+90,Mujer,74,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PSE,4,5
+91,Hombre,73,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,20.001 - 50.000,PSE,4,7
+92,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,No voté,6,5
+93,Mujer,68,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PSE,3,4
+94,Hombre,53,Álava,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,5,5
+95,Hombre,58,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,EH Bildu,2,10
+96,Mujer,70,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,EH Bildu,3,9
+97,Mujer,40,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,2,6
+98,Hombre,33,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Euskera,100.001 - 500.000,EH Bildu,3,10
+99,Mujer,40,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,< 10.000,Prefiero no contestar,,
+100,Hombre,76,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PSE,5,7
+101,Hombre,49,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,0,10
+102,Hombre,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,2,0
+103,Mujer,50,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,< 10.000,Elkarrekin Podemos,3,5
+104,Hombre,21,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Estudiante,C,Euskera,100.001 - 500.000,PSE,0,10
+105,Mujer,65,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,20.001 - 50.000,PNV/ EAJ,3,5
+106,Mujer,61,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,< 10.000,Prefiero no contestar,,0
+107,Mujer,54,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,0
+108,Hombre,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,PSE,5,7
+109,Mujer,33,Bizkaia,Tercer Grado (Máster),Estudiante,C,Castellano,100.001 - 500.000,EH Bildu,2,3
+110,Hombre,68,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Prefiero no contestar,4,5
+111,Mujer,45,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Vox,10,0
+112,Hombre,65,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,PSE,8,4
+113,Hombre,65,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,PSE,3,5
+114,Mujer,38,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,Prefiero no contestar,,6
+115,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,< 10.000,No lo recuerdo,,
+116,Hombre,67,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,Voté en blanco,5,0
+117,Hombre,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,PNV/ EAJ,4,6
+118,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,No voté,6,5
+119,Mujer,54,Álava,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,4,7
+120,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,20.001 - 50.000,No voté,,
+121,Mujer,34,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,No lo recuerdo,5,8
+122,Mujer,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,< 10.000,Prefiero no contestar,5,5
+123,Mujer,54,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,2,8
+124,Hombre,74,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,No voté,,0
+125,Mujer,61,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,No voté,,
+126,Hombre,46,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Euskera,100.001 - 500.000,PNV/ EAJ,4,8
+127,Mujer,43,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Euskera,< 10.000,EH Bildu,3,8
+128,Mujer,41,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,3,7
+129,Hombre,73,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,No voté,5,6
+130,Mujer,75,Bizkaia,Sin estudios o con estudios primarios sin terminar,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E2,Castellano,100.001 - 500.000,PNV/ EAJ,4,5
+131,Hombre,53,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,PNV/ EAJ,3,6
+132,Mujer,65,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,EH Bildu,4,5
+133,Hombre,73,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,10
+134,Mujer,60,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Euskera,100.001 - 500.000,No lo recuerdo,4,7
+135,Hombre,39,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,PSE,5,0
+136,Mujer,54,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,3,8
+137,Mujer,72,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,< 10.000,EH Bildu,2,10
+138,Hombre,61,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,No voté,4,0
+139,Hombre,50,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,< 10.000,PNV/ EAJ,6,5
+140,Mujer,50,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,,
+141,Hombre,57,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E1,Castellano,< 10.000,PSE,2,6
+142,Hombre,54,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,E1,Castellano,100.001 - 500.000,Voté nulo,,4
+143,Hombre,66,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PSE,3,3
+144,Mujer,68,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,10.001 - 20.000,PNV/ EAJ,5,8
+145,Mujer,77,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,5,3
+146,Hombre,60,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Euskera,100.001 - 500.000,No voté,1,1
+147,Hombre,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,,0
+148,Hombre,62,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,10.001 - 20.000,Prefiero no contestar,6,4
+149,Hombre,64,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,4,5
+150,Hombre,42,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté nulo,4,0
+151,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,20.001 - 50.000,Prefiero no contestar,,5
+152,Hombre,65,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Euskera,10.001 - 20.000,PNV/ EAJ,5,8
+153,Mujer,47,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,Prefiero no contestar,,
+154,Mujer,52,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PSE,5,10
+155,Mujer,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,No lo recuerdo,,
+156,Mujer,58,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,B,Castellano,< 10.000,No lo recuerdo,4,5
+157,Hombre,63,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,D,Castellano,20.001 - 50.000,No lo recuerdo,2,8
+158,Mujer,62,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Euskera,< 10.000,No lo recuerdo,4,8
+159,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,PNV/ EAJ,3,6
+160,Mujer,30,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",C,Castellano,20.001 - 50.000,No voté,5,
+161,Hombre,66,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,B,Castellano,10.001 - 20.000,PNV/ EAJ,4,10
+162,Mujer,40,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,1,0
+163,Mujer,59,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,PNV/ EAJ,,
+164,Hombre,47,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,50.001 - 100.000,PSE,4,5
+165,Mujer,40,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Euskera,< 10.000,EH Bildu,5,8
+166,Hombre,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,PP,5,2
+167,Hombre,81,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,B,Castellano,20.001 - 50.000,EH Bildu,6,5
+168,Mujer,63,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",E2,Castellano,50.001 - 100.000,Prefiero no contestar,,
+169,Hombre,80,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PNV/ EAJ,2,8
+170,Mujer,75,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,PNV/ EAJ,3,5
+171,Mujer,39,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,6,7
+172,Hombre,38,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Sumar,2,5
+173,Mujer,49,Álava,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,4
+174,Mujer,44,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E2,Castellano,10.001 - 20.000,No voté,4,7
+175,Mujer,45,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+176,Hombre,66,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PSE,4,1
+177,Hombre,71,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,No voté,5,0
+178,Hombre,65,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,No voté,4,7
+179,Hombre,50,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+180,Hombre,57,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,Voté en blanco,,5
+181,Hombre,39,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,4,3
+182,Mujer,28,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A1,Castellano,100.001 - 500.000,No voté,4,4
+183,Hombre,80,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+184,Hombre,59,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Euskera,< 10.000,PNV/ EAJ,7,10
+185,Hombre,54,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,< 10.000,EH Bildu,4,9
+186,Hombre,65,Bizkaia,Sin estudios o con estudios primarios sin terminar,"Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+187,Hombre,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Euskera,20.001 - 50.000,EH Bildu,2,10
+188,Hombre,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E2,Castellano,10.001 - 20.000,Prefiero no contestar,,
+189,Hombre,60,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,No lo recuerdo,,
+190,Mujer,69,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Prefiero no contestar,3,8
+191,Hombre,76,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,5,6
+192,Hombre,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,1,3
+193,Hombre,71,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,4,7
+194,Hombre,49,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,20.001 - 50.000,PSE,4,4
+195,Mujer,69,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,50.001 - 100.000,Prefiero no contestar,,
+196,Hombre,75,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,6,7
+197,Hombre,85,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,2,7
+198,Hombre,67,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,1,6
+199,Hombre,53,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,5,5
+200,Mujer,18,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A1,Euskera,20.001 - 50.000,No voté,0,
+201,Mujer,66,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,No voté,,
+202,Hombre,67,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PSE,3,1
+203,Hombre,62,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,< 10.000,PNV/ EAJ,4,10
+204,Hombre,59,Álava,Tercer grado (Doctorado),Trabajo actualmente,A2,Castellano,100.001 - 500.000,Sumar,3,0
+205,Mujer,47,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",A2,Castellano,100.001 - 500.000,No voté,5,8
+206,Hombre,76,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,Prefiero no contestar,3,8
+207,Hombre,40,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Euskera,20.001 - 50.000,EH Bildu,2,10
+208,Hombre,34,Álava,Tercer Grado (Máster),Trabajo actualmente,D,Castellano,100.001 - 500.000,Voté nulo,3,0
+209,Mujer,57,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,1,7
+210,Hombre,61,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Prefiero no contestar,2,7
+211,Mujer,56,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,50.001 - 100.000,No voté,5,7
+212,Mujer,68,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,< 10.000,PNV/ EAJ,5,8
+213,Mujer,48,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,Sumar,4,5
+214,Hombre,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Prefiero no contestar,5,5
+215,Hombre,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,EH Bildu,9,10
+216,Hombre,49,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,3,7
+217,Mujer,66,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,No voté,2,5
+218,Hombre,34,Bizkaia,Tercer Grado (Máster),"Parado, he trabajado anteriormente",C,Euskera,< 10.000,EH Bildu,2,2
+219,Hombre,21,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,EH Bildu,5,7
+220,Hombre,52,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté en blanco,5,4
+221,Hombre,41,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,7
+222,Hombre,63,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Euskera,100.001 - 500.000,EH Bildu,1,9
+223,Hombre,69,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PNV/ EAJ,4,7
+224,Mujer,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,< 10.000,EH Bildu,3,8
+225,Hombre,41,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Prefiero no contestar,,
+226,Mujer,41,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,100.001 - 500.000,Prefiero no contestar,,
+227,Hombre,62,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,6,9
+228,Mujer,24,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",E1,Castellano,50.001 - 100.000,Sumar,1,8
+229,Mujer,70,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PSE,4,6
+230,Hombre,62,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,5,5
+231,Hombre,59,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,4,1
+232,Mujer,52,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,,7
+233,Hombre,64,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Prefiero no contestar,2,
+234,Hombre,48,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,< 10.000,No voté,4,10
+235,Mujer,66,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,50.001 - 100.000,PSE,1,3
+236,Mujer,42,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,10.001 - 20.000,Prefiero no contestar,,7
+237,Hombre,81,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,D,Castellano,20.001 - 50.000,EH Bildu,3,9
+238,Hombre,44,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,PSE,3,8
+239,Hombre,36,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,D,Castellano,10.001 - 20.000,PSE,5,0
+240,Mujer,63,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,10.001 - 20.000,Prefiero no contestar,2,2
+241,Hombre,28,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,EH Bildu,8,10
+242,Hombre,51,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,8
+243,Hombre,77,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PNV/ EAJ,4,6
+244,Mujer,50,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,50.001 - 100.000,No voté,4,7
+245,Mujer,67,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,Prefiero no contestar,,
+246,Mujer,68,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,PSE,4,6
+247,Hombre,75,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,6,10
+248,Hombre,79,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,PNV/ EAJ,6,10
+249,Hombre,63,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,50.001 - 100.000,EH Bildu,2,5
+250,Mujer,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,EH Bildu,1,7
+251,Mujer,20,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",E1,Castellano,20.001 - 50.000,No voté,5,5
+252,Mujer,24,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Castellano,100.001 - 500.000,No voté,3,4
+253,Mujer,35,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),B,Castellano,100.001 - 500.000,No voté,,0
+254,Hombre,43,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,20.001 - 50.000,PP,6,1
+255,Hombre,59,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,EH Bildu,2,7
+256,Hombre,25,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Vox,8,6
+257,Hombre,36,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Euskera,20.001 - 50.000,PNV/ EAJ,6,9
+258,Hombre,61,Gipuzkoa,Tercer Grado (Máster),Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,No voté,1,10
+259,Mujer,53,Álava,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,5,2
+260,Mujer,61,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,100.001 - 500.000,No voté,5,5
+261,Mujer,55,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,2,5
+262,Mujer,33,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,4,
+263,Mujer,60,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Prefiero no contestar,6,6
+264,Mujer,70,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Prefiero no contestar,3,10
+265,Mujer,43,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,E1,Castellano,20.001 - 50.000,Voté nulo,0,7
+266,Hombre,41,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,7,8
+267,Mujer,63,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Euskera,< 10.000,EH Bildu,2,9
+268,Mujer,52,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",B,Castellano,100.001 - 500.000,PNV/ EAJ,6,3
+269,Mujer,41,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,4,
+270,Hombre,55,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,EH Bildu,0,0
+271,Mujer,84,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,7,8
+272,Hombre,66,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PP,8,0
+273,Hombre,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,Prefiero no contestar,5,8
+274,Hombre,74,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Voté en blanco,4,6
+275,Hombre,70,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Euskera,< 10.000,Elkarrekin Podemos,4,8
+276,Mujer,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,5,4
+277,Hombre,38,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,No voté,2,0
+278,Hombre,74,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,EH Bildu,3,10
+279,Mujer,44,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,50.001 - 100.000,Prefiero no contestar,5,8
+280,Hombre,45,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,No voté,0,10
+281,Hombre,45,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,3
+282,Mujer,68,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,< 10.000,EH Bildu,1,10
+283,Hombre,56,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,3,1
+284,Mujer,71,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PNV/ EAJ,5,7
+285,Mujer,63,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,10.001 - 20.000,Elkarrekin Podemos,1,8
+286,Mujer,24,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Prefiero no contestar,,
+287,Hombre,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,EH Bildu,1,9
+288,Hombre,65,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,2,7
+289,Hombre,56,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Sumar,3,5
+290,Hombre,52,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,20.001 - 50.000,PSE,5,5
+291,Mujer,64,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,No voté,3,8
+292,Hombre,56,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,3,5
+293,Mujer,56,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,100.001 - 500.000,PNV/ EAJ,5,10
+294,Hombre,43,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,PNV/ EAJ,3,9
+295,Hombre,47,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,< 10.000,No voté,3,5
+296,Mujer,43,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,10.001 - 20.000,No voté,6,2
+297,Mujer,34,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,10.001 - 20.000,Voté nulo,10,0
+298,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PNV/ EAJ,5,8
+299,Hombre,35,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,A2,Castellano,20.001 - 50.000,No voté,5,5
+300,Hombre,65,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,EH Bildu,5,0
+301,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,100.001 - 500.000,PSE,2,7
+302,Hombre,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PSE,3,5
+303,Hombre,61,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,5,6
+304,Mujer,72,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PP,8,6
+305,Hombre,73,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A1,Castellano,100.001 - 500.000,EH Bildu,4,10
+306,Mujer,41,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,3,6
+307,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E2,Castellano,20.001 - 50.000,PNV/ EAJ,3,8
+308,Mujer,59,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,6,6
+309,Hombre,67,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,8
+310,Mujer,46,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,10.001 - 20.000,EH Bildu,2,9
+311,Hombre,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,< 10.000,PSE,4,3
+312,Mujer,26,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",B,Castellano,< 10.000,No voté,2,6
+313,Hombre,61,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,EH Bildu,3,7
+314,Hombre,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,20.001 - 50.000,PNV/ EAJ,6,10
+315,Hombre,20,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,E2,Castellano,100.001 - 500.000,PSE,,
+316,Mujer,34,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Euskera,< 10.000,EH Bildu,2,8
+317,Hombre,59,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,PP,7,0
+318,Hombre,72,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,20.001 - 50.000,PNV/ EAJ,1,8
+319,Hombre,72,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,< 10.000,PNV/ EAJ,4,7
+320,Hombre,58,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,50.001 - 100.000,PP,5,0
+321,Mujer,26,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,No voté,8,2
+322,Hombre,59,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,PNV/ EAJ,2,10
+323,Hombre,35,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,No voté,,8
+324,Mujer,49,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,< 10.000,EH Bildu,2,
+325,Hombre,65,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,Sumar,4,3
+326,Mujer,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,20.001 - 50.000,EH Bildu,1,5
+327,Mujer,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,3,8
+328,Mujer,31,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Euskera,10.001 - 20.000,EH Bildu,0,7
+329,Hombre,55,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,PNV/ EAJ,10,5
+330,Mujer,55,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+331,Hombre,67,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,3,10
+332,Hombre,51,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,PNV/ EAJ,7,7
+333,Mujer,73,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,20.001 - 50.000,No voté,5,5
+334,Mujer,57,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,< 10.000,PNV/ EAJ,3,5
+335,Mujer,48,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,4,4
+336,Hombre,44,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,10,0
+337,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PSE,5,5
+338,Mujer,64,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,No voté,4,5
+339,Mujer,50,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",B,Castellano,100.001 - 500.000,PSE,2,7
+340,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,EH Bildu,0,10
+341,Mujer,42,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,1,10
+342,Mujer,46,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,10.001 - 20.000,EH Bildu,0,10
+343,Mujer,58,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,8
+344,Hombre,40,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,,7
+345,Mujer,24,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,PP,9,5
+346,Hombre,57,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,50.001 - 100.000,PP,8,2
+347,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,10.001 - 20.000,Sumar,5,5
+348,Hombre,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,Sumar,5,5
+349,Hombre,48,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,< 10.000,No voté,4,5
+350,Hombre,72,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,< 10.000,No voté,5,5
+351,Mujer,51,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,A2,Castellano,20.001 - 50.000,PSE,2,0
+352,Hombre,75,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,4,7
+353,Mujer,54,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,20.001 - 50.000,No voté,5,6
+354,Mujer,60,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,10.001 - 20.000,Prefiero no contestar,3,5
+355,Hombre,68,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Vox,7,2
+356,Mujer,58,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+357,Mujer,42,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,Prefiero no contestar,3,9
+358,Mujer,74,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PP,7,2
+359,Hombre,36,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,3,7
+360,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,No voté,8,5
+361,Hombre,65,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,,5
+362,Mujer,56,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,4,0
+363,Mujer,64,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,8,10
+364,Mujer,46,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,1
+365,Hombre,29,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Estudiante,B,Euskera,100.001 - 500.000,EH Bildu,0,8
+366,Hombre,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Castellano,10.001 - 20.000,Prefiero no contestar,,
+367,Mujer,46,Gipuzkoa,Tercer Grado (Máster),"Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Voté nulo,0,0
+368,Mujer,46,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,,
+369,Hombre,38,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,D,Euskera,< 10.000,EH Bildu,3,7
+370,Hombre,22,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",C,Castellano,100.001 - 500.000,No voté,5,6
+371,Hombre,46,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,PP,6,6
+372,Mujer,24,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,1,10
+373,Mujer,69,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,EH Bildu,4,10
+374,Hombre,66,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E2,Castellano,< 10.000,PNV/ EAJ,7,5
+375,Mujer,63,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,4,6
+376,Hombre,69,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,4,5
+377,Hombre,18,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,B,Castellano,100.001 - 500.000,No voté,5,
+378,Mujer,55,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,Voté en blanco,5,1
+379,Mujer,59,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,Prefiero no contestar,,5
+380,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,No voté,5,5
+381,Mujer,58,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,20.001 - 50.000,Prefiero no contestar,6,3
+382,Hombre,28,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PNV/ EAJ,4,9
+383,Hombre,45,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,20.001 - 50.000,Voté en blanco,5,2
+384,Hombre,40,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,0,10
+385,Mujer,78,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,50.001 - 100.000,Voté en blanco,3,3
+386,Mujer,56,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,20.001 - 50.000,EH Bildu,,5
+387,Hombre,33,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Euskera,10.001 - 20.000,No voté,1,8
+388,Mujer,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,2,6
+389,Mujer,18,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Castellano,10.001 - 20.000,No voté,,
+390,Mujer,41,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Elkarrekin Podemos,5,7
+391,Hombre,43,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,2,6
+392,Hombre,69,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PNV/ EAJ,3,7
+393,Hombre,71,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+394,Mujer,55,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,20.001 - 50.000,Prefiero no contestar,,
+395,Hombre,60,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,3,9
+396,Hombre,57,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Castellano,10.001 - 20.000,Elkarrekin Podemos,1,0
+397,Hombre,76,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,B,Castellano,< 10.000,PSE,3,0
+398,Mujer,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,50.001 - 100.000,No voté,5,8
+399,Hombre,69,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,EH Bildu,1,10
+400,Mujer,60,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,4,7
+401,Mujer,57,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A1,Castellano,20.001 - 50.000,PNV/ EAJ,4,10
+402,Mujer,46,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,3,10
+403,Mujer,65,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,No voté,2,8
+404,Hombre,46,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,10.001 - 20.000,Sumar,4,6
+405,Mujer,64,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PNV/ EAJ,3,6
+406,Hombre,57,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,6,8
+407,Mujer,67,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,20.001 - 50.000,No voté,3,5
+408,Hombre,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,2,4
+409,Mujer,26,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,20.001 - 50.000,No voté,,
+410,Mujer,56,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,E1,Castellano,20.001 - 50.000,No lo recuerdo,,
+411,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,0,8
+412,Mujer,47,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,< 10.000,Vox,10,0
+413,Hombre,53,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,6,10
+414,Mujer,71,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,PNV/ EAJ,3,6
+415,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,No voté,8,6
+416,Hombre,71,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,50.001 - 100.000,EH Bildu,2,8
+417,Hombre,69,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,2,10
+418,Mujer,52,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Euskera,10.001 - 20.000,Prefiero no contestar,5,
+419,Hombre,53,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+420,Mujer,39,Álava,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,4,7
+421,Mujer,55,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,EH Bildu,4,6
+422,Mujer,53,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,5,4
+423,Hombre,50,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,10.001 - 20.000,Prefiero no contestar,,
+424,Mujer,47,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,No lo recuerdo,4,6
+425,Mujer,19,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A2,Castellano,< 10.000,No voté,2,7
+426,Mujer,60,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,0,9
+427,Mujer,59,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E2,Castellano,100.001 - 500.000,No lo recuerdo,,5
+428,Hombre,49,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,4,6
+429,Hombre,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,5,5
+430,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,No lo recuerdo,4,3
+431,Mujer,37,Bizkaia,Otros,Trabajo actualmente,D,Castellano,20.001 - 50.000,Prefiero no contestar,,
+432,Hombre,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,< 10.000,No voté,5,5
+433,Mujer,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,10.001 - 20.000,No lo recuerdo,5,5
+434,Mujer,35,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,3,6
+435,Hombre,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,No voté,,5
+436,Mujer,58,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,< 10.000,Prefiero no contestar,,
+437,Mujer,50,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,PNV/ EAJ,,
+438,Mujer,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,4,5
+439,Hombre,68,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,E1,Castellano,50.001 - 100.000,Elkarrekin Podemos,3,2
+440,Hombre,56,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,2,9
+441,Mujer,23,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté nulo,1,5
+442,Hombre,72,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PNV/ EAJ,3,8
+443,Hombre,35,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,10.001 - 20.000,PNV/ EAJ,2,7
+444,Mujer,56,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,No lo recuerdo,5,
+445,Mujer,47,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,8,8
+446,Hombre,53,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,50.001 - 100.000,EH Bildu,2,9
+447,Mujer,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,EH Bildu,2,6
+448,Hombre,67,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PSE,2,0
+449,Mujer,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,PNV/ EAJ,4,5
+450,Mujer,66,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,< 10.000,PNV/ EAJ,3,8
+451,Hombre,68,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,< 10.000,Voté en blanco,5,
+452,Mujer,35,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Euskera,< 10.000,EH Bildu,3,7
+453,Hombre,53,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,6
+454,Hombre,41,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,Vox,5,2
+455,Mujer,66,Álava,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,C,Castellano,< 10.000,No lo recuerdo,3,6
+456,Hombre,51,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,Prefiero no contestar,5,6
+457,Mujer,39,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,50.001 - 100.000,No voté,5,5
+458,Hombre,60,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,20.001 - 50.000,Elkarrekin Podemos,1,5
+459,Mujer,44,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,10.001 - 20.000,Prefiero no contestar,,
+460,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,7
+461,Hombre,50,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,< 10.000,EH Bildu,5,10
+462,Hombre,69,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Elkarrekin Podemos,0,4
+463,Hombre,67,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PP,5,1
+464,Mujer,51,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Euskera,< 10.000,Prefiero no contestar,,7
+465,Hombre,55,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,Otros,10,0
+466,Mujer,45,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,6,9
+467,Hombre,33,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,6,4
+468,Hombre,49,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,50.001 - 100.000,PNV/ EAJ,6,5
+469,Hombre,49,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,< 10.000,No voté,4,5
+470,Hombre,40,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,20.001 - 50.000,No voté,5,5
+471,Mujer,47,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,2,7
+472,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,5,8
+473,Hombre,59,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,Sumar,2,0
+474,Mujer,64,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PP,8,6
+475,Hombre,57,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,A2,Castellano,100.001 - 500.000,Voté en blanco,4,4
+476,Mujer,22,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,3,7
+477,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,< 10.000,Sumar,5,5
+478,Mujer,39,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,50.001 - 100.000,PSE,2,7
+479,Mujer,38,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,,6
+480,Mujer,27,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,E1,Castellano,10.001 - 20.000,Otros,4,1
+481,Hombre,46,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,50.001 - 100.000,No voté,0,2
+482,Mujer,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Euskera,100.001 - 500.000,PNV/ EAJ,5,6
+483,Mujer,72,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PSE,3,5
+484,Mujer,67,Bizkaia,Sin estudios o con estudios primarios sin terminar,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,EH Bildu,0,10
+485,Hombre,50,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,5,6
+486,Mujer,73,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PP,7,0
+487,Hombre,35,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Prefiero no contestar,4,5
+488,Mujer,67,Álava,Tercer grado (Doctorado),Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,3,8
+489,Hombre,69,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,EH Bildu,2,8
+490,Mujer,32,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,EH Bildu,2,8
+491,Mujer,51,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",C,Castellano,20.001 - 50.000,No lo recuerdo,,5
+492,Hombre,62,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,3,7
+493,Hombre,38,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Euskera,10.001 - 20.000,PNV/ EAJ,4,6
+494,Hombre,42,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,50.001 - 100.000,PNV/ EAJ,5,6
+495,Hombre,75,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,Prefiero no contestar,,
+496,Mujer,53,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,,8
+497,Hombre,33,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, busco primer empleo",E1,Castellano,100.001 - 500.000,No voté,0,0
+498,Mujer,45,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,No lo recuerdo,,3
+499,Hombre,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,20.001 - 50.000,PNV/ EAJ,5,8
+500,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,9
+501,Hombre,48,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,10.001 - 20.000,Sumar,2,7
+502,Mujer,67,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,100.001 - 500.000,EH Bildu,1,10
+503,Hombre,72,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,< 10.000,PNV/ EAJ,4,8
+504,Hombre,49,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,PSE,2,5
+505,Mujer,59,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,3,2
+506,Mujer,19,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",B,Castellano,10.001 - 20.000,No voté,0,0
+507,Mujer,39,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,No voté,5,6
+508,Mujer,71,Álava,Tercer Grado (Máster),Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,Prefiero no contestar,4,4
+509,Hombre,19,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,C,Castellano,100.001 - 500.000,No voté,5,0
+510,Hombre,46,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,< 10.000,No voté,2,10
+511,Hombre,61,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,E1,Castellano,< 10.000,PSE,3,2
+512,Mujer,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,< 10.000,PNV/ EAJ,1,5
+513,Hombre,67,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,E1,Castellano,10.001 - 20.000,EH Bildu,5,9
+514,Mujer,52,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Voté en blanco,5,8
+515,Mujer,52,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,50.001 - 100.000,No lo recuerdo,1,5
+516,Mujer,45,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,1,10
+517,Mujer,57,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,10
+518,Hombre,54,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,5,8
+519,Mujer,50,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",B,Castellano,100.001 - 500.000,Prefiero no contestar,5,0
+520,Mujer,30,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,Prefiero no contestar,0,
+521,Hombre,66,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PNV/ EAJ,4,10
+522,Hombre,24,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,Vox,8,5
+523,Hombre,47,Álava,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,7
+524,Mujer,56,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,5,5
+525,Hombre,44,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Euskera,10.001 - 20.000,Vox,5,6
+526,Mujer,55,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Voté nulo,,
+527,Mujer,52,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,PNV/ EAJ,4,3
+528,Hombre,65,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,No lo recuerdo,3,2
+529,Hombre,62,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",E1,Castellano,10.001 - 20.000,Prefiero no contestar,,
+530,Hombre,51,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,20.001 - 50.000,EH Bildu,2,10
+531,Hombre,54,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Voté nulo,0,0
+532,Hombre,23,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,20.001 - 50.000,PNV/ EAJ,7,7
+533,Mujer,56,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,A1,Castellano,100.001 - 500.000,No lo recuerdo,,5
+534,Mujer,54,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,No lo recuerdo,5,7
+535,Mujer,65,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+536,Hombre,71,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+537,Mujer,55,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,10.001 - 20.000,Voté en blanco,5,5
+538,Hombre,52,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,10.001 - 20.000,Sumar,3,3
+539,Mujer,54,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,Sumar,1,6
+540,Mujer,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,,0
+541,Hombre,57,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Euskera,< 10.000,No voté,0,7
+542,Hombre,37,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Euskera,50.001 - 100.000,PNV/ EAJ,2,6
+543,Hombre,50,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,A2,Castellano,20.001 - 50.000,PSE,5,5
+544,Hombre,59,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PSE,0,6
+545,Mujer,65,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,4
+546,Mujer,66,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,< 10.000,PNV/ EAJ,3,6
+547,Mujer,55,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,2,3
+548,Hombre,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,20.001 - 50.000,Vox,10,2
+549,Hombre,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,10.001 - 20.000,No voté,,8
+550,Hombre,51,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E2,Castellano,100.001 - 500.000,Prefiero no contestar,1,9
+551,Hombre,79,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,7,7
+552,Mujer,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,EH Bildu,2,9
+553,Hombre,75,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,6,7
+554,Hombre,65,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PSE,3,6
+555,Mujer,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,No voté,3,6
+556,Mujer,54,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,E1,Castellano,100.001 - 500.000,No lo recuerdo,6,6
+557,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,5,5
+558,Mujer,57,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,3,5
+559,Mujer,72,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PSE,3,3
+560,Mujer,78,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,50.001 - 100.000,Elkarrekin Podemos,0,5
+561,Mujer,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,No voté,,5
+562,Mujer,50,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,10
+563,Hombre,34,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,< 10.000,No voté,7,0
+564,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,20.001 - 50.000,Prefiero no contestar,5,5
+565,Hombre,27,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,2,6
+566,Hombre,60,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,20.001 - 50.000,Elkarrekin Podemos,1,5
+567,Hombre,73,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,3,7
+568,Mujer,38,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,< 10.000,No lo recuerdo,5,6
+569,Hombre,64,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E2,Castellano,100.001 - 500.000,EH Bildu,2,5
+570,Mujer,42,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,No voté,5,5
+571,Mujer,42,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,Elkarrekin Podemos,3,7
+572,Mujer,38,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,< 10.000,No lo recuerdo,3,2
+573,Hombre,23,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,100.001 - 500.000,Sumar,2,10
+574,Hombre,26,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Prefiero no contestar,,7
+575,Mujer,40,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,3,8
+576,Hombre,65,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,< 10.000,EH Bildu,2,9
+577,Mujer,57,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,20.001 - 50.000,Voté en blanco,,5
+578,Mujer,66,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,20.001 - 50.000,Prefiero no contestar,6,4
+579,Hombre,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,,
+580,Hombre,42,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,7,5
+581,Hombre,38,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,50.001 - 100.000,PSE,7,0
+582,Mujer,37,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,No lo recuerdo,4,7
+583,Hombre,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,2,5
+584,Mujer,35,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,10.001 - 20.000,Prefiero no contestar,2,10
+585,Mujer,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,3,1
+586,Hombre,42,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,10.001 - 20.000,Elkarrekin Podemos,2,5
+587,Hombre,55,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",B,Castellano,50.001 - 100.000,Voté en blanco,4,1
+588,Mujer,57,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,10.001 - 20.000,No voté,3,8
+589,Mujer,65,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+590,Mujer,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,1,3
+591,Hombre,55,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,< 10.000,PNV/ EAJ,5,9
+592,Mujer,80,Bizkaia,Tercer Grado (Máster),"Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,PP,8,6
+593,Mujer,38,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,10.001 - 20.000,Elkarrekin Podemos,3,5
+594,Hombre,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Otros,5,0
+595,Hombre,77,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,20.001 - 50.000,PSE,4,4
+596,Hombre,28,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté en blanco,5,5
+597,Hombre,46,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,< 10.000,EH Bildu,1,7
+598,Hombre,30,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Euskera,100.001 - 500.000,EH Bildu,2,8
+599,Hombre,65,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Prefiero no contestar,,
+600,Mujer,18,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,E1,Castellano,20.001 - 50.000,No lo recuerdo,3,7
+601,Hombre,44,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,No voté,3,7
+602,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PNV/ EAJ,4,8
+603,Mujer,41,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,8,8
+604,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,4,7
+605,Mujer,48,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,No lo recuerdo,,
+606,Hombre,53,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,4,9
+607,Hombre,21,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,Prefiero no contestar,,3
+608,Hombre,54,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,5
+609,Hombre,61,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,< 10.000,PNV/ EAJ,3,10
+610,Hombre,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,10
+611,Hombre,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,EH Bildu,0,10
+612,Mujer,44,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo del hogar no remunerado (sin ninguna ocupación previa),B,Castellano,100.001 - 500.000,Vox,8,0
+613,Mujer,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,PSE,2,6
+614,Mujer,55,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,No lo recuerdo,5,5
+615,Hombre,51,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,5,5
+616,Hombre,43,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,0,10
+617,Hombre,50,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,PP,7,5
+618,Mujer,67,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,10.001 - 20.000,Prefiero no contestar,5,
+619,Hombre,54,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,50.001 - 100.000,PSE,2,7
+620,Mujer,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,< 10.000,PP,7,2
+621,Mujer,59,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,3,3
+622,Hombre,73,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Sumar,3,5
+623,Hombre,46,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,< 10.000,No voté,2,9
+624,Hombre,32,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PP,7,0
+625,Hombre,68,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,2,5
+626,Hombre,51,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,10.001 - 20.000,No voté,5,7
+627,Hombre,69,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,20.001 - 50.000,PNV/ EAJ,3,8
+628,Mujer,44,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+629,Hombre,56,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,PSE,3,5
+630,Mujer,46,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,5,5
+631,Mujer,32,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,Prefiero no contestar,4,5
+632,Mujer,20,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,PSE,4,3
+633,Hombre,55,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,< 10.000,PNV/ EAJ,5,9
+634,Mujer,51,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,Elkarrekin Podemos,4,5
+635,Hombre,65,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,10.001 - 20.000,PNV/ EAJ,4,9
+636,Mujer,45,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,10.001 - 20.000,EH Bildu,3,7
+637,Mujer,69,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Vox,8,8
+638,Hombre,31,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,PSE,2,7
+639,Mujer,33,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,No lo recuerdo,5,6
+640,Hombre,52,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Prefiero no contestar,4,0
+641,Mujer,53,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,D,Castellano,20.001 - 50.000,Vox,8,0
+642,Mujer,65,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,100.001 - 500.000,PNV/ EAJ,3,5
+643,Hombre,71,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,4,3
+644,Mujer,45,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,6,6
+645,Mujer,56,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PP,5,7
+646,Hombre,47,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A1,Euskera,< 10.000,EH Bildu,1,9
+647,Mujer,59,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,,0
+648,Mujer,19,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",A2,Castellano,< 10.000,No voté,,8
+649,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,,
+650,Hombre,45,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,20.001 - 50.000,Vox,6,0
+651,Hombre,37,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,6,5
+652,Mujer,48,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,7
+653,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,20.001 - 50.000,Elkarrekin Podemos,2,5
+654,Mujer,52,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,50.001 - 100.000,Sumar,4,5
+655,Hombre,25,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,5,6
+656,Mujer,22,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",E1,Castellano,10.001 - 20.000,PP,4,1
+657,Hombre,63,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,50.001 - 100.000,Prefiero no contestar,4,2
+658,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,PSE,4,5
+659,Hombre,50,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,< 10.000,PNV/ EAJ,5,7
+660,Mujer,49,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,< 10.000,No lo recuerdo,,
+661,Mujer,69,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,10.001 - 20.000,Voté en blanco,5,5
+662,Hombre,76,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PP,6,2
+663,Hombre,52,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A1,Castellano,100.001 - 500.000,Vox,6,3
+664,Mujer,78,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,No voté,5,6
+665,Hombre,27,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,5,7
+666,Mujer,42,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Voté nulo,4,4
+667,Mujer,38,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,50.001 - 100.000,Otros,5,5
+668,Mujer,32,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A1,Euskera,< 10.000,No lo recuerdo,,
+669,Hombre,18,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,A1,Euskera,10.001 - 20.000,PNV/ EAJ,8,7
+670,Mujer,42,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,20.001 - 50.000,No voté,,5
+671,Hombre,57,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,5,2
+672,Mujer,50,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,EH Bildu,0,5
+673,Mujer,47,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,< 10.000,No voté,5,5
+674,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,3,8
+675,Hombre,21,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,50.001 - 100.000,No lo recuerdo,5,5
+676,Mujer,55,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,100.001 - 500.000,Vox,8,3
+677,Hombre,74,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,10.001 - 20.000,EH Bildu,0,10
+678,Hombre,75,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,5,7
+679,Hombre,71,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,< 10.000,PNV/ EAJ,4,9
+680,Hombre,18,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,B,Castellano,50.001 - 100.000,Voté en blanco,4,0
+681,Hombre,21,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,B,Castellano,20.001 - 50.000,EH Bildu,1,7
+682,Mujer,37,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,50.001 - 100.000,Prefiero no contestar,6,5
+683,Hombre,41,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,10.001 - 20.000,No voté,2,2
+684,Mujer,33,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,10.001 - 20.000,EH Bildu,1,10
+685,Mujer,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,< 10.000,Sumar,3,3
+686,Mujer,55,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,3,7
+687,Hombre,62,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,2,0
+688,Mujer,30,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,6,4
+689,Hombre,56,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,50.001 - 100.000,PP,6,0
+690,Mujer,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PSE,4,6
+691,Mujer,34,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,,
+692,Hombre,46,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,10.001 - 20.000,No voté,2,5
+693,Hombre,31,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,PP,6,5
+694,Hombre,43,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,1,6
+695,Mujer,31,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,No voté,,0
+696,Mujer,44,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,20.001 - 50.000,No lo recuerdo,5,5
+697,Mujer,45,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,2,6
+698,Hombre,43,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,0,10
+699,Mujer,25,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PP,5,0
+700,Hombre,41,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,20.001 - 50.000,PP,9,9
+701,Hombre,75,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,4,5
+702,Mujer,45,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,20.001 - 50.000,No voté,3,2
+703,Mujer,48,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,No lo recuerdo,,3
+704,Hombre,41,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E2,Castellano,100.001 - 500.000,EH Bildu,0,10
+705,Mujer,59,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,2,8
+706,Mujer,23,Álava,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,5,6
+707,Mujer,45,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,No lo recuerdo,3,5
+708,Mujer,63,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,Prefiero no contestar,,
+709,Mujer,69,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,0,10
+710,Hombre,74,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,10.001 - 20.000,EH Bildu,0,10
+711,Mujer,78,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,No voté,5,6
+712,Mujer,53,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+713,Mujer,58,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,No voté,5,1
+714,Hombre,44,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,6,6
+715,Mujer,35,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,2,5
+716,Mujer,53,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,4,7
+717,Mujer,56,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,PNV/ EAJ,3,5
+718,Mujer,51,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,No lo recuerdo,1,5
+719,Mujer,35,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,20.001 - 50.000,EH Bildu,3,8
+720,Mujer,49,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,< 10.000,Prefiero no contestar,6,6
+721,Mujer,72,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PSE,6,6
+722,Hombre,58,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,100.001 - 500.000,Voté en blanco,5,5
+723,Mujer,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,3,6
+724,Mujer,20,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A1,Castellano,10.001 - 20.000,EH Bildu,0,10
+725,Hombre,70,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,PNV/ EAJ,4,6
+726,Mujer,22,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Estudiante,D,Euskera,100.001 - 500.000,EH Bildu,3,8
+727,Hombre,64,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,,
+728,Hombre,46,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,No voté,5,0
+729,Mujer,49,Bizkaia,Tercer grado (Doctorado),"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,PNV/ EAJ,5,7
+730,Mujer,52,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,20.001 - 50.000,Elkarrekin Podemos,0,5
+731,Hombre,59,Álava,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PSE,0,3
+732,Mujer,66,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,20.001 - 50.000,PNV/ EAJ,4,4
+733,Hombre,59,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,3,9
+734,Hombre,18,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,B,Castellano,100.001 - 500.000,No voté,2,8
+735,Hombre,70,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,20.001 - 50.000,Vox,10,1
+736,Mujer,46,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,E1,Castellano,50.001 - 100.000,No lo recuerdo,2,6
+737,Mujer,50,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PP,10,0
+738,Hombre,31,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Euskera,10.001 - 20.000,EH Bildu,2,9
+739,Hombre,40,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,3,7
+740,Hombre,51,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,Vox,5,5
+741,Mujer,53,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,< 10.000,No voté,6,6
+742,Mujer,57,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,10.001 - 20.000,PNV/ EAJ,4,7
+743,Mujer,30,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Vox,8,7
+744,Hombre,62,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,20.001 - 50.000,Elkarrekin Podemos,2,5
+745,Mujer,63,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,PNV/ EAJ,7,7
+746,Hombre,18,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,Prefiero no contestar,,
+747,Hombre,27,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,20.001 - 50.000,EH Bildu,0,10
+748,Mujer,69,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,10.001 - 20.000,PSE,4,3
+749,Hombre,65,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,No voté,5,4
+750,Mujer,58,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,20.001 - 50.000,Prefiero no contestar,,
+751,Mujer,39,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,PSE,4,3
+752,Mujer,47,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,5,5
+753,Hombre,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,Sumar,5,6
+754,Mujer,56,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,5,5
+755,Mujer,32,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,Prefiero no contestar,,7
+756,Mujer,63,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,4,
+757,Mujer,33,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)","Parado, he trabajado anteriormente",E2,Castellano,< 10.000,No lo recuerdo,0,0
+758,Mujer,57,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",D,Castellano,100.001 - 500.000,PNV/ EAJ,3,5
+759,Mujer,18,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",E1,Castellano,< 10.000,No voté,,5
+760,Mujer,41,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Euskera,< 10.000,EH Bildu,2,6
+761,Mujer,38,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,20.001 - 50.000,Elkarrekin Podemos,3,5
+762,Hombre,53,Bizkaia,Tercer grado (Doctorado),"Parado, busco primer empleo",E2,Castellano,100.001 - 500.000,Vox,5,0
+763,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",A2,Castellano,20.001 - 50.000,No lo recuerdo,,
+764,Hombre,48,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,20.001 - 50.000,EH Bildu,3,7
+765,Mujer,35,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",B,Euskera,10.001 - 20.000,Prefiero no contestar,,
+766,Mujer,35,Álava,Tercer Grado (Máster),"Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,PSE,4,4
+767,Hombre,46,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,1,5
+768,Hombre,50,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,Elkarrekin Podemos,,
+769,Mujer,57,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",A2,Castellano,100.001 - 500.000,PSE,1,0
+770,Mujer,52,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,5,8
+771,Mujer,56,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,Sumar,3,5
+772,Mujer,61,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,No lo recuerdo,4,6
+773,Mujer,29,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,6,8
+774,Hombre,65,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,No voté,5,
+775,Hombre,45,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,20.001 - 50.000,No voté,5,5
+776,Mujer,43,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,50.001 - 100.000,PSE,4,5
+777,Mujer,27,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,2,8
+778,Hombre,34,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Vox,7,6
+779,Mujer,20,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Castellano,20.001 - 50.000,No voté,5,5
+780,Mujer,32,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Vox,7,5
+781,Mujer,60,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,7,10
+782,Mujer,45,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,No lo recuerdo,4,6
+783,Mujer,30,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,6,6
+784,Hombre,46,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,50.001 - 100.000,Prefiero no contestar,0,8
+785,Mujer,72,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,7
+786,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,20.001 - 50.000,PSE,4,5
+787,Hombre,48,Gipuzkoa,Tercer grado (Doctorado),Trabajo actualmente,B,Castellano,100.001 - 500.000,Otros,0,10
+788,Hombre,56,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,Prefiero no contestar,,
+789,Mujer,53,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,50.001 - 100.000,PNV/ EAJ,5,7
+790,Hombre,50,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,EH Bildu,0,10
+791,Hombre,59,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,EH Bildu,1,5
+792,Mujer,23,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,100.001 - 500.000,PNV/ EAJ,6,6
+793,Mujer,35,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,Sumar,3,0
+794,Hombre,51,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,PSE,2,5
+795,Mujer,84,Bizkaia,Sin estudios o con estudios primarios sin terminar,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E2,Castellano,20.001 - 50.000,No voté,4,2
+796,Hombre,39,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,No voté,4,3
+797,Mujer,37,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,4,0
+798,Mujer,61,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,100.001 - 500.000,Prefiero no contestar,,
+799,Hombre,69,Bizkaia,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Retirado/pensionista/incapacitado,D,Castellano,< 10.000,PSE,10,1
+800,Mujer,57,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,20.001 - 50.000,Prefiero no contestar,,
+801,Mujer,56,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,No voté,6,2
+802,Mujer,52,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),C,Castellano,100.001 - 500.000,Prefiero no contestar,,
+803,Mujer,22,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,10.001 - 20.000,No voté,5,9
+804,Mujer,63,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,< 10.000,Prefiero no contestar,0,5
+805,Mujer,58,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Euskera,10.001 - 20.000,EH Bildu,4,10
+806,Mujer,60,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+807,Hombre,40,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,10.001 - 20.000,PNV/ EAJ,4,5
+808,Mujer,33,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,7,6
+809,Hombre,44,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,No voté,4,0
+810,Hombre,26,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,Voté nulo,7,5
+811,Hombre,56,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Sumar,3,5
+812,Hombre,69,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,D,Castellano,100.001 - 500.000,PNV/ EAJ,3,8
+813,Mujer,50,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,PSE,3,5
+814,Mujer,32,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Euskera,100.001 - 500.000,Prefiero no contestar,4,6
+815,Hombre,46,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,10.001 - 20.000,No voté,,5
+816,Hombre,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,3,8
+817,Mujer,42,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,Elkarrekin Podemos,3,4
+818,Hombre,58,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Euskera,10.001 - 20.000,EH Bildu,0,7
+819,Mujer,51,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,< 10.000,PNV/ EAJ,7,7
+820,Mujer,26,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Euskera,100.001 - 500.000,EH Bildu,1,1
+821,Hombre,59,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,PNV/ EAJ,2,10
+822,Hombre,67,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,PP,6,5
+823,Mujer,43,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,2,9
+824,Hombre,67,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,20.001 - 50.000,EH Bildu,0,8
+825,Mujer,62,Álava,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,10.001 - 20.000,No voté,4,10
+826,Hombre,64,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,EH Bildu,1,10
+827,Mujer,19,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,No voté,1,7
+828,Mujer,33,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,4,5
+829,Mujer,58,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,PNV/ EAJ,6,7
+830,Mujer,47,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,< 10.000,PSE,6,7
+831,Mujer,31,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,Elkarrekin Podemos,2,5
+832,Hombre,75,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,4,6
+833,Mujer,49,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,< 10.000,PNV/ EAJ,5,5
+834,Mujer,66,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,Prefiero no contestar,,5
+835,Hombre,36,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,EH Bildu,2,7
+836,Mujer,52,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,PSE,5,5
+837,Mujer,39,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,,
+838,Mujer,56,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,Prefiero no contestar,,7
+839,Hombre,43,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,3,5
+840,Mujer,48,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,EH Bildu,4,8
+841,Mujer,51,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,No voté,4,5
+842,Hombre,42,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,E1,Castellano,20.001 - 50.000,PNV/ EAJ,5,5
+843,Hombre,42,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,D,Castellano,100.001 - 500.000,EH Bildu,7,8
+844,Mujer,26,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,1,7
+845,Mujer,65,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,E1,Castellano,100.001 - 500.000,Elkarrekin Podemos,3,7
+846,Mujer,32,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,Prefiero no contestar,5,4
+847,Mujer,25,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,7,5
+848,Mujer,32,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,No lo recuerdo,2,5
+849,Mujer,51,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,D,Castellano,100.001 - 500.000,PP,7,0
+850,Mujer,27,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,< 10.000,No lo recuerdo,,10
+851,Mujer,70,Bizkaia,Tercer Grado (Máster),Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PNV/ EAJ,6,8
+852,Hombre,82,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,20.001 - 50.000,PSE,5,5
+853,Hombre,22,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Euskera,20.001 - 50.000,No voté,0,10
+854,Hombre,33,Bizkaia,Tercer grado (Doctorado),Trabajo actualmente,A2,Castellano,20.001 - 50.000,EH Bildu,2,7
+855,Mujer,19,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,PP,6,4
+856,Mujer,39,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,Vox,8,6
+857,Mujer,33,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,Prefiero no contestar,,10
+858,Hombre,25,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,PSE,3,3
+859,Hombre,40,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,EH Bildu,2,8
+860,Mujer,49,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,PSE,2,0
+861,Hombre,53,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E2,Castellano,10.001 - 20.000,No lo recuerdo,2,5
+862,Hombre,64,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,D,Castellano,10.001 - 20.000,No lo recuerdo,4,3
+863,Mujer,30,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,100.001 - 500.000,EH Bildu,7,6
+864,Hombre,47,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,Sumar,6,7
+865,Hombre,18,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Castellano,100.001 - 500.000,Prefiero no contestar,5,5
+866,Mujer,44,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,50.001 - 100.000,No lo recuerdo,,
+867,Mujer,35,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),B,Castellano,20.001 - 50.000,Prefiero no contestar,,5
+868,Hombre,57,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Otros,5,5
+869,Mujer,60,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,C,Castellano,100.001 - 500.000,No voté,5,8
+870,Mujer,48,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,Sumar,5,5
+871,Mujer,27,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,EH Bildu,2,8
+872,Mujer,47,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,10.001 - 20.000,Prefiero no contestar,,
+873,Hombre,58,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",E1,Castellano,100.001 - 500.000,Sumar,4,0
+874,Hombre,19,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,A2,Euskera,100.001 - 500.000,No voté,2,8
+875,Hombre,61,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,D,Castellano,100.001 - 500.000,Prefiero no contestar,5,4
+876,Mujer,24,Álava,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PSE,0,0
+877,Mujer,49,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.","Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,PSE,2,1
+878,Hombre,23,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Vox,6,5
+879,Hombre,39,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,2,
+880,Mujer,65,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,Prefiero no contestar,,
+881,Hombre,29,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Euskera,20.001 - 50.000,EH Bildu,0,10
+882,Mujer,65,Bizkaia,Otros,Retirado/pensionista/incapacitado,E2,Castellano,10.001 - 20.000,Prefiero no contestar,0,0
+883,Hombre,52,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,A2,Euskera,10.001 - 20.000,EH Bildu,5,5
+884,Mujer,25,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,B,Castellano,< 10.000,No voté,3,3
+885,Hombre,59,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Castellano,100.001 - 500.000,PNV/ EAJ,3,10
+886,Hombre,18,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,D,Castellano,100.001 - 500.000,No voté,3,2
+887,Mujer,54,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,,7
+888,Mujer,56,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,No voté,8,7
+889,Hombre,34,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Vox,7,5
+890,Hombre,28,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,7,7
+891,Hombre,51,Bizkaia,Sin estudios o con estudios primarios sin terminar,"Parado, busco primer empleo",E2,Castellano,10.001 - 20.000,Voté en blanco,2,
+892,Mujer,39,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,No lo recuerdo,5,5
+893,Mujer,72,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Retirado/pensionista/incapacitado,E2,Castellano,100.001 - 500.000,PSE,6,4
+894,Hombre,46,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No voté,2,5
+895,Mujer,36,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,5
+896,Hombre,63,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,Prefiero no contestar,5,5
+897,Mujer,45,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,PSE,4,6
+898,Hombre,33,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,3,10
+899,Mujer,26,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,B,Castellano,100.001 - 500.000,Otros,9,9
+900,Mujer,58,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,No lo recuerdo,3,5
+901,Hombre,52,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)",Trabajo actualmente,B,Castellano,50.001 - 100.000,Vox,3,3
+902,Hombre,35,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+903,Mujer,33,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Sumar,7,7
+904,Mujer,32,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté en blanco,6,6
+905,Mujer,34,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,7
+906,Hombre,55,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,100.001 - 500.000,Otros,5,0
+907,Mujer,73,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,4,7
+908,Mujer,35,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,20.001 - 50.000,PNV/ EAJ,4,
+909,Mujer,63,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,20.001 - 50.000,PNV/ EAJ,4,
+910,Mujer,56,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,8,6
+911,Mujer,26,Álava,Tercer Grado (Máster),Trabajo actualmente,D,Castellano,100.001 - 500.000,Vox,10,5
+912,Mujer,42,Bizkaia,Tercer Grado (Máster),"Parado, he trabajado anteriormente",B,Castellano,100.001 - 500.000,Sumar,2,0
+913,Hombre,44,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,EH Bildu,2,2
+914,Mujer,22,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Voté en blanco,6,4
+915,Mujer,41,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,Prefiero no contestar,5,5
+916,Mujer,78,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Retirado/pensionista/incapacitado,E1,Castellano,50.001 - 100.000,Elkarrekin Podemos,0,5
+917,Mujer,35,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,20.001 - 50.000,PNV/ EAJ,10,5
+918,Hombre,36,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,100.001 - 500.000,No voté,5,5
+919,Mujer,26,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,100.001 - 500.000,Elkarrekin Podemos,4,5
+920,Hombre,53,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,E1,Castellano,100.001 - 500.000,PSE,3,3
+921,Mujer,19,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,D,Euskera,50.001 - 100.000,PNV/ EAJ,5,6
+922,Mujer,54,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,PNV/ EAJ,6,6
+923,Hombre,54,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PNV/ EAJ,7,6
+924,Hombre,27,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,5,5
+925,Mujer,22,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)","Parado, he trabajado anteriormente",D,Castellano,10.001 - 20.000,EH Bildu,5,5
+926,Mujer,51,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,< 10.000,PNV/ EAJ,4,8
+927,Hombre,75,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,B,Castellano,100.001 - 500.000,PSE,4,5
+928,Mujer,49,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Retirado/pensionista/incapacitado,A2,Castellano,10.001 - 20.000,EH Bildu,1,10
+929,Hombre,23,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,B,Castellano,10.001 - 20.000,PP,4,4
+930,Mujer,35,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,20.001 - 50.000,No voté,0,10
+931,Hombre,61,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,6,6
+932,Mujer,27,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Euskera,100.001 - 500.000,EH Bildu,2,8
+933,Hombre,50,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)","Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,Elkarrekin Podemos,,
+934,Hombre,33,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,3,7
+935,Hombre,47,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,PNV/ EAJ,5,6
+936,Hombre,29,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Euskera,20.001 - 50.000,EH Bildu,8,10
+937,Mujer,26,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Estudiante,E1,Castellano,< 10.000,EH Bildu,10,10
+938,Mujer,33,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,5,5
+939,Mujer,44,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,E1,Euskera,< 10.000,Prefiero no contestar,5,4
+940,Mujer,63,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,PSE,3,5
+941,Mujer,39,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,< 10.000,PNV/ EAJ,5,4
+942,Hombre,29,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,C,Castellano,100.001 - 500.000,PNV/ EAJ,3,1
+943,Hombre,42,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",E2,Castellano,< 10.000,Prefiero no contestar,5,3
+944,Hombre,67,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Retirado/pensionista/incapacitado,A2,Castellano,10.001 - 20.000,Prefiero no contestar,5,
+945,Hombre,26,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,10.001 - 20.000,PNV/ EAJ,3,7
+946,Hombre,19,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,20.001 - 50.000,Elkarrekin Podemos,5,8
+947,Mujer,30,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,100.001 - 500.000,PSE,5,5
+948,Mujer,18,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo actualmente,C,Castellano,100.001 - 500.000,Voté nulo,5,4
+949,Hombre,43,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,100.001 - 500.000,Prefiero no contestar,6,3
+950,Mujer,18,Bizkaia,Otros,Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,Prefiero no contestar,7,0
+951,Mujer,35,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,C,Castellano,10.001 - 20.000,PNV/ EAJ,6,6
+952,Mujer,22,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,100.001 - 500.000,Prefiero no contestar,1,1
+953,Hombre,52,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,PP,5,4
+954,Mujer,44,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo del hogar no remunerado (sin ninguna ocupación previa),B,Castellano,100.001 - 500.000,Vox,8,1
+955,Hombre,45,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,5,6
+956,Mujer,30,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, he trabajado anteriormente",C,Castellano,< 10.000,No lo recuerdo,3,4
+957,Mujer,29,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Castellano,20.001 - 50.000,Vox,8,7
+958,Hombre,27,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,50.001 - 100.000,No voté,1,7
+959,Mujer,26,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,E1,Euskera,< 10.000,Sumar,10,10
+960,Hombre,29,Bizkaia,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,< 10.000,PNV/ EAJ,6,7
+961,Hombre,52,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,20.001 - 50.000,Sumar,5,6
+962,Mujer,24,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,1,
+963,Hombre,39,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,EH Bildu,0,10
+964,Hombre,24,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,No voté,3,4
+965,Hombre,56,Álava,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,7
+966,Hombre,52,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,D,Castellano,10.001 - 20.000,PSE,3,2
+967,Mujer,49,Gipuzkoa,Tercer Grado (Máster),Trabajo actualmente,A1,Euskera,10.001 - 20.000,EH Bildu,3,7
+968,Hombre,52,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,10.001 - 20.000,EH Bildu,6,7
+969,Mujer,18,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,C,Castellano,20.001 - 50.000,No lo recuerdo,5,3
+970,Mujer,54,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,20.001 - 50.000,PNV/ EAJ,6,6
+971,Mujer,50,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A2,Euskera,10.001 - 20.000,Prefiero no contestar,2,7
+972,Mujer,29,Bizkaia,Tercer Grado (Máster),Estudiante,A2,Castellano,100.001 - 500.000,Vox,10,3
+973,Mujer,38,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,100.001 - 500.000,PSE,0,6
+974,Hombre,27,Álava,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,No voté,5,7
+975,Mujer,23,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,"Parado, he trabajado anteriormente",A2,Euskera,20.001 - 50.000,EH Bildu,2,3
+976,Mujer,44,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,B,Castellano,10.001 - 20.000,No voté,8,5
+977,Mujer,63,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,A1,Castellano,100.001 - 500.000,PSE,8,6
+978,Hombre,55,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,A2,Castellano,50.001 - 100.000,PNV/ EAJ,9,9
+979,Hombre,36,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,D,Castellano,20.001 - 50.000,PNV/ EAJ,3,8
+980,Hombre,46,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,100.001 - 500.000,Elkarrekin Podemos,3,7
+981,Hombre,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,20.001 - 50.000,PNV/ EAJ,6,6
+982,Mujer,32,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,B,Castellano,100.001 - 500.000,PNV/ EAJ,9,7
+983,Hombre,40,Gipuzkoa,Otros,Trabajo actualmente,A2,Castellano,100.001 - 500.000,Prefiero no contestar,,
+984,Mujer,26,Bizkaia,Tercer Grado (Máster),Trabajo actualmente,C,Castellano,100.001 - 500.000,Prefiero no contestar,,
+985,Hombre,46,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo actualmente,B,Castellano,100.001 - 500.000,Vox,3,7
+986,Hombre,20,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,"Parado, busco primer empleo",C,Castellano,20.001 - 50.000,Sumar,7,6
+987,Hombre,23,Álava,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PSE,4,6
+988,Hombre,36,Bizkaia,Tercer Grado (Máster),Estudiante,E1,Castellano,100.001 - 500.000,PNV/ EAJ,5,4
+989,Mujer,19,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Estudiante,E1,Castellano,100.001 - 500.000,No voté,2,0
+990,Mujer,47,Gipuzkoa,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,10.001 - 20.000,Prefiero no contestar,,7
+991,Hombre,29,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,E1,Castellano,< 10.000,Voté en blanco,3,8
+992,Mujer,51,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,A2,Castellano,100.001 - 500.000,No lo recuerdo,10,9
+993,Hombre,25,Gipuzkoa,"Segundo Grado - 1º Ciclo (Graduado escolar, o EGB 2ª etapa, o 1º y 2º de ESO, hasta los 14 años)",Trabajo del hogar no remunerado (sin ninguna ocupación previa),E1,Castellano,100.001 - 500.000,Vox,4,10
+994,Mujer,30,Bizkaia,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A1,Castellano,100.001 - 500.000,PNV/ EAJ,4,4
+995,Mujer,44,Bizkaia,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Trabajo del hogar no remunerado (sin ninguna ocupación previa),D,Castellano,100.001 - 500.000,PSE,4,3
+996,Mujer,22,Gipuzkoa,Tercer Grado  1º Ciclo Equivalente a Ingeniero técnico 3 años Escuelas universitarias Ingenieros técnicos Arquitecto,Estudiante,B,Euskera,100.001 - 500.000,EH Bildu,3,2
+997,Hombre,35,Gipuzkoa,"Primer Grado (Certificado escolar, 1ª etapa de EGB, más o menos hasta los 10 años)","Parado, he trabajado anteriormente",C,Castellano,100.001 - 500.000,EH Bildu,2,4
+998,Hombre,30,Gipuzkoa,"Licenciatura, Grado - 2º Ciclo (Universitarios, Licenciados superiores, Facultades, Escuelas técnicas superiores, etc.",Trabajo actualmente,A2,Castellano,50.001 - 100.000,PP,8,8
+999,Mujer,20,Gipuzkoa,Sin estudios o con estudios primarios sin terminar,Retirado/pensionista/incapacitado,C,Castellano,< 10.000,EH Bildu,1,2
+1000,Mujer,21,Bizkaia,Segundo Grado  2ª Ciclo FP Iº y IIº Bachiller superior BUP 3º y 4º de ESO COU PREU 1º y 2º Bachillerato hasta los,Trabajo actualmente,C,Castellano,10.001 - 20.000,EH Bildu,2,4

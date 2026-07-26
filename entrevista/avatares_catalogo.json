@@ -1,0 +1,46 @@
+{
+  "_descripcion": "Catálogo de emparejamiento avatar/voz para el panel Pueblo Digital sobre Anam (anam.ai). Lo usa emparejar.py para elegir cara+voz de cada Persona de forma automática y determinista, sin que David tenga que escoger. Rellenar los IDs con anam_setup.py una vez creados los avatares y elegidas las voces en el Anam Lab.",
+  "avatar_model": "cara-4",
+
+  "_celdas_descripcion": "Rejilla género × franja de edad. Cada celda es una LISTA de avatarId de Anam; dentro de una celda la Persona recibe la cara nº (id_persona mod nº_caras), así dos Personas de la misma celda no salen idénticas pero es reproducible. Deja la lista vacía [] hasta tener los IDs.",
+  "_nota_stock": "Rellenado con la galería stock de Anam (2026-07-26). La galería tira a adulto profesional 30-55: Hunter cubre joven, Gabriel/Julia (canas) cubren mayores. Para más fidelidad de edad, sustituir por caras propias con anam_setup.py crear. Comentario id→nombre: cae55035=David twin(fuera) · 6cc28442=Gabriel · 8a339c9f=Finn · ecfb2ddb=Hunter · edf6fdcb=Mia · 071b0286=Liv · 27e12daa=Anne · dc9aa3e1=Bella · 6dbc1e47=Sophie · edcb8f1a=Julia(canas).",
+  "celdas": {
+    "h_18_30": ["ecfb2ddb-80ec-4526-88a7-299a4738957c"],
+    "h_31_50": ["8a339c9f-0666-46bd-ab27-e90acd0409dc", "ecfb2ddb-80ec-4526-88a7-299a4738957c"],
+    "h_51_65": ["6cc28442-cccd-42a8-b6e4-24b7210a09c5"],
+    "h_66_plus": ["6cc28442-cccd-42a8-b6e4-24b7210a09c5"],
+    "m_18_30": ["6dbc1e47-7768-403e-878a-94d7fcc3677b"],
+    "m_31_50": ["edf6fdcb-acab-44b8-b974-ded72665ee26", "071b0286-4cce-4808-bee2-e642f1062de3", "dc9aa3e1-32f2-499e-9921-ecabac1076fc"],
+    "m_51_65": ["27e12daa-50fc-4384-93c2-ebca73f1f78d", "edcb8f1a-334f-4cdb-871c-5c513db806a7"],
+    "m_66_plus": ["edcb8f1a-334f-4cdb-871c-5c513db806a7"],
+    "x_18_30": [],
+    "x_31_50": [],
+    "x_51_65": [],
+    "x_66_plus": []
+  },
+
+  "_fallback_genero": "Si una celda de 'x' (No binario) está vacía, se usa la celda 'm' de la misma franja de edad.",
+
+  "_voces_descripcion": "Voz por idioma (cas=castellano, eus=euskera) × género. voiceId = ID de una voz del Anam Lab (galería o clonada/importada). languageCode = ISO 639-1 para la transcripción. Para euskera Anam quizá no tenga voz nativa: ver campo tts_externo (fase 2, Azure/Google passthrough).",
+  "_voces_nota": "Voces en castellano de Anam (2026-07-26). Mujeres Nuria+Blanca rotan por id; hombre Martin Osborne. Euskera usa provisionalmente estas voces castellanas (languageCode eu); euskera nativo en fase 2 (tts_externo, Azure).",
+  "voces": {
+    "cas_h": [
+      { "voiceId": "fbe2b6ee-a4df-4d6c-b51a-92be37c9517f", "nombre": "Martin Osborne (ES)", "languageCode": "es", "tts_externo": null },
+      { "voiceId": "2d96e0ff-6667-4d7d-a908-f5e4d6ee0bcd", "nombre": "Daniel (ES)", "languageCode": "es", "tts_externo": null }
+    ],
+    "cas_m": [
+      { "voiceId": "8f90e9ac-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Nuria (ES)", "languageCode": "es", "tts_externo": null },
+      { "voiceId": "8f70d6bd-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Blanca (ES)", "languageCode": "es", "tts_externo": null }
+    ],
+    "cas_x": { "voiceId": "8f90e9ac-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Nuria (ES)", "languageCode": "es", "tts_externo": null },
+    "eus_h": [
+      { "voiceId": "fbe2b6ee-a4df-4d6c-b51a-92be37c9517f", "nombre": "Martin Osborne (provisional; euskera en fase 2)", "languageCode": "eu", "tts_externo": "azure:eu-ES-GorkaNeural" },
+      { "voiceId": "2d96e0ff-6667-4d7d-a908-f5e4d6ee0bcd", "nombre": "Daniel (provisional; euskera en fase 2)", "languageCode": "eu", "tts_externo": "azure:eu-ES-GorkaNeural" }
+    ],
+    "eus_m": [
+      { "voiceId": "8f90e9ac-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Nuria (provisional; euskera en fase 2)", "languageCode": "eu", "tts_externo": "azure:eu-ES-AinhoaNeural" },
+      { "voiceId": "8f70d6bd-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Blanca (provisional; euskera en fase 2)", "languageCode": "eu", "tts_externo": "azure:eu-ES-AinhoaNeural" }
+    ],
+    "eus_x": { "voiceId": "8f90e9ac-4fc0-11f1-84b0-52bacf74fa75", "nombre": "Nuria (provisional; euskera en fase 2)", "languageCode": "eu", "tts_externo": "azure:eu-ES-AinhoaNeural" }
+  }
+}

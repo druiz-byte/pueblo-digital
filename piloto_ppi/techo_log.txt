@@ -1,0 +1,42 @@
+# Techo predictivo del barómetro desde un perfil sociodemográfico
+
+¿Cuánta de la variación entre personas es explicable desde el perfil?
+**`corr_max = sqrt(R²)` es el límite de CUALQUIER panel digital**: una Persona
+construida solo con el perfil no puede saber más de lo que el perfil contiene.
+
+Predictores (68 columnas): sexo, edad(+²), provincia, lengua, situación
+laboral, estudios, religión, nacimiento, voto 2024, voto 2020, ideología 0-10,
+nacionalismo 0-10 (+flags NS). R² **fuera de muestra**, validación cruzada 5-fold.
+
+## Resumen
+
+- **Escalas y ordinales (100 preguntas):** R² medio fuera de muestra **0.080** -> **corr máxima media 0.24**
+  - mediana R² 0.052 · p90 0.202 · máx 0.389
+  - preguntas con R² <= 0 (el perfil no predice nada): **14/100**
+- **Nominales (35):** acierto 65% vs moda 58% (**+7.5 p.p.**)
+- **Multi-respuesta (9):** acierto medio por opción 78% vs moda 77% (**+1.1 p.p.**)
+- *(control)* las 2 preguntas que SON predictores dan R² 1.00 — circulares, no cuentan.
+
+## Techo por bloque (escalas + ordinales)
+
+| bloque | preg | R² medio | corr máx |
+|---|--:|--:|--:|
+| barometro_digital_1_situacion_ | 24 | 0.024 | 0.15 |
+| barometro_digital_2_bienestar_ | 23 | 0.034 | 0.16 |
+| barometro_digital_3_miedos.jso | 4 | 0.059 | 0.21 |
+| barometro_digital_4_turismo.js | 1 | 0.085 | 0.29 |
+| barometro_digital_5_politica_d | 45 | 0.099 | 0.28 |
+| barometro_digital_7_perfil_val | 3 | 0.371 | 0.61 |
+
+## Preguntas ordenadas por techo (escalas + ordinales)
+
+| R² | corr máx | n | var | pregunta |
+|--:|--:|--:|---|---|
+| 0.389 | 0.62 | 1000 | p44_1 | ¿Cuál es tu nivel de conocimiento del euskera?: Lect |
+| 0.364 | 0.60 | 1000 | p44_2 | ¿Cuál es tu nivel de conocimiento del euskera?: Escr |
+| 0.359 | 0.60 | 1000 | p44_3 | ¿Cuál es tu nivel de conocimiento del euskera?: Conv |
+| 0.358 | 0.60 | 976 | p21_9 | ¿En qué medida confías en cada una de las siguientes |
+| 0.342 | 0.58 | 887 | p26_3 | Indica tu grado de acuerdo con cada una de las sigui |
+| 0.289 | 0.54 | 834 | p26_1 | Indica tu grado de acuerdo con cada una de las sigui |
+
+→ /sessions/serene-admiring-brahmagupta/mnt/Pueblo digital/piloto_ppi/techo_predictivo.md
