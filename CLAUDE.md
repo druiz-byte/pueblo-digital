@@ -100,3 +100,4 @@ Pendiente inmediato (en este orden):
 - David es el autor (Universidad de Deusto, druiz@deusto.es).
 - Documentación en Markdown en la raíz de la carpeta; datos fuente en `datos GV/`; PDFs académicos en `artículos/`.
 - OneDrive puede mantener archivos "solo en la nube": si un script falla al leer un archivo, probablemente no está descargado localmente en ese ordenador.
+- **Git + OneDrive:** si `git` dice "not a git repository" pese a existir la carpeta `.git`, es que OneDrive tiene el contenido de `.git` "solo en la nube" (o OneDrive no está corriendo). Solución: arrancar OneDrive y clic derecho en la carpeta del proyecto → "Conservar siempre en este dispositivo" (o `attrib -U +P ".git\*" /S /D`). El push lo lanza David en su PC con Git for Windows; identidad ya configurada (druiz@deusto.es). Remoto: `github.com/druiz-byte/pueblo-digital` (rama `main`).

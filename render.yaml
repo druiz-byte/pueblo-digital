@@ -10,14 +10,14 @@ services:
     rootDir: entrevista
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python server_v2.py"
+    startCommand: "python server_anam.py"
     autoDeploy: true
     envVars:
       # Contraseña de acceso (Basic Auth). Ponla para que no la use cualquiera.
       - key: SITE_PASSWORD
         sync: false
-      # Clave de HeyGen / LiveAvatar
-      - key: HEYGEN_API_KEY
+      # Clave de Anam (avatar + voz emparejados). Rellenar en el panel de Render.
+      - key: ANAM_API_KEY
         sync: false
       # Clave de Anthropic (Claude Haiku responde como la Persona)
       - key: ANTHROPIC_API_KEY
