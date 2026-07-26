@@ -114,7 +114,7 @@ function entrevistar(id){
   if(!ENTREVISTA_URL || ENTREVISTA_URL.includes('TU-APP')){
     alert('Configura ENTREVISTA_RENDER_URL en index.html con la URL de tu app en Render.');return;
   }
-  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/?id=' + id, '_blank');
+  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/anam?id=' + id, '_blank');
 }
 // Abre el diseñador/lanzador de encuestas (servido por la misma app de entrevista).
 function lanzarEncuesta(){
