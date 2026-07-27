@@ -49,6 +49,9 @@
   .composer { display:flex; gap:8px; margin-top:10px; align-items:center; }
   .composer input { flex:1; padding:11px; border:1px solid var(--line); border-radius:8px; font-size:16px; }
   .composer #send { display:none; }   /* en móvil no hay Enviar: se usa el micrófono o Enter */
+  .lang { flex:0 0 auto; padding:9px 6px; border:1px solid var(--line); border-radius:8px;
+          background:#eef1f6; color:var(--ink); font-size:13px; cursor:pointer; }
+  .lang:disabled { opacity:.5; }
   .mic { width:44px; height:44px; border-radius:50%; border:1px solid var(--line); background:#eef1f6;
          font-size:19px; cursor:pointer; flex:0 0 auto; display:flex; align-items:center; justify-content:center; }
   .mic.on { background:#ffe1e1; border-color:#ff9d9d; animation:pulse 1s infinite; }
@@ -98,6 +101,10 @@
   <section class="panel chat">
     <div id="transcript"><div class="msg sys">La conversación aparecerá aquí.</div></div>
     <div class="composer">
+      <select id="lang" class="lang" title="Idioma de la pregunta" disabled>
+        <option value="es">ES</option>
+        <option value="eu">EU</option>
+      </select>
       <input id="q" placeholder="Escribe o pulsa el micrófono…" disabled>
       <button id="mic" class="mic" title="Hablar por voz" style="display:none">🎤</button>
       <button id="send" class="btn primary" disabled>Enviar</button>
@@ -113,6 +120,53 @@ const $ = s => document.querySelector(s);
 const params = new URLSearchParams(location.search);
 const ID = params.get("id") || "1";
 let persona = null, anam = null, history = [];
+
+// ── Voz de salida en euskera (síntesis del navegador) ─────────────────────
+// El avatar de Anam solo tiene voces en castellano; para que una respuesta en
+// euskera no suene con acento castellano, cuando el turno es en euskera
+// silenciamos el audio del avatar (sigue moviendo los labios) y locutamos el
+// texto con una voz vasca del navegador si existe. Si no hay voz vasca, se
+// mantiene la voz del avatar (castellana) como respaldo.
+const synth = window.speechSynthesis || null;
+let euVoice = null;
+function cargarVozEu(){
+  if(!synth) return;
+  const vs = synth.getVoices() || [];
+  euVoice = vs.find(v => /^eu(-|_|$)/i.test(v.lang)) ||
+            vs.find(v => /basque|euskera|euskara/i.test(v.name)) || null;
+}
+if(synth){ cargarVozEu(); synth.onvoiceschanged = cargarVozEu; }
+function hablarEu(texto){
+  return new Promise(res => {
+    if(!synth || !euVoice){ res(false); return; }
+    try { synth.cancel(); } catch(_){}
+    const u = new SpeechSynthesisUtterance(texto);
+    u.voice = euVoice; u.lang = euVoice.lang || "eu-ES"; u.rate = 1;
+    u.onend = () => res(true); u.onerror = () => res(true);
+    synth.speak(u);
+  });
+}
+
+// Voz euskera nativa vía Azure TTS (servidor). Devuelve true si sonó.
+let audioEu = null;
+async function hablarEuAzure(texto){
+  try {
+    const r = await fetch("/api/tts", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ id: ID, text: texto })
+    });
+    if(!r.ok) return false;                       // sin clave o error → respaldo
+    const url = URL.createObjectURL(await r.blob());
+    if(audioEu){ try { audioEu.pause(); } catch(_){} }
+    audioEu = new Audio(url);
+    await new Promise(res => {
+      audioEu.onended = res; audioEu.onerror = res;
+      audioEu.play().catch(() => res());
+    });
+    URL.revokeObjectURL(url);
+    return true;
+  } catch(_){ return false; }
+}
 
 const esc = t => (t==null?"":String(t)).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function sys(t){ add("sys","",t); }
@@ -185,6 +239,13 @@ async function cargarFicha(){
   if(!r.ok){ $("#resumen").innerHTML = `<span class="nom">Persona ${esc(ID)} no encontrada</span>`; return; }
   persona = await r.json();
   pintarFicha(persona);
+  const eus = (persona.euskera || "").toLowerCase();
+  const esEuskaldun = eus.includes("euskaldun") && (eus.includes("habla bien") || eus.includes("bastante bien"));
+  if(esEuskaldun){
+    const opt = $("#lang").querySelector('option[value="eu"]');
+    if(opt) opt.textContent = "EU ✓";
+    $("#lang").title = "Esta Persona es euskaldun: elige EU para preguntar y que responda en euskera.";
+  }
 }
 
 // ── Conectar avatar (cara+voz emparejadas por el servidor) ────────────────
@@ -208,6 +269,7 @@ async function connect(){
       $("#ph").style.display = "none";
       $("#video").classList.add("on");
       $("#q").disabled = false; $("#send").disabled = false;
+      $("#lang").disabled = false;
       $("#btn-stop").style.display = "inline-block";
       if (SR) $("#mic").style.display = "flex";
       presentarse();
@@ -226,8 +288,31 @@ async function stop(){
   $("#video").classList.remove("on");
   $("#ph").style.display = "";
   $("#q").disabled = true; $("#send").disabled = true; $("#mic").style.display = "none";
+  $("#lang").disabled = true;
+  try { synth && synth.cancel(); } catch(_){}
+  try { if(audioEu) audioEu.pause(); } catch(_){}
   $("#btn-stop").style.display = "none"; $("#btn-connect").disabled = false;
   sys("Sesión terminada.");
+}
+
+// ── Locución de una respuesta: avatar (castellano) o passthrough euskera ──
+async function decir(texto, lang){
+  if(!texto) return;
+  const video = $("#video");
+  if(lang !== "eu"){
+    if(video) video.muted = false;
+    if(anam) await anam.talk(texto);
+    return;
+  }
+  // Turno en euskera: el avatar mueve los labios con la voz castellana silenciada
+  // y locutamos el texto en euskera. Prioridad: Azure (nativo) → navegador → avatar.
+  if(video) video.muted = true;
+  const labios = anam ? anam.talk(texto).catch(() => {}) : Promise.resolve();
+  let ok = await hablarEuAzure(texto);
+  if(!ok) ok = await hablarEu(texto);
+  if(!ok && video) video.muted = false;   // sin voz euskera: se oye el avatar (castellano)
+  await labios;
+  if(video) video.muted = false;
 }
 
 // ── Auto-presentación al conectar (sin esperar pregunta) ──────────────────
@@ -245,7 +330,7 @@ async function presentarse(){
     const reply = data.text;
     pensando.querySelector(".content").textContent = reply;
     history.push({ role:"assistant", content: reply });   // el saludo entra en el contexto
-    if(anam) await anam.talk(reply);
+    await decir(reply, "es");   // la autopresentación siempre en castellano
   } catch(e){
     pensando.querySelector(".content").textContent = "[Error: " + e.message + "]";
   }
@@ -255,6 +340,7 @@ async function presentarse(){
 async function preguntar(){
   const q = $("#q").value.trim();
   if(!q) return;
+  const lang = $("#lang").value;   // idioma del turno (dirige la voz de salida)
   $("#q").value = ""; $("#q").disabled = true; $("#send").disabled = true;
   add("user","Entrevistador", q);
   history.push({ role:"user", content:q });
@@ -269,7 +355,7 @@ async function preguntar(){
     const reply = data.text;
     pensando.querySelector(".content").textContent = reply;
     history.push({ role:"assistant", content: reply });
-    if(anam) await anam.talk(reply);
+    await decir(reply, lang);
   } catch(e){
     pensando.querySelector(".content").textContent = "[Error: " + e.message + "]";
   }
@@ -283,7 +369,8 @@ function toggleMic(){
   if(!SR){ sys("Este navegador no permite dictado por voz."); return; }
   if(escuchando){ recog && recog.stop(); return; }
   recog = new SR();
-  recog.lang = "es-ES"; recog.interimResults = true; recog.continuous = false;
+  recog.lang = $("#lang").value === "eu" ? "eu-ES" : "es-ES";
+  recog.interimResults = true; recog.continuous = false;
   recog.onresult = e => {
     let t = "";
     for(const res of e.results) t += res[0].transcript;
@@ -305,8 +392,8 @@ $("#mic").addEventListener("click", toggleMic);
 $("#q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); preguntar(); }});
 
 // Cierra la sesión de Anam al salir/cerrar la pestaña (libera el cupo de concurrencia)
-window.addEventListener("pagehide", () => { try { if(anam) anam.stopStreaming(); } catch(_){} });
-window.addEventListener("beforeunload", () => { try { if(anam) anam.stopStreaming(); } catch(_){} });
+window.addEventListener("pagehide", () => { try { synth && synth.cancel(); if(anam) anam.stopStreaming(); } catch(_){} });
+window.addEventListener("beforeunload", () => { try { synth && synth.cancel(); if(anam) anam.stopStreaming(); } catch(_){} });
 
 cargarFicha();
 </script>

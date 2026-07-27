@@ -22,3 +22,10 @@ services:
       # Clave de Anthropic (Claude Haiku responde como la Persona)
       - key: ANTHROPIC_API_KEY
         sync: false
+      # Azure Speech: voz en euskera de las Personas euskaldun. KEY 1 del recurso
+      # Speech (capa gratuita F0). Rellenar en el panel de Render.
+      - key: AZURE_SPEECH_KEY
+        sync: false
+      # Región del recurso Speech (no es secreta; puede ir con valor directo).
+      - key: AZURE_SPEECH_REGION
+        value: westeurope

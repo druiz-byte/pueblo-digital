@@ -12,6 +12,9 @@ Requiere en entrevista/.env:  ANAM_API_KEY=...  y  ANTHROPIC_API_KEY=...
 """
 import os
 import json
+import urllib.request
+import urllib.error
+from xml.sax.saxutils import escape as _xml_escape
 from pathlib import Path
 from http.server import HTTPServer
 
@@ -20,6 +23,41 @@ from prompt_v2 import build_system_prompt_v2
 from emparejar import cargar_catalogo, elegir_avatar
 
 ANAM_API = "https://api.anam.ai"
+
+# ── Azure TTS (voz en euskera) ──────────────────────────────────────────────
+# server.load_env() ya volcó el .env a os.environ. Voces euskera neuronales:
+#   eu-ES-AinhoaNeural (mujer) · eu-ES-GorkaNeural (hombre).
+AZURE_SPEECH_KEY = os.environ.get("AZURE_SPEECH_KEY", "")
+AZURE_SPEECH_REGION = os.environ.get("AZURE_SPEECH_REGION", "westeurope")
+AZURE_VOZ_MUJER = "eu-ES-AinhoaNeural"
+AZURE_VOZ_HOMBRE = "eu-ES-GorkaNeural"
+
+
+def azure_tts(texto, voz):
+    """Sintetiza `texto` en euskera con Azure y devuelve (status, bytes_mp3).
+    status 0 = clave no configurada; -1 = error de red."""
+    if not AZURE_SPEECH_KEY:
+        return 0, b""
+    url = ("https://%s.tts.speech.microsoft.com/cognitiveservices/v1"
+           % AZURE_SPEECH_REGION)
+    ssml = (
+        "<speak version='1.0' xml:lang='eu-ES'>"
+        "<voice xml:lang='eu-ES' name='%s'>%s</voice></speak>"
+        % (voz, _xml_escape(texto))
+    ).encode("utf-8")
+    req = urllib.request.Request(url, data=ssml, method="POST", headers={
+        "Ocp-Apim-Subscription-Key": AZURE_SPEECH_KEY,
+        "Content-Type": "application/ssml+xml",
+        "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3",
+        "User-Agent": "pueblo-digital",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return resp.status, resp.read()
+    except urllib.error.HTTPError as e:
+        return e.code, e.read()
+    except Exception:
+        return -1, b""
 
 # ── Panel v2 + prompt v2 (idéntico a server_v2.py) ──────────────────────────
 _here = Path(__file__).parent / "pv_agentes_v2.json"
@@ -55,7 +93,31 @@ class AnamHandler(server.Handler):
         p = self.path.split("?")[0]
         if p == "/api/anam/session":
             return self._anam_session()
+        if p == "/api/tts":
+            return self._tts()
         return super().do_POST()
+
+    def _tts(self):
+        """Sintetiza en euskera el texto recibido y devuelve el MP3.
+        Body: {id, text}. La voz se elige por el género de la Persona."""
+        body = self.read_body()
+        texto = (body.get("text") or "").strip()
+        if not texto:
+            return self.send_err(400, "Falta 'text'.")
+        persona = _AGENTES_POR_ID.get(str(body.get("id") or ""))
+        genero = (persona or {}).get("genero", "")
+        voz = AZURE_VOZ_MUJER if genero == "Mujer" else AZURE_VOZ_HOMBRE
+        status, audio = azure_tts(texto, voz)
+        if status == 0:
+            return self.send_err(503, "AZURE_SPEECH_KEY no configurada.")
+        if status != 200 or not audio:
+            detalle = audio.decode("utf-8", "ignore")[:300] if audio else ""
+            return self.send_err(502, "Azure TTS falló (%s). %s" % (status, detalle))
+        self.send_response(200)
+        self.send_header("Content-Type", "audio/mpeg")
+        self.send_header("Content-Length", str(len(audio)))
+        self.end_headers()
+        self.wfile.write(audio)
 
     def _anam_session(self):
         body = self.read_body()
@@ -106,6 +168,10 @@ def main():
         print("[aviso] ANAM_API_KEY no configurada")
     if not server.ANTHROPIC_API_KEY:
         print("[aviso] ANTHROPIC_API_KEY no configurada")
+    if not AZURE_SPEECH_KEY:
+        print("[aviso] AZURE_SPEECH_KEY no configurada (voz euskera → respaldo navegador)")
+    else:
+        print("[ok] Azure TTS euskera activo (región %s)" % AZURE_SPEECH_REGION)
     httpd = HTTPServer(("", server.PORT), AnamHandler)
     print("Pueblo Digital — Entrevistador con avatar (Anam)")
     print("   Escuchando en el puerto %s" % server.PORT)

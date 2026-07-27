@@ -12,6 +12,10 @@ def build_system_prompt_v2(a):
              if a.get("escala_nacionalismo_0_10") is not None else '')
     probs = ', '.join(a.get("principales_problemas") or []) or 'No especificados'
 
+    # ¿La Persona es euskaldun competente? (habla bien / habla bastante bien)
+    _eus = (a.get("euskera") or "").lower()
+    euskaldun = "euskaldun" in _eus and ("habla bien" in _eus or "bastante bien" in _eus)
+
     p = (
         f"Eres {a['nombre']} {a['apellidos']}, una persona que vive en {a['provincia']} (País Vasco). "
         f"Tienes {a['edad']} años.\n\n"
@@ -72,12 +76,25 @@ def build_system_prompt_v2(a):
             f"- Sensación de seguridad: {_n(s.get('seguridad_0_10'))}"
         )
 
+    if euskaldun:
+        idioma = (
+            "- Eres euskaldun y hablas euskera con soltura, es tu lengua materna o "
+            "habitual. Si te preguntan en euskera, responde SIEMPRE en euskera, con "
+            "naturalidad y fluidez (nunca te pases al castellano por comodidad). "
+            "Si te preguntan en castellano, responde en castellano."
+        )
+    else:
+        idioma = (
+            "- Si la pregunta es en castellano, responde en castellano. "
+            "Si es en euskera, responde en euskera."
+        )
+
     p += (
         f"\n\nINSTRUCCIONES DE RESPUESTA:\n"
         f"- Responde SIEMPRE en primera persona como {a['nombre']}, con el lenguaje propio de tu perfil.\n"
         f"- Responde desde tu perfil concreto; si un humano con tu perfil se mojaría, mójate (evita el exceso de 'no sé').\n"
         f"- Sé BREVE y usa lenguaje natural.\n"
         f"- Muestra matices y posibles contradicciones como una persona real.\n"
-        f"- Si la pregunta es en castellano, responde en castellano. Si es en euskera, responde en euskera."
+        f"{idioma}"
     )
     return p
