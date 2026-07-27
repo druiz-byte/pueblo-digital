@@ -37,7 +37,17 @@
 
 **Incidencia git+OneDrive (resuelta):** `git` daba "not a git repository" pese a existir `.git` porque OneDrive tenía su contenido "solo en la nube" y OneDrive no corría. Solución: arrancar OneDrive + "Conservar siempre en este dispositivo". Git for Windows recién instalado → configurar identidad (`user.email`/`user.name`). Push necesitó `git pull --no-rebase --no-edit` (remoto por delante). Anotado en Convenciones del `CLAUDE.md`.
 
-**Pendiente:** (a) **PÁGINA DE ENTREVISTA RESPONSIVE (siguiente tarea)**: `public/anam.html` usa un grid de 3 columnas (320px · 1fr · 360px) que no cabe en móvil; hay que hacerlo responsive (apilar ficha/avatar/chat en vertical en pantallas estrechas). (b) **euskera** fase 2 (audio passthrough con Azure `eu-ES`; ahora las 105 Personas usan voz castellana provisional). (c) **caras propias** si David sube de plan en Anam (más diversidad de edad que la galería stock).
+**Interfaz `anam.html` — responsive + pulido (HECHO esta sesión):**
+- **Responsive:** móvil = ficha resumida (nombre·edad·provincia) arriba + avatar + chat abajo; escritorio = 3 columnas con **perfil detallado** (personal/lingüístico/político/mediático/bienestar/capital social, con los campos v2 de `/api/agentes/NN`). Gotcha detectado: en el móvil se veían 3 columnas porque Chrome tenía activado "Versión para ordenador" (fuerza viewport ancho); se desactiva en el menú del navegador.
+- **Auto-presentación:** al conectar, la Persona se presenta sola (nombre, edad, de dónde es, a qué se dedica) vía `/api/chat` + `talk()`, sin esperar pregunta.
+- **Voz:** micrófono con Web Speech API (`es-ES`); en móvil se quita el botón "Enviar" y el micro queda a la derecha; en escritorio se mantiene "Enviar".
+- **Favicons:** micrófono azul (SVG inline) en la entrevista; globo azul en `index.html` (panel).
+- **Concurrencia:** la sesión de Anam se cierra al salir/cerrar pestaña (`pagehide`/`beforeunload`) y `maxSessionLengthSeconds` para liberar el cupo. Error "Concurrency limit reached" = varias sesiones vivas a la vez; cerrar pestañas y esperar.
+- **Fix scroll móvil:** la página tenía altura variable y hacía scroll global al responder (se perdía el avatar). Ahora `.app` con altura fija a la pantalla (`100dvh - head`) y `overflow:hidden`; **solo el chat** (`#transcript`) tiene scroll interno (con `min-height:0` en los flex). El avatar queda fijo.
+
+**Plan de Anam contratado: Starter** ($12/mes, uso comercial): **50 min/mes gratis** (luego $0,16/min), **límite 5 min/conversación** (→ `maxSessionLengthSeconds=300` en `server_anam.py`), **2 avatares custom**. Cada prueba consume minutos del cupo.
+
+**Pendiente:** (a) **euskera** fase 2 (audio passthrough con Azure `eu-ES`; ahora las 105 Personas usan voz castellana provisional). (b) **caras propias**: el plan Starter permite 2 avatares custom desde foto (insuficiente para las 8 celdas → se sigue con galería stock; reservar los 2 custom para casos concretos). (c) menor: la ficha resumida móvil solo lleva nombre·edad·provincia (David quería añadir campos pero el mensaje quedó cortado). (d) opcional: persona/avatar de David mismo (se le pasó un borrador de perfil en inglés; su "digital twin" ya está en la galería de Anam).
 
 ---
 
