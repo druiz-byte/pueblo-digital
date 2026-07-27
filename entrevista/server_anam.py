@@ -82,6 +82,9 @@ class AnamHandler(server.Handler):
             # (/api/chat) y se envía con talk(). Sin este campo Anam rechaza el
             # token como "legacy".
             "llmId": "CUSTOMER_CLIENT_V1",
+            # Tope de duración: el plan Starter limita a 5 min/conversación.
+            # Lo fijamos en 300 s para cuadrar y liberar el cupo si algo cuelga.
+            "maxSessionLengthSeconds": 300,
         }}
         status, data = server.http_json(
             "%s/v1/auth/session-token" % ANAM_API, method="POST", body=payload,

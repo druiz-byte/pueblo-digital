@@ -212,7 +212,7 @@ async function connect(){
       if (SR) $("#mic").style.display = "flex";
       presentarse();
     });
-    anam.addListener(AnamEvent.CONNECTION_CLOSED, () => sys("Conexión cerrada."));
+    anam.addListener(AnamEvent.CONNECTION_CLOSED, () => { anam = null; sys("Conexión cerrada."); });
     await anam.streamToVideoElement("video");
   } catch(e){
     sys("Error al conectar: " + e.message);
@@ -303,6 +303,10 @@ $("#btn-stop").addEventListener("click", stop);
 $("#send").addEventListener("click", preguntar);
 $("#mic").addEventListener("click", toggleMic);
 $("#q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); preguntar(); }});
+
+// Cierra la sesión de Anam al salir/cerrar la pestaña (libera el cupo de concurrencia)
+window.addEventListener("pagehide", () => { try { if(anam) anam.stopStreaming(); } catch(_){} });
+window.addEventListener("beforeunload", () => { try { if(anam) anam.stopStreaming(); } catch(_){} });
 
 cargarFicha();
 </script>
