@@ -8,8 +8,8 @@
 <style>
   :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; --head:54px; }
   * { box-sizing:border-box; }
-  html,body { margin:0; }
-  body { font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  html,body { margin:0; height:100%; }
+  body { font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); overflow:hidden; }
   header { height:var(--head); display:flex; flex-direction:column; justify-content:center;
            padding:6px 16px; border-bottom:1px solid var(--line); background:var(--card); }
   header h1 { margin:0; font-size:16px; }
@@ -23,7 +23,7 @@
 
   /* ── Móvil primero: apilado vertical ─────────────────────────────── */
   .app { display:flex; flex-direction:column; gap:10px; padding:10px;
-         min-height:calc(100dvh - var(--head)); }
+         height:calc(100dvh - var(--head)); overflow:hidden; }
 
   /* Ficha: en móvil solo el resumen; el detalle se oculta */
   .ficha { padding:10px 12px; }
@@ -39,8 +39,8 @@
   .stage .ph { color:#98a2b3; text-align:center; padding:16px; font-size:14px; }
   .stage .controls { position:absolute; top:10px; left:10px; display:flex; gap:8px; }
 
-  .chat { display:flex; flex-direction:column; flex:1; min-height:200px; padding:10px; }
-  #transcript { flex:1; overflow:auto; display:flex; flex-direction:column; gap:8px; }
+  .chat { display:flex; flex-direction:column; flex:1; min-height:0; padding:10px; }
+  #transcript { flex:1; min-height:0; overflow:auto; display:flex; flex-direction:column; gap:8px; }
   .msg { padding:8px 10px; border-radius:10px; max-width:92%; }
   .msg.user { background:#eaf1ff; align-self:flex-end; }
   .msg.agent { background:#f1f3f7; align-self:flex-start; }
