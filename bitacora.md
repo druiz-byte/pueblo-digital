@@ -33,7 +33,11 @@
 - **Incidencia Anthropic:** la `ANTHROPIC_API_KEY` del `.env` daba 401 `authentication_error` (revocada). Se creó `test_anthropic.py` (prueba la clave sin dependencias). David generó clave nueva → chat OK.
 - **Estado: la Persona se empareja sola con cara+voz castellana y conversa** (Claude de cerebro, Anam pone cara y voz). Confirmado por David.
 
-**Pendiente:** (a) **euskera** fase 2 (audio passthrough con Azure `eu-ES`; ahora las 105 Personas usan voz castellana provisional). (b) **caras propias** si David sube de plan en Anam (más diversidad de edad que la galería stock). (c) opcional: enlazar `/anam?id=` desde el panel raíz (`ENTREVISTA_URL` en `index.html`).
+**Enlace del panel + despliegue en Render (misma sesión):** el botón "Entrevistar" de `index.html` ahora abre `/anam?id=` (antes `/?id=`). Desplegado en Render: `render.yaml` y el Start Command del panel cambiados a `python server_anam.py`, variable `ANAM_API_KEY` añadida y `ANTHROPIC_API_KEY` actualizada a la clave nueva (la vieja daba 401 también en Render). **Funciona online** en `pueblo-digital.onrender.com/anam?id=NN` (plan free → duerme tras inactividad, primer arranque lento). Nota de flujo: Render no coge el `startCommand` del `render.yaml` si ya hay uno fijado en el panel → cambiarlo en Settings a mano.
+
+**Incidencia git+OneDrive (resuelta):** `git` daba "not a git repository" pese a existir `.git` porque OneDrive tenía su contenido "solo en la nube" y OneDrive no corría. Solución: arrancar OneDrive + "Conservar siempre en este dispositivo". Git for Windows recién instalado → configurar identidad (`user.email`/`user.name`). Push necesitó `git pull --no-rebase --no-edit` (remoto por delante). Anotado en Convenciones del `CLAUDE.md`.
+
+**Pendiente:** (a) **PÁGINA DE ENTREVISTA RESPONSIVE (siguiente tarea)**: `public/anam.html` usa un grid de 3 columnas (320px · 1fr · 360px) que no cabe en móvil; hay que hacerlo responsive (apilar ficha/avatar/chat en vertical en pantallas estrechas). (b) **euskera** fase 2 (audio passthrough con Azure `eu-ES`; ahora las 105 Personas usan voz castellana provisional). (c) **caras propias** si David sube de plan en Anam (más diversidad de edad que la galería stock).
 
 ---
 

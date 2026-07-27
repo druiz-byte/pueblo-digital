@@ -2,40 +2,73 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pueblo Digital — Entrevista (Anam)</title>
 <style>
-  :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; }
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; --head:54px; }
   * { box-sizing:border-box; }
-  body { margin:0; font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); }
-  header { padding:14px 20px; border-bottom:1px solid var(--line); background:var(--card); }
-  header h1 { margin:0; font-size:18px; }
-  header .sub { color:var(--muted); font-size:13px; }
-  main { display:grid; grid-template-columns:320px 1fr 360px; gap:16px; padding:16px; height:calc(100vh - 58px); }
-  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; overflow:auto; }
-  .ficha h2 { font-size:16px; margin:.2em 0 .6em; }
-  .ficha .sec { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:14px 0 4px; }
-  .ficha .row { display:flex; justify-content:space-between; gap:10px; padding:2px 0; border-bottom:1px dashed var(--line); }
-  .ficha .row .k { color:var(--muted); }
-  .stage { display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0d1117; border:1px solid var(--line); border-radius:12px; position:relative; overflow:hidden; }
-  #video { width:100%; height:100%; object-fit:cover; display:none; }
-  #video.on { display:block; }
-  .stage .ph { color:#98a2b3; text-align:center; padding:20px; }
+  html,body { margin:0; }
+  body { font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { height:var(--head); display:flex; flex-direction:column; justify-content:center;
+           padding:6px 16px; border-bottom:1px solid var(--line); background:var(--card); }
+  header h1 { margin:0; font-size:16px; }
+  header .sub { color:var(--muted); font-size:12px; }
+  .badge { display:inline-block; font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:1px 8px; margin-left:6px; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; }
   .btn { border:0; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; }
   .btn.primary { background:var(--accent); color:#fff; }
   .btn.ghost { background:#eef1f6; color:var(--ink); }
   .btn:disabled { opacity:.5; cursor:default; }
+
+  /* ── Móvil primero: apilado vertical ─────────────────────────────── */
+  .app { display:flex; flex-direction:column; gap:10px; padding:10px;
+         min-height:calc(100dvh - var(--head)); }
+
+  /* Ficha: en móvil solo el resumen; el detalle se oculta */
+  .ficha { padding:10px 12px; }
+  .resumen { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+  .resumen .nom { font-size:17px; font-weight:600; }
+  .resumen .meta { color:var(--muted); font-size:13px; }
+  .ficha-detalle { display:none; }
+
+  .stage { position:relative; overflow:hidden; background:#0d1117; border-radius:12px;
+           display:flex; align-items:center; justify-content:center; height:38vh; min-height:220px; }
+  #video { width:100%; height:100%; object-fit:cover; display:none; }
+  #video.on { display:block; }
+  .stage .ph { color:#98a2b3; text-align:center; padding:16px; font-size:14px; }
   .stage .controls { position:absolute; top:10px; left:10px; display:flex; gap:8px; }
-  .chat { display:flex; flex-direction:column; }
+
+  .chat { display:flex; flex-direction:column; flex:1; min-height:200px; padding:10px; }
   #transcript { flex:1; overflow:auto; display:flex; flex-direction:column; gap:8px; }
   .msg { padding:8px 10px; border-radius:10px; max-width:92%; }
   .msg.user { background:#eaf1ff; align-self:flex-end; }
   .msg.agent { background:#f1f3f7; align-self:flex-start; }
   .msg .who { font-size:11px; color:var(--muted); margin-bottom:2px; }
-  .msg.sys { align-self:center; color:var(--muted); font-size:12px; background:transparent; }
-  .composer { display:flex; gap:8px; margin-top:10px; }
-  .composer input { flex:1; padding:9px 11px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
-  .badge { display:inline-block; font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:1px 8px; margin-left:6px; }
+  .msg.sys { align-self:center; color:var(--muted); font-size:12px; background:transparent; text-align:center; }
+  .composer { display:flex; gap:8px; margin-top:10px; align-items:center; }
+  .composer input { flex:1; padding:11px; border:1px solid var(--line); border-radius:8px; font-size:16px; }
+  .mic { width:44px; height:44px; border-radius:50%; border:1px solid var(--line); background:#eef1f6;
+         font-size:19px; cursor:pointer; flex:0 0 auto; display:flex; align-items:center; justify-content:center; }
+  .mic.on { background:#ffe1e1; border-color:#ff9d9d; animation:pulse 1s infinite; }
+  @keyframes pulse { 0%,100%{ box-shadow:0 0 0 0 rgba(255,80,80,.5); } 50%{ box-shadow:0 0 0 6px rgba(255,80,80,0); } }
+
+  /* Ficha detallada (secciones) */
+  .sec { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:14px 0 4px; font-weight:600; }
+  .row { display:flex; justify-content:space-between; gap:10px; padding:2px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .row .k { color:var(--muted); }
+  .row .v { text-align:right; }
+
+  /* ── Escritorio: 3 columnas, ficha detallada visible ─────────────── */
+  @media (min-width:900px) {
+    .app { display:grid; grid-template-columns:340px 1fr 380px; gap:16px; padding:16px;
+           height:calc(100vh - var(--head)); min-height:0; }
+    .ficha { padding:14px; overflow:auto; }
+    .resumen { display:none; }
+    .ficha-detalle { display:block; }
+    .ficha-detalle h2 { font-size:16px; margin:.1em 0 .5em; }
+    .stage { height:auto; }
+    .chat { min-height:0; }
+  }
 </style>
 </head>
 <body>
@@ -43,8 +76,12 @@
   <h1>Pueblo Digital · Entrevista <span id="match-badge" class="badge" style="display:none"></span></h1>
   <div class="sub">Cara y voz asignadas automáticamente al perfil · Anam</div>
 </header>
-<main>
-  <section class="panel ficha" id="ficha"><p style="color:var(--muted)">Cargando ficha…</p></section>
+
+<div class="app">
+  <section class="panel ficha" id="ficha">
+    <div class="resumen" id="resumen"><span class="nom">Cargando…</span></div>
+    <div class="ficha-detalle" id="detalle"></div>
+  </section>
 
   <section class="panel stage">
     <div class="controls">
@@ -58,11 +95,12 @@
   <section class="panel chat">
     <div id="transcript"><div class="msg sys">La conversación aparecerá aquí.</div></div>
     <div class="composer">
+      <button id="mic" class="mic" title="Hablar por voz" style="display:none">🎤</button>
       <input id="q" placeholder="Escribe tu pregunta…" disabled>
       <button id="send" class="btn primary" disabled>Enviar</button>
     </div>
   </section>
-</main>
+</div>
 
 <script type="module">
 import { createClient } from "https://esm.sh/@anam-ai/js-sdk@latest";
@@ -73,7 +111,7 @@ const params = new URLSearchParams(location.search);
 const ID = params.get("id") || "1";
 let persona = null, anam = null, history = [];
 
-const esc = t => (t||"").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const esc = t => (t==null?"":String(t)).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function sys(t){ add("sys","",t); }
 function add(type, who, text){
   const d = document.createElement("div");
@@ -84,35 +122,69 @@ function add(type, who, text){
   return d;
 }
 
-// ── Ficha de la Persona ─────────────────────────────────────────────────────
-function fila(k,v){ return v==null||v===""?"":`<div class="row"><span class="k">${esc(k)}</span><span>${esc(String(v))}</span></div>`; }
+// ── Ficha ────────────────────────────────────────────────────────────────
+function fila(k,v){ return (v==null||v==="")?"":`<div class="row"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`; }
+function seccion(t){ return `<div class="sec">${esc(t)}</div>`; }
+
 function pintarFicha(a){
-  const H = [];
-  H.push(`<h2>${esc(a.nombre)} ${esc(a.apellidos||"")}</h2>`);
-  H.push(`<div class="sec">Perfil</div>`);
+  // Resumen (móvil)
+  $("#resumen").innerHTML =
+    `<span class="nom">${esc(a.nombre)} ${esc(a.apellidos||"")}</span>` +
+    `<span class="meta">${esc(a.edad)} años · ${esc(a.provincia)}</span>`;
+
+  // Detalle (escritorio) — campos del panel v2
+  const H = [`<h2>${esc(a.nombre)} ${esc(a.apellidos||"")}</h2>`];
+  H.push(seccion("Perfil personal"));
   H.push(fila("Edad", a.edad), fila("Género", a.genero), fila("Provincia", a.provincia),
          fila("Hábitat", a.habitat), fila("Estudios", a.nivel_estudios),
          fila("Situación laboral", a.situacion_laboral), fila("Clase social", a.clase_social),
-         fila("Nacimiento", a.nacimiento));
-  H.push(`<div class="sec">Lengua</div>`);
-  H.push(fila("Euskera", a.euskera), fila("Idioma", a.lengua_encuesta));
-  H.push(`<div class="sec">Política</div>`);
-  H.push(fila("Voto 2024", a.voto_autonomicas_2024), fila("Identidad", a.identidad),
-         fila("Territorial", a.preferencia_territorial),
+         fila("Lugar de nacimiento", a.nacimiento), fila("Problemas fin de mes", a.problemas_dinero));
+  H.push(seccion("Perfil lingüístico"));
+  H.push(fila("Euskera", a.euskera), fila("Idioma preferido", a.lengua_encuesta));
+  H.push(seccion("Perfil político"));
+  H.push(fila("Voto autonómicas 2024", a.voto_autonomicas_2024), fila("Identidad", a.identidad),
+         fila("Postura territorial", a.preferencia_territorial),
          fila("Ideología (0-10)", a.ideologia_0_10),
          fila("Nacionalismo (0-10)", a.escala_nacionalismo_0_10),
-         fila("Interés política", a.interes_politica));
-  $("#ficha").innerHTML = H.join("");
+         fila("Valoración economía PV", a.valoracion_economia_pv),
+         fila("Valoración política PV", a.valoracion_politica_pv),
+         fila("Interés por la política", a.interes_politica),
+         fila("Seguridad percibida", a.seguridad_percibida),
+         fila("Preocupaciones", (a.principales_problemas||[]).join(", ")));
+  const m = a.perfil_mediatico;
+  if (m) { H.push(seccion("Perfil mediático"));
+    H.push(fila("Noticias (min/día)", m.consumo_noticias_min_dia),
+           fila("Uso de internet", m.uso_internet),
+           fila("Confianza políticos (0-10)", m.confianza_politicos_0_10),
+           fila("Confianza parlamento (0-10)", m.confianza_parlamento_0_10)); }
+  const b = a.perfil_bienestar;
+  if (b) { H.push(seccion("Bienestar"));
+    H.push(fila("Felicidad (0-10)", b.felicidad_0_10),
+           fila("Satisfacción vital (0-10)", b.satisfaccion_vida_0_10),
+           fila("Salud autopercibida", b.salud_autopercibida),
+           fila("Contacto social", b.contacto_social),
+           fila("Sentimiento de soledad", b.sentimiento_soledad)); }
+  const s = a.perfil_social;
+  if (s) { H.push(seccion("Capital social (0-10)"));
+    H.push(fila("Confianza en personas", s.confianza_general_0_10),
+           fila("Confianza instituciones", s.confianza_instituciones_0_10),
+           fila("Confianza profesiones", s.confianza_profesiones_0_10),
+           fila("Participación social", s.participacion_social_0_10),
+           fila("Pertenencia asociaciones", s.pertenencia_asociaciones_0_10),
+           fila("Cohesión social", s.cohesion_social_0_10),
+           fila("Percepción de corrupción", s.percepcion_corrupcion_0_10),
+           fila("Sensación de seguridad", s.seguridad_0_10)); }
+  $("#detalle").innerHTML = H.join("");
 }
 
 async function cargarFicha(){
   const r = await fetch("/api/agentes/" + encodeURIComponent(ID));
-  if(!r.ok){ $("#ficha").innerHTML = "<p>No se encontró la Persona "+esc(ID)+".</p>"; return; }
+  if(!r.ok){ $("#resumen").innerHTML = `<span class="nom">Persona ${esc(ID)} no encontrada</span>`; return; }
   persona = await r.json();
   pintarFicha(persona);
 }
 
-// ── Conectar el avatar (cara+voz emparejadas por el servidor) ───────────────
+// ── Conectar avatar (cara+voz emparejadas por el servidor) ────────────────
 async function connect(){
   $("#btn-connect").disabled = true;
   sys("Emparejando cara y voz con el perfil…");
@@ -122,13 +194,11 @@ async function connect(){
       body: JSON.stringify({ id: ID })
     });
     const data = await r.json();
-    if(!r.ok || !data.sessionToken){
+    if(!r.ok || !data.sessionToken)
       throw new Error(typeof data.error==="string"?data.error:JSON.stringify(data.error||data));
-    }
     const m = data.match;
-    const b = $("#match-badge");
-    b.textContent = `celda ${m.celda} · voz ${m.claveVoz}`;
-    b.style.display = "inline-block";
+    const bdg = $("#match-badge");
+    bdg.textContent = `${m.celda} · ${m.claveVoz}`; bdg.style.display = "inline-block";
 
     anam = createClient(data.sessionToken, { disableInputAudio: true });
     anam.addListener(AnamEvent.SESSION_READY, () => {
@@ -136,7 +206,8 @@ async function connect(){
       $("#video").classList.add("on");
       $("#q").disabled = false; $("#send").disabled = false;
       $("#btn-stop").style.display = "inline-block";
-      sys(`${persona.nombre} está lista. Escribe tu pregunta.`);
+      if (SR) $("#mic").style.display = "flex";
+      sys(`${persona.nombre} está lista. Escribe o pulsa el micrófono.`);
     });
     anam.addListener(AnamEvent.CONNECTION_CLOSED, () => sys("Conexión cerrada."));
     await anam.streamToVideoElement("video");
@@ -151,13 +222,12 @@ async function stop(){
   anam = null;
   $("#video").classList.remove("on");
   $("#ph").style.display = "";
-  $("#q").disabled = true; $("#send").disabled = true;
-  $("#btn-stop").style.display = "none";
-  $("#btn-connect").disabled = false;
+  $("#q").disabled = true; $("#send").disabled = true; $("#mic").style.display = "none";
+  $("#btn-stop").style.display = "none"; $("#btn-connect").disabled = false;
   sys("Sesión terminada.");
 }
 
-// ── Pregunta → Claude (mismo cerebro) → talk() ──────────────────────────────
+// ── Pregunta → Claude (cerebro) → talk() ──────────────────────────────────
 async function preguntar(){
   const q = $("#q").value.trim();
   if(!q) return;
@@ -182,9 +252,32 @@ async function preguntar(){
   $("#q").disabled = false; $("#send").disabled = false; $("#q").focus();
 }
 
+// ── Voz: dictado con Web Speech API (es-ES) ───────────────────────────────
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recog = null, escuchando = false;
+function toggleMic(){
+  if(!SR){ sys("Este navegador no permite dictado por voz."); return; }
+  if(escuchando){ recog && recog.stop(); return; }
+  recog = new SR();
+  recog.lang = "es-ES"; recog.interimResults = true; recog.continuous = false;
+  recog.onresult = e => {
+    let t = "";
+    for(const res of e.results) t += res[0].transcript;
+    $("#q").value = t;
+  };
+  recog.onerror = () => { escuchando = false; $("#mic").classList.remove("on"); };
+  recog.onend = () => {
+    escuchando = false; $("#mic").classList.remove("on");
+    if($("#q").value.trim()) preguntar();
+  };
+  try { recog.start(); escuchando = true; $("#mic").classList.add("on"); }
+  catch(_){ /* start puede fallar si ya está activo */ }
+}
+
 $("#btn-connect").addEventListener("click", connect);
 $("#btn-stop").addEventListener("click", stop);
 $("#send").addEventListener("click", preguntar);
+$("#mic").addEventListener("click", toggleMic);
 $("#q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); preguntar(); }});
 
 cargarFicha();
