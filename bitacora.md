@@ -4,6 +4,37 @@
 
 ---
 
+## 2026-07-27 · Decimosexta sesión — Entrevista en euskera: Personas euskaldun responden en euskera (texto + voz nativa Azure)
+
+**Ordenador:** oficina (Cowork). El despliegue y las pruebas con API (Anam/Anthropic/Azure) los hace David en su PC / en Render.
+
+**Contexto:** cerrar la "fase 2" que quedó de la 15ª sesión — que las Personas euskaldun puedan entrevistarse en euskera, no solo en castellano. Petición de David en dos tiempos: primero solo el prompt, luego "hagamos ya todo esta vez" (entrada de voz + salida de voz).
+
+**Decisiones (con David):**
+- **Alcance:** ambos niveles euskaldun (`Euskaldun (habla bien)` 262 + `Euskaldun (habla bastante bien)` 141 = **403 Personas**), no solo el que nombró literalmente.
+- **Cuándo:** euskera **solo si se les pregunta en euskera** (no siempre). Si preguntan en castellano, responden en castellano.
+- **Voz de salida:** Azure TTS (única opción con euskera nativo entre los grandes).
+
+**Hecho — prompt (`entrevista/prompt_v2.py`):** detección por substring (`euskaldun` + `habla bien`/`bastante bien`); las 403 reciben una instrucción lingüística reforzada (responder siempre en euskera con fluidez si preguntan en euskera, sin pasarse al castellano). El resto mantiene la regla original. Verificado el reparto = 262+141=403, sin tocar a las demás. Aplica a los tres flujos que usan `build_system_prompt_v2` (`server_anam.py`, `server_v2.py`, `lanzar_barometro_v2.py`).
+
+**Hecho — frontend (`entrevista/public/anam.html`):**
+- **Selector de idioma ES/EU** en el compositor; marca `EU ✓` + tooltip si la Persona es euskaldun. Dirige tanto el micro como la voz de salida del turno.
+- **Entrada de voz:** el dictado Web Speech usa `eu-ES` cuando EU está activo (antes fijo `es-ES`). El reconocimiento en euskera lo hace Chrome en servidor, no depende de voces instaladas.
+- **Salida de voz — cascada de 3 niveles** en turnos EU: se silencia la voz castellana del avatar (labios siguen moviéndose vía `talk()` mudo) y se locuta por (1) **Azure TTS** `/api/tts` (nativo), (2) `speechSynthesis` del navegador si hay voz `eu-*`, (3) respaldo a la voz del avatar (castellano). Autopresentación siempre en castellano.
+
+**Hecho — Azure TTS (`entrevista/server_anam.py`):** `azure_tts()` + ruta `POST /api/tts` (body `{id, text}`); SSML a `https://<region>.tts.speech.microsoft.com/cognitiveservices/v1`, salida MP3. Voz por género de la Persona: `eu-ES-AinhoaNeural` (mujer) / `eu-ES-GorkaNeural` (hombre). Claves en `.env` (`AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION=westeurope`), documentadas en `.env.example` y `render.yaml` (key `sync:false`, región con valor).
+
+**Investigación (WebSearch/verificación):**
+- **Voces del Chrome de David comprobadas en vivo (Claude in Chrome):** 50 voces, **ninguna `eu-*`** → sin Azure, el euskera sonaría en castellano; por eso Azure es necesario, no opcional.
+- **Azure Speech:** capa gratuita **F0 = 500K caracteres/mes** (≈1.500 respuestas), voces euskera incluidas. Error al crear el recurso "plan 'payg' can't be purchased using a free subscription" = el formulario se quedó en **S0**; hay que forzar **Free F0**.
+- **ElevenLabs NO tiene euskera** (29 idiomas en Multilingual v2, 32 en Flash v2.5; euskera no está). **Google Cloud TTS tampoco.** Azure sí.
+
+**Despliegue (David):** push a `main` (`git add -A` desde la raíz del repo, no desde `entrevista/`), `AZURE_SPEECH_KEY` añadida en Render → Environment (`AZURE_SPEECH_REGION` ya va con valor en el blueprint). Verificado el push en GitHub (backend + frontend correctos). **Confirmado por David: funciona end-to-end en Render** — Persona euskaldun en EU responde en euskera con voz nativa.
+
+**Pendiente / opcional:** replicar `/api/tts` en `server_v2.py` (flujo LiveAvatar) por si se usa; hoy solo está en el flujo Anam, que es el activo.
+
+---
+
 ## 2026-07-26 · Decimoquinta sesión — App de entrevista: emparejamiento automático de avatar y migración a Anam
 
 **Ordenador:** oficina (Cowork). Sin API (Anam/Anthropic solo desde el PC de David).
