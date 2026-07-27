@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pueblo Digital — Entrevista (Anam)</title>
+<title>Pueblo Digital — Entrevista</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f6df6'/><rect x='13' y='6' width='6' height='12' rx='3' fill='%23fff'/><path d='M10 15a6 6 0 0 0 12 0' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='21' x2='16' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='12' y1='25' x2='20' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/></svg>">
 <style>
   :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; --head:54px; }
   * { box-sizing:border-box; }
@@ -47,6 +48,7 @@
   .msg.sys { align-self:center; color:var(--muted); font-size:12px; background:transparent; text-align:center; }
   .composer { display:flex; gap:8px; margin-top:10px; align-items:center; }
   .composer input { flex:1; padding:11px; border:1px solid var(--line); border-radius:8px; font-size:16px; }
+  .composer #send { display:none; }   /* en móvil no hay Enviar: se usa el micrófono o Enter */
   .mic { width:44px; height:44px; border-radius:50%; border:1px solid var(--line); background:#eef1f6;
          font-size:19px; cursor:pointer; flex:0 0 auto; display:flex; align-items:center; justify-content:center; }
   .mic.on { background:#ffe1e1; border-color:#ff9d9d; animation:pulse 1s infinite; }
@@ -68,6 +70,7 @@
     .ficha-detalle h2 { font-size:16px; margin:.1em 0 .5em; }
     .stage { height:auto; }
     .chat { min-height:0; }
+    .composer #send { display:block; }   /* en escritorio sí aparece Enviar */
   }
 </style>
 </head>
@@ -95,8 +98,8 @@
   <section class="panel chat">
     <div id="transcript"><div class="msg sys">La conversación aparecerá aquí.</div></div>
     <div class="composer">
+      <input id="q" placeholder="Escribe o pulsa el micrófono…" disabled>
       <button id="mic" class="mic" title="Hablar por voz" style="display:none">🎤</button>
-      <input id="q" placeholder="Escribe tu pregunta…" disabled>
       <button id="send" class="btn primary" disabled>Enviar</button>
     </div>
   </section>
@@ -207,7 +210,7 @@ async function connect(){
       $("#q").disabled = false; $("#send").disabled = false;
       $("#btn-stop").style.display = "inline-block";
       if (SR) $("#mic").style.display = "flex";
-      sys(`${persona.nombre} está lista. Escribe o pulsa el micrófono.`);
+      presentarse();
     });
     anam.addListener(AnamEvent.CONNECTION_CLOSED, () => sys("Conexión cerrada."));
     await anam.streamToVideoElement("video");
@@ -225,6 +228,27 @@ async function stop(){
   $("#q").disabled = true; $("#send").disabled = true; $("#mic").style.display = "none";
   $("#btn-stop").style.display = "none"; $("#btn-connect").disabled = false;
   sys("Sesión terminada.");
+}
+
+// ── Auto-presentación al conectar (sin esperar pregunta) ──────────────────
+async function presentarse(){
+  const instruccion = "Preséntate en 1-2 frases, en tono cercano y natural: di tu " +
+    "nombre, tu edad, de dónde eres y a qué te dedicas. No hagas preguntas.";
+  const pensando = add("agent", persona.nombre, "…");
+  try {
+    const r = await fetch("/api/chat", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ agentId: persona.id, messages: [{ role:"user", content: instruccion }] })
+    });
+    const data = await r.json();
+    if(!r.ok || data.error) throw new Error((data.error&&data.error.message)||data.error||("HTTP "+r.status));
+    const reply = data.text;
+    pensando.querySelector(".content").textContent = reply;
+    history.push({ role:"assistant", content: reply });   // el saludo entra en el contexto
+    if(anam) await anam.talk(reply);
+  } catch(e){
+    pensando.querySelector(".content").textContent = "[Error: " + e.message + "]";
+  }
 }
 
 // ── Pregunta → Claude (cerebro) → talk() ──────────────────────────────────
