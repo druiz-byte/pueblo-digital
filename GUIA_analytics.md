@@ -1,6 +1,6 @@
 # Guía: mejorar la analítica de Pueblo Digital
 
-Sitio: https://druiz-byte.github.io/pueblo-digital/ · GA4: `G-4GQ86YD4FM`
+Sitio: https://druiz-byte.github.io/pueblo-digital/ · GA4: `G-BQH2YG2XRG`
 
 ## Qué tienes ya (sin tocar nada)
 

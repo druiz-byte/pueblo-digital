@@ -1,0 +1,1142 @@
+{
+ "fecha": "2026-08-08 10:07:47",
+ "modelo": "claude-haiku-4-5",
+ "definition": [
+  {
+   "id": "P3",
+   "texto": "El número de personas de origen extranjero que viven en Euskadi, ¿te parece que...?",
+   "opciones": [
+    "Son demasiadas",
+    "Son bastantes",
+    "Son adecuadas",
+    "Son pocas",
+    "No son suficientes",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Son demasiadas": 19.0,
+    "Son bastantes": 26.8,
+    "Son adecuadas": 45.3,
+    "Son pocas": 3.5,
+    "No son suficientes": 1.2,
+    "NS/NC": 4.2
+   },
+   "fuente_dato": "Gráfico 5 (p. 30) + texto p. 29"
+  },
+  {
+   "id": "P5",
+   "texto": "Si te dijera que de cada 100 personas que viven en Euskadi en torno al 14 % son personas de origen extranjero, ¿sigues pensando lo mismo o crees que...?",
+   "opciones": [
+    "Son demasiadas",
+    "Son bastantes",
+    "Son adecuadas",
+    "Son pocas",
+    "No son suficientes",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Son demasiadas": 9.8,
+    "Son bastantes": 21.5,
+    "Son adecuadas": 56.2,
+    "Son pocas": 9.5,
+    "No son suficientes": 0.5,
+    "NS/NC": 2.5
+   },
+   "fuente_dato": "Gráfico 7 (p. 32) + texto p. 32"
+  },
+  {
+   "id": "P6",
+   "texto": "Pensando en los próximos 5 años, ¿crees que la inmigración en Euskadi va a descender, va a aumentar o estará más o menos igual que ahora?",
+   "opciones": [
+    "Descenderá",
+    "Se mantendrá igual",
+    "Aumentará",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Descenderá": 1.3,
+    "Se mantendrá igual": 7.3,
+    "Aumentará": 90.0,
+    "NS/NC": 1.3
+   },
+   "fuente_dato": "Gráfico 8 (p. 34) + texto p. 34"
+  },
+  {
+   "id": "P8c",
+   "texto": "¿En qué medida estás de acuerdo con esta frase? \"Necesitamos personas inmigrantes para trabajar en algunos sectores de nuestra economía\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "De acuerdo",
+    "Ni de acuerdo ni en desacuerdo",
+    "En desacuerdo",
+    "Muy en desacuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "colapso": {
+    "Acuerdo": [
+     "Muy de acuerdo",
+     "De acuerdo"
+    ],
+    "Indecisión": [
+     "Ni de acuerdo ni en desacuerdo"
+    ],
+    "Desacuerdo": [
+     "En desacuerdo",
+     "Muy en desacuerdo"
+    ],
+    "NS/NC": [
+     "No lo sé / prefiero no contestar"
+    ]
+   },
+   "datos_reales": {
+    "Acuerdo": 77.9,
+    "Indecisión": 7.7,
+    "Desacuerdo": 13.3,
+    "NS/NC": 1.1
+   },
+   "fuente_dato": "Gráfico 28 (p. 61) + texto p. 61; NS/NC por residuo"
+  },
+  {
+   "id": "P8f",
+   "texto": "¿En qué medida estás de acuerdo con esta frase? \"Si alguien que ha venido aquí comete cualquier delito, debería ser expulsado del país\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "De acuerdo",
+    "Ni de acuerdo ni en desacuerdo",
+    "En desacuerdo",
+    "Muy en desacuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "colapso": {
+    "Acuerdo": [
+     "Muy de acuerdo",
+     "De acuerdo"
+    ],
+    "Indecisión": [
+     "Ni de acuerdo ni en desacuerdo"
+    ],
+    "Desacuerdo": [
+     "En desacuerdo",
+     "Muy en desacuerdo"
+    ],
+    "NS/NC": [
+     "No lo sé / prefiero no contestar"
+    ]
+   },
+   "datos_reales": {
+    "Acuerdo": 33.3,
+    "Indecisión": 23.0,
+    "Desacuerdo": 40.8,
+    "NS/NC": 2.8
+   },
+   "fuente_dato": "Gráfico 12 (p. 41)"
+  },
+  {
+   "id": "P8n",
+   "texto": "¿En qué medida estás de acuerdo con esta frase? \"Las personas inmigrantes contribuyen a la conciliación familiar y laboral de la sociedad vasca\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "De acuerdo",
+    "Ni de acuerdo ni en desacuerdo",
+    "En desacuerdo",
+    "Muy en desacuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "colapso": {
+    "Acuerdo": [
+     "Muy de acuerdo",
+     "De acuerdo"
+    ],
+    "Indecisión": [
+     "Ni de acuerdo ni en desacuerdo"
+    ],
+    "Desacuerdo": [
+     "En desacuerdo",
+     "Muy en desacuerdo"
+    ],
+    "NS/NC": [
+     "No lo sé / prefiero no contestar"
+    ]
+   },
+   "datos_reales": {
+    "Acuerdo": 70.2,
+    "Indecisión": 20.0,
+    "Desacuerdo": 7.5,
+    "NS/NC": 2.3
+   },
+   "fuente_dato": "Gráfico 27 (p. 60), etiquetas explícitas"
+  },
+  {
+   "id": "P11",
+   "texto": "¿Qué política de entrada crees que sería la más adecuada con respecto a las personas inmigrantes?",
+   "opciones": [
+    "Permitir su entrada sin poner ningún obstáculo legal",
+    "Permitir la entrada solo a aquellas personas que tengan contrato de trabajo",
+    "Permitir la entrada a aquellas personas que cumplan otros requisitos legales: reagrupamiento, estudiante, refugiada...",
+    "Prohibir por completo la entrada a las personas inmigrantes",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Permitir su entrada sin poner ningún obstáculo legal": 34.2,
+    "Permitir la entrada solo a aquellas personas que tengan contrato de trabajo": 40.8,
+    "Permitir la entrada a aquellas personas que cumplan otros requisitos legales: reagrupamiento, estudiante, refugiada...": 17.8,
+    "Prohibir por completo la entrada a las personas inmigrantes": 2.7,
+    "NS/NC": 4.5
+   },
+   "fuente_dato": "Gráfico 11 (p. 39) + texto p. 38"
+  },
+  {
+   "id": "P12",
+   "texto": "¿Qué crees que debería hacer el Gobierno respecto a las personas inmigrantes sin permiso de residencia?",
+   "opciones": [
+    "Regularizarlas a todas, darles \"papeles\"",
+    "Regularizar solo a las que tengan trabajo",
+    "Darles medios para que vuelvan todas a su país",
+    "Expulsar a todas",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Regularizarlas a todas, darles \"papeles\"": 41.5,
+    "Regularizar solo a las que tengan trabajo": 44.3,
+    "Darles medios para que vuelvan todas a su país": 4.5,
+    "Expulsar a todas": 3.5,
+    "NS/NC": 6.2
+   },
+   "fuente_dato": "Gráfico 13 (p. 42) + texto p. 42"
+  },
+  {
+   "id": "P13",
+   "texto": "Y en relación con las personas solicitantes de asilo y refugio, ¿qué crees que sería lo más adecuado hacer?",
+   "opciones": [
+    "Acogerlas sin restricciones",
+    "Acogerlas si se comprueba que están perseguidas",
+    "Acogerlas hasta un número limitado al año",
+    "No acogerlas en ningún caso",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Acogerlas sin restricciones": 31.3,
+    "Acogerlas si se comprueba que están perseguidas": 40.3,
+    "Acogerlas hasta un número limitado al año": 15.0,
+    "No acogerlas en ningún caso": 3.3,
+    "NS/NC": 10.0
+   },
+   "fuente_dato": "Gráfico 14 (p. 43) + texto p. 43"
+  },
+  {
+   "id": "P20",
+   "texto": "Hay personas que piensan que \"en el acceso a la asistencia sanitaria, ayudas sociales, vivienda de protección oficial, etc. deben tener prioridad las personas autóctonas ante las inmigrantes\", mientras que otras opinan que \"todas las personas, autóctonas e inmigrantes, debemos tener los mismos derechos y obligaciones\". ¿Tú qué opinas?",
+   "opciones": [
+    "Deben tener prioridad las personas autóctonas ante las inmigrantes",
+    "Todas las personas, autóctonas e inmigrantes, debemos tener los mismos derechos y obligaciones",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Deben tener prioridad las personas autóctonas ante las inmigrantes": 29.2,
+    "Todas las personas, autóctonas e inmigrantes, debemos tener los mismos derechos y obligaciones": 69.2,
+    "NS/NC": 1.6
+   },
+   "fuente_dato": "Gráfico 24 (p. 57); NS/NC por residuo"
+  },
+  {
+   "id": "P22j",
+   "texto": "¿En qué medida estás de acuerdo con esta frase? \"La llegada de inmigrantes a Europa puede resolver efectivamente los problemas derivados del envejecimiento de la población europea\"",
+   "opciones": [
+    "Muy de acuerdo",
+    "De acuerdo",
+    "Ni de acuerdo ni en desacuerdo",
+    "En desacuerdo",
+    "Muy en desacuerdo",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "colapso": {
+    "Acuerdo": [
+     "Muy de acuerdo",
+     "De acuerdo"
+    ],
+    "Indecisión": [
+     "Ni de acuerdo ni en desacuerdo"
+    ],
+    "Desacuerdo": [
+     "En desacuerdo",
+     "Muy en desacuerdo"
+    ],
+    "NS/NC": [
+     "No lo sé / prefiero no contestar"
+    ]
+   },
+   "datos_reales": {
+    "Acuerdo": 73.7,
+    "Indecisión": 13.0,
+    "Desacuerdo": 11.5,
+    "NS/NC": 1.8
+   },
+   "fuente_dato": "Gráfico 26 (p. 59) + texto p. 59, las cuatro cifras explícitas"
+  },
+  {
+   "id": "P26",
+   "texto": "En términos generales, ¿dirías que la llegada de inmigrantes tiene efectos positivos o negativos para la sociedad vasca? Dame una puntuación de 0 (efectos muy negativos) a 10 (efectos muy positivos).",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "media_real": 5.3,
+   "fuente_dato": "Gráfico 25 (p. 59). El informe solo publica la media, no la distribución."
+  },
+  {
+   "id": "P36",
+   "texto": "Los hijos e hijas de personas inmigrantes que han nacido ya aquí, en Euskadi, ¿crees que pueden ser considerados vascos y vascas?",
+   "opciones": [
+    "Sí",
+    "No",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Sí": 88.8,
+    "No": 8.8,
+    "NS/NC": 2.3
+   },
+   "fuente_dato": "Gráfico 40 (p. 82)"
+  }
+ ],
+ "total": 30,
+ "done": 30,
+ "results": [
+  {
+   "id": 27,
+   "nombre": "David Zubieta Arrizabalaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 49,
+   "voto": "Otros",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 60,
+   "nombre": "Juan Álvarez Hernández",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 64,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 103,
+   "nombre": "Nora Agirre Agirre",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 50,
+   "voto": "Elkarrekin Podemos",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 649,
+   "nombre": "Joseba Hernández Agirre",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 51,
+   "voto": "PSE",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "B",
+    "7": "C",
+    "8": "B",
+    "9": "A",
+    "10": "D",
+    "11": "D",
+    "12": "A"
+   }
+  },
+  {
+   "id": 9,
+   "nombre": "Nora Romero Martínez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 37,
+   "voto": "EH Bildu",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "B",
+    "7": "B",
+    "8": "B",
+    "9": "A",
+    "10": "C",
+    "11": "D",
+    "12": "A"
+   }
+  },
+  {
+   "id": 702,
+   "nombre": "Elena Ibarra Uriarte",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 45,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 970,
+   "nombre": "Sandra Izagirre Ibarra",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 54,
+   "voto": "PNV/ EAJ",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "B",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "B",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 944,
+   "nombre": "David Beristain Bilbao",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 67,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "C",
+    "7": "E",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 110,
+   "nombre": "Unai García Arrieta",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 68,
+   "voto": "Prefiero no contestar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 700,
+   "nombre": "Pablo Gaztañaga Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "35-44",
+   "edad": 41,
+   "voto": "PP",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 734,
+   "nombre": "Alberto Mendieta Romero",
+   "provincia": "Álava",
+   "genero": "Hombre",
+   "grupo_edad": "18-24",
+   "edad": 18,
+   "voto": "No voté",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "C",
+    "7": "E",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "E",
+    "12": "A"
+   }
+  },
+  {
+   "id": 885,
+   "nombre": "Oier García Zubizarreta",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 59,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 418,
+   "nombre": "Naia Martínez Urrutia",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "45-54",
+   "edad": 52,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Máster",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "E",
+    "5": "B",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "B",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 612,
+   "nombre": "Maddi Álvarez Uriarte",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "Vox",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "A",
+    "1": "A",
+    "2": "C",
+    "3": "E",
+    "4": "B",
+    "5": "D",
+    "6": "D",
+    "7": "D",
+    "8": "D",
+    "9": "A",
+    "10": "E",
+    "11": "A",
+    "12": "B"
+   }
+  },
+  {
+   "id": 784,
+   "nombre": "Alberto Lazkano Hernández",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 46,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "A",
+    "1": "A",
+    "2": "C",
+    "3": "D",
+    "4": "B",
+    "5": "D",
+    "6": "D",
+    "7": "D",
+    "8": "B",
+    "9": "A",
+    "10": "D",
+    "11": "C",
+    "12": "B"
+   }
+  },
+  {
+   "id": 404,
+   "nombre": "Joseba Alkorta Álvarez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 46,
+   "voto": "Sumar",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "E",
+    "5": "B",
+    "6": "C",
+    "7": "A",
+    "8": "B",
+    "9": "B",
+    "10": "B",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 479,
+   "nombre": "Sandra Martínez Beristain",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 38,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Sin estudios/Primaria",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "C",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 625,
+   "nombre": "Mikel Hernández Hernández",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 68,
+   "voto": "EH Bildu",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "B",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 171,
+   "nombre": "Patricia Sánchez Torres",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 39,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "C",
+    "3": "B",
+    "4": "C",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 356,
+   "nombre": "Nora López Urrutia",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 58,
+   "voto": "Prefiero no contestar",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 303,
+   "nombre": "Eneko Lazkano Arrizabalaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 61,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "C",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 981,
+   "nombre": "Pablo Fernández Izagirre",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 51,
+   "voto": "PNV/ EAJ",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "C",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 995,
+   "nombre": "Ainhoa Izagirre Álvarez",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "35-44",
+   "edad": 44,
+   "voto": "PSE",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Trabajadora/obrera (D)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 195,
+   "nombre": "Haizea Álvarez Ibarra",
+   "provincia": "Gipuzkoa",
+   "genero": "Mujer",
+   "grupo_edad": "65+",
+   "edad": 69,
+   "voto": "Prefiero no contestar",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (grado)",
+   "resps": {
+    "0": "B",
+    "1": "B",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "C",
+    "7": "E",
+    "8": "B",
+    "9": "A",
+    "10": "D",
+    "11": "D",
+    "12": "A"
+   }
+  },
+  {
+   "id": 695,
+   "nombre": "Patricia Ormaetxea Mendieta",
+   "provincia": "Álava",
+   "genero": "Mujer",
+   "grupo_edad": "25-34",
+   "edad": 31,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Baja (E1)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "B",
+    "5": "C",
+    "6": "B",
+    "7": "E",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 567,
+   "nombre": "Aitor Izagirre Pérez",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "65+",
+   "edad": 73,
+   "voto": "No voté",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "ESO/Secundaria",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 134,
+   "nombre": "Patricia Torres Urrutia",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "55-64",
+   "edad": 60,
+   "voto": "No lo recuerdo",
+   "euskera": "Ia euskaldun (medio)",
+   "clase_social": "Media-baja (C)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 962,
+   "nombre": "Laura González Alkorta",
+   "provincia": "Bizkaia",
+   "genero": "Mujer",
+   "grupo_edad": "18-24",
+   "edad": 24,
+   "voto": "No lo recuerdo",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media-alta (A2)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "B",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "F",
+    "12": "A"
+   }
+  },
+  {
+   "id": 461,
+   "nombre": "Julen Ibarra Ibarra",
+   "provincia": "Gipuzkoa",
+   "genero": "Hombre",
+   "grupo_edad": "45-54",
+   "edad": 50,
+   "voto": "EH Bildu",
+   "euskera": "Euskaldun (alto)",
+   "clase_social": "Alta (A1)",
+   "nivel_estudios": "Universitaria (licenciatura/grado)",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "A",
+    "4": "D",
+    "5": "B",
+    "6": "C",
+    "7": "A",
+    "8": "B",
+    "9": "B",
+    "10": "B",
+    "11": "G",
+    "12": "A"
+   }
+  },
+  {
+   "id": 408,
+   "nombre": "Oier Landa Iturriaga",
+   "provincia": "Bizkaia",
+   "genero": "Hombre",
+   "grupo_edad": "55-64",
+   "edad": 58,
+   "voto": "EH Bildu",
+   "euskera": "Erdaldun (bajo o nulo)",
+   "clase_social": "Media (B)",
+   "nivel_estudios": "Bachillerato/FP",
+   "resps": {
+    "0": "C",
+    "1": "C",
+    "2": "C",
+    "3": "B",
+    "4": "D",
+    "5": "C",
+    "6": "C",
+    "7": "B",
+    "8": "B",
+    "9": "B",
+    "10": "C",
+    "11": "G",
+    "12": "A"
+   }
+  }
+ ],
+ "plantilla": "ikuspegi_piloto_2025.json",
+ "titulo": "Ikuspegi — Barómetro 2025: piloto (13 preguntas)",
+ "panel": "v1 (pv_agentes.json)"
+}

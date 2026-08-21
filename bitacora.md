@@ -4,6 +4,120 @@
 
 ---
 
+## 2026-08-10 · Decimoctava sesión — Elección de journal y esquema del paper
+
+**Ordenador:** oficina (Cowork). Sesión corta, sin API y sin cómputo nuevo: solo decisiones editoriales y planificación.
+
+**Contexto:** el frente de panel/PPI++ está cerrado desde el 20-jul y la réplica de Ikuspegi (17ª sesión) completó la evidencia. Único frente activo: redactar el artículo. David pregunta qué journal de *marketing research* / paneles conviene.
+
+**Hecho — reconocimiento del terreno editorial (verificado en la web):**
+- **El special issue de IJRM/MSI "Generative AI, Synthetic Data, and Synthetic Respondents in Marketing Research"** (eds. Tulin Erdem, NYU · Koen Pauwels, Northeastern) tenía deadline de manuscrito el **1-may-2026 → CERRADO**. El call pedía literalmente "benchmarking studies comparing synthetic data with real-world datasets", "empirical evaluations of synthetic data accuracy" y "uncertainty quantification" — es decir, exactamente este paper. Mala suerte de calendario.
+- El special issue de **IJMR** (MRS/SAGE) sobre IA en market research se publicó a mediados de 2025 → también cerrado.
+- Ambos siguen abiertos por **vía ordinaria**.
+
+**Opciones valoradas y presentadas a David:** IJMR (encaje temático directo con "paneles", tolerante con resultados negativos y con datos de opinión pública) · *Psychology & Marketing* (Q1, publicó a Sarstedt et al. 2024 sobre silicon samples, diálogo directo) · **IJRM** (top-tier EMAC, máxima ambición) · alternativa fuera de marketing: JSSAM / POQ / *Political Analysis*, donde el hallazgo encajaría mejor porque la evidencia es de opinión pública, no de consumo.
+
+**DECISIONES DE DAVID:**
+1. **Destino: IJRM, vía ordinaria.** La opción más ambiciosa.
+2. **Tesis: los dos actos.** Techo de información como límite superior + colapso de varianza como fallo adicional del modelo por debajo de ese techo.
+
+**Hecho — `paper/esquema_paper_IJRM.md`** (carpeta `paper/` estaba vacía). Contiene: tesis en una frase · 4 títulos candidatos (favorito: *"Two Ceilings: Information Limits and Variance Collapse in LLM-Based Synthetic Respondents"*) · abstract borrador de ~200 palabras · diagrama del argumento · **12 secciones** con el mapeo sección→evidencia ya existente (Study 1 techo · Study 2 posición respecto al techo · Study 3 colapso/Ikuspegi · Study 4 el enriquecimiento empeora · análisis por tipo de ítem) · **las 3 contribuciones a declarar** · tabla de huecos por riesgo de rechazo · referencias a formalizar.
+
+**Las 3 contribuciones acordadas:**
+1. **Diagnóstico *ex ante* transportable:** `corr_max = √R²_OOS`. Cualquier equipo con una ola previa de microdatos calcula su propio techo antes de gastar un euro en Personas sintéticas.
+2. **Caracterización del modo de fallo:** no es indiferencia al perfil ni sesgo direccional, es **colapso de varianza condicional**, con índice medible (concentración modal) que empeora con N y con el enriquecimiento.
+3. **Separabilidad agregado/individuo** demostrada con el caso limpio (P26) y traducida en **regla de decisión por tipo de tarea de marketing** (segmentación, conjoint/WTP, targeting y colas = NO admisible; top-line = admisible con validación).
+
+**Hallazgos incidentales de esta sesión:**
+- **⚠ `email_to_jmr_editor.txt` (15-jul) está OBSOLETO y no debe enviarse.** Vende el panel como éxito metodológico ("MAD 14.0 p.p.", "fidelity is highest where profiles are richly specified", "r² > 0.95 in core domains"). La evidencia del 20-jul en adelante lo contradice de plano: delta vs moda ≈0 o negativo y **enriquecer el perfil empeora el resultado**.
+- **✅ Verificado en el código: ninguna llamada a la API fija `temperature`** (grep sobre `entrevista/*.py`) → corre al **1.0 por defecto de Anthropic**, el escenario de *máxima varianza posible*. Juega a favor del argumento y hay que declararlo explícitamente en el paper: el colapso **no** es artefacto de decodificación codiciosa.
+- El techo por bloque confirma que **turismo (R² 0,085) y política (0,099) son los bloques con más margen**, y economía el que menos (0,024).
+
+**HUECOS para IJRM, por riesgo de rechazo (detalle en el esquema):**
+1. **Ángulo de marketing/consumo** *(el más serio)*. Un revisor de IJRM preguntará por qué no hay una sola variable de consumo. Camino recomendado: **explotar los bloques que ya existen** — consumo de medios (`datos GV/` CSV medios 2025), turismo y frecuencia de conductas (p7) — recalculando techo, acuerdo individual y concentración solo sobre ellos. Sin API, sin datos nuevos.
+2. **Robustez de modelo con un frontera** sobre las 13 de Ikuspegi. Objeción garantizada ("usasteis Haiku"). Barato. **Deja de ser opcional.**
+3. **Variante de prompt anti-concentración.** Objeción garantizada ("es prompting"). Si mueve algo, es contribución.
+4. Redactar con rigor las 2 proposiciones de la §3 (marco teórico) — IJRM no publica benchmarks sin marco.
+5. Microdatos de Ikuspegi (UPV/EHU) para calcular el techo en el dominio de la réplica.
+6. Declarar y/o variar `temperature`.
+7. Techo no lineal (GBM).
+8. Benchmark formal de 3 métodos con partición train/test reservada (elevaría mucho el paper, pero añade meses).
+
+**PENDIENTE — próxima sesión.** David deja abierta la elección entre dos puntos de arranque:
+- **(a)** Reanálisis de los bloques de consumo/comportamiento (hueco 1, camino recomendado, sin API).
+- **(b)** Redactar la §3 del paper (las dos proposiciones), que es lo que convierte esto de benchmark en artículo de IJRM.
+
+---
+
+## 2026-08-08 · Decimoséptima sesión — Réplica externa con el Barómetro Ikuspegi 2025: el hallazgo se replica y el diagnóstico se afina
+
+**Ordenador:** oficina (Cowork). Las tres tandas con API (n=30 v1, n=1.000 v1, n=1.000 v2) las lanzó David en su PC.
+
+**Contexto:** hasta hoy toda la validación del panel se había hecho contra el Deustobarómetro. Un revisor puede objetar que el resultado depende del instrumento. David aporta el **Barómetro 2025 de Ikuspegi** (Observatorio Vasco de Inmigración, UPV/EHU): mismo universo (CAE, 18+), otro equipo, otro tema (inmigración), otra casa de campo (CPS), n=600, campo 11-27 marzo 2025, error ±4,0 p.p.
+
+**Decisiones (con David, al inicio):** piloto de ~10 preguntas antes de escalar · panel **v1** · métrica **DAM agregado** por pregunta.
+
+**Hecho — extracción y verificación del dato real:**
+- `datos Ikuspegi 2025/cuestionario_ikuspegi_2025.md`: las 39 preguntas + 14 sociodemográficas (A-N) + ficha técnica + mapeo completo del **Índice de Apertura** (65 variables, 10 áreas). Detectada una errata del anexo de Ikuspegi: el área ECONOM cita "P21i", que no existe — es **P22i**.
+- El informe **no publica tablas**: los porcentajes son etiquetas dentro de los gráficos. Extraídos con `pdfplumber` y verificados contra el texto narrativo. `verificacion_datos_reales.md` deja la trazabilidad opción a opción: **13/13 suman 100 ± 0,6**, 11 con doble fuente, 2 con residuo menor (≤1,6 p.p.).
+- **Excluidas del piloto por lectura ambigua:** **P10** (pdfplumber desordena las etiquetas de barras apiladas) y **P8a** (el texto del informe contradice el orden de segmentos del gráfico y ambas lecturas suman 100). P22i valida el orden de segmento, lo que apunta a que P8a también, pero no lo bastante para darlo por firme.
+
+**Hecho — herramientas:**
+- `entrevista/encuestas/ikuspegi_piloto_2025.json` — 13 preguntas con `datos_reales`, `colapso` (escala 1-5 → Acuerdo/Indecisión/Desacuerdo/Ns, que es como publica Ikuspegi) y `media_real` (P26, de la que solo se publica la media). Enunciados en tuteo, contenido idéntico al original.
+- `entrevista/lanzar_ikuspegi.py` (panel v1) · `entrevista/lanzar_ikuspegi_v2.py` (panel v2 con `build_system_prompt_v2`) · `entrevista/comparar_ikuspegi.py` (soporta `colapso`, `media_real` y marca el umbral de ruido muestral ±4,0 p.p.).
+
+**Resultados (Haiku, 0 vacías / 0 sin parsear en las tres tandas):**
+
+| | DAM | Concentración (opción top) | NS/NC | Opciones usadas/preg. |
+|---|---:|---:|---:|---:|
+| Panel v1, n=30 | 15,1 | 81,7 | 1,1 | — |
+| **Panel v1, n=1.000** | **15,7** | **83,7** | 1,4 | 4,3 |
+| **Panel v2, n=1.000** | **18,2** | **88,8** | 0,9 | **2,7** |
+| Baseline moda | 17,0 | — | — | — |
+| Baseline uniforme | 19,7 | — | — | — |
+| Suelo de ruido (panel perfecto, n=1.000) | 0,8 | — | — | — |
+| **Real** | — | **61,5** | 3,4 | — |
+
+**Hallazgos:**
+1. **El DAM se sostiene entre instrumentos** (15,7 aquí vs 13,4 en el Deustobarómetro) → techo estable, no dependiente del cuestionario. Y **empeora al escalar** (15,1 → 15,7): el piloto de 30 fue afortunado, no injusto.
+2. **El panel gana solo 1,3 p.p. al baseline de la moda** y acierta la moda en 8/12 preguntas.
+3. **Mecanismo: sobreconcentración.** 83,7 vs 61,5 real (22 p.p. de exceso), y **sube con N**. **Cero de mil** Personas eligen "permitir la entrada sin ningún obstáculo legal" (real 34,2 %) ni "acoger sin restricciones" (real 31,3 %). En el otro extremo, igual: "son demasiadas" 3,0 vs 19,0. **Borra los dos extremos del debate migratorio vasco a la vez.**
+4. **🔑 Pero el panel SÍ usa el perfil.** V de Cramér media: voto **0,36** (máx 0,47) · euskera 0,19 · estudios 0,16. Y la dirección es correcta (P8f acuerdo: Vox 90,6 · PP 65,7 · PNV 17,5 · EH Bildu 5,5). **No ignora a la Persona ni confunde izquierda con derecha: comprime el rango.** Prueba: Podemos y Sumar dan 100 % a "otros requisitos legales" y 0 % a la más abierta.
+5. **P26 — la media correcta por las razones equivocadas:** media 5,15 vs real 5,30 (error 0,15, excelente en apariencia), pero el 86,4 % se sitúa en 5 o 6 y **ninguna de las 1.000** puntúa 8, 9 o 10. Ilustración de la distinción agregado/individuo **sin bajar al microdato**: basta mirar la varianza.
+
+**Control con el panel v2 — predicciones registradas ANTES de lanzar** (sección 7 de `diagnostico_ikuspegi_n1000.md`), a propuesta de David. De las 4, las 2 que fallan lo hacen **en dirección contraria a la falsación**: DAM 18,2 (fuera del rango 14,5-17,5 previsto, y **peor que el baseline de la moda**) y concentración 88,8 (previsto 83,7±3). Las otras 2 aciertan: P11/P13 siguen en **0,0** y V(voto) baja a 0,31.
+- **No es artefacto del voto degradado de la v2** (500 Personas sin partido): restringiendo a Personas con partido, v1 14,7 / conc. 81,9 vs v2 **17,9 / conc. 89,0**.
+- **Lectura:** la v2 aporta justo los predictores canónicos de actitudes hacia la inmigración (confianza generalizada, inseguridad económica, seguridad percibida, cohesión social) y **empeora**. Replica y **amplifica** el Deustobarómetro (Δ +0,4 allí, **Δ +2,5** aquí) → "más estructura ≠ mejor predicción" pasa de anécdota a resultado del proyecto.
+- **Consecuencia para el artículo:** ya no hace falta apoyarse solo en el techo de información. Se puede afirmar algo más fuerte y directamente observado — *dado un perfil que ya ordena bien a las Personas, enriquecerlo no recupera la varianza; el colapso lo pone el modelo.*
+- **Cautela a declarar:** la v2 no es "v1 + campos". Gana capital social, identidad e inseguridad económica pero **pierde religión (1.000/1.000 sin dato)**, casi todo el perfil mediático y `principales_problemas`. No es un experimento limpio de dosis de información.
+
+**Análisis por tipo de pregunta (pregunta de David):** clasificadas las 12 y medido **Δ vs moda**:
+
+| Grupo | n | DAM v1 | moda | Δ v1 | Δ v2 |
+|---|---:|---:|---:|---:|---:|
+| A · Política migratoria (P8f, P11, P12, P13, P20) | 5 | 18,0 | 24,0 | **+6,0** | +5,0 |
+| B · Valores e identidad (P8c, P8n, P22j, P36) | 4 | 16,9 | 11,6 | **−5,3** | −10,3 |
+| C · Percepción factual (P3, P5, P6) | 3 | 10,3 | 12,6 | +2,3 | +0,6 |
+| Total | 12 | 15,7 | 17,0 | +1,3 | −1,2 |
+
+- **Sí aporta donde el perfil informa** (+6,0 en política migratoria, 4,6× el global), pero **"donde aporta más" ≠ "donde acierta más"**: el DAM del grupo A (18,0) es peor que el global, porque son las preguntas de distribución real dispersa, justo donde la sobreconcentración duele más.
+- **Grupo B, Δ = −5,3:** el panel **colapsa en la opción equivocada** (P22j y P8n a "Indecisión" 70 %/75 % cuando el real está de acuerdo 73,7 %/70,2 %).
+- **No se sostiene** la hipótesis "a más uso del perfil, más aporta": `corr(V(voto), Δ)` = **+0,10** (v1) y **−0,21** (v2). En cambio `corr(concentración real, Δ) = −0,33` → **el Δ lo explica mejor la forma de la distribución real que el uso del perfil.**
+- **Aviso de selección:** el piloto no es aleatorio y está **sesgado a favor del panel** (5 de 12 son política migratoria, el bloque donde v1 va mejor). En las 39 preguntas ese bloque pesa mucho menos → **15,7 es probablemente optimista**.
+
+**Decisiones tomadas:**
+- Parar aquí; **no** lanzar todavía la variante de prompt anti-concentración.
+- Registrar predicciones antes de cada tanda de control (se hizo con la v2 y funcionó: el resultado es interpretable precisamente porque estaban escritas antes).
+
+**Pendiente próxima sesión (por orden):**
+1. **Pedir a Ikuspegi los microdatos del Barómetro 2025** (UPV/EHU; el informe indica que el fichero SPSS existe; petición académica de microdatos anonimizados es estándar). Es el mejor paso disponible: permitiría correr `techo_predictivo.py` sobre actitudes hacia la inmigración y obtener el **techo de información y la fracción alcanzada por el panel en un dominio independiente** — el equivalente del 0,24 / 65 % del Deustobarómetro. Sin microdatos, "pregunta informada" solo se puede aproximar con la V de Cramér del propio panel, que es un proxy circular.
+2. **Variante de prompt contra la sobreconcentración** (NS/NC y posiciones minoritarias como respuestas legítimas; prohibir el refugio en la opción intermedia) y remedir las 13. Cuantifica cuánta infidelidad es del anclaje y cuánta del comportamiento del modelo. **Material del artículo, no corrección.**
+3. **Robustez de modelo:** repetir las 13 con un modelo frontera. Barato (13 preguntas, no 152) y cierra la propuesta que ya estaba en bitácora desde la 12ª sesión.
+4. Ampliar a las 39 preguntas **solo si** (2) mueve algo.
+5. Resolver la ambigüedad **P8a/P22i** (Gráfico 28, p. 61) — idealmente con los microdatos o preguntando a Ikuspegi.
+
+---
+
 ## 2026-07-27 · Decimosexta sesión — Entrevista en euskera: Personas euskaldun responden en euskera (texto + voz nativa Azure)
 
 **Ordenador:** oficina (Cowork). El despliegue y las pruebas con API (Anam/Anthropic/Azure) los hace David en su PC / en Render.
