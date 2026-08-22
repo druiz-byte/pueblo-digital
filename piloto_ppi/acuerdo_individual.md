@@ -10,6 +10,10 @@ categoría más frecuente. **Si es ≈0 o negativo, el perfil no aporta señal i
 ## Resumen
 
 - **Escalas 0-10** (54): Spearman medio **0.15** · MAE 2.04 puntos · dentro de ±1: 48%
+  - ⚠ **Ese 0,15 incluye p36 (ideología, 0,83) y p38 (nacionalismo, 0,97), que son predictores
+    inyectados en el prompt.** Excluyéndolos: **0,123** sobre 52 ítems. Y para compararlo con el
+    techo hay que usar **Pearson**, no Spearman (`corr_max = √R²` acota Pearson): **0,123**.
+    Ver `../paper/correccion_techo_global.md`.
 - **Cat. ordinales** (48): kappa ponderado medio **0.100** · acierto 52% vs moda 56% (**delta -4.5**)
 - **Cat. nominales** (41): kappa medio **0.231** · acierto 51% vs moda 49% (**delta +1.6**)
 

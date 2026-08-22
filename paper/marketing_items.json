@@ -1,0 +1,1119 @@
+{
+ "descripcion": "Subcorpus de marketing del Deustobarometro verano 2026 para el paper de IJRM (hueco 1).",
+ "fecha": "2026-08-21",
+ "criterio": "Seleccion EX ANTE por constructo de marketing, no por resultado. Se declara el sesgo de seleccion: no es una muestra aleatoria de las 152 preguntas.",
+ "constructos": {
+  "retrenchment_consumo": "Reducción de gasto por categoría ante presión económica. Análogo directo a un tracker de confianza del consumidor con desglose de categoría.",
+  "decision_viaje": "Intención de viaje, abandono de compra y sus drivers. Categoría de alto valor.",
+  "satisfaccion_servicio": "Valoración 0-10 de proveedores de servicio público. Análogo a un tracker de satisfacción multi-marca.",
+  "confianza_marca": "Confianza 0-10 en organizaciones no estatales (medios, empresas, universidad, ONG, sindicatos). Análogo a un brand trust tracker.",
+  "contraste_confianza_politica": "GRUPO DE CONTRASTE, no marketing. Confianza en instituciones del Estado y partidos. Sirve para mostrar que el techo político es MAYOR que el de marketing."
+ },
+ "n_items": 54,
+ "n_marketing": 44,
+ "items": [
+  {
+   "var": "p6_1",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 5,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Reducir los gastos en alimentación",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_2",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 6,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Reducir los gastos en ocio",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_3",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 7,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: No comprar alguna medicina o dejar de seguir un tratamiento médico",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_4",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 8,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Pedir ayuda económica a amigos/as, vecinos/as o familiares",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_5",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 9,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Retrasar algún pago (como el alquiler, la hipoteca, los recibos de la luz, agua, electricidad, etc.)",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_6",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 10,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: No comprar ropa o calzado que realmente necesito",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_7",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 11,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Reducir el consumo de carne o pescado",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_8",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 12,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Pedir ropa",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_9",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 13,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Pedir alimentos",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_10",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 14,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Dejar de ir al dentista",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_11",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 15,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Renunciar a independizarme, teniendo que permanecer en la casa de mis familiares",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_12",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 16,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Volver a vivir en la casa de mis familiares",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p6_13",
+   "bloque": "barometro_digital_1_situacion_economica.json",
+   "qi": 17,
+   "tipo": "cat",
+   "constructo": "retrenchment_consumo",
+   "es_marketing": true,
+   "texto": "Indica si en el último mes, y como consecuencia de tu situación económica, has hecho o has pensado hacer alguna de las siguientes acciones:: Renunciar a irme de vacaciones este verano",
+   "opciones": [
+    "Lo he hecho",
+    "Lo he pensado hacer, pero no lo he hecho",
+    "Ni lo he hecho, ni lo he pensado hacer",
+    "Prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_1",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 0,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La atención sanitaria (Osakidetza)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_2",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 1,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La educación en escuelas, colegios e institutos públicos",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_3",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 2,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La educación en las universidades públicas",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_4",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 3,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: Las pensiones",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_5",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 4,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La Administración de Justicia",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_6",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 5,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La seguridad ciudadana",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_7",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 6,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena: Los servicios sociales (ayuda a personas dependientes, a personas mayores…)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_8",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 7,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: El transporte público",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_9",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 8,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: Las carreteras",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_10",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 9,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: Las políticas de vivienda",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_11",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 10,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La política lingüística",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_12",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 11,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La política turística",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_13",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 12,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoraci: Las políticas para reducir la desigualdad entre mujeres y hombres",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_14",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 13,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: Los programas de Investigación y Desarrollo (I+D)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_15",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 14,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: La protección del medio ambiente",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p8_16",
+   "bloque": "barometro_digital_2_bienestar_politicas.json",
+   "qi": 15,
+   "tipo": "escala",
+   "constructo": "satisfaccion_servicio",
+   "es_marketing": true,
+   "texto": "¿Qué valoración le das a cada uno de los siguientes servicios o políticas? Utiliza una escala de 0 a 10, en la que 0 representa “Muy mala valoración” y 10 “Muy buena valoración”: El servicio de empleo (Lanbide)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p13",
+   "bloque": "barometro_digital_3_miedos.json",
+   "qi": 4,
+   "tipo": "cat",
+   "constructo": "decision_viaje",
+   "es_marketing": true,
+   "texto": "¿En qué medida ha aumentado en los últimos años tu miedo a viajar?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "Nunca he tenido miedo a viajar"
+   ]
+  },
+  {
+   "var": "p14",
+   "bloque": "barometro_digital_3_miedos.json",
+   "qi": 5,
+   "tipo": "cat",
+   "constructo": "decision_viaje",
+   "es_marketing": true,
+   "texto": "¿Has descartado o modificado un viaje en los últimos dos años?",
+   "opciones": [
+    "Sí",
+    "No"
+   ]
+  },
+  {
+   "var": "p15",
+   "bloque": "barometro_digital_3_miedos.json",
+   "qi": 6,
+   "tipo": "cat",
+   "constructo": "decision_viaje",
+   "es_marketing": true,
+   "texto": "¿Cuál fue la principal razón?",
+   "opciones": [
+    "Inseguridad",
+    "Precio elevado",
+    "Crisis sanitaria",
+    "Conflicto político",
+    "Guerras",
+    "Motivos laborales",
+    "Otro"
+   ]
+  },
+  {
+   "var": "p16",
+   "bloque": "barometro_digital_4_turismo.json",
+   "qi": 0,
+   "tipo": "cat",
+   "constructo": "decision_viaje",
+   "es_marketing": true,
+   "texto": "¿En qué medida crees que el aumento de turistas afecta a la pérdida de la tradición e identidad de Euskadi?",
+   "opciones": [
+    "Mucho",
+    "Bastante",
+    "Poco",
+    "Nada",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "MULTI:barometro_digital_4_turismo.json:1",
+   "bloque": "barometro_digital_4_turismo.json",
+   "qi": 1,
+   "tipo": "multi",
+   "constructo": "decision_viaje",
+   "es_marketing": true,
+   "texto": "¿Crees que el turismo tiene alguno de los siguientes efectos en el acceso a la vivienda de la población local en tu municipio? Indica todas las opciones que consideres",
+   "opciones": [
+    "Se incrementa el precio del alquiler residencial al competir con el alquiler vacacional",
+    "Disminuye la oferta de viviendas en venta",
+    "Aumenta la construcción de vivienda, tanto para residentes como para inversores",
+    "La calidad de vida de los barrios disminuye gravemente",
+    "Mejora la calidad de vida al mejorar las infraestructuras y oferta de ocio",
+    "Ninguna de las anteriores"
+   ]
+  },
+  {
+   "var": "p21_1",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 4,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: El Gobierno Central",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_2",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 5,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: La Monarquía",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_3",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 6,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: La Ertzaintza",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_4",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 7,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: EITB",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_5",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 8,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: ONG´S",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_6",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 9,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: El Gobierno Vasco",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_7",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 10,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Las Diputaciones",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_8",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 11,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Los Ayuntamientos",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_9",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 12,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: La Iglesia Católica",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_10",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 13,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: La Universidad",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_11",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 14,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Osakidetza",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_12",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 15,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: El Tribunal Constitucional",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_13",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 16,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Los partidos políticos",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_14",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 17,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: El Parlamento Europeo",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_15",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 18,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Las organizaciones empresariales (la patronal)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_16",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 19,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Las grandes empresas (IBEX 35)",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_17",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 20,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Las pequeñas empresas",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_18",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 21,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Los sindicatos",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_19",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 22,
+   "tipo": "escala",
+   "constructo": "confianza_marca",
+   "es_marketing": true,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Los medios de comunicación",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  },
+  {
+   "var": "p21_20",
+   "bloque": "barometro_digital_5_politica_democracia.json",
+   "qi": 23,
+   "tipo": "escala",
+   "constructo": "contraste_confianza_politica",
+   "es_marketing": false,
+   "texto": "¿En qué medida confías en cada una de las siguientes organizaciones o instituciones? Utiliza una escala de 0 a 10, en la que 0 representa “No confío nada” y 10 “Confío plenamente”: Los tribunales de justicia",
+   "opciones": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "No lo sé / prefiero no contestar"
+   ]
+  }
+ ]
+}

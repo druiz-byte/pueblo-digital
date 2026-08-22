@@ -1,0 +1,267 @@
+{
+ "('barometro_digital_1_situacion_economica.json', 5)": {
+  "var": "p6_1",
+  "R2_gbm": -0.001877784258692583,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_1_situacion_economica.json', 6)": {
+  "var": "p6_2",
+  "R2_gbm": -0.027603824265970234,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_1_situacion_economica.json', 7)": {
+  "var": "p6_3",
+  "R2_gbm": -0.018101749001071622,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_1_situacion_economica.json', 8)": {
+  "var": "p6_4",
+  "R2_gbm": 0.06123822530485634,
+  "corr_max_gbm": 0.24746358379538663
+ },
+ "('barometro_digital_1_situacion_economica.json', 9)": {
+  "var": "p6_5",
+  "R2_gbm": 0.054658438600125515,
+  "corr_max_gbm": 0.23379144252971604
+ },
+ "('barometro_digital_1_situacion_economica.json', 10)": {
+  "var": "p6_6",
+  "R2_gbm": 0.007222619690664978,
+  "corr_max_gbm": 0.08498599702695131
+ },
+ "('barometro_digital_1_situacion_economica.json', 11)": {
+  "var": "p6_7",
+  "R2_gbm": -0.03605590818186601,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_1_situacion_economica.json', 12)": {
+  "var": "p6_8",
+  "R2_gbm": 0.026662916280741446,
+  "corr_max_gbm": 0.16328783261695112
+ },
+ "('barometro_digital_1_situacion_economica.json', 13)": {
+  "var": "p6_9",
+  "R2_gbm": -0.005800015800789415,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_1_situacion_economica.json', 14)": {
+  "var": "p6_10",
+  "R2_gbm": 0.025689932383438308,
+  "corr_max_gbm": 0.16028079230974093
+ },
+ "('barometro_digital_1_situacion_economica.json', 15)": {
+  "var": "p6_11",
+  "R2_gbm": 0.13411717479429272,
+  "corr_max_gbm": 0.36622011795406967
+ },
+ "('barometro_digital_1_situacion_economica.json', 16)": {
+  "var": "p6_12",
+  "R2_gbm": 0.06934802529112523,
+  "corr_max_gbm": 0.2633401323215382
+ },
+ "('barometro_digital_1_situacion_economica.json', 17)": {
+  "var": "p6_13",
+  "R2_gbm": 0.04707293563628303,
+  "corr_max_gbm": 0.21696298217964058
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 0)": {
+  "var": "p8_1",
+  "R2_gbm": 0.02386952597778096,
+  "corr_max_gbm": 0.15449765686825467
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 1)": {
+  "var": "p8_2",
+  "R2_gbm": 0.07959566240523053,
+  "corr_max_gbm": 0.2821270323900752
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 2)": {
+  "var": "p8_3",
+  "R2_gbm": 0.10245826969515896,
+  "corr_max_gbm": 0.32009103345010925
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 3)": {
+  "var": "p8_4",
+  "R2_gbm": 0.05401215123942127,
+  "corr_max_gbm": 0.23240514460618394
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 4)": {
+  "var": "p8_5",
+  "R2_gbm": 0.08181426865176614,
+  "corr_max_gbm": 0.2860319364192854
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 5)": {
+  "var": "p8_6",
+  "R2_gbm": 0.0717932172886224,
+  "corr_max_gbm": 0.2679425634135465
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 6)": {
+  "var": "p8_7",
+  "R2_gbm": 0.0847413386584616,
+  "corr_max_gbm": 0.29110365620936746
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 7)": {
+  "var": "p8_8",
+  "R2_gbm": 0.0652715541524496,
+  "corr_max_gbm": 0.2554829821190633
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 8)": {
+  "var": "p8_9",
+  "R2_gbm": 0.1022852083999842,
+  "corr_max_gbm": 0.3198205878300898
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 9)": {
+  "var": "p8_10",
+  "R2_gbm": 0.0543876215060682,
+  "corr_max_gbm": 0.23321153810664727
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 10)": {
+  "var": "p8_11",
+  "R2_gbm": 0.1254538513825189,
+  "corr_max_gbm": 0.354194651826533
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 11)": {
+  "var": "p8_12",
+  "R2_gbm": 0.05136332534019781,
+  "corr_max_gbm": 0.2266347840473695
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 12)": {
+  "var": "p8_13",
+  "R2_gbm": 0.06685522085337722,
+  "corr_max_gbm": 0.2585637655460974
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 13)": {
+  "var": "p8_14",
+  "R2_gbm": 0.07219871070765664,
+  "corr_max_gbm": 0.26869817771554877
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 14)": {
+  "var": "p8_15",
+  "R2_gbm": 0.007037311017737502,
+  "corr_max_gbm": 0.08388868229825464
+ },
+ "('barometro_digital_2_bienestar_politicas.json', 15)": {
+  "var": "p8_16",
+  "R2_gbm": 0.05584701008913506,
+  "corr_max_gbm": 0.23631972005978483
+ },
+ "('barometro_digital_3_miedos.json', 4)": {
+  "var": "p13",
+  "R2_gbm": -0.005003310873042821,
+  "corr_max_gbm": 0.0
+ },
+ "('barometro_digital_3_miedos.json', 5)": {
+  "var": "p14",
+  "acc_gbm": 70.5,
+  "moda": 73.3
+ },
+ "('barometro_digital_3_miedos.json', 6)": {
+  "var": "p15",
+  "acc_gbm": 27.340823970037455,
+  "moda": 36.329588014981276
+ },
+ "('barometro_digital_4_turismo.json', 0)": {
+  "var": "p16",
+  "R2_gbm": 0.07494373526415894,
+  "corr_max_gbm": 0.27375853459601757
+ },
+ "('barometro_digital_5_politica_democracia.json', 4)": {
+  "var": "p21_1",
+  "R2_gbm": 0.1690648405073814,
+  "corr_max_gbm": 0.41117495121588016
+ },
+ "('barometro_digital_5_politica_democracia.json', 5)": {
+  "var": "p21_2",
+  "R2_gbm": 0.22114904930634288,
+  "corr_max_gbm": 0.4702648714356016
+ },
+ "('barometro_digital_5_politica_democracia.json', 6)": {
+  "var": "p21_3",
+  "R2_gbm": 0.23492428040085594,
+  "corr_max_gbm": 0.48468988064622925
+ },
+ "('barometro_digital_5_politica_democracia.json', 7)": {
+  "var": "p21_4",
+  "R2_gbm": 0.16594912525520758,
+  "corr_max_gbm": 0.40736853738992607
+ },
+ "('barometro_digital_5_politica_democracia.json', 8)": {
+  "var": "p21_5",
+  "R2_gbm": 0.05623897494597481,
+  "corr_max_gbm": 0.23714758051891402
+ },
+ "('barometro_digital_5_politica_democracia.json', 9)": {
+  "var": "p21_6",
+  "R2_gbm": 0.1952798201930543,
+  "corr_max_gbm": 0.4419047637139187
+ },
+ "('barometro_digital_5_politica_democracia.json', 10)": {
+  "var": "p21_7",
+  "R2_gbm": 0.18001694056295317,
+  "corr_max_gbm": 0.42428403288711347
+ },
+ "('barometro_digital_5_politica_democracia.json', 11)": {
+  "var": "p21_8",
+  "R2_gbm": 0.13591901499073616,
+  "corr_max_gbm": 0.36867196122126805
+ },
+ "('barometro_digital_5_politica_democracia.json', 12)": {
+  "var": "p21_9",
+  "R2_gbm": 0.3531251482857635,
+  "corr_max_gbm": 0.5942433409688017
+ },
+ "('barometro_digital_5_politica_democracia.json', 13)": {
+  "var": "p21_10",
+  "R2_gbm": 0.10638439969786137,
+  "corr_max_gbm": 0.3261662148320414
+ },
+ "('barometro_digital_5_politica_democracia.json', 14)": {
+  "var": "p21_11",
+  "R2_gbm": 0.05433459044487876,
+  "corr_max_gbm": 0.2330978130418189
+ },
+ "('barometro_digital_5_politica_democracia.json', 15)": {
+  "var": "p21_12",
+  "R2_gbm": 0.10650744779572167,
+  "corr_max_gbm": 0.3263547882224523
+ },
+ "('barometro_digital_5_politica_democracia.json', 16)": {
+  "var": "p21_13",
+  "R2_gbm": 0.14885434299915148,
+  "corr_max_gbm": 0.38581646284101395
+ },
+ "('barometro_digital_5_politica_democracia.json', 17)": {
+  "var": "p21_14",
+  "R2_gbm": 0.1173406686793359,
+  "corr_max_gbm": 0.3425502425620742
+ },
+ "('barometro_digital_5_politica_democracia.json', 18)": {
+  "var": "p21_15",
+  "R2_gbm": 0.18943778036539577,
+  "corr_max_gbm": 0.43524450641610146
+ },
+ "('barometro_digital_5_politica_democracia.json', 19)": {
+  "var": "p21_16",
+  "R2_gbm": 0.1989234338906952,
+  "corr_max_gbm": 0.44600833388031574
+ },
+ "('barometro_digital_5_politica_democracia.json', 20)": {
+  "var": "p21_17",
+  "R2_gbm": 0.029727535193224575,
+  "corr_max_gbm": 0.17241674858674425
+ },
+ "('barometro_digital_5_politica_democracia.json', 21)": {
+  "var": "p21_18",
+  "R2_gbm": 0.13052063896477203,
+  "corr_max_gbm": 0.36127640244661985
+ },
+ "('barometro_digital_5_politica_democracia.json', 22)": {
+  "var": "p21_19",
+  "R2_gbm": 0.09090706169619692,
+  "corr_max_gbm": 0.3015079794900906
+ },
+ "('barometro_digital_5_politica_democracia.json', 23)": {
+  "var": "p21_20",
+  "R2_gbm": 0.11342905618958872,
+  "corr_max_gbm": 0.33679230423153783
+ }
+}

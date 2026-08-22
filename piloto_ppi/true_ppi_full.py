@@ -94,14 +94,30 @@ def _idx_real(e, i):
     lab = VVL.get(var, {}).get(val)
     if lab is None:
         return None
-    import unicodedata
-    def nm(s):
-        s = unicodedata.normalize("NFKD", s or "");
-        return "".join(c for c in s if not unicodedata.combining(c)).lower().strip()
-    for j, op in enumerate(ops):
-        if nm(op) == nm(lab) or nm(lab) in nm(op) or nm(op) in nm(lab):
-            return j
-    return None
+    return _match_opcion(ops, lab)
+
+
+def _match_opcion(ops, lab):
+    """Mapea la ETIQUETA del .sav al índice de opción de la plantilla.
+
+    ⚠ Corrige un bug: la versión previa aceptaba cualquier contención de
+    subcadena, de modo que 'Ni lo he hecho, ni lo he pensado hacer' casaba con
+    'Lo he hecho' (y 'Buena' con 'Muy buena'). Colapsaba 29 de 89 preguntas
+    categóricas en una sola categoría. Ahora: (1) igualdad exacta sobre texto
+    normalizado sin puntuación; (2) contención SÓLO si es única."""
+    no = [_nm_dur(o) for o in ops]
+    nl = _nm_dur(lab)
+    if nl in no:
+        return no.index(nl)
+    cand = [j for j, o in enumerate(no) if nl and (nl in o or o in nl)]
+    return cand[0] if len(cand) == 1 else None
+
+
+def _nm_dur(s):
+    import unicodedata, re as _re
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c)).lower()
+    return _re.sub(r"[^a-z0-9]", "", s)
 
 
 # ---------- construcción de Y, F por pregunta ----------

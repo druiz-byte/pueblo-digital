@@ -1,3 +1,10 @@
+> ## ⚠ FICHERO OBSOLETO — NO CITAR (2026-08-21)
+> Contiene un **error de mapeo etiqueta→opción** que colapsaba 29 de las 89 preguntas
+> categóricas en una sola categoría (de ahí los `nan` de p6). Cifras corregidas en
+> **`techo_predictivo_v2.md`**; diagnóstico completo en **`../paper/incidencia_mapeo_idx_real.md`**.
+> Corrección del titular: **corr máxima 0,24 → 0,22** (el techo es aún más bajo).
+> Se conserva como registro histórico de lo que se afirmó antes de esa fecha.
+
 # Techo predictivo del barómetro desde un perfil sociodemográfico
 
 ¿Cuánta de la variación entre personas es explicable desde el perfil?

@@ -9,6 +9,7 @@ Encuestas: plantillas en encuestas/ · lanzador por lotes: lanzar_barometro.py
 """
 
 import json
+import random
 import os
 import re
 import base64
@@ -40,6 +41,19 @@ ANTHROPIC_API_KEY  = os.environ.get('ANTHROPIC_API_KEY', '')
 GROQ_API_KEY       = os.environ.get('GROQ_API_KEY', '')
 GEMINI_API_KEY     = os.environ.get('GEMINI_API_KEY', '')
 GEMINI_MODEL       = os.environ.get('GEMINI_MODEL', 'gemini-3.5-flash')
+
+# ── Puntos de extensión para los experimentos de robustez del paper ──────────
+# Añadidos 2026-08-21. Por defecto reproducen EXACTAMENTE el comportamiento
+# anterior, así que ninguna tanda previa queda invalidada.
+#   ANTHROPIC_MODEL : permite repetir una tanda con un modelo frontera (hueco 2)
+#   SURVEY_TEMPERATURE : si no se fija, NO se envía el parámetro y la API usa su
+#       valor por defecto (1.0), que es el escenario de máxima varianza (hueco 6)
+#   EXTRA_INSTRUCCIONES : líneas que se añaden al bloque de instrucciones de la
+#       encuesta, para la variante de prompt anti-concentración (hueco 3)
+ANTHROPIC_MODEL    = os.environ.get('ANTHROPIC_MODEL', 'claude-haiku-4-5-20251001')
+SURVEY_TEMPERATURE = os.environ.get('SURVEY_TEMPERATURE')
+EXTRA_INSTRUCCIONES = ''
+SURVEY_WORKERS     = os.environ.get('SURVEY_WORKERS')
 PORT               = int(os.environ.get('PORT', 3000))
 SITE_PASSWORD      = os.environ.get('SITE_PASSWORD', '')   # si se define, la app pide contraseña (Basic Auth)
 PUBLIC_DIR         = Path(__file__).parent / 'public'
@@ -205,9 +219,19 @@ def _err_msg(data):
         return '?'
 
 def _note_survey_error(msg):
-    """Registra el último error de la encuesta en curso (visible en /api/encuesta/progreso)."""
+    """Registra el último error de la encuesta en curso (visible en /api/encuesta/progreso).
+
+    Añadido 2026-08-21: además del último, acumula el recuento por tipo y una
+    muestra de mensajes, que se guardan en el fichero de resultados. Sin esto,
+    diagnosticar por qué una tanda vino vacía exigía tener la consola delante."""
     with _survey_lock:
         _survey['last_error'] = msg
+        clave = msg.split(':')[0].split('(')[0].strip()[:60]
+        _survey.setdefault('errores', {})
+        _survey['errores'][clave] = _survey['errores'].get(clave, 0) + 1
+        muestras = _survey.setdefault('errores_muestra', [])
+        if len(muestras) < 20:
+            muestras.append(msg[:300])
     print(f'[encuesta] ⚠ {msg}')
 
 def _ask_persona(a, preguntas):
@@ -242,10 +266,18 @@ def _ask_persona(a, preguntas):
         for j, op in enumerate(p['opciones']):
             lines.append(f"   {chr(65+j)}) {op}")
         lines.append('')
+    if EXTRA_INSTRUCCIONES:
+        lines.append(EXTRA_INSTRUCCIONES.strip())
+        lines.append('')
     lines.append('Tu respuesta (SOLO letras, formato N:X — o N:X,Y,Z si la pregunta pide varias):')
 
     user_msg  = '\n'.join(lines)
     max_tok   = max(60, sum(_ks(p) for p in preguntas) * 10)
+    if 'haiku' not in ANTHROPIC_MODEL:
+        # Un modelo frontera puede razonar antes de responder y esos tokens cuentan
+        # como salida: con 130 se queda sin margen. Mismo criterio que ya se usaba
+        # con Gemini (2048).
+        max_tok = max(max_tok, 2048)
 
     def _llamada(mensajes):
         """Una petición al LLM con reintentos; devuelve el texto ('' si falla)."""
@@ -301,23 +333,54 @@ def _ask_persona(a, preguntas):
         else:
             # ── Claude Haiku (fallback de pago) ──────────────────────────────
             payload = {
-                'model':      'claude-haiku-4-5-20251001',
+                'model':      ANTHROPIC_MODEL,
                 'max_tokens': max_tok,
                 'system':     mensajes[0]['content'],
                 'messages':   mensajes[1:],
             }
-            status, data = http_json(
-                'https://api.anthropic.com/v1/messages',
-                method='POST', body=payload,
-                headers={
-                    'x-api-key':         ANTHROPIC_API_KEY,
-                    'anthropic-version': '2023-06-01',
-                    'content-type':      'application/json',
-                }
-            )
-            if status == 200:
-                return (data.get('content') or [{}])[0].get('text', '').strip()
-            _note_survey_error(f'Anthropic {status}: {_err_msg(data)}')
+            if SURVEY_TEMPERATURE is not None:
+                payload['temperature'] = float(SURVEY_TEMPERATURE)
+            # Reintentos con backoff. Añadido 2026-08-21: esta rama no tenía
+            # ninguno. Con Haiku daba igual (límites altos), pero con un modelo
+            # frontera los 429 hacían que ~50 % de las Personas volvieran vacías.
+            for attempt in range(8):
+                status, data = http_json(
+                    'https://api.anthropic.com/v1/messages',
+                    method='POST', body=payload,
+                    headers={
+                        'x-api-key':         ANTHROPIC_API_KEY,
+                        'anthropic-version': '2023-06-01',
+                        'content-type':      'application/json',
+                    }
+                )
+                if status == 200:
+                    # ⚠ NO usar sólo content[0]: un modelo con razonamiento devuelve
+                    # primero un bloque 'thinking' y el texto va en un bloque posterior.
+                    # Coger content[0]['text'] daba cadena vacía con status 200, sin
+                    # ningún error que registrar (2026-08-21, tandas de Opus al 70 % de
+                    # vacías). Hay que concatenar TODOS los bloques de tipo 'text'.
+                    bloques = data.get('content') or []
+                    texto = ''.join(b.get('text', '') for b in bloques
+                                    if isinstance(b, dict) and b.get('type') == 'text')
+                    if not texto:   # sin bloque 'text' declarado → aceptar cualquiera que lo traiga
+                        texto = ''.join(b.get('text', '') for b in bloques
+                                        if isinstance(b, dict))
+                    texto = texto.strip()
+                    if not texto:
+                        tipos = [b.get('type') for b in bloques if isinstance(b, dict)]
+                        _note_survey_error(
+                            f'Anthropic 200 sin texto: stop_reason={data.get("stop_reason")} '
+                            f'bloques={tipos} usage={data.get("usage")}')
+                    return texto
+                if status in (429, 529, 500, 502, 503, 504):
+                    espera = min(2 ** attempt, 60) + random.uniform(0, attempt + 1)
+                    _note_survey_error(f'Anthropic {status} (reintento {attempt+1}/8 '
+                                       f'en {espera:.0f}s): {_err_msg(data)}')
+                    time.sleep(espera)
+                    continue
+                _note_survey_error(f'Anthropic {status}: {_err_msg(data)}')
+                return ''
+            _note_survey_error('Anthropic: agotados los 8 reintentos')
             return ''
 
     mensajes = [
@@ -346,7 +409,7 @@ def _survey_worker(preguntas, subset=None):
     with _survey_lock:
         _survey.update({'running': True, 'done': 0, 'total': total,
                         'results': [], 'error': None, 'saved_file': None,
-                        'last_error': None})
+                        'last_error': None, 'errores': {}, 'errores_muestra': []})
 
     def process(a):
         resps, raw = _ask_persona(a, preguntas)
@@ -375,8 +438,13 @@ def _survey_worker(preguntas, subset=None):
         n_workers = 3
     elif GROQ_API_KEY:
         n_workers = 4
-    else:
+    elif SURVEY_WORKERS:
+        n_workers = int(SURVEY_WORKERS)
+    elif 'haiku' in ANTHROPIC_MODEL:
         n_workers = 20
+    else:
+        n_workers = 4          # modelo frontera: límites de tasa mucho más bajos
+    print(f'[encuesta] modelo={ANTHROPIC_MODEL} · hilos={n_workers}')
     with concurrent.futures.ThreadPoolExecutor(max_workers=n_workers) as ex:
         futs = [ex.submit(process, a) for a in subset]
         for fut in concurrent.futures.as_completed(futs):
@@ -404,11 +472,13 @@ def _save_survey_to_disk():
         'fecha':      time.strftime('%Y-%m-%d %H:%M:%S'),
         'modelo':     (f'gemini/{GEMINI_MODEL}' if GEMINI_API_KEY
                        else 'groq/llama-3.1-8b-instant' if GROQ_API_KEY
-                       else 'claude-haiku-4-5'),
+                       else ANTHROPIC_MODEL),
         'definition': _survey['definition'],
         'total':      _survey['total'],
         'done':       _survey['done'],
         'results':    _survey['results'],
+        'errores':    _survey.get('errores') or {},
+        'errores_muestra': _survey.get('errores_muestra') or [],
     }
     try:
         path = RESULTS_DIR / fname
@@ -725,7 +795,12 @@ class Handler(BaseHTTPRequestHandler):
                 }
             )
             if status == 200:
-                text = (data.get('content') or [{}])[0].get('text', '')
+                # mismo criterio que en la encuesta: concatenar los bloques de
+                # texto, porque un modelo con razonamiento pone 'thinking' delante
+                _bl = data.get('content') or []
+                text = ''.join(b.get('text', '') for b in _bl
+                               if isinstance(b, dict) and b.get('type') == 'text') \
+                       or ''.join(b.get('text', '') for b in _bl if isinstance(b, dict))
                 self.send_json({'text': text})
             else:
                 self.send_json(data, status)

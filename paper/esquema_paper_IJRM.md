@@ -150,7 +150,10 @@ exactamente los que dependen de la varianza que el modelo destruye.
 - Ordinales (48): kappa ponderado **0.100**, acierto 51.9% vs moda 56.5%, delta **−4.54**.
 - Nominales (41): kappa **0.231**, delta vs moda **+1.61** (único positivo).
 - Multi-respuesta (9): Jaccard 0.37, F1 0.46.
-- **El panel alcanza ~65% del techo (0.15 de 0.24).** El pipeline no está roto: choca contra el
+- **El panel alcanza ~51 % del techo (0,137 de 0,271).** ⚠ Cifra corregida el 2026-08-21: la
+  anterior (65 % = 0,15 / 0,24) comparaba Spearman con un techo Pearson **e incluía los dos ítems
+  circulares** (p36 ideología 0,83 · p38 nacionalismo 0,97). Ver `correccion_techo_global.md`.
+  El pipeline no está roto: choca contra el
   límite. Este es el número que desactiva la objeción "es que vuestro panel está mal construido".
 - Comparación con imputación estadística clásica: en nominales el clasificador lineal saca **+7.5
   p.p.** sobre la moda frente a **+1.6** del LLM. *Donde el ítem es imputable, la estadística

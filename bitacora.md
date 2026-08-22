@@ -4,6 +4,277 @@
 
 ---
 
+## 2026-08-21 · Vigesimoprimera sesión — Hueco 2 lanzado: el modelo frontera NO recupera los extremos
+
+**Ordenador:** oficina (Cowork) + PC de David (las tandas con API).
+Continuación de la 20ª sesión, el mismo día.
+
+### 1 · 🐛 Bug que descartó tres tandas: sólo leíamos el primer bloque de la respuesta
+
+Las tres primeras pruebas de 30 Personas con `claude-opus-5` devolvieron **50 %, 70 % y 70 % de
+Personas vacías**, contra el 0 % de las tandas de referencia.
+
+**Causa:** `server.py` hacía `(data.get('content') or [{}])[0].get('text','')`. Un modelo con
+razonamiento devuelve primero un bloque `thinking` y el texto en un bloque posterior → cadena vacía.
+Con Haiku nunca se notó porque no emite bloque de razonamiento y `content[0]` *era* el texto.
+
+Lo que lo destapó fue instrumentar el código: al guardar el **recuento de errores de API en el
+propio fichero de resultados**, la tercera tanda salió con **`errores: {}`** — ni un solo error
+HTTP, todo eran 200 con texto vacío. Eso descartó de golpe límite de tasa, sobrecarga y
+concurrencia, que eran mis dos hipótesis previas, y señaló al parseo.
+
+**Arreglado y verificado** (cuarta tanda: 0 % de vacías, 30/30 con las 13 respuestas):
+concatenar **todos** los bloques `text` · **`max_tokens` 130 → 2.048 si el modelo no es Haiku** (los
+tokens de razonamiento cuentan como salida) · registrar los 200 sin texto con `stop_reason`, tipos
+de bloque y `usage` · 8 reintentos con backoff y concurrencia adaptada al modelo (20 hilos Haiku /
+4 frontera; no eran la causa pero se quedan) · aviso automático si se supera el 2 % de vacías ·
+columna de vacías con marca ⛔ en `comparar_robustez.py` · mismo arreglo en `/api/chat`.
+
+**Las tandas de referencia NO están afectadas:** todas corrieron con Haiku. Las cifras publicadas
+siguen siendo válidas.
+
+▸ **Al paper.** Un artefacto que descarta el 70 % de la muestra **sin producir ningún error** es el
+fallo silencioso típico de un estudio de encuestados sintéticos. Lo detectó tener una tanda de
+referencia con 0 % de vacías con la que comparar, no el código.
+
+### 2 · 📊 Resultado del piloto n=30 con modelo frontera (comparación pareada, mismas 30 Personas)
+
+| métrica | Haiku n=30 | **Opus n=30** | Haiku n=1.000 | REAL |
+|---|--:|--:|--:|--:|
+| DAM | 15,1 | **12,9** | 15,7 | — |
+| Concentración modal | 81,7 | **76,4** | 83,7 | **61,5** |
+| NS-NC % | 1,1 | **0,0** | 1,4 | **3,4** |
+| Opciones usadas / pregunta | 3,2 | **2,8** | 4,3 | — |
+
+**Contra lo preregistrado:** H2.1 (DAM 14,0-17,5) **falla** — mejora más de lo previsto, se reporta
+como fallo · H2.2 (concentración 76-88) acierta en el borde inferior · **H2.3 acierta de pleno** ·
+H2.4 no evaluable con n=30 (celdas de 1-6 personas). **El criterio de falsación (concentración < 70
+Y DAM < 12) NO se cumple:** la tesis sobrevive.
+
+**🔑 EL HALLAZGO: el modelo frontera redistribuye masa entre las opciones centrales pero no resucita
+los extremos.**
+
+- **P11** (política de entrada): concentración 83,3 → **50,0** y DAM 27,8 → 16,6. Opus reparte 50/50
+  donde Haiku ponía 83/12. **Pero "permitir la entrada sin ningún obstáculo legal" sigue en 0,0 %
+  frente al 34,2 % real.**
+- **P13** (asilo): **empeora**. Concentración 96,7 → **100,0**, las 30 Personas en la misma opción.
+  "Acogerlas sin restricciones" sigue en **0,0 % frente al 31,3 % real**.
+- En **dos de las cuatro métricas Opus va a peor**: NS-NC 1,1 → 0,0 (real 3,4) y opciones usadas
+  3,2 → 2,8. El DAM sólo mejora en **5 de 12** preguntas.
+
+**Formulación para el paper:** el colapso de varianza **no es una compresión uniforme hacia el
+centro** que un modelo mejor pueda deshacer; es **la borradura de los polos**, y ésa sobrevive
+intacta al cambio de modelo. La mejora del DAM viene de repartir mejor entre opciones moderadas,
+que es justo lo que *no* sirve para las tareas que dependen de la heterogeneidad.
+
+**⚠ No dar por bueno hasta n=1.000.** Son 30 Personas y los rangos se escribieron para 1.000. Y hay
+razón concreta para esperar que empeore al escalar: en la serie de Haiku la concentración **sube**
+con N (81,7 → 83,7).
+
+### 3 · 🧹 Limpieza de cifras erróneas en la documentación
+
+Purgadas de `bitacora.md` (12ª y 17ª sesión), `CLAUDE.md` y `piloto_ppi/acuerdo_individual.md` las
+afirmaciones que sabemos falsas, sustituidas por las corregidas con remisión a
+`paper/correccion_techo_global.md`:
+
+| decía | dice ahora |
+|---|---|
+| corr máxima del techo **0,24** | **0,225** lineal · **0,271** GBM |
+| el panel alcanza el **65 %** del techo | el panel alcanza el **51 %** (0,137 de 0,271) |
+| Spearman de escalas **0,15** | **0,123** sin los dos ítems circulares (p36, p38) |
+| 14/100 preguntas con R² ≤ 0 | **15/100** |
+
+También se condensó el registro de la incidencia en `preregistro_robustez.md`, eliminando las dos
+hipótesis que resultaron equivocadas (límite de tasa, sobrecarga) y dejando sólo la causa real.
+
+### 4 · Pendiente para mañana
+
+1. **Lanzar la tanda completa del hueco 2:** `python lanzar_robustez.py --exp modelo --modelo
+   claude-opus-5 --hilos 4`. Con `max_tokens` 2.048 y razonamiento, tardará y costará bastante más
+   que Haiku; el `usage` ya queda registrado para estimar.
+2. Lanzar el hueco 3 (`--exp prompt`) y el hueco 6 (`--exp temp --temperature 0.0`).
+3. David: rellenar sus predicciones en `preregistro_robustez.md` antes de mirar resultados.
+4. Resolver los cinco pendientes anotados en `seccion3_marco_teorico.md`.
+5. `git push`.
+
+---
+
+## 2026-08-21 · Vigésima sesión — Cierre de pendientes, §3 del paper y preparación de los huecos 2, 3 y 6
+
+**Ordenador:** oficina (Cowork). **Sin API**: lo que necesita API queda preparado para el PC de David.
+Continuación directa de la 19ª sesión, el mismo día.
+
+### 1 · 🔴 TERCERA CORRECCIÓN: el "65 % del techo" estaba mal por tres motivos (`paper/correccion_techo_global.md`)
+
+El 65 % salía de dividir 0,15 (Spearman de escalas) entre 0,24 (techo). Los tres errores acumulados:
+
+1. **Métricas distintas** — `corr_max = √R²` acota **Pearson**, el numerador era **Spearman**. (Ya detectado en la 19ª sesión.)
+2. **🆕 Ítems circulares en el numerador** — los 54 ítems de escala incluían **p36 (ideología, Spearman 0,83)** y **p38 (nacionalismo, 0,97)**, que son **predictores inyectados en el prompt**. Excluyéndolos la media cae de **0,152 a 0,123**. *La propia bitácora decía que los circulares "validan el motor, no cuentan", pero la media publicada los incluía.* Es el error más embarazoso ante un revisor.
+3. **Techo mal estimado** — bug de mapeo + estimador lineal: 0,240 → 0,225 lineal → **0,271 no lineal**.
+
+**Cifras definitivas, con Pearson arriba y abajo y sin circulares:**
+
+| conjunto | ítems | techo lineal | techo GBM | alcanzado | % lin | % GBM |
+|---|--:|--:|--:|--:|--:|--:|
+| **Todas las escalas + ordinales** | 100 | 0,225 | **0,271** | **0,137** | 61 % | **51 %** |
+| Sólo escalas 0-10 | 52 | 0,260 | 0,312 | 0,123 | 47 % | 39 % |
+| Sólo ordinales | 48 | 0,187 | 0,226 | 0,154 | 82 % | 68 % |
+| Subcorpus de marketing | 44 | 0,216 | 0,234 | 0,127 | 59 % | 54 % |
+
+**Titular nuevo: el panel alcanza ~51 % del techo (0,137 de 0,271), no el 65 %.** El argumento se mantiene y se refuerza — con el techo en 0,27 sigue siendo cierto que el margen es mínimo — pero ya **no** podemos decir que el panel "casi agota" el techo: le queda la mitad, y esa mitad es justo lo que documenta la Proposición 2.
+
+**Decidido:** el paper reporta **los dos techos**, con el GBM como cota operativa. Reportar sólo el lineal sería quedarnos con el número que nos favorece.
+
+Nuevo `paper/techo_gbm_global.py`: techo no lineal sobre las 100 escalas+ordinales, **reanudable por tramos** (el cálculo completo excede el tiempo de una sesión de sandbox y los procesos en background mueren entre llamadas).
+
+**Corregido en:** `paper/esquema_paper_IJRM.md` §6. **Pendiente de corregir:** `CLAUDE.md` (estado del 20-jul), `bitacora.md` 12ª sesión, `piloto_ppi/acuerdo_individual.md`.
+
+### 2 · ✍️ §3 DEL PAPER REDACTADA (`paper/seccion3_marco_teorico.md`)
+
+Borrador 1 del marco teórico, **texto de manuscrito en inglés** (es lo que se envía; traducir después introduce deriva) con notas editoriales en español marcadas `▸`.
+
+- **3.1 Setup** — la Persona sintética como mapa estocástico π(·|x,ρ,M) que depende de i **sólo a través de x**. Distinción aggregate vs individual fidelity.
+- **3.2 Proposición 1 (techo)** — enunciado y **demostración** (tower property + Cauchy-Schwarz), con igualdad sii g es transformación afín de μ(x). Dos extensiones: **(i)** el ruido de muestreo del LLM es una atenuación estricta, así que la cota vale *a fortiori* para cualquier temperature; **(ii)** es propiedad de los datos, no del método — no la cruza ni un modelo mejor ni hot-deck ni k-NN. Sección de estimación con las tres cautelas (OOS obligatorio, conservadurismo de la clase de modelo, ruido de CV = 0,013).
+- **3.3 Proposición 2 (colapso)** — definición del índice de concentración modal condicional y del **collapse index Δ_C**; enunciado de que se puede acertar μ(x) y fallar Var(y|x) porque son lógicamente independientes. **Mecanismo declarado explícitamente como conjetura** (máxima verosimilitud + RLHF → modo condicional; "una Persona es un estereotipo, y un estereotipo es un punto, no una distribución"). Tabla de **cuatro implicaciones contrastables** P2a-P2d, las cuatro confirmadas en nuestros datos.
+- **3.4 Corolario (separabilidad)** — demostración por construcción: permutar las respuestas observadas al azar preserva la marginal y da correlación cero. **Implicación incómoda: la evidencia que reporta la industria es no informativa sobre lo que necesitan sus aplicaciones.** Caso P26 (media 5,15 vs 5,30, pero 86,4 % en {5,6} y cero en {8,9,10}). Y la **tabla de regla de decisión por tarea de marketing**.
+- **3.5** — cómo componen las dos proposiciones.
+
+**Cinco pendientes anotados en la sección**, el principal: si el mecanismo de 3.3 se enuncia como demostrado, un revisor lo tumba. Está marcado como conjetura a propósito.
+
+### 3 · 🧪 HUECOS 2, 3 y 6 PREPARADOS (requieren API → PC de David)
+
+**Tres puntos de extensión en `entrevista/server.py`**, mínimos y **retrocompatibles** (por defecto reproducen exactamente el comportamiento anterior, ninguna tanda previa queda invalidada):
+`ANTHROPIC_MODEL` (hueco 2) · `SURVEY_TEMPERATURE` — si no se fija, **no se envía el parámetro** y la API usa 1.0 (hueco 6) · `EXTRA_INSTRUCCIONES` (hueco 3).
+
+**`entrevista/lanzar_robustez.py`** — relanza las mismas 13 preguntas de Ikuspegi sobre el mismo panel v1 cambiando **una sola cosa por tanda**:
+
+```
+python lanzar_robustez.py --exp modelo --modelo claude-opus-5 --muestra 30   # prueba barata PRIMERO
+python lanzar_robustez.py --exp modelo --modelo claude-opus-5                # hueco 2
+python lanzar_robustez.py --exp prompt                                        # hueco 3
+python lanzar_robustez.py --exp temp --temperature 0.0                        # hueco 6
+```
+
+El **prompt anti-concentración** ataca los tres mecanismos observados (opción modal al 83,7 %, NS/NC infrarrepresentado, cero de mil en los extremos) **sin decir nunca cuál es la distribución real ni cuántas opciones usar** — hacerlo filtraría la respuesta y anularía el experimento. A declarar en el paper.
+
+**`entrevista/comparar_robustez.py`** — tabla comparativa de todas las tandas. **Verificado: reproduce exactamente las cifras publicadas** (v1 → DAM 15,7 · conc. 83,7 · NS-NC 1,4 · 4,3 opciones; v2 → 18,2 · 88,8 · 0,9 · 2,7). *Primera versión daba 32,8 en vez de 15,7 porque reimplementé el DAM a mano ignorando `colapso` y `media_real`; ahora reutiliza la lógica de `comparar_ikuspegi.py`.*
+
+**`paper/preregistro_robustez.md`** — predicciones escritas **antes** de lanzar, con rangos numéricos, métricas fijadas de antemano (concentración modal como principal), criterios explícitos de falsación y riesgos declarados. Resumen de lo que predigo:
+- **Hueco 2:** el modelo frontera **no** arregla el colapso (concentración 76-88, DAM 14,0-17,5, las dos opciones "cero de mil" siguen < 3 %). *Falsaría la tesis:* concentración < 70 y DAM < 12.
+- **Hueco 3:** el prompt **sí** mueve el NS-NC (2,5-5,0) y baja algo la concentración (70-80) **pero no llega al 61,5 real**; el DAM mejora poco (13-16). *Falsaría la tesis:* concentración ≈ 62 y DAM ≈ 8 → el colapso sería un artefacto del prompt por defecto, corregible; seguiría siendo buen paper pero con recomendación práctica en vez de límite.
+- **Predicción clave:** aunque baje la concentración, el **Δ vs moda individual seguirá ≈ 0 o negativo**, porque repartir mejor la varianza no crea información donde no la hay. Si eso pasa, es la confirmación más limpia de que los dos límites son independientes.
+- **Hueco 6:** con `temperature=0.0` la concentración **sube** (86-95) y el DAM empeora → cierra la objeción de decodificación codiciosa.
+
+Hay una tabla vacía para las predicciones de David: dos preregistros independientes son más informativos que uno.
+
+**Aviso de coste:** la tanda de Haiku costó 0,2-0,3 $; un modelo frontera está uno o dos órdenes de magnitud por encima. Lanzar `--muestra 30` primero y comprobar el parseo.
+
+### 4 · Pendiente
+
+1. **David:** rellenar sus predicciones en `preregistro_robustez.md` y lanzar las tres tandas.
+2. ~~Corregir el 65 %~~ ✅ **hecho en la 21ª sesión** en `CLAUDE.md`, `bitacora.md` y `piloto_ppi/acuerdo_individual.md`.
+3. Resolver los cinco pendientes anotados en `seccion3_marco_teorico.md`.
+4. `git push`.
+
+---
+
+## 2026-08-21 · Decimonovena sesión — Fase 1 del ángulo de marketing, y un bug que cambia el titular
+
+**Ordenador:** oficina (Cowork). **Sin API**: todo es relectura y recálculo sobre resultados ya generados.
+
+**Objetivo:** cerrar el **hueco 1** (ángulo de marketing) por el camino barato: reanalizar el Deustobarómetro restringido a ítems de marketing. **Fuera de alcance por decisión de David:** todo el bloque B (Sociómetro de medios), el tercer instrumento / cuarta casa de campo, y el ángulo de elección discreta tipo *brand choice*.
+
+### 1 · El subcorpus (`paper/marketing_items.json`, `paper/subcorpus_marketing.md`)
+
+**44 ítems de marketing + 10 de contraste político**, seleccionados **ex ante por constructo**:
+
+| grupo | var | n | constructo |
+|---|---|--:|---|
+| A | p6_1…p6_13 | 13 | Retrenchment de consumo por categoría (ocio, vacaciones, carne/pescado, alimentación, ropa, dentista…) |
+| B | p13, p14, p15, p16 + multi turismo | 5 | Decisión de viaje y abandono de compra |
+| C | p8_1…p8_16 | 16 | Satisfacción con servicios |
+| D | p21_4,5,9,10,11,15,16,17,18,19 | 10 | Confianza de marca (medios, empresas, universidad, ONG, sindicatos) |
+| E | p21_1,2,3,6,7,8,12,13,14,20 | 10 | **Contraste**, no marketing: instituciones del Estado y partidos |
+
+Descartado p37/p39 (valoración de líderes como "endorsers"): analogía demasiado estirada.
+El corte de p21 en 10/10 es limpio: entidades no estatales vs Estado y partidos.
+
+### 2 · 🔴 BUG EN `_idx_real` — el titular del techo cambia (`paper/incidencia_mapeo_idx_real.md`)
+
+Depurando el `R² = nan` de p6 apareció la causa real: `true_ppi_full._idx_real()` mapeaba la etiqueta del `.sav` a la opción de plantilla aceptando **cualquier contención de subcadena**. Como `"lo he hecho"` es subcadena de `"ni lo he hecho, ni lo he pensado hacer"`, **los códigos 1, 2 y 3 de p6 colapsaban en la misma categoría** → vector constante → `nan`. El `nan` era el síntoma, no el problema.
+
+Mismo patrón en `p2` y `p18` (`Buena` ⊂ `Muy buena`) y en `p30_1…p30_14` (`Aliado` ⊂ `Ni aliado ni enemigo`). **29 de las 89 preguntas categóricas con variable, el 33 %.**
+
+**Verificado que NO estaba afectado** (comprobado, no supuesto): `acuerdo_individual.py` empareja por igualdad exacta y **reproduce exactamente** los valores publicados (p6_4 83,62/87,03 · p6_9 91,41/92,44 · p14 65,67/71,00 · p15 16,28/43,02); `_idx_real` sólo se invoca desde el **modo simulación** de `true_ppi_full`, así que `informe_ppi_full.md` es correcto; los ítems de escala 0-10 nunca pasaron por el matcher.
+
+**Arreglo:** igualdad exacta sobre texto normalizado sin puntuación, y contención **sólo si es única**. Validado: mapeo total e inyectivo en las 89, cero colapsos.
+
+**Dos mejoras de reproducibilidad** (`piloto_ppi/techo_v2.py`): **semilla por ítem** (antes el R² de una pregunta dependía de cuántas se habían evaluado antes, porque el RNG era global y secuencial) y **CV 5-fold repetida 20 veces**. La **sd media del R² entre repeticiones es 0,013**, comparable a la señal en los ítems de techo bajo: un solo 5-fold no bastaba y un revisor lo habría señalado.
+
+**Efecto (mismo método, sólo cambia el mapeo):**
+
+| | antes | después |
+|---|--:|--:|
+| R² medio OOS | 0,0789 | 0,0718 |
+| **corr máxima** | **0,240** | **0,225** |
+| ítems válidos | 87 | **100** |
+| ítems con R² ≤ 0 | 11 | **15** |
+| Δ nominales vs moda | +7,53 | **+7,88** |
+
+→ **El techo es aún más bajo de lo que decíamos.** El argumento de "la imputación clásica gana al LLM" pasa de +7,5 vs +1,6 a **+7,9 vs +1,6**: se mantiene.
+
+### 3 · 🔴 SEGUNDA INCIDENCIA, metodológica: Spearman vs Pearson
+
+`corr_max = √R²` es una cota sobre **Pearson**. Compararla con el **Spearman** del panel es incorrecto: en retrenchment el Spearman medio es 0,447 contra un techo de 0,122 → **367 % del techo**, imposible. Causa: el tratamiento de empates con ~90 % de casos en una categoría.
+
+**→ Hay que corregir la afirmación "el panel alcanza el 65 % del techo"** que circula en la bitácora y en `CLAUDE.md`: se obtuvo comparando Spearman 0,15 con techo Pearson 0,24. Con métricas homogéneas y techo no lineal, en el subcorpus de marketing es el **54 %**. La cifra global debe recalcularse igual.
+
+### 4 · Resultados (`paper/resultados_marketing.md`)
+
+| constructo | ítems | techo lin | techo GBM | Pearson | % techo | Δ vs moda | DAM | conc. panel | conc. real |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| A · Retrenchment | 13 | 0,122 | 0,134 | 0,149 | 112 % | −5,3 | 13,7 | 84,0 | 70,5 |
+| B · Decisión de viaje | 5 | 0,175 | 0,137 | 0,051 | 38 % | −12,4 | 26,9 | 84,8 | 49,9 |
+| C · Satisfacción servicio | 16 | 0,228 | 0,254 | 0,072 | 28 % | −3,2 | 9,4 | 54,5 | 21,4 |
+| D · Confianza de marca | 10 | 0,326 | 0,351 | 0,217 | 62 % | −5,7 | 8,5 | 47,3 | 19,8 |
+| E · (contraste) política | 10 | 0,354 | 0,399 | 0,202 | 51 % | −5,7 | 10,1 | 45,5 | 21,2 |
+| **TOTAL MARKETING** | **44** | **0,216** | **0,234** | **0,127** | **54 %** | **−5,3** | **12,4** | **65,0** | **38,8** |
+
+**Los cuatro hallazgos:**
+1. **El techo de marketing es MÁS BAJO que el político.** Marca 0,35 ≈ política 0,40, pero **consumo 0,13** y **viaje 0,14** quedan muy por debajo. El perfil informa *menos* sobre conducta de consumo que sobre actitud política — al revés de lo que necesita la promesa comercial, y al revés de donde la literatura ha puesto sus benchmarks. **Es el argumento de marketing que le faltaba al paper.**
+2. **En consumo no hay nada que capturar.** Techo 0,134 y alcanzado 0,149, ambos indistinguibles de cero a nivel de ítem.
+3. **Δ vs moda negativo en los cuatro constructos.** Peor caso: razón del abandono de viaje, **−26,7 p.p.**, kappa 0,00.
+4. **Colapso de varianza en los cuatro.** 65,0 % vs 38,8 % real → **+26,2 p.p. de exceso**; ningún ítem de B, C, D o E con exceso negativo. Extremo: multirrespuesta de efectos del turismo, **99,9 % vs 41,2 %**.
+
+### 5 · Anomalía detectada y resuelta
+
+p6_5 y p6_9 daban Pearson **por encima** de su techo lineal (imposible). Tres comprobaciones:
+- **Techo no lineal (GBM):** p6_5 sube de 0,141 a **0,234**. El ridge infraestimaba. *(Esto cierra de paso el hueco 7 para el subcorpus.)*
+- **Bootstrap de 5.000 réplicas:** con ~90 % en una categoría los IC son enormes y **p6_9 [−0,037 · 0,416], p6_3 [−0,034 · 0,421] y p6_4 [−0,005 · 0,312] incluyen el cero**. No son correlaciones reales.
+- **Los 300 con predicción son los 300 PRIMEROS del fichero** (verificado 300/300), no aleatorios. A declarar.
+
+**Conclusión:** ningún ítem supera su techo realmente. Pero deja dos exigencias: el techo del paper debe ser el **no lineal** (o reportar ambos), y **a nivel de ítem las correlaciones individuales no son interpretables** con n≈300 y asimetría del 90 % — sólo los agregados por constructo.
+
+### 6 · Hallazgo lateral: el CSV de medios es MICRODATO
+
+`datos sociometro GV/Consumo y confianza en medios…2025.csv` **no es una tabla agregada**: son **1.223 filas × 65 variables con ponderador**, y `25tef1_gal.pdf` es el cuestionario completo (Gizaker para el Gobierno Vasco, marzo 2025). Encuesta entera de consumo de medios, plataformas e **influencers** (P08: 345 sí / 751 no), con las mismas llaves de perfil que el panel. **Permitiría calcular el techo en dominio de marketing puro**, cosa imposible con Ikuspegi (hueco 5). Documentado en `paper/subcorpus_marketing.md` §B. **Aparcado por decisión de David.** Aviso: P09 (nombre del influencer) viene codificada 97/98/99, no literal → no hay test de recuerdo espontáneo.
+*(Nota: `CLAUDE.md` citaba una carpeta `datos GV/` que no existe; es `datos sociometro GV/`. Corregido.)*
+
+### 7 · Ficheros
+
+Nuevos en `paper/`: `marketing_items.json` · `resultados_marketing.md` / `.json` · `incidencia_mapeo_idx_real.md` · `subcorpus_marketing.md` · `analisis_marketing.py` · `pearson_alcanzado.py` / `.json` · `techo_gbm.py` / `.json` · `informe_marketing.py`.
+Nuevos en `piloto_ppi/`: `techo_v2.py` · `techo_v2_fix.json` / `techo_v2_orig.json` · `techo_predictivo_v2.md`.
+Modificados: `piloto_ppi/true_ppi_full.py` (el arreglo) · `piloto_ppi/techo_predictivo.md` (cabecera de obsoleto).
+
+### 8 · Pendiente
+
+1. ~~Recalcular el "% del techo" global~~ ✅ **hecho en la 20ª sesión**: 51 % (0,137 de 0,271). Ver `paper/correccion_techo_global.md`.
+2. Decidir si el paper reporta techo lineal, GBM o ambos.
+3. Redactar la §3 (las dos proposiciones) con estas cifras ya corregidas.
+4. `git push` desde el PC de David.
+
+---
+
 ## 2026-08-10 · Decimoctava sesión — Elección de journal y esquema del paper
 
 **Ordenador:** oficina (Cowork). Sesión corta, sin API y sin cómputo nuevo: solo decisiones editoriales y planificación.
@@ -110,7 +381,7 @@
 - Registrar predicciones antes de cada tanda de control (se hizo con la v2 y funcionó: el resultado es interpretable precisamente porque estaban escritas antes).
 
 **Pendiente próxima sesión (por orden):**
-1. **Pedir a Ikuspegi los microdatos del Barómetro 2025** (UPV/EHU; el informe indica que el fichero SPSS existe; petición académica de microdatos anonimizados es estándar). Es el mejor paso disponible: permitiría correr `techo_predictivo.py` sobre actitudes hacia la inmigración y obtener el **techo de información y la fracción alcanzada por el panel en un dominio independiente** — el equivalente del 0,24 / 65 % del Deustobarómetro. Sin microdatos, "pregunta informada" solo se puede aproximar con la V de Cramér del propio panel, que es un proxy circular.
+1. **Pedir a Ikuspegi los microdatos del Barómetro 2025** (UPV/EHU; el informe indica que el fichero SPSS existe; petición académica de microdatos anonimizados es estándar). Es el mejor paso disponible: permitiría correr `techo_predictivo.py` sobre actitudes hacia la inmigración y obtener el **techo de información y la fracción alcanzada por el panel en un dominio independiente** — el equivalente del 0,27 / 51 % del Deustobarómetro. Sin microdatos, "pregunta informada" solo se puede aproximar con la V de Cramér del propio panel, que es un proxy circular.
 2. **Variante de prompt contra la sobreconcentración** (NS/NC y posiciones minoritarias como respuestas legítimas; prohibir el refugio en la opción intermedia) y remedir las 13. Cuantifica cuánta infidelidad es del anclaje y cuánta del comportamiento del modelo. **Material del artículo, no corrección.**
 3. **Robustez de modelo:** repetir las 13 con un modelo frontera. Barato (13 preguntas, no 152) y cierra la propuesta que ya estaba en bitácora desde la 12ª sesión.
 4. Ampliar a las 39 preguntas **solo si** (2) mueve algo.
@@ -208,7 +479,7 @@
 - **Herramienta nueva `piloto_ppi/techo_predictivo.py`** — calcula el **TECHO de información**: regresa cada una de las 152 preguntas del `.sav` REAL sobre las variables que un perfil podría contener (sexo, edad, provincia, lengua, situación laboral, estudios, religión, nacimiento, voto 2024, voto 2020, ideología, nacionalismo; 68 columnas). R² **fuera de muestra**, validación cruzada 5-fold, ridge suave. `corr_max = sqrt(R²)` es el límite de CUALQUIER panel digital. No toca el panel: es una propiedad de los datos reales.
 
 **RESULTADOS — los tres números que cierran el frente:**
-1. **Techo (`techo_predictivo.md`): R² medio fuera de muestra 0,080 → corr máxima media 0,24.** Mediana 0,052; **14/100 preguntas con R² ≤ 0** (el perfil no predice NADA). Por bloque: economía 0,024 (corr máx 0,15) · bienestar 0,034 (0,16) · miedos 0,059 (0,21) · turismo 0,085 (0,29) · **política 0,099 (0,28, el mejor)** · perfil 0,371 (0,61, control). Nominales: un clasificador lineal saca +7,5 p.p. sobre la moda; multi solo +1,1.
+1. **Techo (`techo_predictivo_v2.md`): R² medio fuera de muestra 0,072 → corr máxima media 0,225 (lineal) · 0,271 (GBM).** *(corregido 21-ago-2026, ver `paper/correccion_techo_global.md`; las cifras originales, 0,080 → 0,24, tenían un bug de mapeo.)* **15/100 preguntas con R² ≤ 0** (el perfil no predice NADA). Por bloque: economía 0,024 (corr máx 0,15) · bienestar 0,034 (0,16) · miedos 0,059 (0,21) · turismo 0,085 (0,29) · **política 0,099 (0,28, el mejor)** · perfil 0,371 (0,61, control). Nominales: un clasificador lineal saca +7,5 p.p. sobre la moda; multi solo +1,1.
 2. **Tanda enriquecida vs perfil pobre — resultado NULO en lo esencial.** Umbrales fijados ANTES de mirar (éxito: corr ≥ 0,22, recorte IC ≥ 4%, delta vs moda ≥ 0):
 
    | métrica | perfil pobre | enriquecido | veredicto |
@@ -220,13 +491,13 @@
    | delta vs moda, ordinales | −5,2 | −4,5 | sigue negativo |
    | recorte IC limpio (bloques 1-6) | 1,1% | **1,4%** | falla |
    | DAM global | 15,8 | **15,1** | marginal |
-3. **El panel alcanza ~65% del techo.** Spearman 0,15 sobre un máximo de 0,24 → **el pipeline no está roto, choca contra un límite de información.** Aunque se construyera la Persona perfecta, el recorte del PPI sería corr² ≈ 6%, no el 30-40% que haría el método interesante.
+3. **El panel alcanza ~51 % del techo.** Pearson 0,137 sobre un máximo de 0,271 → **el pipeline no está roto, choca contra un límite de información.** *(corregido 21-ago-2026, ver `paper/correccion_techo_global.md`; la cifra original —65 %— comparaba Spearman con un techo Pearson e incluía los dos ítems circulares.)* Aunque se construyera la Persona perfecta, el recorte del PPI sería corr² ≈ 6%, no el 30-40% que haría el método interesante.
 
 **Diagnóstico:** los 3 campos nuevos aportan **solo donde son mecánicamente relevantes** y nada donde no. El caso ilustrativo: la correlación no circular más alta sube de 0,31 a **0,52** y es `p21_9 = confianza en la Iglesia Católica` — sube porque ahora se inyecta la religión. Señal real (por debajo del techo, no es bug) pero casi **tautológica**: el perfil predice bien lo que es una reformulación del propio perfil. Igual con voto 2020 → preguntas de partido (nominales, que son las que mejoran). El margen 0,17→0,24 existía sobre el papel pero requería variables con señal transversal, y estas no la tienen.
 
 **Decisiones:**
 - **NO escalar a los 1.000.** No es cuestión de dinero (~19 $): con corr 0,15 la ganancia del PPI va con corr² y el techo de recorte es ~2% **independientemente del N**. Solo tendría sentido si la correlación hubiera subido.
-- **Frente PPI++/panel CERRADO.** El artículo pasa a tener una tesis explicada, no solo un resultado negativo: *la correlación máxima alcanzable desde un perfil sociodemográfico es 0,24 y nuestro panel alcanza el 65% de ese techo* — el límite es de información, no de modelo (ni de prompt, ni de encuestas donantes, ni de LLM frontera).
+- **Frente PPI++/panel CERRADO.** El artículo pasa a tener una tesis explicada, no solo un resultado negativo: *la correlación máxima alcanzable desde un perfil sociodemográfico es 0,27 y nuestro panel alcanza la mitad de ese techo* (corregido 21-ago-2026, ver `paper/correccion_techo_global.md`) — el límite es de información, no de modelo (ni de prompt, ni de encuestas donantes, ni de LLM frontera).
 - **Distinción central para el paper** (fuente de toda la confusión previa): se puede clavar la distribución agregada sin acertar a **ninguna** persona. Si el 43% dice "Regular", repartir las respuestas al azar reproduce el histograma perfecto con acierto individual nulo. Por eso el DAM parecía razonable (economía 13,5) mientras el delta vs moda salía negativo. Son ejes ortogonales.
 
 **Diseño propuesto para el artículo (discutido con David, "empezar de cero"):** benchmark de 3 métodos sobre las mismas 152 preguntas — imputación estadística clásica (hot-deck/kNN), Persona LLM, y LLM+PPI — contra 2 baselines tontos (moda y marginal). Evidencia a favor: en nominales el clasificador lineal saca +7,5 y el LLM +1,6 → **para preguntas imputables la estadística clásica gana al LLM**; el LLM solo debería reservarse para lo que ninguna encuesta donante cubre (turismo, geopolítica), que es justo donde peor sale (DAM 30,4 y 28,2). Cautela metodológica acordada: partir el fichero (mitad para selección de variables, mitad reservada como test) para no contaminar la validación.
