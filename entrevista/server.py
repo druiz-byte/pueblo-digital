@@ -60,6 +60,34 @@ PUBLIC_DIR         = Path(__file__).parent / 'public'
 RESULTS_DIR        = Path(__file__).parent / 'resultados'   # encuestas guardadas (sincroniza vía OneDrive)
 RESULTS_DIR.mkdir(exist_ok=True)
 TEMPLATES_DIR      = Path(__file__).parent / 'encuestas'     # definiciones de encuestas (plantillas)
+# ── Copia persistente de resultados en GitHub (añadido 2026-10-13) ──────────────
+# En Render (plan free) el disco es efímero: resultados/ se borra en cada reinicio.
+# Si GITHUB_TOKEN está definido, cada encuesta terminada se sube también al repo
+# (entrevista/resultados/) y al arrancar se recuperan las que falten en el disco.
+# Token: fine-grained PAT con permiso "Contents: Read and write" sobre el repo.
+GITHUB_TOKEN        = os.environ.get('GITHUB_TOKEN', '')
+GITHUB_REPO         = os.environ.get('GITHUB_REPO', 'druiz-byte/pueblo-digital')
+GITHUB_BRANCH       = os.environ.get('GITHUB_BRANCH', 'main')
+GITHUB_RESULTS_PATH = os.environ.get('GITHUB_RESULTS_PATH', 'entrevista/resultados').strip('/')
+# Restaura el ejemplo de formato anterior al 2026-09-22 (podía mostrar letras que no
+# existían entre las opciones). Solo para reproducir tandas publicadas: EJEMPLO_LETRAS_LEGACY=1
+EJEMPLO_LETRAS_LEGACY = os.environ.get('EJEMPLO_LETRAS_LEGACY', '') not in ('', '0', 'false', 'False')
+# Aleatoriza la letra del ejemplo de formato POR PERSONA (semilla determinista a partir
+# del id), para medir cuánta respuesta la pone el ejemplo y cuánta la Persona.
+# EJEMPLO_LETRAS_ALEATORIO=1 lo activa. Ver paper/incidencia_ancla_ejemplo.md.
+EJEMPLO_LETRAS_ALEATORIO = os.environ.get('EJEMPLO_LETRAS_ALEATORIO', '') not in ('', '0', 'false', 'False')
+
+
+def letra_ejemplo_persona(persona_id, i, j, n_op):
+    """Letra del ejemplo para (Persona, ítem). Determinista y reproducible fuera del
+    servidor: el análisis puede recalcularla sin que haya que guardarla en el fichero."""
+    n_op = max(1, int(n_op))
+    if EJEMPLO_LETRAS_ALEATORIO:
+        import random
+        return chr(65 + (random.Random(int(persona_id) * 1009 + i * 31 + j).randrange(n_op)))
+    if EJEMPLO_LETRAS_LEGACY:
+        return chr(66 + (i + j) % 4)
+    return chr(65 + (1 + i + j) % n_op)
 TEMPLATES_DIR.mkdir(exist_ok=True)
 
 # ── Cargar agentes ─────────────────────────────────────────────────────────────
@@ -243,8 +271,23 @@ def _ask_persona(a, preguntas):
         # En preguntas "hasta k" el ejemplo muestra 2 letras para no anclar
         # a la Persona a mencionar siempre el máximo permitido.
         return min(2, _ks(p)) if p.get('hasta') else _ks(p)
+    _pid = a.get('id', 0) if isinstance(a, dict) else 0
+
+    def _letra_ejemplo(p, i, j):
+        # Rotación para no anclar siempre a la misma letra, PERO acotada al número
+        # real de opciones de ESA pregunta. Antes se usaba chr(66 + (i+j) % 4), que
+        # con preguntas de 3 o 4 opciones podía mostrar letras INEXISTENTES
+        # (p. ej. "4:E" en una pregunta con opciones A-D). Detectado en el piloto
+        # ICC del 2026-09-22; ver paper/resultados_icc_piloto_n30.md.
+        #
+        # ATENCIÓN A LA COMPARABILIDAD: el arreglo cambia la letra del ejemplo en
+        # muchas plantillas ya lanzadas (8 de los 13 ítems de Ikuspegi, 38 de los 60
+        # del bloque 5, etc.). Para reproducir EXACTAMENTE una tanda publicada antes
+        # del 2026-09-22 hay que exportar EJEMPLO_LETRAS_LEGACY=1, que restaura el
+        # comportamiento antiguo, letras inválidas incluidas.
+        return letra_ejemplo_persona(_pid, i, j, len(p.get('opciones') or []))
     ejemplo = '\n'.join(
-        f"{i+1}:{','.join(chr(66 + (i+j) % 4) for j in range(_ks_ejemplo(p)))}"
+        f"{i+1}:{','.join(_letra_ejemplo(p, i, j) for j in range(_ks_ejemplo(p)))}"
         for i, p in enumerate(preguntas)
     )
     lines = [
@@ -408,7 +451,7 @@ def _survey_worker(preguntas, subset=None):
     total = len(subset)
     with _survey_lock:
         _survey.update({'running': True, 'done': 0, 'total': total,
-                        'results': [], 'error': None, 'saved_file': None,
+                        'results': [], 'error': None, 'saved_file': None, 'github': None,
                         'last_error': None, 'errores': {}, 'errores_muestra': []})
 
     def process(a):
@@ -485,11 +528,95 @@ def _save_survey_to_disk():
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
         _survey['saved_file'] = fname
         print(f'[encuesta] resultados guardados en resultados/{fname}')
+        if GITHUB_TOKEN:
+            _survey['github'] = 'subiendo'
+            threading.Thread(target=_github_upload, args=(fname, path.read_bytes()),
+                             daemon=True).start()
     except Exception as e:
         print(f'[encuesta] ⚠ no se pudieron guardar los resultados: {e}')
 
 _SAFE_FNAME = re.compile(r'^encuesta_[\w\-]+\.json$')
 _SAFE_TPL   = re.compile(r'^[\w\-]+\.json$')
+
+# ── GitHub: copia persistente de resultados ───────────────────────────────────
+def _github_req(method, url, body=None, accept='application/vnd.github+json', timeout=60):
+    req = urllib.request.Request(url, method=method,
+                                 data=(json.dumps(body).encode('utf-8') if body is not None else None))
+    req.add_header('Authorization', f'Bearer {GITHUB_TOKEN}')
+    req.add_header('Accept', accept)
+    req.add_header('X-GitHub-Api-Version', '2022-11-28')
+    req.add_header('User-Agent', 'pueblo-digital-encuestas')
+    if body is not None:
+        req.add_header('Content-Type', 'application/json')
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
+
+def _github_url(fname=''):
+    base = f'https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_RESULTS_PATH}'
+    return f'{base}/{fname}' if fname else base
+
+def _github_upload(fname, content):
+    """Sube resultados/<fname> al repo. '[skip render]' evita que Render redespliegue."""
+    body = {
+        'message': f'Encuesta {fname} (lanzada desde Render) [skip render]',
+        'content': base64.b64encode(content).decode('ascii'),
+        'branch':  GITHUB_BRANCH,
+    }
+    estado = 'error'
+    for intento in range(4):
+        try:
+            _github_req('PUT', _github_url(fname), body)
+            estado = 'ok'
+            print(f'[github] subida {GITHUB_REPO}/{GITHUB_RESULTS_PATH}/{fname}')
+            break
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode('utf-8', 'replace')[:300]
+            if e.code == 422 and 'sha' not in body:
+                # ya existe en el repo: hace falta su sha para sobrescribir
+                try:
+                    meta = json.loads(_github_req('GET', _github_url(fname) + f'?ref={GITHUB_BRANCH}'))
+                    body['sha'] = meta.get('sha')
+                    continue
+                except Exception:
+                    pass
+            estado = f'error HTTP {e.code}: {msg}'
+            print(f'[github] ⚠ no se pudo subir {fname}: {estado}')
+            if e.code in (401, 403, 404):
+                break
+        except Exception as e:
+            estado = f'error: {e}'
+            print(f'[github] ⚠ no se pudo subir {fname}: {e}')
+        time.sleep(2 * (intento + 1))
+    with _survey_lock:
+        if _survey.get('saved_file') == fname:
+            _survey['github'] = estado
+
+def _github_sync_down():
+    """Al arrancar, descarga del repo las encuestas que falten en resultados/."""
+    try:
+        listing = json.loads(_github_req('GET', _github_url() + f'?ref={GITHUB_BRANCH}'))
+    except Exception as e:
+        print(f'[github] ⚠ no se pudo listar {GITHUB_RESULTS_PATH}: {e}')
+        return
+    n = 0
+    for it in listing if isinstance(listing, list) else []:
+        name = it.get('name', '')
+        if it.get('type') != 'file' or not _SAFE_FNAME.match(name):
+            continue
+        dest = RESULTS_DIR / name
+        if dest.exists():
+            continue
+        try:
+            raw = _github_req('GET', _github_url(name) + f'?ref={GITHUB_BRANCH}',
+                              accept='application/vnd.github.raw', timeout=120)
+            dest.write_bytes(raw)
+            n += 1
+        except Exception as e:
+            print(f'[github] ⚠ no se pudo descargar {name}: {e}')
+    print(f'[github] sincronización inicial: {n} encuesta(s) recuperada(s) del repo')
+
+if GITHUB_TOKEN:
+    threading.Thread(target=_github_sync_down, daemon=True).start()
 
 def _list_survey_templates():
     """Lista las plantillas de encuesta disponibles en encuestas/."""
@@ -730,6 +857,8 @@ class Handler(BaseHTTPRequestHandler):
                     'definition': _survey['definition'],
                     'results':    _survey['results'],
                     'saved_file': _survey.get('saved_file'),
+                    'github':     _survey.get('github'),
+                    'github_activo': bool(GITHUB_TOKEN),
                 })
 
         # Plantillas de encuesta (definiciones en encuestas/)

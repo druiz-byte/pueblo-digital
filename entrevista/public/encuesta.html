@@ -81,6 +81,8 @@ select.filter:focus{border-color:var(--accent)}
 .btn-nueva:hover{border-color:var(--accent)}
 .btn-volver{background:var(--accent);border:none;color:#fff;border-radius:8px;padding:9px;font-size:.8rem;font-weight:600;cursor:pointer;width:100%;transition:opacity .15s}
 .btn-volver:hover{opacity:.9}
+.btn-descargar{background:var(--surface);border:1px solid var(--accent);color:var(--accent);border-radius:8px;padding:9px;font-size:.78rem;font-weight:600;cursor:pointer;width:100%;transition:background .15s}
+.btn-descargar:hover{background:var(--surface2)}
 
 .res-main{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:20px}
 .chart-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
@@ -199,6 +201,7 @@ select.filter:focus{border-color:var(--accent)}
       <div class="n-label">Personas seleccionadas</div>
     </div>
     <div class="res-meta" id="res-meta" style="display:none"></div>
+    <button class="btn-descargar" id="btn-descargar" onclick="downloadSurvey()" title="Descarga el fichero JSON con el mismo formato que resultados/">⬇ Descargar resultados (JSON)</button>
     <button class="btn-nueva" onclick="showView('design'); loadHistory()">+ Nueva encuesta</button>
   </div>
   <div class="res-main" id="charts-container"></div>
@@ -210,6 +213,7 @@ let questions   = [];   // definición de la encuesta
 let surveyData  = null; // resultados completos {definition, results}
 let charts      = [];   // instancias Chart.js
 let pollTimer   = null;
+let currentArchivo = null; // nombre del fichero de la encuesta mostrada (si está guardada)
 
 const COLORS = ['#5b6af0','#3dcc91','#f0b429','#e05c5c','#a78bfa','#f97316','#06b6d4'];
 
@@ -330,6 +334,8 @@ async function checkProgress() {
     if (!d.running && d.done > 0) {
       clearInterval(pollTimer);
       await loadResults();
+      // Descarga automática al terminar: en Render el disco se borra al reiniciar
+      downloadSurvey();
     }
   } catch(e) { console.error(e); }
 }
@@ -338,13 +344,64 @@ async function checkProgress() {
 async function loadResults() {
   const r = await fetch('/api/encuesta/resultados');
   surveyData = await r.json();
-  setResMeta(surveyData.saved_file
-    ? `Encuesta actual · guardada en resultados/${surveyData.saved_file}`
-    : 'Encuesta actual (en memoria)');
+  currentArchivo = surveyData.saved_file || null;
+  setResMeta(metaActual(surveyData));
+  if (surveyData.github_activo && surveyData.github === 'subiendo') watchGithub();
   populateFilters(surveyData.results);
   showView('results');
   updateCharts();
   document.getElementById('btn-launch').disabled = false;
+}
+
+function metaActual(d) {
+  if (!d.saved_file) return 'Encuesta actual (en memoria, sin guardar en disco)';
+  let t = `Encuesta actual · guardada en resultados/${d.saved_file}`;
+  if (!d.github_activo) t += ' · ⚠ sin copia en GitHub: se perderá al reiniciar el servidor; descárgala';
+  else if (d.github === 'ok') t += ' · ✓ copia guardada en GitHub';
+  else if (d.github === 'subiendo') t += ' · subiendo copia a GitHub…';
+  else if (d.github) t += ` · ⚠ fallo al subir a GitHub (${d.github}); descárgala`;
+  return t;
+}
+
+// Reconsulta el estado de la subida a GitHub hasta que termine (máx. ~1 min)
+function watchGithub(intentos = 20) {
+  setTimeout(async () => {
+    try {
+      const d = await (await fetch('/api/encuesta/resultados')).json();
+      if (d.saved_file !== currentArchivo) return;
+      surveyData.github = d.github;
+      setResMeta(metaActual(d));
+      if (d.github === 'subiendo' && intentos > 1) watchGithub(intentos - 1);
+    } catch(e) { console.error(e); }
+  }, 3000);
+}
+
+// ── Descarga de resultados (JSON) ────────────────────────────────────────────
+async function downloadSurvey() {
+  if (!surveyData) return;
+  let data = null;
+  // Si está guardada, se descarga el fichero tal cual (mismo formato que resultados/)
+  if (currentArchivo) {
+    try {
+      const r = await fetch('/api/encuesta/historial/' + encodeURIComponent(currentArchivo));
+      if (r.ok) data = await r.json();
+    } catch(e) { console.error(e); }
+  }
+  if (!data) {
+    data = surveyData.fecha ? surveyData : {
+      fecha: new Date().toISOString().slice(0, 19).replace('T', ' '),
+      definition: surveyData.definition, total: surveyData.total,
+      done: surveyData.done, results: surveyData.results,
+    };
+  }
+  const ts = new Date().toISOString().slice(0, 19).replace('T', '_').replace(/:/g, '');
+  const nombre = currentArchivo || `encuesta_${ts}.json`;
+  const blob = new Blob([JSON.stringify(data, null, 1)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = nombre;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
 }
 
 function setResMeta(text) {
@@ -417,6 +474,7 @@ async function openSaved(archivo) {
     const r = await fetch('/api/encuesta/historial/' + encodeURIComponent(archivo));
     if (!r.ok) { alert('No se pudo cargar la encuesta guardada.'); return; }
     surveyData = await r.json();
+    currentArchivo = archivo;
     setResMeta(`Encuesta guardada · ${surveyData.fecha || archivo} · ${surveyData.modelo || ''}`);
     populateFilters(surveyData.results || []);
     showView('results');

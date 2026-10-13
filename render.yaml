@@ -29,3 +29,7 @@ services:
       # Región del recurso Speech (no es secreta; puede ir con valor directo).
       - key: AZURE_SPEECH_REGION
         value: westeurope
+      # Copia persistente de las encuestas en GitHub (el disco de Render es efímero).
+      # Fine-grained PAT con "Contents: Read and write" sobre druiz-byte/pueblo-digital.
+      - key: GITHUB_TOKEN
+        sync: false
