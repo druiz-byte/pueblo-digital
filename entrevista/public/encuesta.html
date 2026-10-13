@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) · misma propiedad que el panel (index.html) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQH2YG2XRG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQH2YG2XRG');
+  // Evento GA4 seguro: no falla si gtag está bloqueado (consentimiento, adblock…)
+  function track(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e){} }
+</script>
+<script src="https://cdn.cookiehub.eu/c2/1ee0047c.js"></script>
 <title>Pueblo Digital — Encuesta</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -201,7 +212,7 @@ select.filter:focus{border-color:var(--accent)}
       <div class="n-label">Personas seleccionadas</div>
     </div>
     <div class="res-meta" id="res-meta" style="display:none"></div>
-    <button class="btn-descargar" id="btn-descargar" onclick="downloadSurvey()" title="Descarga el fichero JSON con el mismo formato que resultados/">⬇ Descargar resultados (JSON)</button>
+    <button class="btn-descargar" id="btn-descargar" onclick="downloadSurvey(false)" title="Descarga el fichero JSON con el mismo formato que resultados/">⬇ Descargar resultados (JSON)</button>
     <button class="btn-nueva" onclick="showView('design'); loadHistory()">+ Nueva encuesta</button>
   </div>
   <div class="res-main" id="charts-container"></div>
@@ -310,6 +321,7 @@ async function launchSurvey() {
     btn.disabled = false;
     return;
   }
+  track('encuesta_lanzada', { n_preguntas: preguntas.length, muestra: muestra || 1000 });
   document.getElementById('prog-label').textContent = `de ${d.total} Personas respondidas`;
   showView('progress');
   startPolling();
@@ -334,8 +346,9 @@ async function checkProgress() {
     if (!d.running && d.done > 0) {
       clearInterval(pollTimer);
       await loadResults();
+      track('encuesta_completada', { n_personas: d.done, n_preguntas: (surveyData.definition || []).length });
       // Descarga automática al terminar: en Render el disco se borra al reiniciar
-      downloadSurvey();
+      downloadSurvey(true);
     }
   } catch(e) { console.error(e); }
 }
@@ -377,8 +390,9 @@ function watchGithub(intentos = 20) {
 }
 
 // ── Descarga de resultados (JSON) ────────────────────────────────────────────
-async function downloadSurvey() {
+async function downloadSurvey(auto = false) {
   if (!surveyData) return;
+  track('resultados_descargados', { modo: auto ? 'automatica' : 'boton' });
   let data = null;
   // Si está guardada, se descarga el fichero tal cual (mismo formato que resultados/)
   if (currentArchivo) {
@@ -475,6 +489,7 @@ async function openSaved(archivo) {
     if (!r.ok) { alert('No se pudo cargar la encuesta guardada.'); return; }
     surveyData = await r.json();
     currentArchivo = archivo;
+    track('encuesta_historial_abierta', { archivo });
     setResMeta(`Encuesta guardada · ${surveyData.fecha || archivo} · ${surveyData.modelo || ''}`);
     populateFilters(surveyData.results || []);
     showView('results');

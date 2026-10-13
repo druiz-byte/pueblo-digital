@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pueblo Digital — Entrevista</title>
+<!-- Google tag (gtag.js) · misma propiedad que el panel (index.html) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQH2YG2XRG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BQH2YG2XRG');
+  // Evento GA4 seguro: no falla si gtag está bloqueado (consentimiento, adblock…)
+  function track(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e){} }
+</script>
+<script src="https://cdn.cookiehub.eu/c2/1ee0047c.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f6df6'/><rect x='13' y='6' width='6' height='12' rx='3' fill='%23fff'/><path d='M10 15a6 6 0 0 0 12 0' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='21' x2='16' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='12' y1='25' x2='20' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/></svg>">
 <style>
   :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; --head:54px; }
@@ -266,6 +277,7 @@ async function connect(){
 
     anam = createClient(data.sessionToken, { disableInputAudio: true });
     anam.addListener(AnamEvent.SESSION_READY, () => {
+      track('entrevista_iniciada', { persona_id: String(ID), celda: m.celda, voz: m.claveVoz });
       $("#ph").style.display = "none";
       $("#video").classList.add("on");
       $("#q").disabled = false; $("#send").disabled = false;
@@ -343,6 +355,7 @@ async function preguntar(){
   const lang = $("#lang").value;   // idioma del turno (dirige la voz de salida)
   $("#q").value = ""; $("#q").disabled = true; $("#send").disabled = true;
   add("user","Entrevistador", q);
+  track('entrevista_pregunta', { persona_id: String(ID), idioma: lang, n_turno: history.filter(h => h.role === 'user').length + 1 });
   history.push({ role:"user", content:q });
   const pensando = add("agent", persona.nombre, "…");
   try {

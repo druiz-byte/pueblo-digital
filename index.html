@@ -112,18 +112,20 @@ const num = v => (v===null||v===undefined)?'—':(typeof v==='number'?(Number.is
 const ENTREVISTA_RENDER_URL = "https://pueblo-digital.onrender.com";   // URL de la app de entrevista en Render
 const _esLocal = ['localhost','127.0.0.1',''].includes(location.hostname);
 const ENTREVISTA_URL = _esLocal ? "http://localhost:3000" : ENTREVISTA_RENDER_URL;
+// Parámetros UTM: en GA4 la visita a Render aparece con origen 'panel_pueblo_digital'
+function utm(campana){ return 'utm_source=panel_pueblo_digital&utm_medium=boton&utm_campaign=' + campana; }
 function entrevistar(id){
   if(!ENTREVISTA_URL || ENTREVISTA_URL.includes('TU-APP')){
     alert('Configura ENTREVISTA_RENDER_URL en index.html con la URL de tu app en Render.');return;
   }
-  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/anam?id=' + id, '_blank');
+  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/anam?id=' + id + '&' + utm('entrevista'), '_blank');
 }
 // Abre el diseñador/lanzador de encuestas (servido por la misma app de entrevista).
 function lanzarEncuesta(){
   if(!ENTREVISTA_URL || ENTREVISTA_URL.includes('TU-APP')){
     alert('Configura ENTREVISTA_RENDER_URL en index.html con la URL de tu app en Render.');return;
   }
-  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/encuesta.html', '_blank');
+  window.open(ENTREVISTA_URL.replace(/\/$/,'') + '/encuesta.html?' + utm('encuesta'), '_blank');
 }
 function promptDe(a){
   const ideol = a.ideologia_0_10!=null ? ` Ideología: ${a.ideologia_0_10}/10 (0=izq, 10=dcha).` : '';
