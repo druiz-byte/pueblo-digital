@@ -4,17 +4,95 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pueblo Digital — Entrevista</title>
-<!-- Google tag (gtag.js) · misma propiedad que el panel (index.html) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQH2YG2XRG"></script>
+<!-- ── Consentimiento de cookies + Google Analytics 4 ─────────────────────────
+     CookieConsent v3 (Orest Bida, MIT, gratuito) en lugar de CookieHub.
+     GA4 (G-BQH2YG2XRG) NO se carga hasta que el visitante acepta "Analítica":
+     antes de eso no hay ninguna cookie de Google. Los eventos que se lanzan antes
+     de aceptar se guardan en cola y se envían si acepta; si rechaza, se descartan.
+     Mismo bloque en index.html, entrevista/public/encuesta.html y anam.html. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css">
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BQH2YG2XRG');
-  // Evento GA4 seguro: no falla si gtag está bloqueado (consentimiento, adblock…)
-  function track(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e){} }
+  var GA_ID = 'G-BQH2YG2XRG';
+  var _gaCargado = false, _gaCola = [];
+  function _gaPush(){ dataLayer.push(arguments); }
+  // gtag() de siempre: antes del consentimiento solo encola (máx. 100 llamadas)
+  function gtag(){ if (_gaCargado) dataLayer.push(arguments); else if (_gaCola.length < 100) _gaCola.push(arguments); }
+  // Evento GA4 seguro: nunca rompe la página
+  function track(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  function cargarGA(){
+    if (_gaCargado) { _gaPush('consent', 'update', { analytics_storage: 'granted' }); return; }
+    _gaCargado = true;
+    _gaPush('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied',
+                                    ad_personalization: 'denied', analytics_storage: 'granted' });
+    _gaPush('js', new Date());
+    _gaPush('config', GA_ID);
+    _gaCola.forEach(function(a){ dataLayer.push(a); }); _gaCola = [];
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  function retirarGA(){
+    _gaCola = [];
+    if (_gaCargado) _gaPush('consent', 'update', { analytics_storage: 'denied' });
+  }
 </script>
-<script src="https://cdn.cookiehub.eu/c2/1ee0047c.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function(){
+    if (!window.CookieConsent) return;   // CDN bloqueada: la página sigue funcionando, sin GA
+    function aplicar(){ CookieConsent.acceptedCategory('analytics') ? cargarGA() : retirarGA(); }
+    CookieConsent.run({
+      guiOptions: {
+        consentModal: { layout: 'box', position: 'bottom left', equalWeightButtons: true },
+        preferencesModal: { layout: 'box', equalWeightButtons: true }
+      },
+      categories: {
+        necessary: { enabled: true, readOnly: true },
+        analytics: { autoClear: { cookies: [ { name: /^_ga/ }, { name: '_gid' } ] } }
+      },
+      onConsent: aplicar,
+      onChange: aplicar,
+      language: {
+        default: 'es',
+        translations: { es: {
+          consentModal: {
+            title: 'Cookies de analítica',
+            description: 'Pueblo Digital es un proyecto de investigación de la Universidad de Deusto. Con tu permiso usamos Google Analytics para saber cuántas personas visitan estas páginas y cómo llegan a ellas. No usamos cookies publicitarias.',
+            acceptAllBtn: 'Aceptar',
+            acceptNecessaryBtn: 'Rechazar',
+            showPreferencesBtn: 'Configurar'
+          },
+          preferencesModal: {
+            title: 'Preferencias de cookies',
+            acceptAllBtn: 'Aceptar todas',
+            acceptNecessaryBtn: 'Rechazar todas',
+            savePreferencesBtn: 'Guardar preferencias',
+            closeIconLabel: 'Cerrar',
+            sections: [
+              { title: 'Necesarias',
+                description: 'Guardan tu elección sobre las cookies (cookie <code>cc_cookie</code>). Son imprescindibles y no se pueden desactivar.',
+                linkedCategory: 'necessary' },
+              { title: 'Analítica',
+                description: 'Google Analytics 4: páginas vistas, origen de la visita y uso de la encuesta y la entrevista, de forma agregada. Cookies <code>_ga</code> y <code>_ga_*</code>, hasta 2 años.',
+                linkedCategory: 'analytics' },
+              { title: 'Más información',
+                description: 'Para cualquier duda sobre estos datos: <a href="mailto:druiz@deusto.es">druiz@deusto.es</a>.' }
+            ]
+          }
+        } }
+      }
+    });
+  });
+</script>
+<style>
+  /* Botón discreto para cambiar la elección en cualquier momento */
+  .cc-reabrir{position:fixed;right:10px;top:10px;z-index:40;width:28px;height:28px;border-radius:50%;
+    border:1px solid rgba(0,0,0,.15);background:#fff;color:#555;font-size:14px;line-height:26px;padding:0;
+    cursor:pointer;opacity:.55;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+  .cc-reabrir:hover{opacity:1}
+</style>
+<!-- ── fin consentimiento ── -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f6df6'/><rect x='13' y='6' width='6' height='12' rx='3' fill='%23fff'/><path d='M10 15a6 6 0 0 0 12 0' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='16' y1='21' x2='16' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/><line x1='12' y1='25' x2='20' y2='25' stroke='%23fff' stroke-width='2' stroke-linecap='round'/></svg>">
 <style>
   :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#67707c; --line:#e4e8ee; --accent:#2f6df6; --head:54px; }
@@ -410,5 +488,6 @@ window.addEventListener("beforeunload", () => { try { synth && synth.cancel(); i
 
 cargarFicha();
 </script>
+<button class="cc-reabrir" type="button" data-cc="show-preferencesModal" title="Preferencias de cookies" aria-label="Preferencias de cookies">🍪</button>
 </body>
 </html>
