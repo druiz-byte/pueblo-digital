@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Pueblo Digital — Entrevistador
+Obaba-s — Entrevistador
 Servidor Python · sin dependencias externas (stdlib only)
 Uso: python server.py
 
@@ -700,7 +700,7 @@ class Handler(BaseHTTPRequestHandler):
             except Exception:
                 pass
         self.send_response(401)
-        self.send_header('WWW-Authenticate', 'Basic realm="Pueblo Digital"')
+        self.send_header('WWW-Authenticate', 'Basic realm="Obaba-s"')
         self.send_header('Content-Type', 'text/plain; charset=utf-8')
         self.end_headers()
         self.wfile.write('Acceso restringido — introduce la contraseña.'.encode('utf-8'))
@@ -1022,7 +1022,7 @@ if __name__ == '__main__':
         print('   Encuestas usarán Claude Haiku (sin GEMINI_API_KEY ni GROQ_API_KEY en .env)')
 
     server = HTTPServer(('', PORT), Handler)
-    print(f'\n🎙  Pueblo Digital — Entrevistador  (LiveAvatar API)')
+    print(f'\n🎙  Obaba-s — Entrevistador  (LiveAvatar API)')
     print(f'   Abre en el navegador: http://localhost:{PORT}')
     print(f'   (Ctrl+C para detener)\n')
     try:

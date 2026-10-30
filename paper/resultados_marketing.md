@@ -79,7 +79,7 @@ para el paper: (a) el techo del paper debe ser el **no lineal**, o al menos repo
 (b) a nivel de ítem, con n≈300 y asimetría del 90 %, **las correlaciones individuales no son
 interpretables** — sólo lo son los agregados por constructo.
 
-## Qué hay que corregir en el material previo
+## Qué hubo que corregir en el material previo ✅ *(hecho: 20ª y 22ª sesión)*
 
 - La afirmación **"el panel alcanza el 65 % del techo"** (bitácora y `CLAUDE.md`) compara un
   Spearman (0,15) con un techo Pearson (0,24). Con métricas homogéneas y techo no lineal, en el

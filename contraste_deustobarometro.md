@@ -1,4 +1,4 @@
-# Contraste Pueblo Digital vs. Deustobarómetro (verano 2026)
+# Contraste Obaba-s vs. Deustobarómetro (verano 2026)
 
 **Encuesta:** `entrevista/resultados/encuesta_2026-07-07_225354.json` · 2026-07-07 22:53 · groq/llama-3.1-8b-instant
 **Referencia real:** Informe Deustobarómetro verano 2026 (población del País Vasco).

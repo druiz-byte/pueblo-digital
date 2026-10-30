@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────
-#  Pueblo Digital — .gitignore
+#  Obaba-s — .gitignore
 #  Excluye claves de API, microdatos reales (licencia/privacidad)
 #  y PDFs con copyright. NO subir nada de esto a un repo público.
 # ─────────────────────────────────────────────────────────────

@@ -1,4 +1,4 @@
-# Guía: mejorar la analítica de Pueblo Digital
+# Guía: mejorar la analítica de Obaba-s
 
 Sitio: https://druiz-byte.github.io/pueblo-digital/ · GA4: `G-BQH2YG2XRG`
 

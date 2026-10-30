@@ -16,6 +16,9 @@ categoría más frecuente. **Si es ≈0 o negativo, el perfil no aporta señal i
     Ver `../paper/correccion_techo_global.md`.
 - **Cat. ordinales** (48): kappa ponderado medio **0.100** · acierto 52% vs moda 56% (**delta -4.5**)
 - **Cat. nominales** (41): kappa medio **0.231** · acierto 51% vs moda 49% (**delta +1.6**)
+  - ⚠ **Incluye p41, p42, p45 y p46** (religión, nacimiento, voto 2024, voto 2020), que son
+    predictores inyectados y dan kappa ≈ 1,00. **Sin circulares (36 ítems): kappa 0,139 ·
+    acierto 45,5 % vs moda 50,9 % · delta −5,36.** No es un resultado positivo.
 
 Referencia de kappa (Landis & Koch): <0 nulo · 0-0,20 leve · 0,21-0,40 aceptable ·
 0,41-0,60 moderado · >0,60 sustancial.

@@ -1,0 +1,77 @@
+{
+ "titulo": "CIS 3575 — ICC de julio 2026 · versión B (réplica fiel: categoría intermedia NO ofrecida)",
+ "fuente": "CIS, Estudio nº 3575 «ICC de julio», julio 2026. Universo: residentes en España de 16 años y más. n=3.004 (submuestra País Vasco n=133), entrevista telefónica, campo 24-29 julio 2026, error ±1,8 p.p. (nacional).",
+ "muestra": 1000,
+ "nota": "Idéntica a la versión A salvo en que las categorías (NO LEER) del original se RETIRAN de la lista, replicando exactamente lo que oye el entrevistado del CIS. Solo se incluyen los 4 ítems donde el original marca la intermedia como (NO LEER). El contraste A vs B aísla si el vacío de la categoría central depende de que se ofrezca o no.",
+ "preguntas": [
+  {
+   "id": "P3",
+   "texto": "¿Consideras que la situación económica actual de tu hogar es mejor o peor que hace seis meses?",
+   "opciones": [
+    "Mejor",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 16.0,
+    "Igual": 62.8,
+    "Peor": 20.5,
+    "NS/NC": 0.6
+   },
+   "datos_reales_espana": {
+    "Mejor": 20.8,
+    "Igual": 49.3,
+    "Peor": 29.4,
+    "NS/NC": 0.6
+   },
+   "nota": "Versión B: 'Igual' NO se ofrece, como en el CIS. El dato real de 'Igual' se mantiene en datos_reales porque el encuestado real lo produce espontáneamente."
+  },
+  {
+   "id": "P12",
+   "texto": "¿Consideras que la situación económica de tu hogar dentro de seis meses será mejor o peor que en la actualidad?",
+   "opciones": [
+    "Mejor",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 31.2,
+    "Igual": 44.4,
+    "Peor": 23.6,
+    "NS/NC": 0.8
+   },
+   "datos_reales_espana": {
+    "Mejor": 31.3,
+    "Igual": 39.2,
+    "Peor": 28.3,
+    "NS/NC": 1.3
+   },
+   "nota": "Versión B: 'Igual' NO se ofrece, como en el CIS. El dato real de 'Igual' se mantiene en datos_reales porque el encuestado real lo produce espontáneamente."
+  },
+  {
+   "id": "P8",
+   "texto": "Teniendo en cuenta todo lo anterior, ¿consideras que la situación actual de la economía española es mejor o peor que hace seis meses?",
+   "opciones": [
+    "Mejor",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 31.4,
+    "Igual": 23.3,
+    "Peor": 41.8,
+    "NS/NC": 3.6
+   },
+   "datos_reales_espana": {
+    "Mejor": 23.6,
+    "Igual": 21.2,
+    "Peor": 51.7,
+    "NS/NC": 3.5
+   },
+   "nota": "Versión B: 'Igual' NO se ofrece, como en el CIS. El dato real de 'Igual' se mantiene en datos_reales porque el encuestado real lo produce espontáneamente."
+  }
+ ]
+}

@@ -83,6 +83,29 @@ estimate of the ceiling and treat the larger as the operative bound."* Ya está 
 
 ---
 
+## Addenda (2026-08-22) — una cuarta corrección, del mismo tipo
+
+El error nº 2 de esta lista (ítems circulares en el numerador) **también contaminaba el acuerdo
+individual de las preguntas nominales**, y no se detectó hasta el 22-ago:
+
+| | con circulares | **sin circulares** |
+|---|--:|--:|
+| Kappa nominales | 0,231 | **0,139** |
+| Acierto exacto nominales | 51,0 % | **45,5 %** |
+| **Δ vs moda nominales** | **+1,61** | **−5,36** |
+
+El **+1,61**, descrito repetidamente como *"el único resultado individual positivo del proyecto"*,
+era el efecto de incluir p41, p42, p45 y p46 (religión, nacimiento, voto 2024, voto 2020), que se
+inyectan en el prompt y dan kappa ≈ 1,00. **No hay ningún resultado individual positivo.**
+
+Efecto colateral favorable al argumento: el contraste con la imputación clásica pasa de
+**+7,5 vs +1,6** a **+7,88 vs −5,36**. Antes se comparaba un techo ya limpio de circulares con un
+acuerdo individual que no lo estaba.
+
+Detalle en `preregistro_anticonc_individual.md`.
+
+---
+
 ## Reproducibilidad
 
 | Script | Qué hace |

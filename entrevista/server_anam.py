@@ -173,7 +173,7 @@ def main():
     else:
         print("[ok] Azure TTS euskera activo (región %s)" % AZURE_SPEECH_REGION)
     httpd = HTTPServer(("", server.PORT), AnamHandler)
-    print("Pueblo Digital — Entrevistador con avatar (Anam)")
+    print("Obaba-s — Entrevistador con avatar (Anam)")
     print("   Escuchando en el puerto %s" % server.PORT)
     try:
         httpd.serve_forever()

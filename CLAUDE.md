@@ -1,4 +1,4 @@
-# Pueblo Digital — Contexto del proyecto
+# Obaba-s — Contexto del proyecto
 
 > **Propósito de este archivo:** dar contexto a Claude (Cowork/Claude Code) en cualquier ordenador.
 > La carpeta se sincroniza vía OneDrive entre el ordenador de la oficina y el de casa.
@@ -6,7 +6,7 @@
 
 ## Qué es el proyecto
 
-Pueblo Digital es un **panel sintético de 1.000 Personas** representativas de la población del País Vasco. Cada Persona se construye a partir de microdatos reales de encuestas oficiales (Deusto Barómetro 2026, Barómetro político de Euskadi, Encuesta de Bienestar Personal 2025 de Eustat, ESS de Europa) y puede instanciarse como agente LLM que responde de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar. Fundamento metodológico: "silicon sampling" (Argyle et al. 2023).
+Obaba-s es un **panel sintético de 1.000 Personas** representativas de la población del País Vasco. Cada Persona se construye a partir de microdatos reales de encuestas oficiales (Deusto Barómetro 2026, Barómetro político de Euskadi, Encuesta de Bienestar Personal 2025 de Eustat, ESS de Europa) y puede instanciarse como agente LLM que responde de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar. Fundamento metodológico: "silicon sampling" (Argyle et al. 2023).
 
 Detalle completo de la metodología en `resumen_construccion_panel.md` (muestreo estratificado, post-estratificación, emparejamiento estadístico k-NN por celda lurral × sexo × edad_g × eus_g).
 
@@ -180,6 +180,7 @@ Pendiente inmediato (en este orden):
 ## Convenciones de trabajo
 
 - Idioma de trabajo y documentos: **español**.
+- **Nombre del proyecto: Obaba-s** (antes «Pueblo Digital»; renombrado el 2026-10-30 solo en textos visibles: webs, títulos, documentos). **Se conservan a propósito** el nombre de la carpeta (`Pueblo digital`), el repo `druiz-byte/pueblo-digital`, la URL `pueblo-digital.onrender.com`, el `name` de `package.json`, el parámetro UTM `panel_pueblo_digital` y la propiedad GA4 «Pueblo Digital», además de las menciones históricas de la bitácora.
 - Los individuos sintéticos se llaman **Personas** (con mayúscula), nunca "agentes".
 - David es el autor (Universidad de Deusto, druiz@deusto.es).
 - Documentación en Markdown en la raíz de la carpeta; datos fuente en `datos GV/`; PDFs académicos en `artículos/`.

@@ -1,4 +1,4 @@
-# Pueblo Digital — Contexto del proyecto
+# Obaba-s — Contexto del proyecto
 
 > **Propósito de este archivo:** dar contexto a Claude (Cowork/Claude Code) en cualquier ordenador.
 > La carpeta se sincroniza vía OneDrive entre el ordenador de la oficina y el de casa.
@@ -6,7 +6,7 @@
 
 ## Qué es el proyecto
 
-Pueblo Digital es un **panel sintético de 1.000 Personas** representativas de la población del País Vasco. Cada Persona se construye a partir de microdatos reales de encuestas oficiales (Barómetro político de Euskadi, Encuesta de Bienestar Personal 2025 de Eustat) y puede instanciarse como agente LLM que responde de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar. Fundamento metodológico: "silicon sampling" (Argyle et al. 2023).
+Obaba-s es un **panel sintético de 1.000 Personas** representativas de la población del País Vasco. Cada Persona se construye a partir de microdatos reales de encuestas oficiales (Barómetro político de Euskadi, Encuesta de Bienestar Personal 2025 de Eustat) y puede instanciarse como agente LLM que responde de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar. Fundamento metodológico: "silicon sampling" (Argyle et al. 2023).
 
 Detalle completo de la metodología en `resumen_construccion_panel.md` (muestreo estratificado, post-estratificación, emparejamiento estadístico k-NN por celda lurral × sexo × edad_g × eus_g).
 

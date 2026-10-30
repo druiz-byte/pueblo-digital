@@ -1,6 +1,6 @@
 # Fuentes de datos para el rediseño del panel
 
-> Inventario de encuestas con **microdatos** que podrían alimentar la nueva versión de Pueblo Digital.
+> Inventario de encuestas con **microdatos** que podrían alimentar la nueva versión de Obaba-s.
 > Objetivo: pasar de "3 encuestas unidas por 4 llaves" a fuentes con **muchas variables de enlace** (idealmente una sola encuesta que traiga los 4 dominios: sociodemográfico + político + medios + bienestar).
 > Llaves de enlace que ya tiene el Deustobarómetro: **sexo, edad, hábitat (tamaño de ciudad), provincia, nivel educativo**.
 

@@ -5,7 +5,7 @@
 
 ## Qué se ha hecho
 
-Primer piloto que aplica **PPI++** al panel *Pueblo Digital* usando por fin **microdatos individuales reales** del Deustobarómetro verano 2026 (n = 1.000, fichero SPSS). Se combina una muestra real pequeña con las predicciones del panel sintético para estimar magnitudes poblacionales del **Bloque 5 (situación política y calidad de la democracia)** con intervalos de confianza *válidos*, en lugar de sustituir la encuesta por el panel (que es lo que hace la aproximación actual, y que la literatura demuestra sesgada).
+Primer piloto que aplica **PPI++** al panel *Obaba-s* usando por fin **microdatos individuales reales** del Deustobarómetro verano 2026 (n = 1.000, fichero SPSS). Se combina una muestra real pequeña con las predicciones del panel sintético para estimar magnitudes poblacionales del **Bloque 5 (situación política y calidad de la democracia)** con intervalos de confianza *válidos*, en lugar de sustituir la encuesta por el panel (que es lo que hace la aproximación actual, y que la literatura demuestra sesgada).
 
 - **Gold-standard `Y`:** respuestas reales del Deustobarómetro (`p18`, `p20_2`, `p21_1`, `p21_6`, `p21_13`).
 - **Predicción `f`:** respuesta del panel v2. En este piloto se usa un **sustituto sin API**: para cada encuestado real se toma la respuesta del panel emparejada por **voto × ideología × sexo**. La versión limpia (predicción generativa directa, un LLM por encuestado) se deja lista en `generar_predicciones_deusto.py` (requiere API, ver más abajo).

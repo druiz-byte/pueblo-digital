@@ -134,12 +134,62 @@ codiciosa?"*. Si T=0 empeora y T=1 (por defecto) ya colapsa, el colapso no es de
 
 ## Predicciones de David
 
-▸ *Rellenar antes de lanzar. Si difieren de las mías, mejor: dos preregistros independientes son*
-*más informativos que uno.*
+**Registradas el 2026-08-22, antes de lanzar las tandas de 1.000.** Literales, sin editar. Las
+observaciones que le hice antes de registrarlas están debajo, y **David decidió mantener sus cifras
+tal cual**, que es lo correcto: un preregistro que se retoca tras la crítica ya no es un preregistro.
 
-| # | Predicción | Rango |
-|---|---|---|
-| | | |
+| # | Experimento | Métrica | Predicción | Razonamiento de David |
+|---|---|---|--:|---|
+| D2.1 | Hueco 2 · Opus n=1.000 | DAM | 22 | |
+| D2.2 | Hueco 2 · Opus n=1.000 | Concentración | 62 | se mantiene |
+| D2.3 | Hueco 2 · Opus n=1.000 | NS-NC % | 2 | debería haber algo |
+| D2.4 | Hueco 2 · Opus n=1.000 | Opciones/pregunta | 1 | debería bajar al aumentar el n |
+| D2.5 | Hueco 2 · Opus n=1.000 | P11 "sin obstáculo legal" (real 34,2) | 40 | |
+| D2.6 | Hueco 2 · Opus n=1.000 | P13 "sin restricciones" (real 31,3) | 35 | |
+| D3.1 | Hueco 3 · prompt anti-conc. | DAM | 18 | |
+| D3.2 | Hueco 3 · prompt anti-conc. | Concentración | 58 | disminuye |
+| D3.3 | Hueco 3 · prompt anti-conc. | NS-NC % | 2 | |
+| D3.4 | Hueco 3 · prompt anti-conc. | Opciones/pregunta | 1,1 | |
+| D3.5 | Hueco 3 · prompt anti-conc. | P11 (real 34,2) | 34 | |
+| D3.6 | Hueco 3 · prompt anti-conc. | P13 (real 31,3) | 31 | |
+| D6.1 | Hueco 6 · temperature 0.0 | DAM | 15 | |
+| D6.2 | Hueco 6 · temperature 0.0 | Concentración | 90 | |
+| D6.3 | Hueco 6 · temperature 0.0 | NS-NC % | 5 | |
+| D6.4 | Hueco 6 · temperature 0.0 | Opciones/pregunta | 3 | |
+
+**Criterio de falsación de David:** *"que la DAM baje de 10, que la concentración sea menor a 50,
+que la NS-NC % sea 0"*.
+
+### Observaciones formuladas ANTES de lanzar (Claude, 2026-08-22)
+
+Se dejan constancia aquí porque afectan a cómo hay que leer el contraste, no para corregir nada.
+
+1. **D2.4 y D3.4 (opciones/pregunta = 1 y 1,1) predicen algo casi imposible con la métrica tal como
+   está definida.** La métrica cuenta cuántas opciones reciben **al menos un voto**, así que **crece
+   con N**: con Haiku fue 3,2 con n=30 y 4,3 con n=1.000. El razonamiento anotado ("debería bajar al
+   aumentar el n") supone lo contrario. Un valor de 1 exigiría que las 1.000 Personas eligieran
+   exactamente la misma opción en las trece preguntas. **Estas dos predicciones fallarán casi con
+   seguridad, y el fallo será de la métrica elegida, no del juicio sustantivo.**
+   ▸ *Métrica alternativa sugerida y no adoptada:* número **efectivo** de opciones (inverso del
+   índice de Herfindahl sobre las cuotas), que sí decrece cuando la masa se concentra y sería lo que
+   David parece tener en mente. Si interesa, se puede calcular *a posteriori* sobre las mismas
+   tandas, declarándola explícitamente como métrica exploratoria añadida después.
+2. **Las predicciones del hueco 2 son mutuamente inconsistentes.** D2.2 (concentración 62 ≈ el 61,5
+   real), D2.5 (40, por encima del 34,2 real) y D2.6 (35, por encima del 31,3 real) describen un
+   panel que reproduce la distribución real casi exactamente; pero D2.1 predice un DAM de **22**,
+   peor que Haiku (15,7) y peor que el baseline de la moda (17,0). Si la distribución coincide, el
+   DAM es bajo por construcción. **Al menos una de las dos tiene que fallar.**
+3. **La tercera condición de falsación de David va en dirección contraria a la prevista.** Un
+   NS-NC de **0** es el panel negándose a usar "no sé", lo cual **confirma** el colapso en lugar de
+   falsarlo — y ya se observó en el piloto de Opus n=30 (0,0 %). Tomada al pie de la letra, la tesis
+   ya estaría falsada por un resultado que la respalda. Se registra tal cual; al evaluar se
+   interpretará junto con las otras dos condiciones (DAM < 10 y concentración < 50), que sí apuntan
+   en la dirección correcta.
+
+**Valor de estas discrepancias.** Que dos preregistros independientes difieran tanto —Claude predice
+que el frontera no arregla nada, David que lo arregla casi del todo— hace el contraste mucho más
+informativo que si ambos hubiéramos apostado por lo mismo. Sea cual sea el resultado, alguien se
+equivoca de forma medible.
 
 ---
 
@@ -153,6 +203,134 @@ codiciosa?"*. Si T=0 empeora y T=1 (por defecto) ya colapsa, el colapso no es de
 | 2026-08-21 | modelo | claude-opus-5 | 30 | **70 %** | — | — | — | — | `encuesta_2026-08-21_225546.json` | ⛔ **NO** |
 | 2026-08-21 | modelo | claude-opus-5 | 30 | **70 %** | — | — | — | — | `encuesta_2026-08-21_230138.json` | ⛔ **NO** — `errores: {}` → destapó la causa real |
 | 2026-08-21 | modelo | claude-opus-5 | 30 | **0 %** | **12,9** | **76,4** | **0,0** | **2,8** | `encuesta_2026-08-21_230548.json` | ✅ **SÍ** (piloto) |
+
+---
+
+## ★ RESULTADOS DEFINITIVOS — las tres tandas de 1.000 (2026-08-22)
+
+Las tres válidas, **0 % de Personas vacías** en las tres.
+
+| tanda | DAM | concentración | NS-NC % | opciones/preg. | nº efectivo | P11 extremo | P13 extremo | fichero |
+|---|--:|--:|--:|--:|--:|--:|--:|---|
+| **v1 · Haiku (referencia)** | 15,7 | 83,7 | 1,4 | 4,3 | 1,66 | **0,0** | **0,0** | `..._2026-08-08_101241` |
+| **Hueco 3 · prompt anti-conc.** | 14,8 | **79,4** | 2,0 | 4,5 | 1,73 | **0,0** | **0,0** | `..._2026-08-22_111025` |
+| **Hueco 6 · temperature 0.0** | 15,8 | 84,1 | 1,1 | 4,2 | 1,64 | **0,0** | **0,0** | `..._2026-08-22_111207` |
+| **Hueco 2 · Opus 5** | **11,8** | **75,0** | **0,0** | 3,6 | 2,03 | **3,0** | **7,8** | `..._2026-08-22_112821` |
+| *Baseline moda* | 17,0 | — | — | — | — | — | — | |
+| **REAL (Ikuspegi)** | — | **61,5** | **3,4** | — | — | **34,2** | **31,3** | |
+
+*P11 = "permitir la entrada sin ningún obstáculo legal" · P13 = "acogerlas sin restricciones".*
+*Nº efectivo = 1/Herfindahl sobre las cuotas; **métrica exploratoria añadida a posteriori**, es la
+que David tenía en mente en D2.4/D3.4 y no la que estaba definida. Se declara como tal.*
+
+### Contraste con lo preregistrado — Claude
+
+| # | Rango | Observado | |
+|---|---|--:|---|
+| H2.1 DAM | 14,0 – 17,5 | **11,8** | ❌ falla, mejora mucho más de lo previsto |
+| H2.2 Concentración | 76 – 88 | **75,0** | ❌ falla por 1 punto |
+| H2.3 Extremos < 3 % | < 3 % ambas | 3,0 y **7,8** | ❌ falla; P11 en el borde, P13 claramente fuera |
+| H2.4 Dirección se mantiene | — | sí, **reforzada** | ✅ acierta |
+| H3.1 NS-NC | 2,5 – 5,0 | **2,0** | ❌ falla por poco |
+| H3.2 Concentración | 70 – 80 | **79,4** | ✅ acierta |
+| H3.3 DAM | 13,0 – 16,0 | **14,8** | ✅ acierta |
+| H3.4 Opciones/preg. | 4,8 – 6,0 | **4,5** | ❌ falla por poco |
+| H3.5 Extremos 3-15 % | 3 – 15 % | **0,0 y 0,0** | ❌ falla de pleno |
+| H6.1 Concentración | 86 – 95 | **84,1** | ❌ falla por poco |
+| H6.2 DAM | 16 – 20 | **15,8** | ❌ falla por poco |
+| H6.3 Opciones/preg. | 2,5 – 4,0 | **4,2** | ❌ falla por poco |
+
+**3 aciertos claros de 12.** El patrón de los fallos es sistemático y hay que decirlo: **subestimé
+al modelo frontera y sobreestimé el efecto de la temperature.**
+
+**Criterio de falsación de Claude** (concentración < 70 **y** DAM < 12): DAM 11,8 **sí**,
+concentración 75,0 **no**. Se cumple una de las dos → **la tesis NO queda falsada**, pero éste es
+literalmente el *"resultado más incómodo posible"* que dejé escrito antes de lanzar: mejora
+sustancial pero insuficiente. Toca reportarlo como tal y matizar la invariancia al modelo.
+
+### Contraste con lo preregistrado — David
+
+| # | Predicción | Observado | |
+|---|--:|--:|---|
+| D2.1 DAM | 22 | 11,8 | ❌ |
+| D2.2 Concentración | 62 | 75,0 | ❌ |
+| D2.3 NS-NC | 2 | 0,0 | ❌ |
+| D2.4 Opciones/preg. | 1 | 3,6 | ❌ *(fallo de métrica, ya anticipado)* |
+| D2.5 P11 | 40 | 3,0 | ❌ |
+| D2.6 P13 | 35 | 7,8 | ❌ |
+| D3.1 DAM | 18 | 14,8 | ❌ |
+| D3.2 Concentración | 58 | 79,4 | ❌ |
+| **D3.3 NS-NC** | **2** | **2,0** | ✅ **exacto** |
+| D3.4 Opciones/preg. | 1,1 | 4,5 | ❌ *(fallo de métrica)* |
+| D3.5 P11 | 34 | 0,0 | ❌ |
+| D3.6 P13 | 31 | 0,0 | ❌ |
+| **D6.1 DAM** | **15** | **15,8** | ✅ prácticamente exacto |
+| D6.2 Concentración | 90 | 84,1 | ❌ por poco |
+| D6.3 NS-NC | 5 | 1,1 | ❌ |
+| D6.4 Opciones/preg. | 3 | 4,2 | ❌ |
+
+**La hipótesis central de David —que el modelo frontera corrige el colapso— queda refutada:**
+concentración 75,0 frente a su 62, y extremos en 3,0 y 7,8 frente a sus 40 y 35.
+
+**Criterio de falsación de David:** DAM < 10 **no** (11,8) · concentración < 50 **no** (75,0) ·
+NS-NC = 0 **sí** (Opus da 0,0). Se cumple sólo la condición que se había señalado *antes de lanzar*
+como orientada al revés: un NS-NC de cero confirma el colapso, no lo falsa. Con las otras dos, la
+tesis se sostiene.
+
+### ✅ HUECOS 2, 3 y 6 CERRADOS (2026-08-22)
+
+Los tres experimentos están hechos con n=1.000 y son válidos. **Decisión: no se harán más tandas.**
+El seguimiento del hueco 3 a nivel individual está en `preregistro_anticonc_individual.md` y resultó
+**inconcluyente por manipulación débil** — el prompt apenas transporta al Deustobarómetro.
+
+### Los cuatro hallazgos
+
+**1 · La temperature no hace absolutamente nada.** 15,8 / 84,1 / 1,1 / 4,2 frente a la referencia
+15,7 / 83,7 / 1,4 / 4,3: diferencias de décimas en las cuatro métricas, y los extremos siguen en
+0,0. **El hueco 6 queda cerrado de forma más limpia de lo previsto:** no es que la decodificación
+codiciosa empeore el colapso, es que **la temperature es irrelevante**. La objeción "¿no será que
+usáis greedy decoding?" queda muerta.
+
+**2 · El prompt mueve el centro pero no toca los polos.** Se le dice explícitamente que las
+posturas minoritarias y los extremos de escala son legítimos, y el modelo **redistribuye masa entre
+las opciones moderadas** — en P11, de 12,1/85,9 pasa a 39,6/58,0 — bajando la concentración a 79,4
+y subiendo el NS-NC a 2,0. **Pero las dos opciones extremas siguen exactamente en 0,0 %.**
+Es el resultado más elegante de los tres: *se le da permiso explícito para usar los polos y no los
+usa*. El colapso no es un artefacto del prompt por defecto.
+
+**3 · Opus sí despega los polos del cero, por primera vez en todo el proyecto — pero poco.**
+P11 0,0 → **3,0** (real 34,2) y P13 0,0 → **7,8** (real 31,3): recupera en torno al **9 %** y al
+**25 %** de la masa polar. Y simultáneamente **arrasa la cola con más saña que Haiku**: "prohibir
+por completo" 2,0 → 0,0 · "acoger hasta un número limitado" 0,8 → 0,1 · "no acogerlas en ningún
+caso" 0,7 → 0,0. Usa **menos** opciones (3,6 vs 4,3) pero mejor calibradas entre las dominantes
+(nº efectivo 2,03 vs 1,66). **Caracterización precisa: el modelo frontera mejora el reparto entre
+las opciones mayoritarias y elimina la cola todavía más.**
+
+**4 · La dirección se refuerza con Opus.** Acuerdo con la expulsión por delito, por voto:
+
+| | Vox | PP | PSE | PNV | EH Bildu | Podemos |
+|---|--:|--:|--:|--:|--:|--:|
+| Haiku | 91 % | 66 % | 18 % | 18 % | 6 % | 0 % |
+| **Opus** | **100 %** | **91 %** | **38 %** | **41 %** | **17 %** | **3 %** |
+
+El gradiente político es más pronunciado, no menos. **H2.4 confirmada:** el modelo usa el perfil, y
+el modelo mejor lo usa más.
+
+### Qué cambia en el paper
+
+- **Hay que matizar la invariancia al modelo.** El DAM de Opus (11,8) es **el mejor número que ha
+  producido el proyecto** y bate al baseline de la moda por 5,2 puntos. No se puede seguir diciendo
+  que el modelo no importa: importa, y bastante.
+- **La Proposición 2 sobrevive con una formulación más fina.** El colapso **se atenúa** con la
+  capacidad del modelo pero **no desaparece**: concentración 75,0 frente al 61,5 real (+13,5 de
+  exceso), NS-NC **peor** que con Haiku (0,0 vs 1,4), y los polos siguen borrados en un 91 % y un
+  75 %.
+- **Las tres intervenciones fallan en cosas distintas, y eso es un resultado de diseño fuerte:**
+  temperature no hace nada · el prompt sólo mueve el centro · el modelo despega los polos un poco y
+  destruye la cola aún más. Ninguna de las tres recupera la varianza.
+- **Limitación a declarar:** con Ikuspegi no hay microdatos, así que **no se puede contrastar la
+  predicción sobre el acuerdo individual** (que la concentración baje sin que mejore el Δ vs moda).
+  Ese contraste sólo es posible en el Deustobarómetro. Sigue siendo el pendiente más interesante.
 
 ---
 

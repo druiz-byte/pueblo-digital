@@ -17,7 +17,7 @@
 | Trabajo de campo | 11-27 de marzo de 2025 (empresa CPS) |
 | Serie | Anual desde 2004 |
 
-**Implicación para el panel:** el universo (CAE, 18+) coincide con el de las 1.000 Personas de Pueblo Digital. El n real (600) es menor que el panel, así que el error muestral del dato real (±4 p.p.) es el suelo de precisión de cualquier contraste: **diferencias por debajo de ~4 p.p. no son distinguibles de ruido muestral.**
+**Implicación para el panel:** el universo (CAE, 18+) coincide con el de las 1.000 Personas de Obaba-s. El n real (600) es menor que el panel, así que el error muestral del dato real (±4 p.p.) es el suelo de precisión de cualquier contraste: **diferencias por debajo de ~4 p.p. no son distinguibles de ruido muestral.**
 
 ---
 

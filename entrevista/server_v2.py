@@ -29,7 +29,7 @@ if not server.ANTHROPIC_API_KEY:
     print("[aviso] ANTHROPIC_API_KEY no configurada")
 
 httpd = HTTPServer(("", server.PORT), server.Handler)
-print("Pueblo Digital v2 - Entrevistador con avatar")
+print("Obaba-s v2 - Entrevistador con avatar")
 print("   Escuchando en el puerto %s" % server.PORT)
 try:
     httpd.serve_forever()

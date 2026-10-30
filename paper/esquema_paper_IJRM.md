@@ -1,62 +1,66 @@
 # Esquema del paper — International Journal of Research in Marketing
 
 **Autor:** David Ruiz (Universidad de Deusto)
-**Destino:** IJRM, vía ordinaria (el special issue "Generative AI, Synthetic Data, and Synthetic
-Respondents in Marketing Research", eds. Erdem y Pauwels, cerró el 1-may-2026).
-**Estructura:** dos actos — techo de información (Acto I) + colapso de varianza (Acto II).
-**Última actualización:** 2026-08-10
+**Destino:** IJRM, vía ordinaria (el special issue *"Generative AI, Synthetic Data, and Synthetic
+Respondents in Marketing Research"*, eds. Erdem y Pauwels, cerró el 1-may-2026).
+**Última actualización:** 2026-08-24, redactada §4 (data and design).
+
+> **Estado de la evidencia: completa.** Se decide **no hacer más tandas** y redactar con lo que hay.
+> Todos los números de este documento están verificados y las cifras erróneas anteriores, purgadas.
 
 ---
 
 ## 0. La tesis en una frase
 
-Los encuestados sintéticos generados por LLM fallan a nivel individual por **dos causas
-independientes y separables**: un límite superior que impone la información contenida en el perfil
-(irreducible por cualquier método), y un colapso de la varianza condicional que el modelo añade por
-debajo de ese límite — y que **empeora cuando se enriquece el perfil**.
+Los encuestados sintéticos generados por LLM fallan a nivel individual por **dos límites
+independientes**: un techo que impone la información contenida en el perfil —irreducible por
+cualquier método— y un fallo distribucional que el modelo añade por debajo de ese techo. Ese
+segundo límite **se desdobla en dos componentes que se comportan de forma distinta**: la compresión
+de varianza cede parcialmente ante modelos mejores, y la borradura de las categorías polares no.
 
-Corolario operativo para el investigador de mercados: la fidelidad agregada y la fidelidad
-individual son **estadísticamente independientes**. Se puede clavar la media y no acertar a ninguna
-persona. Los casos de uso que motivan comercialmente los paneles sintéticos (segmentación,
-heterogeneidad en conjoint, targeting, identificación de early adopters, análisis de colas) son
-exactamente los que dependen de la varianza que el modelo destruye.
+Corolario operativo: la fidelidad agregada y la individual son **lógicamente independientes**. Se
+puede clavar la media sin acertar a nadie. Las tareas que motivan comercialmente los paneles
+sintéticos —segmentación, heterogeneidad en conjoint, targeting, colas— son exactamente las que
+dependen de lo que el modelo destruye.
 
 ---
 
 ## 1. Título — candidatos
 
-1. **"Two Ceilings: Information Limits and Variance Collapse in LLM-Based Synthetic Respondents"**
-   *(el favorito: nombra las dos contribuciones, es memorable, y "ceiling" es vocabulario que un
-   editor metodológico reconoce al instante)*
+1. **"Two Ceilings: Information Limits and Distributional Collapse in LLM-Based Synthetic
+   Respondents"** *(favorito)*
 2. "Nailing the Mean, Missing Everyone: The Separability of Aggregate and Individual Fidelity in
    Synthetic Survey Panels"
-3. "How Much Can a Synthetic Respondent Know? An Upper Bound on Profile-Conditioned LLM Survey
-   Simulation"
-4. "Richer Personas, Worse Predictions: Evidence Against the Enrichment Assumption in Synthetic
-   Respondent Design"
+3. "The Poles Are Missing: What Frontier Models Fix and What They Don't in Synthetic Survey Data"
+4. "Richer Personas, Worse Predictions: Evidence Against the Enrichment Assumption"
 
 ---
 
-## 2. Abstract (borrador, ~200 palabras)
+## 2. Abstract (borrador 2, ~220 palabras)
 
 > Synthetic respondents — large language models prompted to answer surveys as a person with a given
 > profile — are being adopted in marketing research as a fast, cheap substitute for human panels.
-> We show that their individual-level accuracy is bounded by two distinct and separable mechanisms,
-> and we provide a diagnostic for each that researchers can compute before committing to the method.
+> We show that their individual-level accuracy is bounded by two distinct mechanisms and provide a
+> diagnostic for each.
 >
-> First, an **information ceiling**: regressing survey items on the full space of variables a
-> profile could plausibly contain yields a mean out-of-sample R² of 0.080 across 100 items,
-> implying a maximum attainable individual correlation of 0.24; 14% of items are unpredictable from
-> any profile. This bound holds for any method, statistical or generative.
+> First, an **information ceiling**. Regressing survey items on the full space of variables a
+> profile could plausibly contain yields a mean out-of-sample R² of 0.072 across 100 items,
+> implying a maximum attainable individual correlation of 0.27; 15 % of items are unpredictable
+> from any profile. The bound holds for any method, generative or statistical. Our panel attains
+> 0.137 — roughly half the ceiling.
 >
-> Second, **variance collapse**: below that ceiling, the model reproduces the *direction* of profile
-> effects correctly but compresses the conditional distribution onto the modal category (83.7%
-> modal share versus 61.5% observed). Collapse intensifies with sample size and, critically, with
-> profile enrichment — reversing the field's central design assumption.
+> Second, **distributional collapse**, which decomposes into two components. The modal share is
+> 83.7 % against 61.5 % observed, and this compression is partly reversible: a frontier model
+> lowers it to 75.0 % and improves aggregate fit beyond a modal baseline. But options held by
+> 34.2 % and 31.3 % of the population are chosen by **none** of 1,000 synthetic respondents, and
+> remain at 3.0 % and 7.8 % with the frontier model. Neither an explicit anti-concentration
+> instruction nor a change in decoding temperature moves them at all.
 >
-> We validate against 152 items from an official regional barometer and replicate on an independent
-> immigration-attitudes survey with 1,000 synthetic respondents. We conclude with a decision rule
-> for when synthetic respondents are and are not admissible in marketing practice.
+> We validate on 152 items from an official regional barometer, replicate on an independent
+> immigration survey, and report a marketing subcorpus where the ceiling is **lower** than for
+> political attitudes. We close with a decision rule by research task.
+
+▸ *Pendiente: recortar a 200 palabras para el límite de IJRM.*
 
 ---
 
@@ -66,22 +70,21 @@ exactamente los que dependen de la varianza que el modelo destruye.
                     ¿Qué puede saber una Persona sintética?
                                   │
         ┌─────────────────────────┴─────────────────────────┐
-        │                                                   │
    ACTO I: TECHO                                    ACTO II: COLAPSO
    (límite de los datos)                            (fallo del modelo)
         │                                                   │
-   corr_max = √R²_OOS = 0.24                        conc. 83.7% vs 61.5% real
-   14/100 ítems con R² ≤ 0                          0/1000 en opciones del 34.2%
-   independiente del LLM                            V(voto)=0.36 → SÍ usa el perfil
-   independiente de N                               empeora con N y con enriquecimiento
+   corr máx 0,225 lin / 0,271 GBM              (a) concentración 83,7 vs 61,5
+   15/100 ítems con R² ≤ 0                         → CEDE con mejor modelo (75,0)
+   invariante al modelo, al prompt,             (b) borradura de los polos
+   a la temperature y a N                           → NO cede: 0,0 % en opciones
+   el panel alcanza el 51 %                            del 34,2 % y el 31,3 %
         │                                                   │
         └─────────────────────────┬─────────────────────────┘
-                                  │
                     SEPARABILIDAD AGREGADO / INDIVIDUO
-                    P26: media 5.15 vs 5.30 (error 0.15)
-                    pero 86.4% en {5,6} y 0% en {8,9,10}
+                    P26: media 5,15 vs 5,30 (error 0,15)
+                    pero 86,4 % en {5,6} y 0 % en {8,9,10}
                                   │
-                        REGLA DE DECISIÓN PRÁCTICA
+                        REGLA DE DECISIÓN POR TAREA
 ```
 
 ---
@@ -89,245 +92,259 @@ exactamente los que dependen de la varianza que el modelo destruye.
 ## 4. Estructura de secciones
 
 ### 1. Introduction
-- Gancho: la promesa comercial (velocidad, coste, escalabilidad) y su adopción acelerada en
-  *insights*. El call de IJRM/MSI como evidencia de que la disciplina se toma esto en serio.
-- El vacío: la literatura valida sobre todo **distribuciones agregadas**. El criterio más exigente
-  de Argyle et al. (2023), la *correspondencia de patrones*, apenas se ha puesto a prueba.
-- Tres contribuciones declaradas explícitamente (ver §5).
-- Adelanto de resultados y del alcance ("no sustituto, sí instrumento condicional").
+Gancho comercial y adopción en *insights*. El vacío: la literatura valida **distribuciones
+agregadas**; el criterio más exigente de Argyle et al. (2023), la *correspondencia de patrones*,
+apenas se ha puesto a prueba. Tres contribuciones (§5). Adelanto de resultados.
 
 ### 2. Background
-2.1 *Silicon sampling* y fidelidad algorítmica — Argyle et al. (2023) y sus 4 criterios.
+2.1 *Silicon sampling* y los 4 criterios de fidelidad algorítmica — Argyle et al. (2023).
 2.2 Los *perils* — Bisbee et al. (2024, *Political Analysis*): sesgo y varianza reducida.
-2.3 El puente al marketing — Sarstedt et al. (2024, *Psychology & Marketing*): guidelines.
-2.4 Encuestados sintéticos en la práctica de insights — Wang et al. (2024, AAE), NIM, evidencia
-    de industria.
-2.5 **El hueco:** nadie ha separado *cuánto del error es irreducible* de *cuánto lo pone el modelo*.
-    Esta distinción es la que decide si el problema es soluble con mejor ingeniería o no.
+2.3 El puente al marketing — Sarstedt et al. (2024, *Psychology & Marketing*).
+2.4 Práctica de industria — Wang et al. (2024), NIM.
+2.5 **El hueco:** nadie separa *cuánto del error es irreducible* de *cuánto lo pone el modelo*.
 
-### 3. Framework: dos límites a la fidelidad individual
-*(Sección conceptual corta — es la que hace que esto sea IJRM y no un informe técnico.)*
-
-- Formalización: una Persona sintética es un estimador de $y_i$ condicionado a $x_i$ (el perfil).
-- **Proposición 1 (techo).** Para cualquier estimador $\hat{y}(x)$, $\mathrm{corr}(\hat y, y) \le
-  \sqrt{R^2_{\max}(y \mid x)}$. El LLM no puede superar la información del perfil; a lo sumo
-  la explota óptimamente. Estimable fuera de muestra con microdatos reales.
-- **Proposición 2 (colapso).** Un modelo puede respetar $E[y\mid x]$ y aun así fallar en
-  $\mathrm{Var}(y \mid x)$. Se define el índice de concentración modal condicional y se argumenta
-  por qué el entrenamiento por máxima verosimilitud + RLHF empuja hacia la moda condicional.
-- **Corolario (separabilidad).** Fidelidad agregada ⊥ fidelidad individual. Consecuencias directas
-  para los casos de uso de marketing.
+### 3. Framework *(escrita — `seccion3_marco_teorico.md`)*
+Proposición 1 con demostración y dos extensiones. Proposición 2 desdoblada en concentración y
+truncamiento del soporte. Corolario de separabilidad. Tabla de implicaciones contrastables P2a-P2g.
 
 ### 4. Data and design
-4.1 El panel: 1.000 Personas del País Vasco; muestreo estratificado, post-estratificación,
-    emparejamiento k-NN por celda (lurral × sexo × edad_g × eus_g). Dos versiones (v1, v2) para el
-    contraste de enriquecimiento.
+4.1 Panel de 1.000 Personas del País Vasco; dos versiones (v1, v2) para el contraste de
+    enriquecimiento.
 4.2 **Validación primaria:** Deustobarómetro verano 2026, microdatos SPSS n=1.000, 152 ítems.
-4.3 **Réplica externa:** Barómetro Ikuspegi 2025 (UPV/EHU), n=600, actitudes hacia la inmigración
-    en la CAE. Otro equipo, otro tema, otra casa de campo, mismo universo. 13 ítems verificados.
-4.4 Modelo, prompting y decodificación. **Declarar temperature = 1.0 (por defecto de la API), es
-    decir, el escenario de máxima varianza posible.** El colapso NO es un artefacto de greedy
-    decoding.
-4.5 Baselines: moda, marginal (uniforme sobre categorías observadas), suelo de ruido de muestreo.
-4.6 Métricas: DAM agregado; kappa ponderado, ±1, MAE, Spearman, Jaccard a nivel individual; índice
-    de concentración modal; V de Cramér respuesta × perfil.
+4.3 **Réplica externa:** Ikuspegi 2025 (UPV/EHU), n=600, inmigración en la CAE. Otro equipo, otro
+    tema, otra casa de campo.
+4.4 **Subcorpus de marketing:** 44 ítems seleccionados *ex ante* por constructo + 10 de contraste
+    político.
+4.5 Modelo, prompting y decodificación. Declarar temperature por defecto = 1,0.
+4.6 Baselines: moda, marginal, suelo de ruido muestral (0,8 p.p. con n=1.000).
+4.7 Métricas: DAM; correlación de Pearson, kappa ponderado, ±1, MAE, Δ vs moda; concentración
+    modal; masa borrada; V de Cramér.
 
 ### 5. Study 1 — El techo de información
-- Método: 152 ítems regresados sobre 68 columnas de perfil (sexo, edad+edad², provincia, lengua,
-  situación laboral, estudios, religión, nacimiento, voto 2024, voto 2020, ideología 0-10,
-  nacionalismo 0-10 + flags NS). R² fuera de muestra, CV 5-fold.
-- Resultado: R² medio **0.080** → corr máx **0.24**; mediana 0.052; p90 0.202; máx 0.389.
-  **14/100 ítems con R² ≤ 0.**
-- Por bloque: economía 0.024 (0.15) · bienestar 0.034 (0.16) · miedos 0.059 (0.21) · turismo 0.085
-  (0.29) · política 0.099 (0.28) · perfil 0.371 (0.61, control).
-- Control de circularidad: los 2 ítems que *son* predictores dan R² = 1.00 y se excluyen.
-- **Lectura:** el margen disponible es estrecho *antes* de que intervenga ningún LLM. Cualquier
-  afirmación de "gemelo digital" debe medirse contra este techo, no contra cero.
+- 152 ítems regresados sobre 68 columnas de perfil. R² **fuera de muestra**, CV 5-fold **repetida
+  20 veces** con semilla por ítem (sd del R² = 0,013, comparable a la señal).
+- **R² medio 0,072 → corr máx 0,225 lineal · 0,271 GBM.** 15/100 ítems con R² ≤ 0.
+- Por bloque: economía 0,024 · bienestar 0,034 · miedos 0,059 · turismo 0,085 · **política 0,099**.
+- Control de circularidad: los ítems que *son* predictores se excluyen.
+- **Se reportan los dos techos, con el GBM como cota operativa** (es el más exigente con nosotros).
 
 ### 6. Study 2 — Dónde está el panel respecto al techo
-- Acuerdo individual 1:1, n=300 encuestados reales emparejados por id.
-- Escalas 0-10 (54 ítems): Spearman medio **0.15**, MAE 2.04, ±1 en 48%, delta vs moda **−5.95**.
-- Ordinales (48): kappa ponderado **0.100**, acierto 51.9% vs moda 56.5%, delta **−4.54**.
-- Nominales (41): kappa **0.231**, delta vs moda **+1.61** (único positivo).
-- Multi-respuesta (9): Jaccard 0.37, F1 0.46.
-- **El panel alcanza ~51 % del techo (0,137 de 0,271).** ⚠ Cifra corregida el 2026-08-21: la
-  anterior (65 % = 0,15 / 0,24) comparaba Spearman con un techo Pearson **e incluía los dos ítems
-  circulares** (p36 ideología 0,83 · p38 nacionalismo 0,97). Ver `correccion_techo_global.md`.
-  El pipeline no está roto: choca contra el
-  límite. Este es el número que desactiva la objeción "es que vuestro panel está mal construido".
-- Comparación con imputación estadística clásica: en nominales el clasificador lineal saca **+7.5
-  p.p.** sobre la moda frente a **+1.6** del LLM. *Donde el ítem es imputable, la estadística
-  clásica gana.*
+- Acuerdo individual 1:1, n=300 emparejados, **excluidos los 10 ítems circulares**.
+- Escalas 0-10 (52): Pearson **0,123** · MAE 2,10 · ±1 en 46,1 % · **Δ vs moda −7,53**.
+- Ordinales (45): kappa ponderado **0,097** · acierto 52,3 % · **Δ vs moda −4,97**.
+- Nominales (36): kappa **0,139** · **Δ vs moda −5,36**.
+- Multi-respuesta (9): Jaccard 0,37 · F1 0,46.
+- **El panel alcanza el 51 % del techo (0,137 de 0,271).** No está roto: choca contra un límite que
+  además es bajísimo.
+- **No hay ningún resultado individual positivo en el proyecto.** El Δ vs moda es negativo en las
+  tres familias.
+- **Comparación con imputación clásica:** en nominales el clasificador lineal saca **+7,88 p.p.**
+  sobre la moda y la Persona LLM **−5,36**. Trece puntos, y el LLM por debajo del baseline tonto.
+  *Donde el ítem es imputable, la estadística clásica gana con holgura.*
 
-### 7. Study 3 — Colapso de varianza (réplica externa, Ikuspegi)
-- DAM **15.7 p.p.** con 1.000 Personas. Baselines sobre los mismos 13 ítems: moda **17.0**,
-  uniforme 19.7, suelo de ruido 0.8. → **gana 1.3 p.p. a un baseline tonto.**
-- **El DAM se sostiene entre instrumentos:** 15.7 (Ikuspegi) vs 13.4 (Deustobarómetro). El techo no
-  depende del cuestionario.
-- **Mecanismo — sobreconcentración:** opción modal 83.7% panel vs 61.5% real (+22 p.p.).
-  NS/NC 1.4% vs 3.4%. **Sube con N** (81.7 → 83.7 al pasar de n=30 a n=1.000).
-- **Cero de mil:** ninguna Persona elige "permitir la entrada sin obstáculo legal" (real 34.2%) ni
-  "acoger sin restricciones" (real 31.3%). En el polo opuesto, misma compresión: "son demasiadas"
-  3.0 vs 19.0; "prioridad para las autóctonas" 8.4 vs 29.2. **Borra los dos extremos a la vez** —
-  no es sesgo direccional, es compresión.
-- **El panel SÍ usa el perfil (falsación del diagnóstico ingenuo).** V de Cramér media: voto 0.36
-  (máx 0.47) · euskera 0.19 · estudios 0.16 · clase 0.13 · género 0.11 · edad 0.08 · provincia 0.07.
-  La dirección es correcta: acuerdo con expulsión por delito = Vox 90.6% · PP 65.7% · PNV 17.5% ·
-  EH Bildu 5.5%. **No ignora a la Persona ni invierte el eje: comprime el rango.**
-- **La ilustración limpia (P26, escala 0-10):** media panel 5.15 vs real 5.30 (error 0.15,
-  aparentemente excelente), pero **86.4% en {5, 6}** y **cero** en {8, 9, 10}. Fidelidad agregada
-  perfecta con validez individual nula, sin necesidad de bajar al microdato.
+### 7. Study 3 — Colapso distribucional y réplica externa
+- Ikuspegi, 1.000 Personas: **DAM 15,7** vs moda 17,0 · uniforme 19,7 · suelo de ruido 0,8.
+- **El DAM se sostiene entre instrumentos** (15,7 vs 13,4 en el Deustobarómetro) → no depende del
+  cuestionario.
+- **Concentración 83,7 vs 61,5 real** (+22,2), y **sube con N** (81,7 → 83,7).
+- **Cero de mil** en dos opciones que tienen el **34,2 %** y el **31,3 %** reales. En el polo
+  opuesto, misma compresión.
+- **El panel SÍ usa el perfil:** V de Cramér con voto **0,36**; dirección correcta (expulsión por
+  delito: Vox 91 % · PP 66 % · PNV 18 % · EH Bildu 6 %). No ignora a la Persona: **comprime el
+  rango**.
+- **P26, la ilustración limpia:** media 5,15 vs 5,30 real (error 0,15) pero **86,4 % en {5,6}** y
+  **cero** en {8,9,10}. Fidelidad agregada excelente, distribución destruida.
 
-### 8. Study 4 — El enriquecimiento del perfil empeora el colapso
-*(La sección con más potencial de contribución teórica: contradice el supuesto de diseño dominante.)*
-- Diseño: v2 = Persona anclada en encuestado real + bloques de ESS España y EUSTAT Capital Social
-  (5-6 llaves en vez de 4). Aporta justo los predictores canónicos de actitudes hacia la inmigración
-  (confianza generalizada, inseguridad económica, seguridad percibida, cohesión).
-- **Predicciones preregistradas antes de lanzar** (sección 7 de `diagnostico_ikuspegi_n1000.md`);
-  las 2 que fallan lo hacen en dirección contraria a la falsación. *Esto es un activo enorme ante
-  revisores; hay que destacarlo.*
-- DAM v2 **18.2** vs v1 15.7 → **peor que el baseline de la moda (17.0)**.
-- Concentración **88.8** vs 83.7. Opciones distintas usadas por pregunta: **2.7 (v2) vs 4.3 (v1)**.
-- No es artefacto del voto degradado: restringiendo a Personas con partido, v1 14.7 / conc. 81.9 vs
-  v2 17.9 / conc. **89.0**.
-- Replica y **amplifica** el resultado del Deustobarómetro (Δ +0.4 allí, **Δ +2.5** aquí).
-- **Lectura:** dado un perfil que ya ordena bien, enriquecerlo no recupera la varianza. El colapso
-  lo pone el modelo, no la pobreza del anclaje. "Más estructura ≠ mejor predicción" pasa de
-  anécdota a resultado replicado.
-- Cautela a declarar: v2 no es "v1 + campos"; pierde religión, casi todo el perfil mediático y
-  `principales_problemas`.
+### 8. Study 4 — Enriquecer el perfil empeora
+- Panel v2 con 5-6 llaves y predictores canónicos de actitudes migratorias.
+- **Predicciones preregistradas antes de lanzar**; las que fallan lo hacen **en dirección contraria
+  a la falsación**.
+- **DAM 18,2** (peor que el baseline de la moda) · concentración **88,8** · opciones usadas 2,7 vs
+  4,3.
+- No es artefacto del voto degradado: restringiendo a Personas con partido, v1 14,7 / conc. 81,9 vs
+  v2 17,9 / conc. **89,0**.
+- **"Más estructura ≠ mejor predicción" pasa de anécdota a resultado replicado.**
 
-### 9. ¿Dónde aporta el panel? Análisis por tipo de ítem
-- A · Política migratoria (5 ítems): DAM v1 18.0 vs moda 24.0 → **Δ +6.0** (4.6× el global).
-- B · Valores/identidad (4): **Δ −5.3** (colapsa en la opción *equivocada*: 70-75% "Indecisión"
-  cuando el real está de acuerdo 73.7/70.2%).
-- C · Percepción factual (3): Δ +2.3.
-- **"Donde aporta más" ≠ "donde acierta más":** el DAM del grupo A (18.0) es peor que el global,
-  porque son ítems de distribución real dispersa — justo donde la sobreconcentración duele más.
-- No se sostiene "a más uso del perfil, más aporta": corr(V(voto), Δ) = +0.10 (v1) / −0.21 (v2),
-  frente a corr(concentración real, Δ) = **−0.33**.
-- **Declarar el sesgo de selección:** el piloto de 13 ítems no es aleatorio y está sesgado **a
-  favor** del panel (5 de 12 son política migratoria, su mejor bloque). **15.7 es probablemente
-  optimista.** Declararlo desarma al revisor y refuerza la conclusión.
+### 9. Study 5 — Robustez: modelo, prompt y temperature ⭐ *nuevo*
+Tres manipulaciones independientes, 1.000 Personas cada una, mismos ítems, **con predicciones
+preregistradas por dos autores por separado** (`preregistro_robustez.md`).
 
-### 10. Robustness *(PENDIENTE DE EJECUTAR — ver §6 de este documento)*
-10.1 Invariancia al modelo: repetir los 13 ítems con un modelo frontera.
-10.2 Variante de prompt anti-concentración: legitimar NS/NC y posiciones minoritarias, prohibir el
-     refugio en la opción intermedia. Cuantifica cuánta infidelidad es de prompting y cuánta del
-     modelo.
-10.3 Sensibilidad a temperature (0.0 / 1.0) — cierra la objeción de decodificación.
-10.4 Techo no lineal (gradient boosting) para confirmar que 0.24 no es artefacto de linealidad.
+| | Δ_C | NS/NC | soporte | nº efectivo | P11 · P13 | DAM |
+|---|--:|--:|--:|--:|--:|--:|
+| Base (Haiku, τ por defecto) | 22,2 | 1,4 % | 4,3 | 1,66 | **0,0 · 0,0** | 15,7 |
+| + prompt anti-concentración | **17,9** | 2,0 % | 4,5 | 1,73 | **0,0 · 0,0** | 14,8 |
+| + temperature 0,0 | 22,6 | 1,1 % | 4,2 | 1,64 | **0,0 · 0,0** | 15,8 |
+| + modelo frontera | **13,5** | 0,0 % | **3,6** | 2,03 | **3,0 · 7,8** | **11,8** |
+| *real* | — | 3,4 % | — | — | 34,2 · 31,3 | — |
 
-### 11. Discussion
-11.1 **Regla de decisión para la práctica de marketing** *(el entregable gerencial del paper)*.
-     Antes de usar encuestados sintéticos, calcular el techo con los microdatos disponibles. Y luego:
+**F1 · La temperature es irrelevante.** Todas las métricas se mueven menos de medio punto. El
+colapso no es un artefacto de decodificación — y no porque τ=0 empeore, sino porque τ **no importa**.
 
-| Tarea de investigación | ¿Depende de la varianza individual? | Veredicto |
+**F2 · El prompt mueve el centro, no los polos.** Se le dice explícitamente que los extremos son
+legítimos: redistribuye entre opciones moderadas (P11: 12,1/85,9 → 39,6/58,0) y deja los polos
+**exactamente en 0,0 %**. Se le da permiso y no lo usa.
+
+**F3 · El modelo frontera atenúa (a) y apenas toca (b).** Mejor DAM del proyecto (11,8, bate a la
+moda por 5,2) y primera vez que los polos reciben masa. Pero recuperan **0,09 y 0,25**: sigue
+borrado el **83 %** de la masa polar.
+
+**F4 · Concentración y soporte se mueven en direcciones OPUESTAS.** El frontera está menos
+concentrado y usa **menos** categorías (4,3 → 3,6): equilibra las dominantes y **aniquila la cola
+más**. Refuta la lectura del colapso como "compresión hacia el centro".
+
+**F5 · El gradiente político se refuerza:** Vox 100 · PP 91 · PNV 41 · EH Bildu 17 · Podemos 3,
+frente a 91 · 66 · 18 · 6 · 0 con Haiku. El modelo mejor usa **más** el perfil.
+
+▸ **Honestidad obligada:** preregistramos que el frontera no mejoraría el DAM de forma relevante y
+**falló** (15,7 → 11,8). La afirmación de invariancia al modelo se retira y se sustituye por P2g.
+
+### 10. Study 6 — ¿Repartir la varianza mejora el acierto individual? *(inconcluyente)* ⭐ *nuevo*
+El prompt anti-concentración aplicado a los **encuestados reales** del Deustobarómetro, para medir
+lo que Ikuspegi no permite: el acuerdo persona a persona.
+
+- **La manipulación se aplicó:** cambian **10.841 de 45.448 respuestas (23,9 %)**.
+- **Pero apenas mueve nada:** concentración 66,6 → 65,8 (−0,85); correlación de escalas 0,123 →
+  0,137, **IC95 bootstrap [−0,001, +0,029]**, no distinguible de cero.
+- **El prompt no transporta entre instrumentos.** En Ikuspegi liberó 4,3 puntos de concentración;
+  aquí, 0,9 — y **no por falta de margen**: las categóricas del Deustobarómetro tienen el mismo
+  número de opciones (4,7 vs 4-5) y parten de 75,3, comparable al 83,7 de Ikuspegi.
+- **Interpretación tentativa:** el prompt se diseñó mirando un cuestionario de **inmigración**, un
+  dominio donde el modelo se modera mucho y hay varianza suprimida que soltar. En temas generales
+  no se está conteniendo igual. **El efecto del prompt depende del tema.**
+- **Se reporta como inconcluyente por manipulación débil**, no como hipótesis refutada. Con Δ_C de
+  −0,85 no hay manipulación suficiente para poner a prueba la separabilidad.
+
+### 11. Study 7 — El ángulo de marketing
+Subcorpus de 44 ítems seleccionados *ex ante* por constructo + 10 de contraste político.
+
+| constructo | ítems | techo GBM | alcanzado | % techo | Δ vs moda | conc. panel / real |
+|---|--:|--:|--:|--:|--:|--:|
+| Retrenchment de consumo | 13 | 0,134 | 0,149 | — | −5,3 | 84,0 / 70,5 |
+| Decisión de viaje | 5 | 0,137 | 0,051 | 38 % | −12,4 | 84,8 / 49,9 |
+| Satisfacción de servicio | 16 | 0,254 | 0,072 | 28 % | −3,2 | 54,5 / 21,4 |
+| Confianza de marca | 10 | 0,351 | 0,217 | 62 % | −5,7 | 47,3 / 19,8 |
+| *(contraste) política* | 10 | 0,399 | 0,202 | 51 % | −5,7 | 45,5 / 21,2 |
+| **TOTAL MARKETING** | **44** | **0,234** | **0,127** | **54 %** | **−5,3** | **65,0 / 38,8** |
+
+**🔑 El techo de marketing es MÁS BAJO que el político.** Confianza de marca (0,35) y política
+(0,40) van parejas, pero **consumo (0,13)** y **viaje (0,14)** se hunden. El perfil informa *menos*
+sobre conducta de consumo que sobre actitud política — al revés de lo que necesita la promesa
+comercial y al revés de donde la literatura pone sus benchmarks.
+
+**Cautela obligatoria:** a nivel de ítem, con n≈300 y asimetría del 90 %, las correlaciones
+individuales **no son interpretables** (IC bootstrap que incluyen el cero). Sólo lo son los
+agregados por constructo.
+
+### 12. Discussion
+12.1 **Regla de decisión por tarea de marketing** *(el entregable gerencial)*.
+
+| Tarea | ¿Depende de Var(y\|x) o de las colas? | Veredicto |
 |---|---|---|
-| Estimación *top-line* de incidencia | No | Admisible con validación |
+| Estimación *top-line* de incidencia | No | **Admisible** con tolerancia de DAM validada — y con un modelo frontera, defendible (DAM 11,8 vs moda 17,0) |
 | Pretest de creatividades / wording | Parcial | Con cautela, como filtro |
 | Segmentación y perfilado | **Sí** | **No admisible** |
 | Heterogeneidad en conjoint / WTP | **Sí** | **No admisible** |
 | Targeting, early adopters, colas | **Sí** | **No admisible** |
-| Dominios sin encuesta donante | — | Peor rendimiento (DAM 28-30) |
+| Dominios sin encuesta donante | — | Peor rendimiento observado |
 
-11.2 Por qué la escalada de capacidad de los modelos no lo arregla: la fidelidad no ha seguido a la
-     capacidad (Argyle GPT-3 → *perils* GPT-3.5/4 → Wang/Park GPT-4o → nosotros Haiku 4.5, y los
-     sesgos persisten). El techo es informacional, no de modelo. *Turing conversacional ≠ fidelidad
-     de panel* (Jones & Bergen 2025, PNAS).
-11.3 Consecuencia sustantiva medible: el panel retrata a Euskadi como más tibia ante la inmigración
-     de lo que es, **en las dos direcciones**. Los encuestados sintéticos no solo pierden precisión:
-     **borran el conflicto**. Si se usan para research de opinión o de marca en temas polarizados,
-     producen un consenso que no existe.
-11.4 Uso híbrido: PPI++ (Angelopoulos et al. 2023) como forma *válida* de usar predicciones
-     imperfectas. Resultado propio: recorte de IC ~1.1% — despreciable, porque el recorte va con
-     corr² y corr = 0.15. Honesto y útil: el marco es correcto, la señal no da.
-11.5 Limitaciones: región única; dominio de opinión pública más que de consumo; un modelo principal;
-     13 ítems en la réplica; v2 no anidada en v1.
+12.2 Por qué la escalada de capacidad **ayuda pero no resuelve**: el frontera mejora el agregado y
+     deja los polos borrados. El techo es informacional.
+12.3 Consecuencia sustantiva: el panel **borra el conflicto**. En temas polarizados produce un
+     consenso que no existe.
+12.4 Uso híbrido y PPI++: marco válido, señal insuficiente (recorte de IC ~1,1 %, porque va con
+     corr²).
+12.5 Limitaciones: región única; dominio de opinión pública más que de consumo puro; 13 ítems en la
+     réplica; v2 no anidada en v1; una sola tanda por manipulación.
 
-### 12. Conclusion
-Los paneles sintéticos son admisibles como instrumento condicional, no como sustituto. La condición
-es comprobable *ex ante* y la damos hecha.
+### 13. Conclusion
+Los paneles sintéticos son un instrumento condicional, no un sustituto. La condición es comprobable
+*ex ante* y la damos hecha.
 
 ---
 
-## 5. Las tres contribuciones (declararlas así en la intro)
+## 5. Las tres contribuciones
 
-1. **Un diagnóstico *ex ante*, transportable y barato:** `corr_max = √R²_OOS`. Cualquier equipo con
-   una ola previa de microdatos puede calcular su propio techo antes de gastar un euro en Personas
-   sintéticas. Es la "methodological innovation in validating synthetic data" que pedía el call.
-2. **La caracterización del modo de fallo:** no es indiferencia al perfil ni sesgo direccional, es
-   **colapso de varianza condicional**, con un índice medible (concentración modal) que empeora
-   monótonamente con N y con el enriquecimiento del perfil.
-3. **La separabilidad agregado/individuo, demostrada con un caso limpio** (P26: media correcta,
-   distribución destruida), y traducida en una regla de decisión por tipo de tarea de marketing.
+1. **Diagnóstico *ex ante* transportable:** `corr_max = √R²_OOS`, calculable con una ola previa de
+   microdatos antes de gastar un euro. No conocemos equivalente en la literatura de marketing.
+2. **Caracterización del modo de fallo en dos componentes** —concentración y truncamiento del
+   soporte— que se comportan de forma **opuesta** ante mejoras del modelo. Con índices medibles y
+   siete implicaciones contrastables, todas verificadas.
+3. **Separabilidad agregado/individuo** demostrada con un caso limpio y traducida en **regla de
+   decisión por tarea de marketing**.
 
 ---
 
-## 6. Huecos que hay que cerrar antes de enviar a IJRM
+## 6. Estado de los huecos
 
-Ordenados por riesgo de rechazo si no se hacen.
+| # | Hueco | Estado |
+|---|---|---|
+| 1 | Ángulo de marketing/consumo | ✅ **cerrado** — subcorpus de 44 ítems, §11 |
+| 2 | Robustez con modelo frontera | ✅ **cerrado** — §9, resultado matizado |
+| 3 | Prompt anti-concentración | ✅ **cerrado** — §9 (agregado) y §10 (individual, inconcluyente) |
+| 4 | Marco teórico con rigor | ✅ **cerrado** — `seccion3_marco_teorico.md` |
+| 5 | Microdatos de Ikuspegi | ⬜ no obtenidos; se declara como limitación |
+| 6 | Declarar/variar temperature | ✅ **cerrado** — §9, F1 |
+| 7 | Techo no lineal (GBM) | ✅ **cerrado** — se reportan los dos |
+| 8 | Benchmark formal de 3 métodos | ⬜ **no se hará** — el contraste nominal (+7,88 vs −5,36) cubre lo esencial |
 
-| # | Hueco | Por qué es crítico | Esfuerzo |
+**Decisión (2026-08-22): no se harán más tandas. Se redacta con lo que hay.**
+
+---
+
+## 7. Correcciones aplicadas — leer antes de citar cualquier cifra
+
+Cuatro errores detectados y corregidos. Todos iban en la dirección de **favorecer al panel**.
+
+| # | Error | Efecto | Documento |
 |---|---|---|---|
-| 1 | **Ángulo de marketing/consumo** | Un revisor de IJRM preguntará por qué no hay una sola variable de consumo. Hoy la evidencia es de opinión pública. | Alto |
-| 2 | **Robustez de modelo (frontera)** | Objeción #1 garantizada: "usasteis Haiku, un modelo pequeño y barato". Sin esto no pasa el primer round. Barato: 13 ítems. | Bajo |
-| 3 | **Variante de prompt anti-concentración** | Objeción #2 garantizada: "es un artefacto de prompting". Además, si mueve algo, es contribución. | Medio |
-| 4 | **Contribución teórica de la §3** | IJRM no publica benchmarks sin marco. Las dos proposiciones tienen que estar escritas con rigor, no como intuición. | Medio |
-| 5 | Microdatos de Ikuspegi (UPV/EHU) | Permitiría calcular el techo en el dominio de la réplica. Sin ellos, "ítem informado" solo se aproxima con la V de Cramér del propio panel, que es circular. | Medio (gestión) |
-| 6 | Sensibilidad a temperature | Cierra la objeción de decodificación. Hoy corre a 1.0 por defecto — hay que **verificarlo y declararlo**. | Bajo |
-| 7 | Techo no lineal (GBM) | Robustez menor; se espera poco movimiento. | Bajo |
-| 8 | Benchmark formal de 3 métodos | Imputación clásica vs Persona LLM vs LLM+PPI, con partición train/test reservada para no contaminar. Elevaría mucho el paper. | Alto |
+| 1 | Mapeo etiqueta→opción por contención de subcadena; colapsaba 29 de 89 categóricas | techo 0,240 → **0,225** | `incidencia_mapeo_idx_real.md` |
+| 2 | Spearman comparado con techo Pearson | ratios inflados, hasta 367 % | `correccion_techo_global.md` |
+| 3 | Ítems circulares en el numerador del techo alcanzado | 0,152 → **0,123** | `correccion_techo_global.md` |
+| 4 | Ítems circulares en el Δ vs moda de nominales | **+1,61 → −5,36**: se cae "el único positivo del proyecto" | `preregistro_anticonc_individual.md` |
 
-### Sobre el hueco #1 — cómo resolver el ángulo de marketing
-
-Tres caminos, de menos a más coste:
-
-- **(a) Reencuadre argumental.** Sostener que la variable dependiente es indiferente: lo que se mide
-  es una propiedad del *estimador*, no del dominio. Y apoyarse en que la industria vende encuestados
-  sintéticos precisamente para las tareas que exigen varianza (segmentación, conjoint, targeting).
-  *Barato, pero probablemente insuficiente por sí solo para IJRM.*
-- **(b) Explotar los bloques ya existentes de consumo/comportamiento.** El barómetro incluye
-  **consumo de medios** (`datos GV/` CSV medios 2025), **turismo** y **frecuencia de conductas**
-  (p7). Recalcular techo, acuerdo individual y concentración restringiendo a estos bloques, y
-  presentarlos como el caso marketing. *Coste bajo-medio, sin API. Es el camino recomendado.*
-- **(c) Réplica en una encuesta de consumo con microdatos públicos.** Sería lo definitivo. Candidatos
-  a explorar: paneles de consumo de Eustat/INE, ESS módulos de confianza al consumidor,
-  encuestas de hábitos de compra con microdato abierto.
-
-### Aviso: `email_to_jmr_editor.txt` está obsoleto
-
-El borrador de julio presenta el panel como una contribución metodológica **positiva** ("mean
-absolute deviation of 14.0 p.p.", "fidelity is highest where profiles are richly specified",
-"r² > 0.95 in core domains"). La evidencia posterior lo contradice de plano: el delta vs moda es
-≈0 o negativo, y **enriquecer el perfil empeora el resultado**. No enviar ese email. Si se contacta
-con un editor, el pitch correcto es el de este esquema.
+▸ **Al paper:** merece un párrafo de métodos. Cuatro errores independientes, todos favorables al
+panel, detectados sólo porque había cifras de referencia con las que contrastar. Es un argumento de
+peso a favor de publicar el paquete de replicación.
 
 ---
 
-## 7. Referencias a incorporar formalmente
+## 8. Ficheros de apoyo
 
-Pendientes de añadir a `literatura_relacionada.md`:
+| Fichero | Contenido |
+|---|---|
+| `seccion3_marco_teorico.md` | §3 redactada (inglés) |
+| `seccion4_data_design.md` | §4 redactada (inglés) — *nuevo, 2026-08-24* |
+| `resultados_marketing.md` · `marketing_items.json` | subcorpus de marketing, §11 |
+| `preregistro_robustez.md` | huecos 2, 3 y 6 — predicciones y resultados, §9 |
+| `preregistro_anticonc_individual.md` | anti-concentración individual, §10 + corrección 4 |
+| `correccion_techo_global.md` | correcciones 2 y 3 |
+| `incidencia_mapeo_idx_real.md` | corrección 1 |
+| `subcorpus_marketing.md` | inventario de ítems y fuentes |
+| `../piloto_ppi/techo_predictivo_v2.md` | techo corregido |
+
+---
+
+## 9. Referencias a incorporar
 
 - Angelopoulos, A. N., Bates, S., Fannjiang, C., Jordan, M. I., & Zrnic, T. (2023). Prediction-powered
-  inference. *Science*, 382(6671). arXiv:2301.09633.
-- Argyle, L. P., Busby, E. C., Fulda, N., Gubler, J. R., Rytting, C., & Wingate, D. (2023). Out of one,
-  many: Using language models to simulate human samples. *Political Analysis*, 31(3), 337-351.
-- Bisbee, J., Clinton, J. D., Dorff, C., Kenkel, B., & Larson, J. M. (2024). Synthetic replacements for
-  human survey data? The perils of large language models. *Political Analysis*, 32(4), 401-416.
+  inference. *Science*, 382(6671).
+- Argyle, L. P., et al. (2023). Out of one, many: Using language models to simulate human samples.
+  *Political Analysis*, 31(3), 337-351.
+- Bisbee, J., et al. (2024). Synthetic replacements for human survey data? The perils of large
+  language models. *Political Analysis*, 32(4), 401-416.
 - Jones, C. R., & Bergen, B. K. (2025). Large language models pass the Turing test. *PNAS*.
-- Sarstedt, M., Adler, S. J., Rau, L., & Schmitt, B. (2024). Using large language models to generate
-  silicon samples in consumer and marketing research: Challenges, opportunities, and guidelines.
-  *Psychology & Marketing*, 41(6), 1254-1270.
-- Wang, Y., et al. (2024). Automated social science / AAE for market research. arXiv:2412.19363.
+- Sarstedt, M., et al. (2024). Using large language models to generate silicon samples in consumer
+  and marketing research. *Psychology & Marketing*, 41(6), 1254-1270.
+- Wang, Y., et al. (2024). arXiv:2412.19363.
 
 ---
 
-## 8. Próximo paso
+## 10. Próximo paso
 
-Decidir el orden de ataque:
-
-- **Vía rápida:** cerrar huecos 2, 3 y 6 (todos baratos) + camino (b) del hueco 1, y empezar a
-  redactar. ~2-3 semanas de trabajo antes del primer borrador completo.
-- **Vía completa:** añadir el hueco 8 (benchmark de 3 métodos). Sube mucho la probabilidad en IJRM
-  pero añade meses.
+**Redactar.** Orden sugerido: ~~§4 (data and design, mecánico)~~ ✅ *borrador 1, 2026-08-24,
+`seccion4_data_design.md`, con 5 pendientes marcados con ▸ dentro del fichero — el más importante
+es confirmar la distinción Design A (digital twins, emparejados 1:1) / Design B (panel de
+población, solo agregado), que no estaba escrita en ningún sitio como tal y la reconstruí a partir
+de `resumen_construccion_panel.md` y `PASOS_ppi_full.md`.* → **§5-§8** (studies, los datos ya
+están) → §9-§11 → §12 (discussion) → §1-§2 (intro y background, al final, cuando se sepa qué se
+está introduciendo) → abstract.

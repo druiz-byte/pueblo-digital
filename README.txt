@@ -1,5 +1,5 @@
 ===============================================================
- PUEBLO DIGITAL
+ OBABA-S
  Panel sintetico de 1.000 Personas del Pais Vasco
 ===============================================================
 
@@ -8,7 +8,7 @@ Autor: David Ruiz — Universidad de Deusto (druiz@deusto.es)
 
 QUE ES
 ---------------------------------------------------------------
-Pueblo Digital es un panel sintetico de 1.000 "Personas"
+Obaba-s es un panel sintetico de 1.000 "Personas"
 representativas de la poblacion del Pais Vasco. Cada Persona se
 construye a partir de microdatos reales de encuestas oficiales
 (Deusto Barometro, Sociometro Vasco, ESS, EUSTAT) y puede

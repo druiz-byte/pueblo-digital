@@ -228,7 +228,7 @@ app.post('/api/heygen/session/stop', async (req, res) => {
 
 // ── Start ──────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`\n🎙  Pueblo Digital — Entrevistador`);
+  console.log(`\n🎙  Obaba-s — Entrevistador`);
   console.log(`   http://localhost:${PORT}\n`);
   if (!process.env.HEYGEN_API_KEY)    console.warn('⚠  HEYGEN_API_KEY no configurada');
   if (!process.env.ANTHROPIC_API_KEY) console.warn('⚠  ANTHROPIC_API_KEY no configurada');

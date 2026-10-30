@@ -1,8 +1,8 @@
-# Pueblo Digital — Cómo hemos construido el panel sintético del País Vasco
+# Obaba-s — Cómo hemos construido el panel sintético del País Vasco
 
-## ¿Qué es Pueblo Digital?
+## ¿Qué es Obaba-s?
 
-Pueblo Digital es un panel sintético de 1.000 Personas que simulan ser la población del País Vasco. Cada Persona es un perfil estadísticamente representativo construido a partir de microdatos reales de encuestas oficiales, y puede ser instanciado como un agente LLM capaz de responder preguntas, expresar opiniones y comportarse de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar.
+Obaba-s es un panel sintético de 1.000 Personas que simulan ser la población del País Vasco. Cada Persona es un perfil estadísticamente representativo construido a partir de microdatos reales de encuestas oficiales, y puede ser instanciado como un agente LLM capaz de responder preguntas, expresar opiniones y comportarse de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar.
 
 ---
 

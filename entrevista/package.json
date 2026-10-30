@@ -1,7 +1,7 @@
 {
   "name": "pueblo-digital-entrevista",
   "version": "1.0.0",
-  "description": "Entrevistador de agentes sintéticos del Pueblo Digital con HeyGen Streaming Avatar",
+  "description": "Entrevistador de agentes sintéticos del Obaba-s con HeyGen Streaming Avatar",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

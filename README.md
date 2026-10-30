@@ -1,4 +1,4 @@
-# Pueblo Digital
+# Obaba-s
 
 Panel sintético de 1.000 **Personas** representativas de la población del País Vasco, construidas a partir de microdatos reales de encuestas oficiales (Deusto Barómetro, Sociómetro Vasco, ESS, EUSTAT). Cada Persona puede instanciarse como agente conversacional que responde de forma coherente con su perfil sociodemográfico, político, mediático y de bienestar (fundamento: *silicon sampling*, Argyle et al. 2023).
 
@@ -37,7 +37,7 @@ Abre `index.html` (raíz) y pulsa **Entrevistar** en cualquier ficha. En local `
 # (una vez, en la carpeta del proyecto)
 git init
 git add .
-git commit -m "Pueblo Digital: panel + app de entrevista"
+git commit -m "Obaba-s: panel + app de entrevista"
 git branch -M main
 git remote add origin https://github.com/<tu-usuario>/pueblo-digital.git
 git push -u origin main

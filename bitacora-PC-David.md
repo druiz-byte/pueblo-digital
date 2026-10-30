@@ -1,4 +1,4 @@
-# Pueblo Digital — Bitácora de sesiones
+# Obaba-s — Bitácora de sesiones
 
 > Registro cronológico de trabajo (más reciente arriba). Cada sesión con Claude, en cualquier ordenador, debe terminar añadiendo una entrada aquí: fecha, ordenador, qué se hizo y decisiones tomadas. Así ambos ordenadores comparten el mismo contexto.
 

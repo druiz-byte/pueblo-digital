@@ -1,5 +1,5 @@
 {
-  "_descripcion": "Catálogo de emparejamiento avatar/voz para el panel Pueblo Digital sobre Anam (anam.ai). Lo usa emparejar.py para elegir cara+voz de cada Persona de forma automática y determinista, sin que David tenga que escoger. Rellenar los IDs con anam_setup.py una vez creados los avatares y elegidas las voces en el Anam Lab.",
+  "_descripcion": "Catálogo de emparejamiento avatar/voz para el panel Obaba-s sobre Anam (anam.ai). Lo usa emparejar.py para elegir cara+voz de cada Persona de forma automática y determinista, sin que David tenga que escoger. Rellenar los IDs con anam_setup.py una vez creados los avatares y elegidas las voces en el Anam Lab.",
   "avatar_model": "cara-4",
 
   "_celdas_descripcion": "Rejilla género × franja de edad. Cada celda es una LISTA de avatarId de Anam; dentro de una celda la Persona recibe la cara nº (id_persona mod nº_caras), así dos Personas de la misma celda no salen idénticas pero es reproducible. Deja la lista vacía [] hasta tener los IDs.",

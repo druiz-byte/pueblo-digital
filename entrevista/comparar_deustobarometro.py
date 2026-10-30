@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Compara una encuesta del panel sintético (Pueblo Digital) con los datos
+"""Compara una encuesta del panel sintético (Obaba-s) con los datos
 reales del Deustobarómetro verano 2026.
 
 Los datos reales se leen del campo `datos_reales` de las plantillas en

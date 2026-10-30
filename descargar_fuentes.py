@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Descarga de microdatos para el rediseño del panel Pueblo Digital.
+Descarga de microdatos para el rediseño del panel Obaba-s.
 
 Ejecutar en el ordenador de David (tiene salida a internet):
     python descargar_fuentes.py

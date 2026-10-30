@@ -1,6 +1,6 @@
 # Barómetro Digital — Cuestionario completo por bloques
 
-> Réplica del **Deustobarómetro social XXIV (verano 2026)** usada para interrogar al panel Pueblo Digital.
+> Réplica del **Deustobarómetro social XXIV (verano 2026)** usada para interrogar al panel Obaba-s.
 > **141 preguntas** en 6 bloques. Fuente de los ítems y datos de contraste: Informe Deustobarómetro social XXIV, verano 2026 (campo: 3–10 junio 2026, n=1.000).
 
 | Bloque | Preguntas |

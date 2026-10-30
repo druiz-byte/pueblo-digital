@@ -1,0 +1,173 @@
+{
+ "titulo": "CIS 3575 — ICC de julio 2026 · versión A (categoría intermedia ofrecida)",
+ "fuente": "CIS, Estudio nº 3575 «ICC de julio», julio 2026. Universo: residentes en España de 16 años y más. n=3.004 (submuestra País Vasco n=133), entrevista telefónica, campo 24-29 julio 2026, error ±1,8 p.p. (nacional).",
+ "muestra": 1000,
+ "nota": "datos_reales = submuestra del País Vasco (n=133, error ±8,5 p.p.) porque es el universo del panel; datos_reales_espana = muestra nacional (n=3.004), más precisa pero de otro universo. Un fallo contra AMBAS descarta el desajuste de universo como explicación. Enunciados adaptados al tuteo; contenido y opciones idénticos al original. En el CIS las categorías marcadas (NO LEER) NO se ofrecen al entrevistado: se codifican solo si las produce espontáneamente. En esta versión A SÍ se ofrecen, para medir el máximo de uso posible.",
+ "preguntas": [
+  {
+   "id": "P3",
+   "texto": "¿Consideras que la situación económica actual de tu hogar es mejor o peor que hace seis meses?",
+   "opciones": [
+    "Mejor",
+    "Igual",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 16.0,
+    "Igual": 62.8,
+    "Peor": 20.5,
+    "NS/NC": 0.6
+   },
+   "datos_reales_espana": {
+    "Mejor": 20.8,
+    "Igual": 49.3,
+    "Peor": 29.4,
+    "NS/NC": 0.6
+   },
+   "nota": "PAR A — test del satisficing. 'Igual' es (NO LEER) en el original y aun así se lleva el 49,3 % nacional / 62,8 % en la CAE."
+  },
+  {
+   "id": "P12",
+   "texto": "¿Consideras que la situación económica de tu hogar dentro de seis meses será mejor o peor que en la actualidad?",
+   "opciones": [
+    "Mejor",
+    "Igual",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 31.2,
+    "Igual": 44.4,
+    "Peor": 23.6,
+    "NS/NC": 0.8
+   },
+   "datos_reales_espana": {
+    "Mejor": 31.3,
+    "Igual": 39.2,
+    "Peor": 28.3,
+    "NS/NC": 1.3
+   },
+   "nota": "PAR A — réplica prospectiva de P3."
+  },
+  {
+   "id": "P8",
+   "texto": "Teniendo en cuenta todo lo anterior, ¿consideras que la situación actual de la economía española es mejor o peor que hace seis meses?",
+   "opciones": [
+    "Mejor",
+    "Igual",
+    "Peor",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mejor": 31.4,
+    "Igual": 23.3,
+    "Peor": 41.8,
+    "NS/NC": 3.6
+   },
+   "datos_reales_espana": {
+    "Mejor": 23.6,
+    "Igual": 21.2,
+    "Peor": 51.7,
+    "NS/NC": 3.5
+   },
+   "nota": "PAR B — techo de información ALTO (corr_max lineal 0,468, el mayor de la encuesta junto a P2)."
+  },
+  {
+   "id": "P17",
+   "texto": "En términos generales, ¿crees que el precio de la vivienda durante el próximo año subirá, se mantendrá o bajará?",
+   "opciones": [
+    "Subirá",
+    "Se mantendrá",
+    "Bajará",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Subirá": 70.2,
+    "Se mantendrá": 25.5,
+    "Bajará": 4.3,
+    "NS/NC": 0.0
+   },
+   "datos_reales_espana": {
+    "Subirá": 75.3,
+    "Se mantendrá": 18.3,
+    "Bajará": 4.9,
+    "NS/NC": 1.5
+   },
+   "nota": "PAR B — techo de información NULO (corr_max lineal 0,041). El perfil no informa nada, y además el tópico del corpus coincide con la respuesta modal real."
+  },
+  {
+   "id": "P18",
+   "texto": "¿Tienes planes de comprar vivienda en el próximo año?",
+   "opciones": [
+    "Sí",
+    "No",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Sí": 5.4,
+    "No": 94.0,
+    "NS/NC": 0.6
+   },
+   "datos_reales_espana": {
+    "Sí": 11.2,
+    "No": 88.2,
+    "NS/NC": 0.5
+   },
+   "nota": "PAR C — intención de compra, base minoritaria. El caso comercial puro."
+  },
+  {
+   "id": "P10",
+   "texto": "¿Crees que tus posibilidades de adquisición de bienes duraderos (coches, muebles, electrodomésticos, ordenadores; nunca viviendas ni bienes inmuebles) durante el próximo año serán mayores, menores o iguales que las de este año?",
+   "opciones": [
+    "Mayores",
+    "Iguales",
+    "Menores",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Mayores": 15.3,
+    "Iguales": 69.3,
+    "Menores": 13.1,
+    "NS/NC": 2.3
+   },
+   "datos_reales_espana": {
+    "Mayores": 15.5,
+    "Iguales": 56.3,
+    "Menores": 26.8,
+    "NS/NC": 1.4
+   },
+   "nota": "PAR C — gasto previsto en duraderos. Aquí 'Iguales' SÍ se lee en el original."
+  },
+  {
+   "id": "P15",
+   "texto": "El crecimiento de los precios (o inflación) en España durante este último año ha sido del 3,2 %. ¿Crees que los precios crecerán durante el próximo año más, menos o igual que en el último año?",
+   "opciones": [
+    "Más",
+    "Igual",
+    "Menos",
+    "No lo sé / prefiero no contestar"
+   ],
+   "multiple": 1,
+   "datos_reales": {
+    "Más": 69.3,
+    "Igual": 23.4,
+    "Menos": 4.9,
+    "NS/NC": 2.4
+   },
+   "datos_reales_espana": {
+    "Más": 65.6,
+    "Igual": 26.3,
+    "Menos": 5.2,
+    "NS/NC": 2.8
+   },
+   "nota": "PAR D — el enunciado da un ancla numérica explícita (3,2 %). ¿La usa la Persona o la ignora?"
+  }
+ ]
+}

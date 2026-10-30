@@ -1,6 +1,129 @@
-# Pueblo Digital — Bitácora de sesiones
+# Obaba-s — Bitácora de sesiones
 
 > Registro cronológico de trabajo (más reciente arriba). Cada sesión con Claude, en cualquier ordenador, debe terminar añadiendo una entrada aquí: fecha, ordenador, qué se hizo y decisiones tomadas. Así ambos ordenadores comparten el mismo contexto.
+
+---
+
+## 2026-08-22 · Vigesimosegunda sesión — Huecos 2, 3 y 6 CERRADOS. Se deja de experimentar y se pasa a redactar
+
+**Ordenador:** oficina (Cowork) + PC de David (las cuatro tandas con API).
+**Decisión de David al final de la sesión: no se harán más pruebas. Se redacta con lo que hay.**
+
+### 1 · `git push` hecho
+
+Commit `71f97a5`, 40 ficheros, las sesiones 19-21 ya en GitHub. Incidencias: un `index.lock` de 0
+bytes que dejó un `git` mío muerto por *Bus error* en el mount de OneDrive, y **58 JSON de
+resultados que aparecían modificados pero con contenido idéntico** (sólo cambia el fin de línea por
+Windows/OneDrive) — descartados con `git restore` en vez de commitearlos. También se restauró
+`entrevista/.env.example`, borrado por accidente. Verificado que ningún fichero con claves entró.
+
+### 2 · 🧪 HUECOS 2, 3 y 6 — las tres tandas de 1.000, todas válidas (0 % de vacías)
+
+| | Δ_C | NS-NC | soporte | nº efectivo | P11 · P13 | DAM |
+|---|--:|--:|--:|--:|--:|--:|
+| Base (Haiku, τ por defecto) | 22,2 | 1,4 % | 4,3 | 1,66 | **0,0 · 0,0** | 15,7 |
+| **+ prompt anti-concentración** | **17,9** | 2,0 % | 4,5 | 1,73 | **0,0 · 0,0** | 14,8 |
+| **+ temperature 0,0** | 22,6 | 1,1 % | 4,2 | 1,64 | **0,0 · 0,0** | 15,8 |
+| **+ modelo frontera (Opus 5)** | **13,5** | 0,0 % | **3,6** | 2,03 | **3,0 · 7,8** | **11,8** |
+| *REAL* | — | 3,4 % | — | — | 34,2 · 31,3 | — |
+
+**F1 · La temperature es irrelevante.** Todo se mueve menos de medio punto. El colapso no es
+artefacto de decodificación — y no porque τ=0 empeore, sino porque τ **no importa**. Hueco 6 cerrado
+mejor de lo previsto.
+
+**F2 · El prompt mueve el centro, no los polos.** Se le dice explícitamente que los extremos son
+legítimos: redistribuye entre opciones moderadas (P11 pasa de 12,1/85,9 a 39,6/58,0) y deja los
+polos **exactamente en 0,0 %**. Se le da permiso y no lo usa.
+
+**F3 · El frontera atenúa la concentración y apenas toca el soporte.** Mejor DAM del proyecto
+(**11,8**, bate a la moda por 5,2) y primera vez que los polos reciben masa. Pero recuperan sólo
+**0,09 y 0,25**: sigue borrado el **83 %** de la masa polar.
+
+**F4 · Concentración y soporte se mueven en direcciones OPUESTAS.** El frontera está menos
+concentrado y usa **menos** categorías (4,3 → 3,6): equilibra las dominantes y **aniquila la cola
+más**. Refuta la lectura del colapso como "compresión hacia el centro". *Es el hallazgo más nuevo.*
+
+**F5 · El gradiente político se refuerza:** Vox 100 · PP 91 · PNV 41 · EH Bildu 17 · Podemos 3,
+frente a 91 · 66 · 18 · 6 · 0. El modelo mejor usa **más** el perfil.
+
+**Contraste con los dos preregistros.** Claude acierta 3 de 12; David falla su hipótesis central
+(el frontera no corrige el colapso: 75,0 frente a su 62; extremos 3,0 y 7,8 frente a sus 40 y 35).
+El criterio de falsación de Claude (conc. < 70 **y** DAM < 12) se cumple sólo a medias → **la tesis
+sobrevive**, pero es literalmente el *"resultado más incómodo posible"* que él mismo dejó escrito.
+**Se retira la afirmación de invariancia al modelo** y se sustituye por P2g: la concentración cede
+con la capacidad del modelo, el truncamiento del soporte no.
+
+### 3 · 🧪 Seguimiento del hueco 3 a nivel individual — inconcluyente, y por una razón útil
+
+El prompt anti-concentración aplicado a los **300 encuestados reales** del Deustobarómetro, que es
+donde sí hay microdato para medir el acuerdo persona a persona.
+
+- **La manipulación se aplicó:** cambian **10.841 de 45.448 respuestas (23,9 %)**.
+- **Pero no mueve nada:** concentración 66,6 → 65,8 (−0,85); correlación de escalas 0,123 → 0,137,
+  **IC95 bootstrap [−0,001, +0,029]**, no distinguible de cero. Ordinales y nominales, ligeramente
+  peor.
+- **La predicción de titular de Claude ("el agregado mejora y el individual empeora") es FALSA en
+  los dos términos.** Se reporta como fallo.
+- **🔑 El prompt no transporta entre instrumentos.** En Ikuspegi liberó 4,3 puntos de concentración;
+  aquí 0,9. **Y no por falta de margen:** las categóricas del Deustobarómetro tienen el mismo número
+  de opciones (4,7 vs 4-5) y parten de 75,3, comparable al 83,7 de Ikuspegi. Interpretación
+  tentativa: el prompt se diseñó mirando un cuestionario de **inmigración**, donde el modelo se
+  modera mucho y hay varianza suprimida que soltar; en temas generales no se está conteniendo igual.
+  **El efecto del prompt depende del tema.**
+- **Se reporta como inconcluyente por manipulación débil, no como hipótesis refutada.** No se puede
+  comprobar si liberar varianza mejora el acierto individual sin haber liberado varianza.
+
+### 4 · 🔴 CUARTA CORRECCIÓN: se cae "el único resultado positivo del proyecto"
+
+Al recalcular los anclajes apareció que el **Δ vs moda de nominales +1,61** estaba inflado por los
+ítems circulares:
+
+| | con circulares | **sin circulares** |
+|---|--:|--:|
+| Kappa nominales | 0,231 | **0,139** |
+| Acierto exacto | 51,0 % | **45,5 %** |
+| **Δ vs moda** | **+1,61** | **−5,36** |
+
+Incluía p41, p42, p45 y p46 (religión, nacimiento, voto 2024, voto 2020), predictores inyectados con
+kappa ≈ 1,00. **No hay ningún resultado individual positivo en el proyecto.**
+
+**Efecto colateral favorable:** el contraste con la imputación clásica pasa de **+7,5 vs +1,6** a
+**+7,88 vs −5,36** — trece puntos, y el LLM por debajo del baseline tonto. Antes se comparaba un
+techo ya limpio de circulares con un acuerdo individual que no lo estaba.
+
+Corregido en `esquema_paper_IJRM.md`, `bitacora.md`, `CLAUDE.md` y `piloto_ppi/acuerdo_individual.md`.
+
+▸ **Van cuatro correcciones, y las cuatro iban en la dirección de favorecer al panel.** Merece un
+párrafo de métodos en el paper y es un argumento de peso para publicar el paquete de replicación.
+
+### 5 · ✍️ Documentos del paper rehechos
+
+- **`esquema_paper_IJRM.md` reescrito entero.** Abstract nuevo con las cifras correctas; tesis en
+  dos actos con la Proposición 2 desdoblada; **13 secciones**, con dos nuevas (§9 robustez, §10
+  separabilidad inconcluyente) y §11 marketing; tabla de estado de los 8 huecos (6 cerrados, 2
+  descartados); tabla de las 4 correcciones; orden de redacción sugerido.
+- **`seccion3_marco_teorico.md`:** F2 matizado con la dependencia del instrumento; **nueva §3.6**
+  con el intento de test de separabilidad y por qué es inconcluyente; renumeración.
+- **`correccion_techo_global.md`:** addenda con la cuarta corrección.
+- **`preregistro_robustez.md`:** marcado como cerrado, con enlace al seguimiento individual.
+- **`preregistro_anticonc_individual.md`:** preregistro de los dos + resultados + la comprobación de
+  que la explicación fácil ("menos margen") es falsa.
+
+### 6 · Herramientas nuevas
+
+`piloto_ppi/generar_predicciones_anticonc.py` (importa el prompt de `lanzar_robustez.py` en vez de
+copiarlo, para que no diverjan) · `piloto_ppi/comparar_anticonc.py` · `entrevista/lanzar_robustez.py`
+con `--hilos` y control de validez · `entrevista/comparar_robustez.py` con columna de vacías y marca ⛔.
+
+### 7 · Pendiente
+
+1. **REDACTAR.** Orden sugerido en `esquema_paper_IJRM.md` §10: §4 → §5-§8 → §9-§11 → §12 → §1-§2 →
+   abstract.
+2. Resolver los cinco pendientes anotados dentro de `seccion3_marco_teorico.md`.
+3. Regenerar los `.docx` de `paper/` con pandoc (están desactualizados).
+4. `git push` de esta sesión.
+5. Opcional, si algún día interesa: `.gitattributes` con `* text=auto` para acabar con el ruido de
+   fin de línea.
 
 ---
 
@@ -221,7 +344,7 @@ Mismo patrón en `p2` y `p18` (`Buena` ⊂ `Muy buena`) y en `p30_1…p30_14` (`
 | ítems con R² ≤ 0 | 11 | **15** |
 | Δ nominales vs moda | +7,53 | **+7,88** |
 
-→ **El techo es aún más bajo de lo que decíamos.** El argumento de "la imputación clásica gana al LLM" pasa de +7,5 vs +1,6 a **+7,9 vs +1,6**: se mantiene.
+→ **El techo es aún más bajo de lo que decíamos.** El argumento de "la imputación clásica gana al LLM" pasa de +7,5 vs +1,6 a **+7,9 vs −5,4**: se refuerza mucho. *(El +1,6 del LLM incluía ítems circulares; corregido 22-ago-2026, ver `paper/preregistro_anticonc_individual.md`.)*
 
 ### 3 · 🔴 SEGUNDA INCIDENCIA, metodológica: Spearman vs Pearson
 
@@ -487,7 +610,7 @@ Modificados: `piloto_ppi/true_ppi_full.py` (el arreglo) · `piloto_ppi/techo_pre
    | Spearman escalas (54) | 0,15 | **0,15** | sin cambio |
    | kappa ordinales (48) | 0,101 | **0,100** | sin cambio |
    | kappa nominales (41) | 0,161 | **0,231** | mejora |
-   | delta vs moda, nominales | −3,3 | **+1,6** | **cumple** |
+   | delta vs moda, nominales | −3,3 | **+1,6** ⚠ | **cumple** *(cifra con circulares; sin ellos, −5,4 → NO cumple)* |
    | delta vs moda, ordinales | −5,2 | −4,5 | sigue negativo |
    | recorte IC limpio (bloques 1-6) | 1,1% | **1,4%** | falla |
    | DAM global | 15,8 | **15,1** | marginal |
@@ -500,7 +623,7 @@ Modificados: `piloto_ppi/true_ppi_full.py` (el arreglo) · `piloto_ppi/techo_pre
 - **Frente PPI++/panel CERRADO.** El artículo pasa a tener una tesis explicada, no solo un resultado negativo: *la correlación máxima alcanzable desde un perfil sociodemográfico es 0,27 y nuestro panel alcanza la mitad de ese techo* (corregido 21-ago-2026, ver `paper/correccion_techo_global.md`) — el límite es de información, no de modelo (ni de prompt, ni de encuestas donantes, ni de LLM frontera).
 - **Distinción central para el paper** (fuente de toda la confusión previa): se puede clavar la distribución agregada sin acertar a **ninguna** persona. Si el 43% dice "Regular", repartir las respuestas al azar reproduce el histograma perfecto con acierto individual nulo. Por eso el DAM parecía razonable (economía 13,5) mientras el delta vs moda salía negativo. Son ejes ortogonales.
 
-**Diseño propuesto para el artículo (discutido con David, "empezar de cero"):** benchmark de 3 métodos sobre las mismas 152 preguntas — imputación estadística clásica (hot-deck/kNN), Persona LLM, y LLM+PPI — contra 2 baselines tontos (moda y marginal). Evidencia a favor: en nominales el clasificador lineal saca +7,5 y el LLM +1,6 → **para preguntas imputables la estadística clásica gana al LLM**; el LLM solo debería reservarse para lo que ninguna encuesta donante cubre (turismo, geopolítica), que es justo donde peor sale (DAM 30,4 y 28,2). Cautela metodológica acordada: partir el fichero (mitad para selección de variables, mitad reservada como test) para no contaminar la validación.
+**Diseño propuesto para el artículo (discutido con David, "empezar de cero"):** benchmark de 3 métodos sobre las mismas 152 preguntas — imputación estadística clásica (hot-deck/kNN), Persona LLM, y LLM+PPI — contra 2 baselines tontos (moda y marginal). Evidencia a favor: en nominales el clasificador lineal saca +7,9 y el LLM **−5,4** (sin circulares) → **para preguntas imputables la estadística clásica gana al LLM**; el LLM solo debería reservarse para lo que ninguna encuesta donante cubre (turismo, geopolítica), que es justo donde peor sale (DAM 30,4 y 28,2). Cautela metodológica acordada: partir el fichero (mitad para selección de variables, mitad reservada como test) para no contaminar la validación.
 
 **Limitación reconocida:** el techo se calcula con un modelo **lineal**; uno no lineal podría arañar algo más. Es cota razonable, no absoluta. Réplica prevista si un revisor lo pregunta: gradient boosting (se espera poco movimiento — 14 preguntas con R² ≤ 0 no es un problema de forma funcional).
 
@@ -520,7 +643,7 @@ Modificados: `piloto_ppi/true_ppi_full.py` (el arreglo) · `piloto_ppi/techo_pre
 
 **Analítica web (Google Analytics 4):**
 - **Diagnóstico de la cuenta.** La web ya tenía GA4 (`G-4GQ86YD4FM`) y los eventos personalizados pegados por David (`abrir_persona`, `entrevistar_persona`, `lanzar_encuesta`, `generar_prompt`, `usar_filtro`, `limpiar_filtros`). El ID **no** estaba en la cuenta de Google con la que estaba abierto Chrome (esa solo tiene la propiedad "International Weeks", stream `G-TK9Y4XRVBP`, + la cuenta **demo** de GA con tráfico ficticio). El `G-4GQ86YD4FM` vive en **otra cuenta de Google de David** (propiedad "Pueblo Digital", `a6838353p545874210`, `authuser=1`).
-- **Informe creado (Explorar → Formato libre):** filas = **País** anidado con **Nombre del evento**, valores = **Usuarios activos** + **Recuento de eventos**. En Tiempo real ya entran los eventos personalizados; en las Exploraciones tardan 24-48 h en procesarse, así que el informe se llena solo. Guardado en la propiedad Pueblo Digital.
+- **Informe creado (Explorar → Formato libre):** filas = **País** anidado con **Nombre del evento**, valores = **Usuarios activos** + **Recuento de eventos**. En Tiempo real ya entran los eventos personalizados; en las Exploraciones tardan 24-48 h en procesarse, así que el informe se llena solo. Guardado en la propiedad Obaba-s.
 - **Limpieza de `index.html`:** eliminado el bloque `<noscript>` de **Google Tag Manager (`GTM-K6Z7RF7G`)** que estaba a medias (sin el script de cabecera → no cargaba nada) y encima mal colocado dentro del `<style>`. GA4 intacto.
 
 **Rediseño de la app de encuestas (`entrevista/public/encuesta.html`):**
@@ -870,3 +993,15 @@ Modificados: `piloto_ppi/true_ppi_full.py` (el arreglo) · `piloto_ppi/techo_pre
 - App de entrevista con avatar (`entrevista/server.py`, versión Python stdlib; sustituye a `server.js`).
 - Página de encuestas (`entrevista/public/encuesta.html`) con Groq (llama-3.1-8b-instant); lanzada una encuesta a 1.000 Personas (resultados no persistidos).
 - Revisión de literatura (`literatura_relacionada.md`) y documento metodológico (`resumen_construccion_panel.md`).
+
+## 23ª sesión — 2026-09-22
+
+- **🔴 SESIÓN 23 (2026-09-22) — CONFOUND DEL EJEMPLO DE FORMATO. No publicar cifras nuevas hasta medirlo.** Detalle en `paper/incidencia_ancla_ejemplo.md`.
+  - **Dos preguntas del CIS sobre impuestos** (P1 «¿pagamos mucho, regular o poco?» y la de beneficio de los servicios públicos) dieron **98,5 % y luego 100,0 %** en una sola opción. Al rotar el orden de opciones y reetiquetar la intermedia como «Regular, ni mucho ni poco», el centro **siguió en 0,0** frente al 47,7 % real: ni ancla de formato ni ambigüedad semántica. DAM 22,5, **peor que la moda (20,9) y que el uniforme (20,6)**, concentración 100,0, 1 opción usada de 5, V de Cramér = 0 por varianza nula. Es el registro máximo de colapso del proyecto.
+  - **Nuevo instrumento: CIS 3575 «ICC de julio» (julio 2026, n=3.004, submuestra CAE n=133).** Índice de Confianza del Consumidor — consumo puro, microdato individual y submuestra del País Vasco. Cubre el hueco 1 (ángulo de marketing) con tercer instrumento y cuarta casa de campo. Techo de información calculado (`paper/preregistro_icc_cis3575.md`): media **0,258 lineal**, rango interno de **0,015 (P6) a 0,483 (P2)** dentro de la misma encuesta. GBM descartado aquí (R² ≤ 0 en 14 de 18 ítems por sobreajuste).
+  - **Plantillas y preregistro escritos ANTES de lanzar:** `entrevista/encuestas/cis_icc_julio2026_A.json` (7 ítems, categoría intermedia ofrecida) y `..._B_sin_intermedia.json` (3 ítems, intermedia retirada como en el CIS). Seis hipótesis con criterio de falsación numérico.
+  - **Piloto n=30: 3 de 6 hipótesis REFUTADAS.** (a) **Se retira la explicación del «centro vacío»**: aquí «Igual» se lleva el 96,7 % (real 62,8), lo contrario que en impuestos. Lo que sobrevive es la concentración, no una dirección. (b) **Hallazgo principal, pendiente de confirmar:** sin la casilla intermedia el panel no produce posición, produce **NS/NC 50,4 %** (real 0,6) — el humano, sin que se le ofrezca, genera «Igual» espontáneo al 62,8 %. (c) **P15 no comprime, INVIERTE**: «Menos» 96,5 % frente a «Más» 69,3 % real, DAM 46,1, el peor ítem del proyecto; el enunciado da un ancla numérica (3,2 %) y el modelo razona como analista en vez de responder como ciudadano.
+  - **🔴 CONFOUND QUE PARA TODO.** `server.py` mostraba a las 1.000 Personas un ejemplo de formato con letra **fija por posición del ítem** (`chr(66 + (i+j) % 4)`), que además podía ser una letra **inexistente** entre las opciones (16 casos en las 14 plantillas). Al corregirlo cambió la letra en 2 de los 7 ítems del ICC, y **P18 siguió al ejemplo**: con ejemplo B respondió «No» el 100,0 % (DAM 4,0); con ejemplo C respondió «No lo sé» el 99,7 % (DAM 66,1). Misma pregunta, mismas Personas, una letra de diferencia. **El ancla gana donde el ítem no tiene señal** (ni tópico ni información en el perfil) y pierde donde sí la hay (P12, P8, P15 no lo siguen; la pregunta de impuestos tampoco). **Alcance: todas las tandas del proyecto usaron letra fija**, así que Ikuspegi, el barómetro y las tandas de robustez entran a revisión.
+  - **Herramientas nuevas:** `entrevista/comparar_icc.py` (DAM contra CAE y contra España, baselines, concentración, V de Cramér, contraste A vs B) · `entrevista/analizar_ancla.py` (mide qué proporción de Personas responde la letra que le tocó, contra el azar) · tres modos en `server.py` vía entorno: por defecto el correcto, `EJEMPLO_LETRAS_LEGACY=1` reproduce tandas anteriores al 22-sep, `EJEMPLO_LETRAS_ALEATORIO=1` sortea la letra por Persona con semilla determinista. Backup en `server.py.bak_20260922`.
+  - **PENDIENTE INMEDIATO AL RETOMAR:** (1) lanzar A del ICC con `EJEMPLO_LETRAS_ALEATORIO=1` y pasarle `analizar_ancla.py`; (2) lo mismo sobre `ikuspegi_piloto_2025.json`, que es de donde cuelgan más cifras del paper; (3) según el resultado, decidir qué se reescribe. **Nada del ICC se publica hasta entonces.**
+  - Los ficheros nuevos están **sin commitear**; `git status` marca además muchos ficheros de `resultados/` como modificados por un cambio de finales de línea de OneDrive (392 líneas añadidas y 392 borradas), así que el commit debe ser selectivo.
