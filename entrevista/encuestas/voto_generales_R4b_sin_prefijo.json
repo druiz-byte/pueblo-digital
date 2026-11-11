@@ -1,0 +1,22 @@
+{
+ "titulo": "Retest voto generales 29-N — R4b (sin prefijo, = R1/R3b)",
+ "fuente": "Preregistro claude/preregistro_retest_R4_prefijo.md (2026-11-01). Texto y opciones copiados del fichero de resultados de R1",
+ "muestra": 1000,
+ "preguntas": [
+  {
+   "texto": "Se han convocado Elecciones Generales en España para el 29 de noviembre 2026. En estas elecciones, ¿a qué partido vas a votar?",
+   "opciones": [
+    "PNV/EAJ",
+    "Elkarrekin Podemos",
+    "EH Bildu",
+    "PP",
+    "PSE",
+    "Sumar",
+    "VOX",
+    "No lo he decidido aún, estoy indeciso",
+    "No votaré"
+   ],
+   "multiple": 1
+  }
+ ]
+}

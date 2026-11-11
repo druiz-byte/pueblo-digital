@@ -205,6 +205,11 @@ select.filter:focus{border-color:var(--accent)}
         <h2>📝 Diseña nueva encuesta</h2>
         <div id="questions-container"></div>
         <button class="btn-add-q" onclick="addQuestion()">+ Añadir pregunta</button>
+        <div class="contexto-row" style="margin-top:14px">
+          <label for="contexto-input" style="display:block;font-size:.8rem;margin-bottom:6px">Contexto / dossier <b>(opcional — solo tandas D)</b>. Vacío = encuesta normal.</label>
+          <textarea id="contexto-input" rows="5" placeholder="Déjalo VACÍO en las tandas R. Se rellena solo al cargar una plantilla D." oninput="updContextoAviso()"></textarea>
+          <p id="contexto-aviso" style="font-size:.8rem;margin:6px 0 0"></p>
+        </div>
         <div class="muestra-row">
           <label>Tamaño de muestra:</label>
           <select id="muestra-select">
@@ -367,6 +372,21 @@ function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// ── Contexto / dossier (tandas D) ────────────────────────────────────────────
+function getContexto() {
+  const el = document.getElementById('contexto-input');
+  return el ? el.value.trim() : '';
+}
+function updContextoAviso() {
+  const c = getContexto();
+  const av = document.getElementById('contexto-aviso');
+  if (!av) return;
+  av.textContent = c
+    ? `⚠ Esta tanda llevará DOSSIER (${c.length} caracteres).`
+    : 'Sin dossier: la Persona recibe exactamente el mismo mensaje que en las tandas R.';
+  av.style.color = c ? '#e0a100' : '';
+}
+
 // ── Lanzar encuesta ───────────────────────────────────────────────────────────
 async function launchSurvey() {
   // Validar
@@ -389,9 +409,16 @@ async function launchSurvey() {
 
   const muestraVal = document.getElementById('muestra-select').value;
   const muestra = muestraVal ? parseInt(muestraVal) : null;
+  const contexto = getContexto();
+  if (contexto && !confirm(`Esta tanda lleva DOSSIER (${contexto.length} caracteres). ¿Lanzar?`)) {
+    btn.disabled = false;
+    return;
+  }
+  const payload = {preguntas, muestra};
+  if (contexto) payload.contexto = contexto;   // sin dossier → el cuerpo es el de siempre
   const r = await fetch('/api/encuesta/iniciar', {
     method: 'POST', headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({preguntas, muestra})
+    body: JSON.stringify(payload)
   });
   const d = await r.json();
   if (!r.ok) {
@@ -399,7 +426,7 @@ async function launchSurvey() {
     btn.disabled = false;
     return;
   }
-  track('encuesta_lanzada', { n_preguntas: preguntas.length, muestra: muestra || 1000 });
+  track('encuesta_lanzada', { n_preguntas: preguntas.length, muestra: muestra || 1000, con_contexto: !!contexto });
   document.getElementById('prog-label').textContent = `de ${d.total} Personas respondidas`;
   showView('progress');
   startPolling();
@@ -536,6 +563,10 @@ async function loadTemplate(archivo) {
       multiple: parseInt(q.multiple || 1),
     }));
     renderQuestions();
+    // Cargar SIEMPRE el contexto de la plantilla (vacío si no tiene): así una
+    // plantilla R borra el dossier que hubiera dejado una plantilla D.
+    const ctx = document.getElementById('contexto-input');
+    if (ctx) { ctx.value = d.contexto || ''; updContextoAviso(); }
     const sel = document.getElementById('muestra-select');
     if (d.muestra === null) sel.value = '';
     else if (d.muestra) sel.value = String(d.muestra);
@@ -702,6 +733,7 @@ function updateCharts() {
 // ── Init: añadir una pregunta en blanco ──────────────────────────────────────
 addQuestion();
 
+updContextoAviso();
 // Cargar plantillas e historial de encuestas guardadas
 loadTemplates();
 loadHistory();

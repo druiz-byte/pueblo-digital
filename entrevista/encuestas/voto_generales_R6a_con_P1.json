@@ -1,0 +1,22 @@
+{
+ "titulo": "Retest voto generales 29-N — R6a (con «P1.», = R2/R3a/R4a) · 2026-11-28",
+ "fuente": "Copia literal de voto_generales_R4a_con_P1.json (solo cambian titulo y fuente). SIN contexto.",
+ "muestra": 1000,
+ "preguntas": [
+  {
+   "texto": "P1. Se han convocado Elecciones Generales en España para el 29 de noviembre 2026. En estas elecciones, ¿a qué partido vas a votar?",
+   "opciones": [
+    "PNV/EAJ",
+    "Elkarrekin Podemos",
+    "EH Bildu",
+    "PP",
+    "PSE",
+    "Sumar",
+    "VOX",
+    "No lo he decidido aún, estoy indeciso",
+    "No votaré"
+   ],
+   "multiple": 1
+  }
+ ]
+}

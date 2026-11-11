@@ -11,6 +11,7 @@ Encuestas: plantillas en encuestas/ · lanzador por lotes: lanzar_barometro.py
 import json
 import random
 import os
+import hashlib
 import re
 import base64
 import time
@@ -53,6 +54,15 @@ GEMINI_MODEL       = os.environ.get('GEMINI_MODEL', 'gemini-3.5-flash')
 ANTHROPIC_MODEL    = os.environ.get('ANTHROPIC_MODEL', 'claude-haiku-4-5-20251001')
 SURVEY_TEMPERATURE = os.environ.get('SURVEY_TEMPERATURE')
 EXTRA_INSTRUCCIONES = ''
+# CONTEXTO (dossier informativo) — añadido 2026-11-11 para los experimentos D1-D3
+# (voto en generales 29-N). Es OPCIONAL y llega en cada petición de
+# /api/encuesta/iniciar (campo "contexto"); no es una variable global ni de
+# entorno, así que no puede "quedarse puesto" entre tandas. Si no se envía, el
+# mensaje a la Persona es idéntico byte a byte al de antes (verificado con
+# paper/experimento_dossier/test_no_contaminacion.py). Si se envía, se antepone
+# al bloque de la encuesta con esta cabecera fija, igual en D1, D2 y D3:
+CONTEXTO_CABECERA = 'Antes de responder, lee esta información publicada en los medios estos días:'
+CONTEXTO_MAX_CHARS = 12000
 SURVEY_WORKERS     = os.environ.get('SURVEY_WORKERS')
 PORT               = int(os.environ.get('PORT', 3000))
 SITE_PASSWORD      = os.environ.get('SITE_PASSWORD', '')   # si se define, la app pide contraseña (Basic Auth)
@@ -262,8 +272,9 @@ def _note_survey_error(msg):
             muestras.append(msg[:300])
     print(f'[encuesta] ⚠ {msg}')
 
-def _ask_persona(a, preguntas):
-    """Envía las preguntas a una Persona. Usa Groq si hay clave, si no Claude Haiku."""
+def _ask_persona(a, preguntas, contexto=None):
+    """Envía las preguntas a una Persona. Usa Groq si hay clave, si no Claude Haiku.
+    `contexto` (opcional): dossier que se antepone al bloque de la encuesta."""
     n = len(preguntas)
     def _ks(p):
         return max(1, int(p.get('multiple') or 1))
@@ -290,7 +301,10 @@ def _ask_persona(a, preguntas):
         f"{i+1}:{','.join(_letra_ejemplo(p, i, j) for j in range(_ks_ejemplo(p)))}"
         for i, p in enumerate(preguntas)
     )
-    lines = [
+    lines = []
+    if contexto:
+        lines += [CONTEXTO_CABECERA, '', contexto.strip(), '']
+    lines += [
         'Encuesta. Responde como tú mismo/a.',
         f'Escribe SOLO esto (sin texto adicional):',
         ejemplo,
@@ -445,17 +459,17 @@ def _ask_persona(a, preguntas):
             return resps2, text2
     return resps, text
 
-def _survey_worker(preguntas, subset=None):
+def _survey_worker(preguntas, subset=None, contexto=None):
     if subset is None:
         subset = agents
     total = len(subset)
     with _survey_lock:
-        _survey.update({'running': True, 'done': 0, 'total': total,
+        _survey.update({'running': True, 'done': 0, 'total': total, 'contexto': contexto,
                         'results': [], 'error': None, 'saved_file': None, 'github': None,
                         'last_error': None, 'errores': {}, 'errores_muestra': []})
 
     def process(a):
-        resps, raw = _ask_persona(a, preguntas)
+        resps, raw = _ask_persona(a, preguntas, contexto)
         if raw and not resps:
             # respuesta recibida pero no parseada → guardar el crudo para diagnóstico
             _note_survey_error(f'sin parsear (Persona {a["id"]}): {raw[:150]!r}')
@@ -523,6 +537,11 @@ def _save_survey_to_disk():
         'errores':    _survey.get('errores') or {},
         'errores_muestra': _survey.get('errores_muestra') or [],
     }
+    if _survey.get('contexto'):
+        # Solo en tandas con dossier: las tandas sin él conservan el esquema de siempre
+        data['contexto']          = _survey['contexto']
+        data['contexto_cabecera'] = CONTEXTO_CABECERA
+        data['contexto_sha256']   = hashlib.sha256(_survey['contexto'].encode('utf-8')).hexdigest()
     try:
         path = RESULTS_DIR / fname
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding='utf-8')
@@ -840,6 +859,7 @@ class Handler(BaseHTTPRequestHandler):
                     'done':       _survey['done'],
                     'total':      _survey['total'],
                     'definition': _survey['definition'],
+                    'con_contexto': bool(_survey.get('contexto')),
                     'last_error': _survey.get('last_error'),
                 })
 
@@ -998,11 +1018,18 @@ class Handler(BaseHTTPRequestHandler):
                 if _survey['running']:
                     return self.send_err(409, 'Encuesta en curso')
                 _survey['definition'] = preguntas
+            contexto = body.get('contexto')
+            if contexto is not None and not isinstance(contexto, str):
+                return self.send_err(400, 'contexto debe ser texto')
+            contexto = (contexto or '').strip() or None
+            if contexto and len(contexto) > CONTEXTO_MAX_CHARS:
+                return self.send_err(400, f'contexto demasiado largo (> {CONTEXTO_MAX_CHARS} caracteres)')
             muestra = body.get('muestra')  # None = todas
             import random
             subset = random.sample(agents, min(muestra, len(agents))) if muestra else agents
-            threading.Thread(target=_survey_worker, args=(preguntas, subset), daemon=True).start()
-            print(f'[encuesta] iniciada: {len(preguntas)} pregunta(s), {len(subset)} Personas')
+            threading.Thread(target=_survey_worker, args=(preguntas, subset, contexto), daemon=True).start()
+            print(f'[encuesta] iniciada: {len(preguntas)} pregunta(s), {len(subset)} Personas'
+                  + (f' · CON CONTEXTO ({len(contexto)} car.)' if contexto else ' · sin contexto'))
             self.send_json({'ok': True, 'total': len(subset)})
 
         else:
